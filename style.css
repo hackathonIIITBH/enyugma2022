@@ -20,12 +20,12 @@ body{
     left: 17%;
     top: 5%;
 }
-.empty_container{
+/* .empty_container{
     background: transparent;
     color: transparent;
     height: 10px;
     width: 500px;
-}
+} */
 .container_fest{
     background-color: transparent;
     height: 35vh;
