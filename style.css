@@ -3,6 +3,7 @@ body{
     background:url("./assets/stars.jpg");
     background-size: cover;
     overflow: hidden;
+    cursor: none;
 }
 .container{
     background-color: white;
