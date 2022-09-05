@@ -11,6 +11,7 @@ body{
     position: absolute;
 	width: 9vw;
     height: 14vh;
+    /* top: -1%; */
     left: 2%;
     border-radius:0 0 10px 10px ;
 }
@@ -21,12 +22,12 @@ body{
     left: 17%;
     top: 5%;
 }
-/* .empty_container{
+.empty_container{
     background: transparent;
     color: transparent;
     height: 10px;
     width: 500px;
-} */
+}
 .container_fest{
     background-color: transparent;
     height: 35vh;
@@ -38,4 +39,100 @@ body{
 .fest_tech{
     position: relative;
     width: 80%;
+}
+
+
+
+@media screen and (max-width:1100px) {
+    .container{
+        background-color: white;
+        color: white;
+        position: absolute;
+        width: 9vw;
+        height: 13vh;
+        /* top: -1%; */
+        left: 2%;
+        border-radius:0 0 10px 10px ;
+    }
+}
+@media screen and (max-width:901px) {
+    .container{
+        background-color: white;
+        color: white;
+        position: absolute;
+        width: 9vw;
+        height: 11vh;
+        /* top: -1%; */
+        left: 2%;
+        border-radius:0 0 10px 10px ;
+    }
+}
+@media screen and (max-width:751px) {
+    .container{
+        background-color: white;
+        color: white;
+        position: absolute;
+        width: 9vw;
+        height: 10vh;
+        /* top: -1%; */
+        left: 2%;
+        border-radius:0 0 10px 10px ;
+    }
+}
+@media screen and (max-width:673px) {
+    .container{
+        background-color: white;
+        color: white;
+        position: absolute;
+        width: 9vw;
+        height: 9vh;
+        /* top: -1%; */
+        left: 2%;
+        border-radius:0 0 10px 10px ;
+    }
+    .logo_clg{
+        width: fit-content;
+        position: relative;
+        width: 64%;
+        left: 17%;
+        top: 8%;
+    }
+}
+@media screen and (max-width:426px) {
+    .container{
+        background-color: white;
+        color: white;
+        position: absolute;
+        width: 9vw;
+        height: 8vh;
+        /* top: -1%; */
+        left: 2%;
+        border-radius:0 0 10px 10px ;
+    }
+    .logo_clg{
+        width: fit-content;
+        position: relative;
+        width: 67%;
+        left: 17%;
+        top: 15%;
+    }
+}
+@media screen and (max-width:376px) {
+    .container{
+        background-color: white;
+        color: white;
+        position: absolute;
+        width: 9vw;
+        height: 7vh;
+        /* top: -1%; */
+        left: 2%;
+        border-radius:0 0 10px 10px ;
+    }
+    .logo_clg{
+        width: fit-content;
+        position: relative;
+        width: 67%;
+        left: 17%;
+        top: 15%;
+    }
 }
