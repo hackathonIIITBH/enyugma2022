@@ -49,7 +49,7 @@ body{
     height: 25vh;
     width: 35vw;
     position: absolute;
-    top: 32%;
+    top: 20%;
     left: 64%;
     display: flex;
     flex-direction: row;
@@ -110,7 +110,7 @@ body{
     position: absolute;
     width: 35vw;
     height: 14vh;
-    top: 26%;
+    top: 15%;
     left: 64%;
 }
 .wrapper{
@@ -200,7 +200,7 @@ body{
         height: 25vh;
         width: 35vw;
         position: absolute;
-        top: 37%;
+        top: 27%;
         left: 34%;
         display: flex;
         flex-direction: row;
@@ -208,7 +208,7 @@ body{
     .days_container{
         position: relative;
         background-color: white;
-        height: 10vh;
+        height: 12vh;
         width: 6vw;
         border-radius: 8px;
         box-shadow: 3px 3px 3px grey;
@@ -238,7 +238,7 @@ body{
         position: absolute;
         width: 35vw;
         height: 14vh;
-        top: 37%;
+        top: 23%;
         left: 34.5%;
     }
     .main h1{
@@ -264,6 +264,16 @@ body{
         /* top: -1%; */
         left: 2%;
         border-radius:0 0 10px 10px ;
+    }
+    .container_timer{
+        background-color: transparent;
+        height: 25vh;
+        width: 35vw;
+        position: absolute;
+        top: 30%;
+        left: 34%;
+        display: flex;
+        flex-direction: row;
     }
     .days_container{
         position: relative;
@@ -301,7 +311,7 @@ body{
         position: absolute;
         width: 35vw;
         height: 14vh;
-        top: 34.6%;
+        top: 28%;
         left: 34.5%;
     }
     .main h1{
@@ -340,6 +350,16 @@ body{
         flex-direction: column;
         justify-content: space-between;
     }
+    .container_timer{
+        background-color: transparent;
+        height: 25vh;
+        width: 47vw;
+        position: absolute;
+        top: 31%;
+        left: 28%;
+        display: flex;
+        flex-direction: row;
+    }
     .days_text{
         font-size: 24px;
         padding-left: 11px;
@@ -365,7 +385,7 @@ body{
         position: absolute;
         width: 35vw;
         height: 14vh;
-        top: 35%;
+        top: 30%;
         left: 34.5%;
     }
     .main h1{
@@ -444,17 +464,17 @@ body{
     .container_timer{
         background-color: transparent;
         height: 25vh;
-        width: 50vw;
+        width: 70vw;
         position: absolute;
-        top: 37%;
-        left: 24%;
+        top: 25%;
+        left: 14%;
         display: flex;
         flex-direction: row;
     }
     .days_container{
         position: relative;
         background-color: white;
-        height: 10vh;
+        height: 8.9vh;
         width: 10vw;
         border-radius: 8px;
         box-shadow: 3px 3px 3px grey;
@@ -487,7 +507,7 @@ body{
         height: 25vh;
         width: 90vw;
         position: absolute;
-        top: 39%;
+        top: 33%;
         left: 5%;
         display: flex;
         flex-direction: row;
@@ -522,7 +542,7 @@ body{
         height: 25vh;
         width: 100vw;
         position: absolute;
-        top: 41%;
+        top: 23%;
         left: 0%;
         display: flex;
         flex-direction: row;
