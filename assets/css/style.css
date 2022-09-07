@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
 body{
     margin: 0px;
     background:url("../stars.jpg");
@@ -40,8 +44,145 @@ body{
     position: relative;
     width: 80%;
 }
+.container_timer{
+    background-color: transparent;
+    height: 25vh;
+    width: 35vw;
+    position: absolute;
+    top: 32%;
+    left: 64%;
+    display: flex;
+    flex-direction: row;
+}
+.days_container{
+    position: relative;
+    background-color: white;
+    height: 15vh;
+    width: 6vw;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px grey;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.days_text{
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    /* margin: auto; */
+    width: fit-content;
+    padding-left: 17px;
+    align-items: center;
+}
+.hours_text{
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    /* margin: auto; */
+    font-weight: 700;
+    padding-left: 28px;
+    align-items: center;
+}
+.minutes_text{
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    /* margin: auto; */
+    font-weight: 700;
+    padding-left: 24px;
+    align-items: center;
+}
+.sec_text{
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    /* margin: auto; */
+    font-weight: 700;
+    padding-left: 21px;
+    align-items: center;
+}
+.days_char{
+    font-size: 20px;
+    padding-left: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+}
 
+.starts_in_container{
+    background-color: transparent;
+    position: absolute;
+    width: 35vw;
+    height: 14vh;
+    top: 26%;
+    left: 64%;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    background:transparent;
+    font-size: 55px;
+}
+.main{
+    width: inherit;
+    height: inherit;
+    font-family: 'Yeseva One', cursive;
 
+}
+.main h1{
+    width: 70%;
+    /* width: 50%; */
+    margin: 0 auto 0 auto;
+    color: #ffffff;
+    font-size: 0.9em;
+    line-height: 1em;
+    text-align: center;
+    position: relative;
+    word-spacing: 6px;
+    letter-spacing: 4px;
+}
+.shadow-effect{
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.659);
+    /* 0px 3px 3px rgba(255, 255, 255, 0.25),
+    2px 6px 3px rgba(255, 255, 255, 0.24),
+    4px 9px 3px rgba(255, 255, 255, 0.23),
+    6px 12px 3px rgba(255, 255, 255, 0.22),
+    8px 15px 3px rgba(255, 255, 255, 0.21),
+    10px 18px 3px rgba(255, 255, 255, 0.2),
+    12px 21px 3px rgba(255, 255, 255, 0.19); */
+    /* 14px 24px 3px rgba(255, 255, 255, 0.18),
+    16px 27px 3px rgba(205, 60, 60, 0.17),
+    18px 30px 3px rgba(205, 60, 60, 0.16),
+    20px 33px 3px rgba(205, 60, 60, 0.15),
+    22px 36px 3px rgba(205, 60, 60, 0.14),
+    24px 39px 3px rgba(205, 60, 60, 0.13),
+    26px 42px 3px rgba(205, 60, 60, 0.12),
+    28px 45px 3px rgba(205, 60, 60, 0.11),
+    30px 48px 3px rgba(205, 60, 60, 0.1),
+    32px 51px 3px rgba(205, 60, 60, 0.09),
+    34px 54px 3px rgba(205, 60, 60, 0.08),
+    36px 57px 3px rgba(205, 60, 60, 0.06),
+    38px 60px 3px rgba(205, 60, 60, 0.05),
+    40px 63px 3px rgba(205, 60, 60, 0.04),
+    42px 66px 3px rgba(205, 60, 60, 0.03),
+    44px 69px 3px rgba(205, 60, 60, 0.02),
+    46px 72px 3px rgba(205, 60, 60, 0.01);; */
+}
+/* .tween-looper{
+    backface-visibility: hidden;
+    animation: pulse 1s infinite alternate ease-in-out;
+    animation-delay: 2s;
+    opacity: 0;
+} */
+
+/* @keyframes pulse {
+    from{
+        opacity: 0;
+        
+    }
+    to {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+} */
 
 @media screen and (max-width:1100px) {
     .container{
@@ -53,6 +194,64 @@ body{
         /* top: -1%; */
         left: 2%;
         border-radius:0 0 10px 10px ;
+    }
+    .container_timer{
+        background-color: transparent;
+        height: 25vh;
+        width: 35vw;
+        position: absolute;
+        top: 37%;
+        left: 34%;
+        display: flex;
+        flex-direction: row;
+    }
+    .days_container{
+        position: relative;
+        background-color: white;
+        height: 10vh;
+        width: 6vw;
+        border-radius: 8px;
+        box-shadow: 3px 3px 3px grey;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .days_text{
+        font-size: 35px;
+    }
+    .hours_text{
+        font-size: 35px;
+    }
+    .minutes_text{
+        font-size: 35px;
+    }
+    .sec_text{
+        font-size: 35px;
+    }
+    .days_char{
+        font-size: 17px;
+        padding-left: 11px;
+    }
+    .starts_in_container{
+        background-color: transparent;
+        position: absolute;
+        width: 35vw;
+        height: 14vh;
+        top: 37%;
+        left: 34.5%;
+    }
+    .main h1{
+        width: 89%;
+        /* width: 50%; */
+        margin: 0 auto 0 auto;
+        color: #ffffff;
+        font-size: 0.7em;
+        line-height: 1em;
+        text-align: center;
+        position: relative;
+        word-spacing: 6px;
+        letter-spacing: 4px;
     }
 }
 @media screen and (max-width:901px) {
@@ -66,6 +265,57 @@ body{
         left: 2%;
         border-radius:0 0 10px 10px ;
     }
+    .days_container{
+        position: relative;
+        background-color: white;
+        height: 10vh;
+        width: 6vw;
+        border-radius: 8px;
+        box-shadow: 3px 3px 3px grey;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .days_text{
+        font-size: 26px;
+    }
+    .hours_text{
+        font-size: 26px;
+        padding-left: 17px;
+    }
+    .minutes_text{
+        font-size: 26px;
+        padding-left: 17px;
+    }
+    .sec_text{
+        font-size: 26px;
+        padding-left: 17px;
+    }
+    .days_char{
+        font-size: 12px;
+        padding-left: 11px;
+    }
+    .starts_in_container{
+        background-color: transparent;
+        position: absolute;
+        width: 35vw;
+        height: 14vh;
+        top: 34.6%;
+        left: 34.5%;
+    }
+    .main h1{
+        width: 89%;
+        /* width: 50%; */
+        margin: 0 auto 0 auto;
+        color: #ffffff;
+        font-size: 0.6em;
+        line-height: 1em;
+        text-align: center;
+        position: relative;
+        word-spacing: 6px;
+        letter-spacing: 4px;
+    }
 }
 @media screen and (max-width:751px) {
     .container{
@@ -77,6 +327,58 @@ body{
         /* top: -1%; */
         left: 2%;
         border-radius:0 0 10px 10px ;
+    }
+    .days_container{
+        position: relative;
+        background-color: white;
+        height: 10vh;
+        width: 6vw;
+        border-radius: 8px;
+        box-shadow: 3px 3px 3px grey;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .days_text{
+        font-size: 24px;
+        padding-left: 11px;
+    }
+    .hours_text{
+        font-size: 24px;
+        padding-left: 17px;
+    }
+    .minutes_text{
+        font-size: 26px;
+        padding-left: 12px;
+    }
+    .sec_text{
+        font-size: 26px;
+        padding-left: 12px;
+    }
+    .days_char{
+        font-size: 9.5px;
+        padding-left: 10px;
+    }
+    .starts_in_container{
+        background-color: transparent;
+        position: absolute;
+        width: 35vw;
+        height: 14vh;
+        top: 35%;
+        left: 34.5%;
+    }
+    .main h1{
+        width: 89%;
+        /* width: 50%; */
+        margin: 0 auto 0 auto;
+        color: #ffffff;
+        font-size: 0.55em;
+        line-height: 1em;
+        text-align: center;
+        position: relative;
+        word-spacing: 6px;
+        letter-spacing: 4px;
     }
 }
 @media screen and (max-width:673px) {
@@ -97,6 +399,26 @@ body{
         left: 17%;
         top: 8%;
     }
+    .days_text{
+        font-size: 24px;
+        padding-left: 11px;
+    }
+    .hours_text{
+        font-size: 24px;
+        padding-left: 17px;
+    }
+    .minutes_text{
+        font-size: 26px;
+        padding-left: 9px;
+    }
+    .sec_text{
+        font-size: 26px;
+        padding-left: 9px;
+    }
+    .days_char{
+        font-size: 9.5px;
+        padding-left: 10px;
+    }
 }
 @media screen and (max-width:426px) {
     .container{
@@ -116,6 +438,31 @@ body{
         left: 17%;
         top: 15%;
     }
+    .starts_in_container{
+        display: none;
+    }
+    .container_timer{
+        background-color: transparent;
+        height: 25vh;
+        width: 50vw;
+        position: absolute;
+        top: 37%;
+        left: 24%;
+        display: flex;
+        flex-direction: row;
+    }
+    .days_container{
+        position: relative;
+        background-color: white;
+        height: 10vh;
+        width: 10vw;
+        border-radius: 8px;
+        box-shadow: 3px 3px 3px grey;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 @media screen and (max-width:376px) {
     .container{
@@ -134,5 +481,62 @@ body{
         width: 67%;
         left: 17%;
         top: 15%;
+    }
+    .container_timer{
+        background-color: transparent;
+        height: 25vh;
+        width: 55vw;
+        position: absolute;
+        top: 37%;
+        left: 24%;
+        display: flex;
+        flex-direction: row;
+    }
+    .days_container{
+        position: relative;
+        background-color: white;
+        height: 10vh;
+        width: 11vw;
+        border-radius: 8px;
+        box-shadow: 3px 3px 3px grey;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:321px) {
+    .container{
+        background-color: white;
+        color: white;
+        position: absolute;
+        width: 9vw;
+        height: 6vh;
+        /* top: -1%; */
+        left: 2%;
+        border-radius:0 0 10px 10px ;
+    }
+    .container_timer{
+        background-color: transparent;
+        height: 25vh;
+        width: 100vw;
+        position: absolute;
+        top: 41%;
+        left: 0%;
+        display: flex;
+        flex-direction: row;
+    }
+    .days_container{
+        position: relative;
+        background-color: white;
+        height: 10vh;
+        width: 14vw;
+        border-radius: 8px;
+        box-shadow: 3px 3px 3px grey;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
