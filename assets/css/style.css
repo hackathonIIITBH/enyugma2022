@@ -470,7 +470,7 @@ body{
         color: white;
         position: absolute;
         width: 9vw;
-        height: 7vh;
+        height: 5.5vh;
         /* top: -1%; */
         left: 2%;
         border-radius:0 0 10px 10px ;
@@ -485,17 +485,17 @@ body{
     .container_timer{
         background-color: transparent;
         height: 25vh;
-        width: 55vw;
+        width: 90vw;
         position: absolute;
-        top: 37%;
-        left: 24%;
+        top: 39%;
+        left: 5%;
         display: flex;
         flex-direction: row;
     }
     .days_container{
         position: relative;
         background-color: white;
-        height: 10vh;
+        height: 9vh;
         width: 11vw;
         border-radius: 8px;
         box-shadow: 3px 3px 3px grey;
