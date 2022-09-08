@@ -212,7 +212,7 @@ body{
 }*/
 :root {
     --clr-neon: white;
-    --clr-bg: hsl(323 21% 16%);
+    --clr-bg: hsl(323 11% 16%);
   }
   .glow-on-hover {
     font-size: 2rem;
@@ -227,7 +227,7 @@ body{
     position: relative;
     text-align: center;
     top: 50vh;
-    left: 71vw;
+    left: 72.3vw;
     font-family: 'Acme', sans-serif;
 }
   /*
@@ -271,7 +271,7 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    box-shadow: 0 0 0.5em 0.5em var(--clr-neon);
     opacity: 0;
     background-color: var(--clr-neon);
     z-index: -1;
@@ -282,6 +282,7 @@ body{
   .glow-on-hover:focus {
     color: var(--clr-bg);
     text-shadow: none;
+    cursor: none;
   }
   
   .glow-on-hover:hover::before,
