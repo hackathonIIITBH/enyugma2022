@@ -2,13 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 body{
     margin: 0px;
     /*background: #191d1e;*/
     background: url("../stars.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     cursor: none;
+}
+
+#canvas{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    z-index: -1;
 }
 .container{
     background-color: white;
@@ -57,8 +67,8 @@ body{
     height: 25vh;
     width: 35vw;
     position: absolute;
-    top: 20%;
-    left: 64%;
+    top: 17%;
+    left: 63.7%;
     display: flex;
     flex-direction: row;
 }
@@ -118,7 +128,7 @@ body{
     position: absolute;
     width: 35vw;
     height: 14vh;
-    top: 15%;
+    top: 10%;
     left: 64%;
 }
 .wrapper{
@@ -215,7 +225,7 @@ body{
     --clr-bg: hsl(323 11% 16%);
   }
   .glow-on-hover {
-    font-size: 2rem;
+    font-size: 1.8rem;
     cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon);
@@ -226,9 +236,9 @@ body{
     box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
     position: relative;
     text-align: center;
-    top: 50vh;
+    top: 47vh;
     left: 72.3vw;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Fredoka One', cursive;
 }
   /*
 .glow-on-hover {
@@ -338,6 +348,9 @@ body{
       opacity: 1;
     }
 } */
+#particles-js{
+    overflow: hidden;
+}
 
 @media screen and (max-width:1100px) {
     .container{
@@ -355,7 +368,7 @@ body{
         height: 25vh;
         width: 35vw;
         position: absolute;
-        top: 27%;
+        top: 22%;
         left: 34%;
         display: flex;
         flex-direction: row;
@@ -374,18 +387,22 @@ body{
     }
     .days_text{
         font-size: 35px;
+        /* padding-left: 11px; */
     }
     .hours_text{
         font-size: 35px;
+        padding-left: 17px;
     }
     .minutes_text{
         font-size: 35px;
+        padding-left: 17px;
     }
     .sec_text{
         font-size: 35px;
+        padding-left: 17px;
     }
     .days_char{
-        font-size: 17px;
+        font-size: 15px;
         padding-left: 11px;
     }
     .starts_in_container{
@@ -393,7 +410,7 @@ body{
         position: absolute;
         width: 35vw;
         height: 14vh;
-        top: 23%;
+        top: 19%;
         left: 34.5%;
     }
     .main h1{
@@ -401,7 +418,7 @@ body{
         /* width: 50%; */
         margin: 0 auto 0 auto;
         color: #ffffff;
-        font-size: 0.7em;
+        font-size: 0.65em;
         line-height: 1em;
         text-align: center;
         position: relative;
@@ -412,8 +429,37 @@ body{
         top: 50vh;
         left: 38vw;
     }
+    .glow-on-hover {
+        font-size: 1.4rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--clr-neon);
+        border: var(--clr-neon) 0.125em solid;
+        padding: 0.25em 1em;
+        border-radius: 0.25em;
+        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+        position: relative;
+        text-align: center;
+        top: 48vh;
+        left: 41.6vw;
+        font-family: 'Fredoka One', cursive;
+    }
+    /* #canvas{
+        display: none;
+    } */
 }
 @media screen and (max-width:901px) {
+    body{
+        margin: 0px;
+        /*background: #191d1e;*/
+        background: url("../stars1100px.jpg");
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+        overflow: hidden;
+        height:100%;
+        cursor: none;
+    }
     .container{
         background-color: white;
         color: white;
@@ -429,8 +475,8 @@ body{
         height: 25vh;
         width: 35vw;
         position: absolute;
-        top: 30%;
-        left: 34%;
+        top: 15%;
+        left: 62%;
         display: flex;
         flex-direction: row;
     }
@@ -451,7 +497,7 @@ body{
     }
     .hours_text{
         font-size: 26px;
-        padding-left: 17px;
+        padding-left: 16px;
     }
     .minutes_text{
         font-size: 26px;
@@ -470,15 +516,15 @@ body{
         position: absolute;
         width: 35vw;
         height: 14vh;
-        top: 28%;
-        left: 34.5%;
+        top: 14%;
+        left: 62.3%;
     }
     .main h1{
         width: 89%;
         /* width: 50%; */
         margin: 0 auto 0 auto;
         color: #ffffff;
-        font-size: 0.6em;
+        font-size: 0.5em;
         line-height: 1em;
         text-align: center;
         position: relative;
@@ -486,10 +532,21 @@ body{
         letter-spacing: 4px;
     }
     .glow-on-hover {
-        top: 55vh;
-        left: 33vw;
+        font-size: 1.1rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--clr-neon);
+        border: var(--clr-neon) 0.125em solid;
+        padding: 0.25em 1em;
+        border-radius: 0.25em;
+        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+        position: relative;
+        text-align: center;
+        top: 40vh;
+        left: 70.3vw;
+        font-family: 'Fredoka One', cursive;
     }
-    
 }
 @media screen and (max-width:751px) {
     .container{
@@ -503,8 +560,20 @@ body{
         border-radius:0 0 10px 10px ;
     }
     .glow-on-hover {
-        top: 54vh;
-        left: 32vw;
+        font-size: 1.09rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--clr-neon);
+        border: var(--clr-neon) 0.125em solid;
+        padding: 0.25em 1em;
+        border-radius: 0.25em;
+        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+        position: relative;
+        text-align: center;
+        top: 44vh;
+        left: 67vw;
+        font-family: 'Fredoka One', cursive;
     }
     .days_container{
         position: relative;
@@ -521,10 +590,10 @@ body{
     .container_timer{
         background-color: transparent;
         height: 25vh;
-        width: 47vw;
+        width: 37vw;
         position: absolute;
-        top: 31%;
-        left: 28%;
+        top: 20%;
+        left: 60%;
         display: flex;
         flex-direction: row;
     
@@ -536,11 +605,11 @@ body{
     }
     .hours_text{
         font-size: 24px;
-        padding-left: 17px;
+        padding-left: 11px;
     }
     .minutes_text{
         font-size: 26px;
-        padding-left: 12px;
+        padding-left: 11px;
     }
     .sec_text{
         font-size: 26px;
@@ -555,15 +624,15 @@ body{
         position: absolute;
         width: 35vw;
         height: 14vh;
-        top: 30%;
-        left: 34.5%;
+        top: 18.5%;
+        left: 61%;
     }
     .main h1{
         width: 89%;
         /* width: 50%; */
         margin: 0 auto 0 auto;
         color: #ffffff;
-        font-size: 0.55em;
+        font-size: 0.47em;
         line-height: 1em;
         text-align: center;
         position: relative;
@@ -583,10 +652,22 @@ body{
         border-radius:0 0 10px 10px ;
     }
     .glow-on-hover {
-        top: 54vh;
-        left: 34vw;
         font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--clr-neon);
+        border: var(--clr-neon) 0.125em solid;
+        padding: 0.25em 1em;
+        border-radius: 0.25em;
+        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+        position: relative;
+        text-align: center;
+        top: 44vh;
+        left: 67vw;
+        font-family: 'Fredoka One', cursive;
     }
+    
     .logo_clg{
         width: fit-content;
         position: relative;
@@ -600,7 +681,7 @@ body{
     }
     .hours_text{
         font-size: 24px;
-        padding-left: 17px;
+        padding-left: 9px;
     }
     .minutes_text{
         font-size: 26px;
@@ -612,16 +693,48 @@ body{
     }
     .days_char{
         font-size: 9.5px;
-        padding-left: 10px;
+        padding-left: 8.5px;
+    }
+    .starts_in_container{
+        background-color: transparent;
+        position: absolute;
+        width: 35vw;
+        height: 14vh;
+        top: 18.5%;
+        left: 61.5%;
+    }
+    .main h1{
+        width: 89%;
+        /* width: 50%; */
+        margin: 0 auto 0 auto;
+        color: #ffffff;
+        font-size: 0.47em;
+        line-height: 1em;
+        text-align: center;
+        position: relative;
+        word-spacing: 6px;
+        letter-spacing: 4px;
     }
 }
 @media screen and (max-width:426px) {
+    body{
+        margin: 0px;
+        /*background: #191d1e;*/
+        background: url("../mobilestars.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        cursor: none;
+    }
+    #canvas{
+        display: none;
+    }
     .container{
         background-color: white;
         color: white;
         position: absolute;
         width: 9vw;
-        height: 8vh;
+        height: 7vh;
         /* top: -1%; */
         left: 2%;
         border-radius:0 0 10px 10px ;
@@ -635,21 +748,35 @@ body{
     }
     .starts_in_container{
         display: none;
+        background-color: transparent;
     }
     .container_timer{
         background-color: transparent;
         height: 25vh;
         width: 70vw;
         position: absolute;
-        top: 25%;
+        top: 46%;
         left: 14%;
         display: flex;
         flex-direction: row;
     }
     .glow-on-hover {
-        top: 54vh;
-        left: 18vw;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--clr-neon);
+        border: var(--clr-neon) 0.125em solid;
+        padding: 0.25em 1em;
+        border-radius: 0.25em;
+        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+        position: relative;
+        text-align: center;
+        top: 74vh;
+        left: 32vw;
+        font-family: 'Fredoka One', cursive;
     }
+    
     .days_container{
         position: relative;
         background-color: white;
@@ -686,7 +813,7 @@ body{
         height: 25vh;
         width: 90vw;
         position: absolute;
-        top: 33%;
+        top: 43%;
         left: 5%;
         display: flex;
         flex-direction: row;
@@ -702,6 +829,22 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+    .glow-on-hover {
+        font-size: 1.1rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--clr-neon);
+        border: var(--clr-neon) 0.125em solid;
+        padding: 0.25em 1em;
+        border-radius: 0.25em;
+        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+        position: relative;
+        text-align: center;
+        top: 75vh;
+        left: 28vw;
+        font-family: 'Fredoka One', cursive;
     }
 }
 
@@ -719,23 +862,59 @@ body{
     .container_timer{
         background-color: transparent;
         height: 25vh;
-        width: 100vw;
+        width: 75vw;
         position: absolute;
-        top: 23%;
-        left: 0%;
+        top: 43%;
+        left: 12%;
         display: flex;
         flex-direction: row;
     }
     .days_container{
         position: relative;
         background-color: white;
-        height: 10vh;
-        width: 14vw;
+        height: 8vh;
+        width: 12vw;
         border-radius: 8px;
         box-shadow: 3px 3px 3px grey;
         margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+    .glow-on-hover {
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--clr-neon);
+        border: var(--clr-neon) 0.125em solid;
+        padding: 0.25em 1em;
+        border-radius: 0.25em;
+        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+        position: relative;
+        text-align: center;
+        top: 75vh;
+        left: 27.5vw;
+        font-family: 'Fredoka One', cursive;
+    }
+    .days_text{
+        font-size: 19px;
+        padding-left: 11px;
+    }
+    .hours_text{
+        font-size: 19px;
+        padding-left: 11px;
+    }
+    .minutes_text{
+        font-size: 19px;
+        padding-left: 11px;
+    }
+    .sec_text{
+        font-size: 19px;
+        padding-left: 11px;
+    }
+    .days_char{
+        font-size: 7px;
+        padding-left: 10px;
     }
 }
