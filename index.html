@@ -125,8 +125,8 @@
     <script>
         var tl = gsap.timeline({ defaults: { duartion: 1 } });
 
-        tl.from(".container", { duration: 2, ease: "bounce.out", y: -50, opacity: 0 })
-            .from(".logo_clg", { duration: 1.5, delay: 0.5, opacity: 0 })
+        tl.from(".container", { duration: 2,delay: 5, ease: "bounce.out", y: -50, opacity: 0 })
+            .from(".logo_clg", { duration: 1.5, delay: 2, opacity: 0 })
             .from(".starts_in_container", { duration: 3.5, opacity: 0, ease: "elastic.out(1, 0.1)", y: -100 })
             .from(".days_container", { duration: 2.5, ease: "bounce.out", x: 100, opacity: 0 })
             .from(".hr1", { delay: 0.5 })
