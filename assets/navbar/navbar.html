@@ -1,0 +1,129 @@
+<!-- poori website body class mein honi chahiye -->
+
+<!DOCTYPE html>
+<html class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 max-scale=1.0"
+    />
+
+    <link
+      rel="icon"
+      href="https://cdn.discordapp.com/attachments/734127839544344678/984115861445034034/Untitled32_20220608163112.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- jsquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- stellar.js -->
+    <script src="./jquery.stellar.min.js"></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <link id="html-css" rel="stylesheet" href="./light.css" />
+  </head>
+
+  <body>
+    <script src="./home.js"></script>
+    <div class="body">
+      <br><br><br><br><br><br><br><br>
+      <h1>Hi This is ENUYGMA 2022</h1>
+      <div class="settingbar">
+        <div class="closebtn" style="--i: 7" onclick="closesettingbar()">
+          <i class="material-icons">close</i>
+        </div>
+        <div style="--top: 70px">
+          <i class="material-icons">animation</i><i>Home</i>
+        </div>
+        <div style="--top: 170px">
+          <i class="material-icons">animation</i><i>About Section</i>
+        </div>
+        <div style="--top: 270px">
+          <i class="material-icons">animation</i><i>Hero Section</i>
+        </div>
+        <div style="--top: 370px">
+          <i class="material-icons">animation</i><i>Event Section</i>
+        </div>
+        <div style="--top: 470px">
+          <i class="material-icons">filter_vintage</i>
+          <i class="text">Contact Us</i>
+        </div>
+      </div>
+      <div class="displaybox">
+        <div class="navbar">
+          <div class="navbarbtns">
+            <div class="link">
+              <div class="forwarda"></div>
+              <a class="active" href="./index.html">Home</a>
+              <div class="backwarda"></div>
+            </div>
+            <div class="link">
+              <div class="forwarda"></div>
+              <a href="#about">About Section</a>
+              <div class="backwarda"></div>
+            </div>
+            <div class="link">
+              <div class="forwarda"></div>
+              <a href="#home">Hero Section</a>
+              <div class="backwarda"></div>
+            </div>
+            <div class="link">
+              <div class="forwarda"></div>
+              <a href="#hero">Event Section</a>
+              <div class="backwarda"></div>
+            </div>
+          </div>
+          <div class="settings">
+            <div class="sets">
+              <div class="setbtn" id="setb" onclick="sets(this)">
+                <span class="material-symbols-outlined">
+                  menu
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="footer">Copyright to be written</div> -->
+    </div>
+    <script>
+      $.stellar({
+        horizontalScrolling: false,
+        verticalScrolling: true,
+        verticalOffset: 0,
+        responsive: false,
+        hideDistantElements: false,
+        horizontalOffset: 0,
+        parallaxBackgrounds: true,
+        parallaxElements: true,
+        hideElement: function (elem) {
+          $(elem).hide();
+        },
+        showElement: function (elem) {
+          $(elem).show();
+        },
+      });
+    </script>
+  </body>
+</html>
