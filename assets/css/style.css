@@ -28,6 +28,19 @@ body {
   background-color: transparent;
   z-index: -1;
 }
+.techfest_logo{
+    background-color: transparent;
+    position: absolute;
+    height: 40vh;
+    width: 70vw;
+    top: 12%;
+}
+.fest_logo_img{
+    position: relative;
+    width: 50%;
+    left: 20%;
+}
+
 .container {
   background-color: white;
   color: white;
@@ -373,10 +386,10 @@ body {
   .container_timer {
     background-color: transparent;
     height: 25vh;
-    width: 35vw;
+    width: 30vw;
     position: absolute;
-    top: 22%;
-    left: 34%;
+    top: 15%;
+    left: 67%;
     display: flex;
     flex-direction: row;
   }
@@ -417,15 +430,15 @@ body {
     position: absolute;
     width: 35vw;
     height: 14vh;
-    top: 19%;
-    left: 34.5%;
+    top: 12%;
+    left: 64.5%;
   }
   .main h1 {
     width: 89%;
     /* width: 50%; */
     margin: 0 auto 0 auto;
     color: #ffffff;
-    font-size: 0.65em;
+    font-size: 0.55em;
     line-height: 1em;
     text-align: center;
     position: relative;
@@ -437,7 +450,7 @@ body {
     left: 38vw;
   }
   .glow-on-hover {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon);
@@ -448,8 +461,8 @@ body {
     box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
     position: relative;
     text-align: center;
-    top: 48vh;
-    left: 41.6vw;
+    top: 40vh;
+    left: 72.5vw;
     font-family: "Fredoka One", cursive;
   }
   /* #canvas{
@@ -467,6 +480,18 @@ body {
     height: 100%;
     cursor: none;
   }
+  .techfest_logo{
+    background-color: transparent;
+    position: absolute;
+    height: 40vh;
+    width: 70vw;
+    top: 13%;
+}
+.fest_logo_img{
+    position: relative;
+    width: 55%;
+    left: 20%;
+}
   .container {
     background-color: white;
     color: white;
@@ -483,7 +508,7 @@ body {
     width: 35vw;
     position: absolute;
     top: 15%;
-    left: 62%;
+    left: 64%;
     display: flex;
     flex-direction: row;
   }
@@ -524,7 +549,7 @@ body {
     width: 35vw;
     height: 14vh;
     top: 14%;
-    left: 62.3%;
+    left: 65%;
   }
   .main h1 {
     width: 89%;
@@ -551,7 +576,7 @@ body {
     position: relative;
     text-align: center;
     top: 40vh;
-    left: 70.3vw;
+    left: 73vw;
     font-family: "Fredoka One", cursive;
   }
 }
@@ -566,6 +591,18 @@ body {
     left: 2%;
     border-radius: 0 0 10px 10px;
   }
+  .techfest_logo{
+    background-color: transparent;
+    position: absolute;
+    height: 40vh;
+    width: 70vw;
+    top: 19%;
+   }
+   .fest_logo_img{
+    position: relative;
+    width: 55%;
+    left: 5%;
+   }
   .glow-on-hover {
     font-size: 1.09rem;
     cursor: pointer;
@@ -731,6 +768,18 @@ body {
     overflow: hidden;
     cursor: none;
   }
+  .techfest_logo{
+    background-color: transparent;
+    position: absolute;
+    height: 40vh;
+    width: 100vw;
+    top: 19%;
+   }
+   .fest_logo_img{
+    position: relative;
+    width: 65%;
+    left: 17%;
+   }
   #canvas {
     display: none;
   }
@@ -806,6 +855,18 @@ body {
     left: 2%;
     border-radius: 0 0 10px 10px;
   }
+  .techfest_logo{
+    background-color: transparent;
+    position: absolute;
+    height: 40vh;
+    width: 100vw;
+    top: 19%;
+   }
+   .fest_logo_img{
+    position: relative;
+    width: 69%;
+    left: 16%;
+   }
   .logo_clg {
     width: fit-content;
     position: relative;

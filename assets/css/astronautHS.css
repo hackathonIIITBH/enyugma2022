@@ -7,8 +7,8 @@
     width: 20%;
     height: 420px;
     position: absolute;
-    top: 80%;
-    left: 20%;
+    top: 98%;
+    left: 5%;
     transform: translate(-50%, -50%);
     /* background: url("../stars1100px.jpg"); */
     background-color: transparent;
@@ -361,5 +361,11 @@
     }
     to {
       transform: translateY(-50%) translateX(-50%);
+    }
+  }
+
+  @media screen and (max-width:426px) {
+    .astronautbgcont{
+      display: none;
     }
   }
