@@ -1,161 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-body{
-    margin: 0px;
-    /*background: #191d1e;*/
-    background: url("../stars.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    cursor: none;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+body {
+  margin: 0px;
+  /*background: #191d1e;*/
+  background: url("../stars.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  cursor: none;
 }
 
-#canvas{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: transparent;
-    z-index: -1;
+.loader {
+  z-index: 10;
 }
-.container{
-    background-color: white;
-    color: white;
-    position: absolute;
-	width: 9vw;
-    height: 14vh;
-    /* top: -1%; */
-    left: 2%;
-    border-radius:0 0 10px 10px ;
+
+.landing-page {
+    display: none;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
+  z-index: -1;
+}
+.container {
+  background-color: white;
+  color: white;
+  position: absolute;
+  width: 9vw;
+  height: 14vh;
+  /* top: -1%; */
+  left: 2%;
+  border-radius: 0 0 10px 10px;
 }
 #particles-js {
-    display: block;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-  }
-.logo_clg{
-    width: fit-content;
-    position: relative;
-    width: 64%;
-    left: 17%;
-    top: 5%;
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
 }
-.empty_container{
-    background: transparent;
-    color: transparent;
-    height: 10px;
-    width: 500px;
+.logo_clg {
+  width: fit-content;
+  position: relative;
+  width: 64%;
+  left: 17%;
+  top: 5%;
 }
-.container_fest{
-    background-color: transparent;
-    height: 35vh;
-    width: 40vw;
-    position: absolute;
-    top: 100px;
-    left: 220px;
+.empty_container {
+  background: transparent;
+  color: transparent;
+  height: 10px;
+  width: 500px;
 }
-.fest_tech{
-    position: relative;
-    width: 80%;
+.container_fest {
+  background-color: transparent;
+  height: 35vh;
+  width: 40vw;
+  position: absolute;
+  top: 100px;
+  left: 220px;
 }
-.container_timer{
-    background-color: transparent;
-    height: 25vh;
-    width: 35vw;
-    position: absolute;
-    top: 17%;
-    left: 63.7%;
-    display: flex;
-    flex-direction: row;
+.fest_tech {
+  position: relative;
+  width: 80%;
 }
-.days_container{
-    position: relative;
-    background-color: white;
-    height: 15vh;
-    width: 6vw;
-    border-radius: 8px;
-    box-shadow: 3px 3px 3px grey;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.container_timer {
+  background-color: transparent;
+  height: 25vh;
+  width: 35vw;
+  position: absolute;
+  top: 17%;
+  left: 63.7%;
+  display: flex;
+  flex-direction: row;
 }
-.days_text{
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    font-weight: 700;
-    /* margin: auto; */
-    width: fit-content;
-    padding-left: 17px;
-    align-items: center;
+.days_container {
+  position: relative;
+  background-color: white;
+  height: 15vh;
+  width: 6vw;
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px grey;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.hours_text{
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    /* margin: auto; */
-    font-weight: 700;
-    padding-left: 28px;
-    align-items: center;
+.days_text {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 700;
+  /* margin: auto; */
+  width: fit-content;
+  padding-left: 17px;
+  align-items: center;
 }
-.minutes_text{
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    /* margin: auto; */
-    font-weight: 700;
-    padding-left: 24px;
-    align-items: center;
+.hours_text {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  /* margin: auto; */
+  font-weight: 700;
+  padding-left: 28px;
+  align-items: center;
 }
-.sec_text{
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    /* margin: auto; */
-    font-weight: 700;
-    padding-left: 21px;
-    align-items: center;
+.minutes_text {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  /* margin: auto; */
+  font-weight: 700;
+  padding-left: 24px;
+  align-items: center;
 }
-.days_char{
-    font-size: 20px;
-    padding-left: 15px;
-    font-family: 'Josefin Sans', sans-serif;
+.sec_text {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  /* margin: auto; */
+  font-weight: 700;
+  padding-left: 21px;
+  align-items: center;
+}
+.days_char {
+  font-size: 20px;
+  padding-left: 15px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.starts_in_container{
-    background-color: transparent;
-    position: absolute;
-    width: 35vw;
-    height: 14vh;
-    top: 10%;
-    left: 64%;
+.starts_in_container {
+  background-color: transparent;
+  position: absolute;
+  width: 35vw;
+  height: 14vh;
+  top: 10%;
+  left: 64%;
 }
-.wrapper{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    overflow: hidden;
-    background:transparent;
-    font-size: 55px;
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  background: transparent;
+  font-size: 55px;
 }
-.main{
-    width: inherit;
-    height: inherit;
-    font-family: 'Yeseva One', cursive;
-
+.main {
+  width: inherit;
+  height: inherit;
+  font-family: "Yeseva One", cursive;
 }
-.main h1{
-    width: 70%;
-    /* width: 50%; */
-    margin: 0 auto 0 auto;
-    color: #ffffff;
-    font-size: 0.9em;
-    line-height: 1em;
-    text-align: center;
-    position: relative;
-    word-spacing: 6px;
-    letter-spacing: 4px;
+.main h1 {
+  width: 70%;
+  /* width: 50%; */
+  margin: 0 auto 0 auto;
+  color: #ffffff;
+  font-size: 0.9em;
+  line-height: 1em;
+  text-align: center;
+  position: relative;
+  word-spacing: 6px;
+  letter-spacing: 4px;
 }
 /*.glow-on-hover {
     width: 220px;
@@ -221,26 +228,26 @@ body{
     100% { background-position: 0 0; }
 }*/
 :root {
-    --clr-neon: white;
-    --clr-bg: hsl(323 11% 16%);
-  }
-  .glow-on-hover {
-    font-size: 1.8rem;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--clr-neon);
-    border: var(--clr-neon) 0.125em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.25em;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-    position: relative;
-    text-align: center;
-    top: 47vh;
-    left: 72.3vw;
-    font-family: 'Fredoka One', cursive;
+  --clr-neon: white;
+  --clr-bg: hsl(323 11% 16%);
 }
-  /*
+.glow-on-hover {
+  font-size: 1.8rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  position: relative;
+  text-align: center;
+  top: 47vh;
+  left: 72.3vw;
+  font-family: "Fredoka One", cursive;
+}
+/*
 .glow-on-hover {
     font-size: 4rem;
   
@@ -258,62 +265,62 @@ body{
   
     position: relative;
   }*/
-  
-  .glow-on-hover::before {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    background: var(--clr-neon);
-    top: 120%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  
-    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(1em);
-    opacity: 0.7;
-  }
-  
-  .glow-on-hover::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0 0.5em 0.5em var(--clr-neon);
-    opacity: 0;
-    background-color: var(--clr-neon);
-    z-index: -1;
-    transition: opacity 100ms linear;
-  }
-  
-  .glow-on-hover:hover,
-  .glow-on-hover:focus {
-    color: var(--clr-bg);
-    text-shadow: none;
-    cursor: none;
-  }
-  
-  .glow-on-hover:hover::before,
-  .glow-on-hover:focus::before {
-    opacity: 1;
-  }
-  .glow-on-hover:hover::after,
-  .glow-on-hover:focus::after {
-    opacity: 1;
-  }
-  
-.shadow-effect{
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.659);
-    /* 0px 3px 3px rgba(255, 255, 255, 0.25),
+
+.glow-on-hover::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-neon);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.glow-on-hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 0.5em 0.5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.glow-on-hover:hover,
+.glow-on-hover:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+  cursor: none;
+}
+
+.glow-on-hover:hover::before,
+.glow-on-hover:focus::before {
+  opacity: 1;
+}
+.glow-on-hover:hover::after,
+.glow-on-hover:focus::after {
+  opacity: 1;
+}
+
+.shadow-effect {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.659);
+  /* 0px 3px 3px rgba(255, 255, 255, 0.25),
     2px 6px 3px rgba(255, 255, 255, 0.24),
     4px 9px 3px rgba(255, 255, 255, 0.23),
     6px 12px 3px rgba(255, 255, 255, 0.22),
     8px 15px 3px rgba(255, 255, 255, 0.21),
     10px 18px 3px rgba(255, 255, 255, 0.2),
     12px 21px 3px rgba(255, 255, 255, 0.19); */
-    /* 14px 24px 3px rgba(255, 255, 255, 0.18),
+  /* 14px 24px 3px rgba(255, 255, 255, 0.18),
     16px 27px 3px rgba(205, 60, 60, 0.17),
     18px 30px 3px rgba(205, 60, 60, 0.16),
     20px 33px 3px rgba(205, 60, 60, 0.15),
@@ -348,573 +355,571 @@ body{
       opacity: 1;
     }
 } */
-#particles-js{
-    overflow: hidden;
+#particles-js {
+  overflow: hidden;
 }
 
-@media screen and (max-width:1100px) {
-    .container{
-        background-color: white;
-        color: white;
-        position: absolute;
-        width: 9vw;
-        height: 13vh;
-        /* top: -1%; */
-        left: 2%;
-        border-radius:0 0 10px 10px ;
-    }
-    .container_timer{
-        background-color: transparent;
-        height: 25vh;
-        width: 35vw;
-        position: absolute;
-        top: 22%;
-        left: 34%;
-        display: flex;
-        flex-direction: row;
-    }
-    .days_container{
-        position: relative;
-        background-color: white;
-        height: 12vh;
-        width: 6vw;
-        border-radius: 8px;
-        box-shadow: 3px 3px 3px grey;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .days_text{
-        font-size: 35px;
-        /* padding-left: 11px; */
-    }
-    .hours_text{
-        font-size: 35px;
-        padding-left: 17px;
-    }
-    .minutes_text{
-        font-size: 35px;
-        padding-left: 17px;
-    }
-    .sec_text{
-        font-size: 35px;
-        padding-left: 17px;
-    }
-    .days_char{
-        font-size: 15px;
-        padding-left: 11px;
-    }
-    .starts_in_container{
-        background-color: transparent;
-        position: absolute;
-        width: 35vw;
-        height: 14vh;
-        top: 19%;
-        left: 34.5%;
-    }
-    .main h1{
-        width: 89%;
-        /* width: 50%; */
-        margin: 0 auto 0 auto;
-        color: #ffffff;
-        font-size: 0.65em;
-        line-height: 1em;
-        text-align: center;
-        position: relative;
-        word-spacing: 6px;
-        letter-spacing: 4px;
-    }
-    .glow-on-hover {
-        top: 50vh;
-        left: 38vw;
-    }
-    .glow-on-hover {
-        font-size: 1.4rem;
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--clr-neon);
-        border: var(--clr-neon) 0.125em solid;
-        padding: 0.25em 1em;
-        border-radius: 0.25em;
-        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-        position: relative;
-        text-align: center;
-        top: 48vh;
-        left: 41.6vw;
-        font-family: 'Fredoka One', cursive;
-    }
-    /* #canvas{
+@media screen and (max-width: 1100px) {
+  .container {
+    background-color: white;
+    color: white;
+    position: absolute;
+    width: 9vw;
+    height: 13vh;
+    /* top: -1%; */
+    left: 2%;
+    border-radius: 0 0 10px 10px;
+  }
+  .container_timer {
+    background-color: transparent;
+    height: 25vh;
+    width: 35vw;
+    position: absolute;
+    top: 22%;
+    left: 34%;
+    display: flex;
+    flex-direction: row;
+  }
+  .days_container {
+    position: relative;
+    background-color: white;
+    height: 12vh;
+    width: 6vw;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px grey;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .days_text {
+    font-size: 35px;
+    /* padding-left: 11px; */
+  }
+  .hours_text {
+    font-size: 35px;
+    padding-left: 17px;
+  }
+  .minutes_text {
+    font-size: 35px;
+    padding-left: 17px;
+  }
+  .sec_text {
+    font-size: 35px;
+    padding-left: 17px;
+  }
+  .days_char {
+    font-size: 15px;
+    padding-left: 11px;
+  }
+  .starts_in_container {
+    background-color: transparent;
+    position: absolute;
+    width: 35vw;
+    height: 14vh;
+    top: 19%;
+    left: 34.5%;
+  }
+  .main h1 {
+    width: 89%;
+    /* width: 50%; */
+    margin: 0 auto 0 auto;
+    color: #ffffff;
+    font-size: 0.65em;
+    line-height: 1em;
+    text-align: center;
+    position: relative;
+    word-spacing: 6px;
+    letter-spacing: 4px;
+  }
+  .glow-on-hover {
+    top: 50vh;
+    left: 38vw;
+  }
+  .glow-on-hover {
+    font-size: 1.4rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: relative;
+    text-align: center;
+    top: 48vh;
+    left: 41.6vw;
+    font-family: "Fredoka One", cursive;
+  }
+  /* #canvas{
         display: none;
     } */
 }
-@media screen and (max-width:901px) {
-    body{
-        margin: 0px;
-        /*background: #191d1e;*/
-        background: url("../stars1100px.jpg");
-        /* background-repeat: no-repeat; */
-        background-size: cover;
-        overflow: hidden;
-        height:100%;
-        cursor: none;
-    }
-    .container{
-        background-color: white;
-        color: white;
-        position: absolute;
-        width: 9vw;
-        height: 11vh;
-        /* top: -1%; */
-        left: 2%;
-        border-radius:0 0 10px 10px ;
-    }
-    .container_timer{
-        background-color: transparent;
-        height: 25vh;
-        width: 35vw;
-        position: absolute;
-        top: 15%;
-        left: 62%;
-        display: flex;
-        flex-direction: row;
-    }
-    .days_container{
-        position: relative;
-        background-color: white;
-        height: 10vh;
-        width: 6vw;
-        border-radius: 8px;
-        box-shadow: 3px 3px 3px grey;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .days_text{
-        font-size: 26px;
-    }
-    .hours_text{
-        font-size: 26px;
-        padding-left: 16px;
-    }
-    .minutes_text{
-        font-size: 26px;
-        padding-left: 17px;
-    }
-    .sec_text{
-        font-size: 26px;
-        padding-left: 17px;
-    }
-    .days_char{
-        font-size: 12px;
-        padding-left: 11px;
-    }
-    .starts_in_container{
-        background-color: transparent;
-        position: absolute;
-        width: 35vw;
-        height: 14vh;
-        top: 14%;
-        left: 62.3%;
-    }
-    .main h1{
-        width: 89%;
-        /* width: 50%; */
-        margin: 0 auto 0 auto;
-        color: #ffffff;
-        font-size: 0.5em;
-        line-height: 1em;
-        text-align: center;
-        position: relative;
-        word-spacing: 6px;
-        letter-spacing: 4px;
-    }
-    .glow-on-hover {
-        font-size: 1.1rem;
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--clr-neon);
-        border: var(--clr-neon) 0.125em solid;
-        padding: 0.25em 1em;
-        border-radius: 0.25em;
-        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-        position: relative;
-        text-align: center;
-        top: 40vh;
-        left: 70.3vw;
-        font-family: 'Fredoka One', cursive;
-    }
+@media screen and (max-width: 901px) {
+  body {
+    margin: 0px;
+    /*background: #191d1e;*/
+    background: url("../stars1100px.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    overflow: hidden;
+    height: 100%;
+    cursor: none;
+  }
+  .container {
+    background-color: white;
+    color: white;
+    position: absolute;
+    width: 9vw;
+    height: 11vh;
+    /* top: -1%; */
+    left: 2%;
+    border-radius: 0 0 10px 10px;
+  }
+  .container_timer {
+    background-color: transparent;
+    height: 25vh;
+    width: 35vw;
+    position: absolute;
+    top: 15%;
+    left: 62%;
+    display: flex;
+    flex-direction: row;
+  }
+  .days_container {
+    position: relative;
+    background-color: white;
+    height: 10vh;
+    width: 6vw;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px grey;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .days_text {
+    font-size: 26px;
+  }
+  .hours_text {
+    font-size: 26px;
+    padding-left: 16px;
+  }
+  .minutes_text {
+    font-size: 26px;
+    padding-left: 17px;
+  }
+  .sec_text {
+    font-size: 26px;
+    padding-left: 17px;
+  }
+  .days_char {
+    font-size: 12px;
+    padding-left: 11px;
+  }
+  .starts_in_container {
+    background-color: transparent;
+    position: absolute;
+    width: 35vw;
+    height: 14vh;
+    top: 14%;
+    left: 62.3%;
+  }
+  .main h1 {
+    width: 89%;
+    /* width: 50%; */
+    margin: 0 auto 0 auto;
+    color: #ffffff;
+    font-size: 0.5em;
+    line-height: 1em;
+    text-align: center;
+    position: relative;
+    word-spacing: 6px;
+    letter-spacing: 4px;
+  }
+  .glow-on-hover {
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: relative;
+    text-align: center;
+    top: 40vh;
+    left: 70.3vw;
+    font-family: "Fredoka One", cursive;
+  }
 }
-@media screen and (max-width:751px) {
-    .container{
-        background-color: white;
-        color: white;
-        position: absolute;
-        width: 9vw;
-        height: 10vh;
-        /* top: -1%; */
-        left: 2%;
-        border-radius:0 0 10px 10px ;
-    }
-    .glow-on-hover {
-        font-size: 1.09rem;
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--clr-neon);
-        border: var(--clr-neon) 0.125em solid;
-        padding: 0.25em 1em;
-        border-radius: 0.25em;
-        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-        position: relative;
-        text-align: center;
-        top: 44vh;
-        left: 67vw;
-        font-family: 'Fredoka One', cursive;
-    }
-    .days_container{
-        position: relative;
-        background-color: white;
-        height: 10vh;
-        width: 6vw;
-        border-radius: 8px;
-        box-shadow: 3px 3px 3px grey;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .container_timer{
-        background-color: transparent;
-        height: 25vh;
-        width: 37vw;
-        position: absolute;
-        top: 20%;
-        left: 60%;
-        display: flex;
-        flex-direction: row;
-    
-    }
-    .days_text{
-        font-size: 24px;
-        padding-left: 11px;
-        
-    }
-    .hours_text{
-        font-size: 24px;
-        padding-left: 11px;
-    }
-    .minutes_text{
-        font-size: 26px;
-        padding-left: 11px;
-    }
-    .sec_text{
-        font-size: 26px;
-        padding-left: 12px;
-    }
-    .days_char{
-        font-size: 9.5px;
-        padding-left: 10px;
-    }
-    .starts_in_container{
-        background-color: transparent;
-        position: absolute;
-        width: 35vw;
-        height: 14vh;
-        top: 18.5%;
-        left: 61%;
-    }
-    .main h1{
-        width: 89%;
-        /* width: 50%; */
-        margin: 0 auto 0 auto;
-        color: #ffffff;
-        font-size: 0.47em;
-        line-height: 1em;
-        text-align: center;
-        position: relative;
-        word-spacing: 6px;
-        letter-spacing: 4px;
-    }
+@media screen and (max-width: 751px) {
+  .container {
+    background-color: white;
+    color: white;
+    position: absolute;
+    width: 9vw;
+    height: 10vh;
+    /* top: -1%; */
+    left: 2%;
+    border-radius: 0 0 10px 10px;
+  }
+  .glow-on-hover {
+    font-size: 1.09rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: relative;
+    text-align: center;
+    top: 44vh;
+    left: 67vw;
+    font-family: "Fredoka One", cursive;
+  }
+  .days_container {
+    position: relative;
+    background-color: white;
+    height: 10vh;
+    width: 6vw;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px grey;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .container_timer {
+    background-color: transparent;
+    height: 25vh;
+    width: 37vw;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    display: flex;
+    flex-direction: row;
+  }
+  .days_text {
+    font-size: 24px;
+    padding-left: 11px;
+  }
+  .hours_text {
+    font-size: 24px;
+    padding-left: 11px;
+  }
+  .minutes_text {
+    font-size: 26px;
+    padding-left: 11px;
+  }
+  .sec_text {
+    font-size: 26px;
+    padding-left: 12px;
+  }
+  .days_char {
+    font-size: 9.5px;
+    padding-left: 10px;
+  }
+  .starts_in_container {
+    background-color: transparent;
+    position: absolute;
+    width: 35vw;
+    height: 14vh;
+    top: 18.5%;
+    left: 61%;
+  }
+  .main h1 {
+    width: 89%;
+    /* width: 50%; */
+    margin: 0 auto 0 auto;
+    color: #ffffff;
+    font-size: 0.47em;
+    line-height: 1em;
+    text-align: center;
+    position: relative;
+    word-spacing: 6px;
+    letter-spacing: 4px;
+  }
 }
-@media screen and (max-width:673px) {
-    .container{
-        background-color: white;
-        color: white;
-        position: absolute;
-        width: 9vw;
-        height: 9vh;
-        /* top: -1%; */
-        left: 2%;
-        border-radius:0 0 10px 10px ;
-    }
-    .glow-on-hover {
-        font-size: 1rem;
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--clr-neon);
-        border: var(--clr-neon) 0.125em solid;
-        padding: 0.25em 1em;
-        border-radius: 0.25em;
-        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-        position: relative;
-        text-align: center;
-        top: 44vh;
-        left: 67vw;
-        font-family: 'Fredoka One', cursive;
-    }
-    
-    .logo_clg{
-        width: fit-content;
-        position: relative;
-        width: 64%;
-        left: 17%;
-        top: 8%;
-    }
-    .days_text{
-        font-size: 24px;
-        padding-left: 11px;
-    }
-    .hours_text{
-        font-size: 24px;
-        padding-left: 9px;
-    }
-    .minutes_text{
-        font-size: 26px;
-        padding-left: 9px;
-    }
-    .sec_text{
-        font-size: 26px;
-        padding-left: 9px;
-    }
-    .days_char{
-        font-size: 9.5px;
-        padding-left: 8.5px;
-    }
-    .starts_in_container{
-        background-color: transparent;
-        position: absolute;
-        width: 35vw;
-        height: 14vh;
-        top: 18.5%;
-        left: 61.5%;
-    }
-    .main h1{
-        width: 89%;
-        /* width: 50%; */
-        margin: 0 auto 0 auto;
-        color: #ffffff;
-        font-size: 0.47em;
-        line-height: 1em;
-        text-align: center;
-        position: relative;
-        word-spacing: 6px;
-        letter-spacing: 4px;
-    }
+@media screen and (max-width: 673px) {
+  .container {
+    background-color: white;
+    color: white;
+    position: absolute;
+    width: 9vw;
+    height: 9vh;
+    /* top: -1%; */
+    left: 2%;
+    border-radius: 0 0 10px 10px;
+  }
+  .glow-on-hover {
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: relative;
+    text-align: center;
+    top: 44vh;
+    left: 67vw;
+    font-family: "Fredoka One", cursive;
+  }
+
+  .logo_clg {
+    width: fit-content;
+    position: relative;
+    width: 64%;
+    left: 17%;
+    top: 8%;
+  }
+  .days_text {
+    font-size: 24px;
+    padding-left: 11px;
+  }
+  .hours_text {
+    font-size: 24px;
+    padding-left: 9px;
+  }
+  .minutes_text {
+    font-size: 26px;
+    padding-left: 9px;
+  }
+  .sec_text {
+    font-size: 26px;
+    padding-left: 9px;
+  }
+  .days_char {
+    font-size: 9.5px;
+    padding-left: 8.5px;
+  }
+  .starts_in_container {
+    background-color: transparent;
+    position: absolute;
+    width: 35vw;
+    height: 14vh;
+    top: 18.5%;
+    left: 61.5%;
+  }
+  .main h1 {
+    width: 89%;
+    /* width: 50%; */
+    margin: 0 auto 0 auto;
+    color: #ffffff;
+    font-size: 0.47em;
+    line-height: 1em;
+    text-align: center;
+    position: relative;
+    word-spacing: 6px;
+    letter-spacing: 4px;
+  }
 }
-@media screen and (max-width:426px) {
-    body{
-        margin: 0px;
-        /*background: #191d1e;*/
-        background: url("../mobilestars.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
-        cursor: none;
-    }
-    #canvas{
-        display: none;
-    }
-    .container{
-        background-color: white;
-        color: white;
-        position: absolute;
-        width: 9vw;
-        height: 7vh;
-        /* top: -1%; */
-        left: 2%;
-        border-radius:0 0 10px 10px ;
-    }
-    .logo_clg{
-        width: fit-content;
-        position: relative;
-        width: 67%;
-        left: 17%;
-        top: 15%;
-    }
-    .starts_in_container{
-        display: none;
-        background-color: transparent;
-    }
-    .container_timer{
-        background-color: transparent;
-        height: 25vh;
-        width: 70vw;
-        position: absolute;
-        top: 46%;
-        left: 14%;
-        display: flex;
-        flex-direction: row;
-    }
-    .glow-on-hover {
-        font-size: 1rem;
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--clr-neon);
-        border: var(--clr-neon) 0.125em solid;
-        padding: 0.25em 1em;
-        border-radius: 0.25em;
-        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-        position: relative;
-        text-align: center;
-        top: 74vh;
-        left: 32vw;
-        font-family: 'Fredoka One', cursive;
-    }
-    
-    .days_container{
-        position: relative;
-        background-color: white;
-        height: 8.9vh;
-        width: 10vw;
-        border-radius: 8px;
-        box-shadow: 3px 3px 3px grey;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+@media screen and (max-width: 426px) {
+  body {
+    margin: 0px;
+    /*background: #191d1e;*/
+    background: url("../mobilestars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    cursor: none;
+  }
+  #canvas {
+    display: none;
+  }
+  .container {
+    background-color: white;
+    color: white;
+    position: absolute;
+    width: 9vw;
+    height: 7vh;
+    /* top: -1%; */
+    left: 2%;
+    border-radius: 0 0 10px 10px;
+  }
+  .logo_clg {
+    width: fit-content;
+    position: relative;
+    width: 67%;
+    left: 17%;
+    top: 15%;
+  }
+  .starts_in_container {
+    display: none;
+    background-color: transparent;
+  }
+  .container_timer {
+    background-color: transparent;
+    height: 25vh;
+    width: 70vw;
+    position: absolute;
+    top: 46%;
+    left: 14%;
+    display: flex;
+    flex-direction: row;
+  }
+  .glow-on-hover {
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: relative;
+    text-align: center;
+    top: 74vh;
+    left: 32vw;
+    font-family: "Fredoka One", cursive;
+  }
+
+  .days_container {
+    position: relative;
+    background-color: white;
+    height: 8.9vh;
+    width: 10vw;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px grey;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
-@media screen and (max-width:376px) {
-    .container{
-        background-color: white;
-        color: white;
-        position: absolute;
-        width: 9vw;
-        height: 5.5vh;
-        /* top: -1%; */
-        left: 2%;
-        border-radius:0 0 10px 10px ;
-    }
-    .logo_clg{
-        width: fit-content;
-        position: relative;
-        width: 67%;
-        left: 17%;
-        top: 15%;
-    }
-    .container_timer{
-        background-color: transparent;
-        height: 25vh;
-        width: 90vw;
-        position: absolute;
-        top: 43%;
-        left: 5%;
-        display: flex;
-        flex-direction: row;
-    }
-    .days_container{
-        position: relative;
-        background-color: white;
-        height: 9vh;
-        width: 11vw;
-        border-radius: 8px;
-        box-shadow: 3px 3px 3px grey;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .glow-on-hover {
-        font-size: 1.1rem;
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--clr-neon);
-        border: var(--clr-neon) 0.125em solid;
-        padding: 0.25em 1em;
-        border-radius: 0.25em;
-        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-        position: relative;
-        text-align: center;
-        top: 75vh;
-        left: 28vw;
-        font-family: 'Fredoka One', cursive;
-    }
+@media screen and (max-width: 376px) {
+  .container {
+    background-color: white;
+    color: white;
+    position: absolute;
+    width: 9vw;
+    height: 5.5vh;
+    /* top: -1%; */
+    left: 2%;
+    border-radius: 0 0 10px 10px;
+  }
+  .logo_clg {
+    width: fit-content;
+    position: relative;
+    width: 67%;
+    left: 17%;
+    top: 15%;
+  }
+  .container_timer {
+    background-color: transparent;
+    height: 25vh;
+    width: 90vw;
+    position: absolute;
+    top: 43%;
+    left: 5%;
+    display: flex;
+    flex-direction: row;
+  }
+  .days_container {
+    position: relative;
+    background-color: white;
+    height: 9vh;
+    width: 11vw;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px grey;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .glow-on-hover {
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: relative;
+    text-align: center;
+    top: 75vh;
+    left: 28vw;
+    font-family: "Fredoka One", cursive;
+  }
 }
 
-@media screen and (max-width:321px) {
-    .container{
-        background-color: white;
-        color: white;
-        position: absolute;
-        width: 9vw;
-        height: 6vh;
-        /* top: -1%; */
-        left: 2%;
-        border-radius:0 0 10px 10px ;
-    }
-    .container_timer{
-        background-color: transparent;
-        height: 25vh;
-        width: 75vw;
-        position: absolute;
-        top: 43%;
-        left: 12%;
-        display: flex;
-        flex-direction: row;
-    }
-    .days_container{
-        position: relative;
-        background-color: white;
-        height: 8vh;
-        width: 12vw;
-        border-radius: 8px;
-        box-shadow: 3px 3px 3px grey;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .glow-on-hover {
-        font-size: 1rem;
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--clr-neon);
-        border: var(--clr-neon) 0.125em solid;
-        padding: 0.25em 1em;
-        border-radius: 0.25em;
-        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-        box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-        position: relative;
-        text-align: center;
-        top: 75vh;
-        left: 27.5vw;
-        font-family: 'Fredoka One', cursive;
-    }
-    .days_text{
-        font-size: 19px;
-        padding-left: 11px;
-    }
-    .hours_text{
-        font-size: 19px;
-        padding-left: 11px;
-    }
-    .minutes_text{
-        font-size: 19px;
-        padding-left: 11px;
-    }
-    .sec_text{
-        font-size: 19px;
-        padding-left: 11px;
-    }
-    .days_char{
-        font-size: 7px;
-        padding-left: 10px;
-    }
+@media screen and (max-width: 321px) {
+  .container {
+    background-color: white;
+    color: white;
+    position: absolute;
+    width: 9vw;
+    height: 6vh;
+    /* top: -1%; */
+    left: 2%;
+    border-radius: 0 0 10px 10px;
+  }
+  .container_timer {
+    background-color: transparent;
+    height: 25vh;
+    width: 75vw;
+    position: absolute;
+    top: 43%;
+    left: 12%;
+    display: flex;
+    flex-direction: row;
+  }
+  .days_container {
+    position: relative;
+    background-color: white;
+    height: 8vh;
+    width: 12vw;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px grey;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .glow-on-hover {
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: relative;
+    text-align: center;
+    top: 75vh;
+    left: 27.5vw;
+    font-family: "Fredoka One", cursive;
+  }
+  .days_text {
+    font-size: 19px;
+    padding-left: 11px;
+  }
+  .hours_text {
+    font-size: 19px;
+    padding-left: 11px;
+  }
+  .minutes_text {
+    font-size: 19px;
+    padding-left: 11px;
+  }
+  .sec_text {
+    font-size: 19px;
+    padding-left: 11px;
+  }
+  .days_char {
+    font-size: 7px;
+    padding-left: 10px;
+  }
 }

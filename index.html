@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+
 
     <title>Enyugma - 2022</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/cursor.css">
+    <link rel="stylesheet" href="./assets/css/loader.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
     <!-- <div class="empty_container">
         <h1>Hello world</h1>
@@ -21,68 +24,96 @@
     <div id="particles-js"></div>
 
     <div id="canvas"></div>
-    <div class="container">
-        <img src="./assets/Indian_Institute_of_Information_Technology,_Bhagalpur_logo.png" alt="iiitbh" class="logo_clg">
-    </div>
-    
-    <!-- <div class="container_fest">
+    <section class="loader">
+        <div class="noite"></div>
+
+        <div class="constelacao"></div>
+
+        <div class="lua">
+            <div class="textura"></div>
+        </div>
+
+        <div class="chuvaMeteoro"></div>
+
+        <div class="floresta">
+
+            <h1 id="header">ENYUGMA</h1>
+
+
+            <img src="https://raw.githubusercontent.com/interaminense/starry-sky/master/src/img/bgTree.png" alt="" />
+        </div>
+    </section>
+
+    <section class="landing-page">
+
+        <div class="container">
+            <img src="./assets/Indian_Institute_of_Information_Technology,_Bhagalpur_logo.png" alt="iiitbh"
+                class="logo_clg">
+        </div>
+
+        <!-- <div class="container_fest">
         <img src="https://enyugma.iiitbh.ac.in/img/enugma%20introduction.png" alt="fest_tech" class="fest_tech">
     </div> -->
 
 
 
-    <!-- COUNTDOWN TIMER -->
-    <div class="container_timer">
-        <div class="days_container">
-            <span class="days_text" id="days"></span>
-            <span class="days_char">DAYS</span>
-        </div>
-        <div class="days_container hr1">
-            <span class="hours_text" id="hours"></span>
-            <span class="days_char">HOUR</span>
-        </div>
-        <div class="days_container">
-            <span class="minutes_text" id="minutes"></span>
-            <span class="days_char">MINS</span>
-        </div>
-        <div class="days_container">
-            <span class="sec_text" id="seconds"></span>
-            <span class="days_char">SECS</span>
-        </div>
-    </div>
-
-    <div class="starts_in_container">
-        <div class="wrapper">
-            <div class="main">
-                <h1 class="shadow-effect tween-looper">STARTS IN <span></span></h1>
+        <!-- COUNTDOWN TIMER -->
+        <div class="container_timer">
+            <div class="days_container">
+                <span class="days_text" id="days"></span>
+                <span class="days_char">DAYS</span>
+            </div>
+            <div class="days_container hr1">
+                <span class="hours_text" id="hours"></span>
+                <span class="days_char">HOUR</span>
+            </div>
+            <div class="days_container">
+                <span class="minutes_text" id="minutes"></span>
+                <span class="days_char">MINS</span>
+            </div>
+            <div class="days_container">
+                <span class="sec_text" id="seconds"></span>
+                <span class="days_char">SECS</span>
             </div>
         </div>
-    </div>
 
-    <div>
-        <a href="#" class="glow-on-hover">REGISTER NOW</a>
-    </div>
+        <div class="starts_in_container">
+            <div class="wrapper">
+                <div class="main">
+                    <h1 class="shadow-effect tween-looper">STARTS IN <span></span></h1>
+                </div>
+            </div>
+        </div>
 
-    
-    <!-- <div class="curzr" hidden>
+        <div>
+            <a href="#" class="glow-on-hover">REGISTER NOW</a>
+        </div>
+
+
+        <!-- <div class="curzr" hidden>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
       <path class="inner" d="M25,30a5.82,5.82,0,0,1-1.09-.17l-.2-.07-7.36-3.48a.72.72,0,0,0-.35-.08.78.78,0,0,0-.33.07L8.24,29.54a.66.66,0,0,1-.2.06,5.17,5.17,0,0,1-1,.15,3.6,3.6,0,0,1-3.29-5L12.68,4.2a3.59,3.59,0,0,1,6.58,0l9,20.74A3.6,3.6,0,0,1,25,30Z" fill="#F2F5F8" />
       <path class="outer" d="M16,3A2.59,2.59,0,0,1,18.34,4.6l9,20.74A2.59,2.59,0,0,1,25,29a5.42,5.42,0,0,1-.86-.15l-7.37-3.48a1.84,1.84,0,0,0-.77-.17,1.69,1.69,0,0,0-.73.16l-7.4,3.31a5.89,5.89,0,0,1-.79.12,2.59,2.59,0,0,1-2.37-3.62L13.6,4.6A2.58,2.58,0,0,1,16,3m0-2h0A4.58,4.58,0,0,0,11.76,3.8L2.84,24.33A4.58,4.58,0,0,0,7,30.75a6.08,6.08,0,0,0,1.21-.17,1.87,1.87,0,0,0,.4-.13L16,27.18l7.29,3.44a1.64,1.64,0,0,0,.39.14A6.37,6.37,0,0,0,25,31a4.59,4.59,0,0,0,4.21-6.41l-9-20.75A4.62,4.62,0,0,0,16,1Z" fill="#111920" />
     </svg>
   </div> -->
 
+
+    </section>
+
     <div class="cursor"></div>
     <div class="cursor2"></div>
 
 
+
     <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js"></script>
-    <script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js'></script>
+    <script
+        src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js'></script>
     <script src='https://jeromeetienne.github.io/threex.terrain/threex.terrain.js'></script>
 
     <script type="text/javascript" src="./assets/js/index.js"></script>
     <script type="text/javascript" src="./assets/js/particles.js"></script>
     <script type="text/javascript" src="./assets/js/app.js"></script>
-    <!-- <script src="cursor.js"></script> -->
+    <script type="text/javascript" src="./assets/js/loader.js"></script>
     <script type="text/javascript" src="./assets/js/cursor1.js"></script>
 
     <!-- timer javascript -->
@@ -92,14 +123,15 @@
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
 
     <script>
-        var tl=gsap.timeline({defaults: {duartion:1}});
+        var tl = gsap.timeline({ defaults: { duartion: 1 } });
 
-        tl.from(".container",{duration: 2, ease: "bounce.out", y: -50,opacity:0})
-          .from(".logo_clg", {duration:1.5,delay:0.5,opacity:0})
-          .from(".starts_in_container",{duration:3.5,opacity:0,ease: "elastic.out(1, 0.1)",y:-100})
-          .from(".days_container",{duration:2.5,ease:"bounce.out",x:100,opacity:0})
-          .from(".hr1", {delay:0.5})
+        tl.from(".container", { duration: 2, ease: "bounce.out", y: -50, opacity: 0 })
+            .from(".logo_clg", { duration: 1.5, delay: 0.5, opacity: 0 })
+            .from(".starts_in_container", { duration: 3.5, opacity: 0, ease: "elastic.out(1, 0.1)", y: -100 })
+            .from(".days_container", { duration: 2.5, ease: "bounce.out", x: 100, opacity: 0 })
+            .from(".hr1", { delay: 0.5 })
     </script>
-    
+
 </body>
+
 </html>
