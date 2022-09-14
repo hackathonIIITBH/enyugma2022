@@ -15,6 +15,29 @@
     <link rel="stylesheet" href="./assets/css/astronautHS.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/light.css">
+
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+     <!-- jsquery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+     <!-- stellar.js -->
+     <script src="assets/js/jquery.stellar.min.js"></script>
+     <script src="assets/js/home.js"></script>
+
      
 </head>
 
@@ -44,6 +67,41 @@
             <img src="https://raw.githubusercontent.com/interaminense/starry-sky/master/src/img/bgTree.png" alt="" />
         </div>
     </section>
+
+    <div class="navbar">
+      <div class="settings">
+        <div class="sets">
+          <div class="setbtn" id="setb" onclick="sets(this)">
+            <span class="material-symbols-outlined">
+              menu
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "body">
+    <div class="settingbar">
+      <div class="closebtn" style="--i: 7" onclick="closesettingbar()">
+        <i class="material-icons">close</i>
+      </div>
+      <div style="--top: 70px; --i :6">
+        <i class="material-icons">animation</i><i>Home</i>
+      </div>
+      <div style="--top: 170px; --i :5">
+        <i class="material-icons">animation</i><i>About Section</i>
+      </div>
+      <div style="--top: 270px; --i :4">
+        <i class="material-icons">animation</i><i>Hero Section</i>
+      </div>
+      <div style="--top: 370px; --i :3">
+        <i class="material-icons">animation</i><i>Event Section</i>
+      </div>
+      <div style="--top: 470px; --i :2">
+        <i class="material-icons">filter_vintage</i>
+        <i class="text">Contact Us</i>
+      </div>
+    </div>
 
     <section class="landing-page">
 
@@ -150,10 +208,9 @@
 
 
     </section>
-
+  </div>
     <div class="cursor"></div>
     <div class="cursor2"></div>
-
 
 
     <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js"></script>
@@ -170,6 +227,9 @@
     <!-- timer javascript -->
     <script src="./assets/js/timer.js"></script>
 
+    <!-- Navbar Script -->
+
+
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
 
@@ -182,7 +242,7 @@
             .from(".days_container", { duration: 2.5, ease: "bounce.out", x: 100, opacity: 0 })
             .from(".hr1", { delay: 0.5 })
     </script>
-
+ 
 </body>
 
 </html>
