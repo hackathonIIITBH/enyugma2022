@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+body{
+    
+    background: url('./darkimage\ 2.jpg');
+    background-size: cover;
+}
+
+
+.container{
+    background-color: white;
+    color: white;
+    position: absolute;
+	width: 9vw;
+    height: 14vh;
+    left: 4%;
+    border-radius:0 0 10px 10px ;
+}
+
+
+.logo_clg{
+    width: fit-content;
+    position: relative;
+    width: 64%;
+    left: 4%;
+    top: 5%;
+}
+
+.e_container {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+}
+
+.e_container section {
+    min-width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100vh;
+}
+
+.e_container section .e_content {
+    max-width: 1200px;
+    padding: 40px;
+    text-align: center;
+}
+
+.e_container section .e_content h2 {
+    font-size: 4em;
+    color: beige;
+    margin-bottom: 40px;
+}
+
+.e_container section .e_content p {
+    max-width: 800px;
+    font-size: 1em;
+    line-height: 1.4em;
+    color: aliceblue;
+}
+
+.sq1 {
+    height: 150px;
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    /* text-align: center; */
+    border-width: 10px;
+    /* color: aquamarine; */
+    /* background: #D9D9D9; */
+    /* font-weight: bold; */
+    border-radius: 25px;
+}
+
+.sq2 {
+    height: 150px;
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    /* color: aquamarine; */
+    background: #D9D9D9;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.sq3 {
+    height: 150px;
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    /* color: aquamarine; */
+    background: #D9D9D9;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+/* .sq4 {
+    height: 120px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-width: 10px;
+    color: aquamarine;
+    background: #D9D9D9;
+    font-weight: bold;
+} */
+
+.column {
+    flex: 20%;
+    max-width: 20%;
+    padding: 0 4px;
+}
+
+.sq1_star {
+    height: 300px;
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-width: 10px;
+    /* color: aquamarine; */
+    background: #D9D9D9;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.column_star {
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 4px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* code of vinit */
+.container {
+    position: relative;
+    width: 1400px;
+    height: 300px;
+    margin: 240px auto;
+
+
+}
+
+/*
+@media (max-width : 600px) {
+    .e_container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        transform: none !important;
+    }
+} */

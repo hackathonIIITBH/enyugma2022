@@ -1,0 +1,87 @@
+
+.v-container {
+    /* position: relative; */
+    /* width: 1400px; */
+    /* height: 300px; */
+    /* margin: 240px auto; */
+
+
+}
+.v-container .box
+{   
+    display: flex;
+    align-items: center;
+    border-radius: 45px;
+    position: relative;
+    /* width: calc(400px - 3px); */
+    /* height: calc(300px - 30px); */
+    background: rgb(5, 41, 98);
+    background-image: url(darkimage.jpg);
+    float: left;
+    /* margin: 10px; */
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.v-container .box .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(iconimage.jpg);
+    
+    transform: 0.5s;
+    z-index: 1;
+}
+.v-container .box:hover .icon {
+    top:20px;
+     left: calc(50% - 40px);
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+}
+.v-container .box .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+.v-container .box:hover .icon .fa{
+    font-size: 40px;
+
+}
+.v-container .box .content {
+    /* position: absolute; */
+    top: 100%;
+    /* height: calc(100%-100px); */
+    text-align: center;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    /* transition: 0.5s; */
+    /* opacity: 0; */
+
+
+}
+.v-container .box:hover .content {
+    top:100px;
+   opacity: 1;
+}
+.v-container .box .content h3 {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 0 10px;
+    text-align: center;
+    padding: 0;
+    color: rgb(241, 237, 237);
+    font-size: 24px;
+
+}
+.v-container .box .content p{
+    margin: 0;
+     padding: 0;
+     color: rgb(225, 246, 246);    
+}
