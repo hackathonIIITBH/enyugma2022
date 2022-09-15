@@ -212,6 +212,27 @@ body {
 
   height: 100px;
 }
+
+@media (max-width:992px){
+  .floresta {
+    position: absolute;
+    
+  }
+  .floresta #header {
+    font-size: 50px;
+    /* bottom: 200%; */
+    position: absolute;
+    /* top: 50%; */
+    z-index: 20;
+  }
+   .floresta img{
+    /* width: 60%; */
+  position: fixed; 
+  bottom:20;
+  left: 0;
+  } 
+
+}
 @-webkit-keyframes blink {
   100% {
     text-shadow: 0 0 2px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff,
