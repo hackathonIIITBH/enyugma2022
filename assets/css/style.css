@@ -35,10 +35,10 @@ body {
     width: 70vw;
     top: 12%;
 }
-.fest_logo_img{
-    position: relative;
-    width: 50%;
-    left: 20%;
+.fest_logo_img {
+  position: relative;
+  width: 46%;
+  left: 23%;
 }
 
 .container {
@@ -601,8 +601,8 @@ body {
    }
    .fest_logo_img{
     position: relative;
-    width: 55%;
-    left: 5%;
+    width: 50%;
+    left: 15%;
    }
   .glow-on-hover {
     font-size: 1.09rem;
