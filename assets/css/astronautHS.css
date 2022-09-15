@@ -1,371 +1,99 @@
-/* body {
-    background: url("../stars1100px.jpg");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 
-  } */
+body {
   
-  .astronautbgcont {
-    width: 20%;
-    height: 420px;
-    position: absolute;
-    top: 98%;
-    left: 5%;
-    transform: translate(-50%, -50%);
-    /* background: url("../stars1100px.jpg"); */
-    background-color: transparent;
-  }
-  
-  .astronaut {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    height: 400px;
-    z-index: 10;
-    animation-duration: 3s;
-    animation-name: floating;
-    animation-iteration-count: infinite;
-  }
-  .astronaut .helmet {
-    position: relative;
-    background-color: #FFFDFF;
-    height: 65px;
-    width: 70px;
-    border-radius: 100px 100px 85px 85px;
-    z-index: 2;
-  }
-  .astronaut .helmet .visor {
-    background-color: #1AADC9;
-    height: 55px;
-    width: 60px;
-    border-radius: 100px 100px 90px 90px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: inset -20px -20px 0px 0px rgba(255, 255, 246, 0.2), inset 0 -30px 0 0 #1A8CA6, inset 0 -60px 0 0 #209DB9;
-  }
-  .astronaut .helmet .left-lug {
-    width: 5px;
-    height: 10px;
-    background-color: #ABA7AA;
-    position: absolute;
-    top: 45%;
-    left: -5px;
-    border-radius: 15px 0 0 15px;
-  }
-  .astronaut .helmet .right-lug {
-    width: 5px;
-    height: 10px;
-    background-color: #ABA7AA;
-    position: absolute;
-    top: 45%;
-    right: -5px;
-    border-radius: 0 15px 15px 0;
-  }
-  .astronaut .neck {
-    width: 50px;
-    height: 15px;
-    background-color: #C3C3C3;
-    position: absolute;
-    top: 55px;
-    left: 11px;
-    border-radius: 0 0 100% 100%;
-    z-index: 1;
-  }
-  .astronaut .body {
-    position: absolute;
-    top: 65px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 60px;
-    height: 80px;
-    background-color: #FFFDFF;
-  }
-  .astronaut .body .left-arm {
-    background-color: #FFFDFF;
-    width: 17px;
-    height: 80px;
-    position: absolute;
-    left: -16px;
-    border-radius: 40px 0 0 40px;
-  }
-  .astronaut .body .left-arm .shadow {
-    background-color: rgba(0, 0, 0, 0.1);
-    width: 2.5px;
-    height: 55px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-  .astronaut .body .left-arm .hoop-1 {
-    position: absolute;
-    top: 30px;
-    right: 0;
-    width: 18px;
-    height: 3px;
-    background-color: #1AADC9;
-    border-radius: 5px 0 0 5px;
-  }
-  .astronaut .body .left-arm .hoop-2 {
-    position: absolute;
-    top: 40px;
-    right: 0;
-    width: 18px;
-    height: 3px;
-    background-color: #1A8CA6;
-    border-radius: 5px 0 0 5px;
-  }
-  .astronaut .body .right-arm {
-    background-color: #FFFDFF;
-    width:17px;
-    height: 80px;
-    position: absolute;
-    right: -16px;
-    border-radius: 0 40px 40px 0;
-  }
-  .astronaut .body .right-arm .shadow {
-    background-color: rgba(0, 0, 0, 0.1);
-    width: 2.5px;
-    height: 55px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  .astronaut .body .right-arm .hoop-1 {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 18px;
-    height: 3px;
-    background-color: #1AADC9;
-    border-radius: 0 5px 5px 0;
-  }
-  .astronaut .body .right-arm .hoop-2 {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 18px;
-    height: 3px;
-    background-color: #1A8CA6;
-    border-radius: 0 5px 5px 0;
-  }
-  .astronaut .body .chest-pack {
-    background-color: #D1D1D1;
-    width: 32.5px;
-    height: 32.5px;
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .astronaut .body .chest-pack .dot1 {
-    background-color: #FFFDFF;
-    width: 5px;
-    height: 5px;
-    border-radius: 10px;
-    position: absolute;
-    top: 7px;
-    left: 6px;
-  }
-  .astronaut .body .chest-pack .dot2 {
-    background-color: #FFFDFF;
-    width: 5px;
-    height: 5px;
-    border-radius: 10px;
-    position: absolute;
-    top: 7px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .astronaut .body .chest-pack .dot3 {
-    background-color: #FFFDFF;
-    width: 5px;
-    height: 5px;
-    border-radius: 10px;
-    position: absolute;
-    top: 7px;
-    right: 6px;
-  }
-  .astronaut .body .chest-pack .lower-console {
-    background-color: #C3C3C3;
-    width: 32.5px;
-    height: 18.5px;
-    position: absolute;
-    bottom: 0;
-  }
-  .astronaut .body .chest-pack .lower-console .box1 {
-    width: 8.5px;
-    height: 4px;
-    background-color: #FFFDFF;
-    position: absolute;
-    top: 3px;
-    left: 6px;
-  }
-  .astronaut .body .chest-pack .lower-console .box2 {
-    width: 8.5px;
-    height: 4px;
-    background-color: #FFFDFF;
-    position: absolute;
-    bottom: 5px;
-    left: 6px;
-  }
-  .astronaut .body .chest-pack .lower-console .box3 {
-    width: 10px;
-    height: 11px;
-    background-color: #FFFDFF;
-    position: absolute;
-    bottom: 4px;
-    right: 6px;
-  }
-  .astronaut .body .belt {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    height: 5px;
-  }
-  .astronaut .body .belt .loop1 {
-    height: 50%;
-    width: 16px;
-    background-color: #C3C3C3;
-    position: absolute;
-    left: 0;
-  }
-  .astronaut .body .belt .loop2 {
-    height: 50%;
-    width: 16px;
-    background-color: #C3C3C3;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .astronaut .body .belt .loop3 {
-    height: 50%;
-    width: 16px;
-    background-color: #C3C3C3;
-    position: absolute;
-    right: 0;
-  }
-  .astronaut .backpack {
-    position: absolute;
-    top: 55px;
-    border-radius: 10px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 70px;
-    height: 70px;
-    background-color: #c3c3c3;
-    z-index: -1;
-    box-shadow: inset 0 16px 0 0px #FFFDFF;
-  }
-  .astronaut .legs {
-    position: absolute;
-    top: 147px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 50px;
-    background-color: #FFFDFF;
-  }
-  .astronaut .thigh-gap {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    height: 40px;
-    background-color: #181B20;
-    border-radius: 5px 5px 0 0;
-  }
-  .astronaut .left-knee {
-    position: absolute;
-    top: 40px;
-    left: 14px;
-    width: 15px;
-    height:10px;
-    background-color: #D1D1D1;
-    border-radius: 4px;
-  }
-  /* .astronaut .left-knee:before, .astronaut .left-knee:after {
-    display: block;
-    content: &quot;&quot;;
-    height: 4px;
-    position: absolute;
-    left: 3px;
-    right: 3px;
-    background-color: #C3C3C3;
-    border-radius: 4px;
-  } */
-  .astronaut .left-knee:before {
-    top: 4px;
-  }
-  .astronaut .left-knee:after {
-    bottom: 4px;
-  }
-  .astronaut .right-knee {
-    position: absolute;
-    top: 40px;
-    right: 14px;
-    width: 15px;
-    height: 10px;
-    background-color: #D1D1D1;
-    border-radius: 4px;
-  }
-  /* .astronaut .right-knee:before, .astronaut .right-knee:after {
-    display: block;
-    content: &quot;&quot;;
-    height: 4px;
-    position: absolute;
-    left: 3px;
-    right: 3px;
-    background-color: #C3C3C3;
-    border-radius: 4px;
-  } */
-  .astronaut .right-knee:before {
-    top: 4px;
-  }
-  .astronaut .right-knee:after {
-    bottom: 4px;
-  }
-  .astronaut .left-foot {
-    position: absolute;
-    bottom: -10px;
-    left: -3.5px;
-    width: 32.5px;
-    height: 17.2px;
-    background-color: #FFFDFF;
-    border-radius: 40px 40px 0 0;
-    border-bottom: 5px dashed #C3C3C3;
-    box-shadow: 0 -4px 0px 0px rgba(0, 0, 0, 0.1);
-  }
-  .astronaut .right-foot {
-    position: absolute;
-    bottom: -10px;
-    right: -4px;
-    width: 32.5px;
-    height: 17.2px;
-    background-color: #FFFDFF;
-    border-radius: 40px 40px 0 0;
-    border-bottom: 5px dashed #C3C3C3;
-    box-shadow: 0 -4px 0px 0px rgba(0, 0, 0, 0.1);
-  }
-  
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  
-  @keyframes floating {
-    from {
-      transform: translateY(-50%) translateX(-50%);
-    }
-    65% {
-      transform: translateY(-55%) translateX(-50%);
-    }
-    to {
-      transform: translateY(-50%) translateX(-50%);
-    }
-  }
+#main{
+  background-color: transparent;
+}
+#astronaut > img {
+  padding-top: 150px;
+  display: block;
+  left: 48%;
+  animation: anim 20s linear infinite;
+  position: absolute;
+}
 
-  @media screen and (max-width:426px) {
-    .astronautbgcont{
-      display: none;
-    }
+#astronaut2 > img {
+  padding-top: 150px;
+  display: block;
+  
+  position: absolute;
+  animation: anim2 20s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0px);
   }
+  10%{
+    transform: translateY(30px) rotate(10deg);
+  }
+  20%{
+    transform: translateY(60px) rotate(20deg);
+  }
+   30%{
+    transform: translateY(90px) rotate(30deg);
+  }
+   40%{
+    transform: translateY(120px) rotate(20deg);
+  }
+  50% {
+    transform: translateY(150px) rotate(30deg);
+  }
+  60%{
+    transform: translateY(120px) rotate(40deg);
+  }
+  70%{
+    transform: translateY(90px) rotate(10deg);
+  }
+  80%{
+    transform: translateY(60px) rotate(20deg);
+  }
+  90%{
+    transform: translateY(30px) rotate(10deg);
+  }
+   100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    transform: translateY(0px);
+  }
+  10%{
+    transform: translateY(-30px) rotate(-10deg);
+  }
+  20%{
+    transform: translateY(-60px) rotate(-20deg);
+  }
+   30%{
+    transform: translateY(-90px) rotate(-10deg);
+  }
+   40%{
+    transform: translateY(-120px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-150px) rotate(-10deg);
+  }
+  60%{
+    transform: translateY(-120px) rotate(0deg);
+  }
+  70%{
+    transform: translateY(-90px) rotate(20deg);
+  }
+  80%{
+    transform: translateY(-60px) rotate(10deg);
+  }
+  90%{
+    transform: translateY(-30px) rotate(0deg);
+  }
+   100% {
+    transform: translateY(0px);
+  }
+}
