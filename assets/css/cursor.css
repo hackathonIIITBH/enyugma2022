@@ -9,17 +9,18 @@
     left: 0;
     top: 0;
     transform: translate(calc(-50% + 15px), -50%);
-  }
-  
-  .cursor2 {
+    z-index: 12;
+}
+
+.cursor2 {
     width: 20px;
     height: 20px;
     border-radius: 100%;
     background-color: white;
-    opacity: .3;
+    opacity: 0.3;
     position: fixed;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    transition: width .3s, height .3s, opacity .3s;
-  }
-  
+    transition: width 0.3s, height 0.3s, opacity 0.3s;
+    z-index: 12;
+}

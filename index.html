@@ -15,6 +15,29 @@
     <link rel="stylesheet" href="./assets/css/astronautHS.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/light.css">
+
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+     <!-- jsquery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+     <!-- stellar.js -->
+     <script src="assets/js/jquery.stellar.min.js"></script>
+     <script src="assets/js/home.js"></script>
+
      
     <link
     rel="stylesheet"
@@ -51,6 +74,37 @@
             <img src="https://raw.githubusercontent.com/interaminense/starry-sky/master/src/img/bgTree.png" alt="" />
         </div>
     </section>
+
+    <div class="navbar">
+          <div class="setbtn" id="setb" onclick="sets(this)">
+            <span class="material-symbols-outlined">
+              menu
+            </span>
+      </div>
+    </div>
+
+    <div class = "body">
+    <div class="settingbar">
+      <div class="closebtn" style="--i: 7" onclick="closesettingbar()">
+        <i class="material-icons">close</i>
+      </div>
+      <div style="--top: 70px; --i :6">
+        <i class="material-icons">animation</i><i>Home</i>
+      </div>
+      <div style="--top: 170px; --i :5">
+        <i class="material-icons">animation</i><i>About Section</i>
+      </div>
+      <div style="--top: 270px; --i :4">
+        <i class="material-icons">animation</i><i>Hero Section</i>
+      </div>
+      <div style="--top: 370px; --i :3">
+        <i class="material-icons">animation</i><i>Event Section</i>
+      </div>
+      <div style="--top: 470px; --i :2">
+        <i class="material-icons">filter_vintage</i>
+        <i class="text">Contact Us</i>
+      </div>
+    </div>
 
     <section class="landing-page">
 
@@ -100,53 +154,20 @@
             <a href="#" class="glow-on-hover">REGISTER NOW</a>
         </div>
         <!-- Astronaut Hero Section -->
-        <div class="astronautbgcont">
-            <div class="astronaut">
-              <div class="helmet">
-                <div class="left-lug"></div>
-                <div class="right-lug"></div>
-                <div class="visor"></div>
-              </div>
-              <div class="neck"></div>
-              <div class="body">
-                <div class="left-arm">
-                  <div class="shadow"></div>
-                  <div class="hoop-1"></div>
-                  <div class="hoop-2"></div>
-                </div>
-                <div class="right-arm">
-                  <div class="shadow"></div>
-                  <div class="hoop-1"></div>
-                  <div class="hoop-2"></div>
-                </div>
-                <div class="chest-pack">
-                  <div class="dot1"></div>
-                  <div class="dot2"></div>
-                  <div class="dot3"></div>
-                  <div class="lower-console">
-                    <div class="box1"></div>
-                    <div class="box2"></div>
-                    <div class="box3"></div>
-                  </div>
-                </div>
-                <div class="belt">
-                  <div class="loop1"></div>
-                  <div class="loop2"></div>
-                  <div class="loop3"></div>
-                </div>
-              </div>
-              
-              <div class="backpack"></div>
-              
-              <div class="legs">
-                <div class="thigh-gap"></div>
-                <div class="left-knee"></div>
-                <div class="right-knee"></div>
-                <div class="left-foot"></div>
-                <div class="right-foot"></div>
-              </div>
-            </div>
+       
+        
+          
+          <div id= "main">
+          <div id ="astronaut">
+              <img src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png" alt="" width="250">
           </div>
+          
+          <div id ="astronaut2">
+              <img src="https://images.vexels.com/media/users/3/152641/isolated/preview/2b3d63661f0d7fe62c36168604985f26-space-cosmonaut-cartoon-by-vexels.png" alt="" width="250">
+          </div>
+          </div>
+        
+
 
         <!-- <div class="curzr" hidden>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -274,12 +295,10 @@
           <!-- </div> -->
 
     </section>
-
     <div class="cursor"></div>
     <div class="cursor2"></div>
 
-
-
+  </div>
     <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js"></script>
     <script
         src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js'></script>
@@ -294,6 +313,9 @@
     <!-- timer javascript -->
     <script src="./assets/js/timer.js"></script>
 
+    <!-- Navbar Script -->
+
+
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
 
@@ -306,7 +328,7 @@
             .from(".days_container", { duration: 2.5, ease: "bounce.out", x: 100, opacity: 0 })
             .from(".hr1", { delay: 0.5 })
     </script>
-
+ 
 </body>
 
 </html>
