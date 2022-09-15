@@ -86,16 +86,17 @@ body {
 .container_timer {
   background-color: transparent;
   height: 25vh;
-  width: 35vw;
+  width: 30vw;
   position: absolute;
   top: 17%;
-  left: 63.7%;
+  left: 66%;
   display: flex;
   flex-direction: row;
 }
 .days_container {
   position: relative;
-  background-color: white;
+  background-color: transparent;
+  color: white;
   height: 15vh;
   width: 6vw;
   border-radius: 8px;
@@ -389,13 +390,13 @@ body {
     width: 30vw;
     position: absolute;
     top: 15%;
-    left: 67%;
+    left: 66.5%;
     display: flex;
     flex-direction: row;
   }
   .days_container {
     position: relative;
-    background-color: white;
+    background-color: transparent;
     height: 12vh;
     width: 6vw;
     border-radius: 8px;
@@ -476,7 +477,7 @@ body {
     background: url("../stars1100px.jpg");
     /* background-repeat: no-repeat; */
     background-size: cover;
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 100%;
     cursor: none;
   }
@@ -514,7 +515,7 @@ body {
   }
   .days_container {
     position: relative;
-    background-color: white;
+    background-color: transparent;
     height: 10vh;
     width: 6vw;
     border-radius: 8px;
@@ -621,7 +622,7 @@ body {
   }
   .days_container {
     position: relative;
-    background-color: white;
+    background-color: transparent;
     height: 10vh;
     width: 6vw;
     border-radius: 8px;
@@ -833,7 +834,7 @@ body {
 
   .days_container {
     position: relative;
-    background-color: white;
+    background-color: transparent;
     height: 8.9vh;
     width: 10vw;
     border-radius: 8px;
@@ -886,7 +887,7 @@ body {
   }
   .days_container {
     position: relative;
-    background-color: white;
+    background-color: transparent;
     height: 9vh;
     width: 11vw;
     border-radius: 8px;
@@ -937,7 +938,7 @@ body {
   }
   .days_container {
     position: relative;
-    background-color: white;
+    background-color: transparent;
     height: 8vh;
     width: 12vw;
     border-radius: 8px;
