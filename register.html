@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/register.css" rel="stylesheet" type="text/css">
+    <title>Form Validator</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/register" method="POST" class="form" id="form">
+            <h1>Register With Us</h1>
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" autoComplete='off' id="name" placeholder="Enter name">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" autoComplete='off' id="email" name="email" placeholder="Enter email">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" autoComplete='off' name="password" class='field' id="password" placeholder="Enter password">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirmpassword" autoComplete='off'  placeholder="Enter password again">
+                <small id="small" class="small">Error Message</small>
+            </div>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="assets/js/register.js"></script>
+</body>
+</html>
