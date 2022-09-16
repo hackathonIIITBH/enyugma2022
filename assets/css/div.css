@@ -4,6 +4,7 @@
     /* width: 1400px; */
     /* height: 300px; */
     /* margin: 240px auto; */
+    margin: auto;
 
 
 }
@@ -13,10 +14,11 @@
     align-items: center;
     border-radius: 45px;
     position: relative;
+    
     /* width: calc(400px - 3px); */
     /* height: calc(300px - 30px); */
     background: rgb(5, 41, 98);
-    background-image: url(darkimage.jpg);
+    
     float: left;
     /* margin: 10px; */
     box-sizing: border-box;
@@ -29,7 +31,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(iconimage.jpg);
+    color: #000;
     
     transform: 0.5s;
     z-index: 1;
@@ -52,6 +54,7 @@
 }
 .v-container .box:hover .icon .fa{
     font-size: 40px;
+    display: none;
 
 }
 .v-container .box .content {
@@ -61,8 +64,8 @@
     text-align: center;
     /* padding: 20px; */
     box-sizing: border-box;
-    /* transition: 0.5s; */
-    /* opacity: 0; */
+  transition: 0.5s; 
+    opacity: 0; 
 
 
 }
