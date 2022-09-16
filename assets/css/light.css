@@ -41,9 +41,9 @@
 .setbtn
 {
   color: rgb(255, 255, 255);
-  float : right;
-  z-index: -100000;
-  margin:94em;
+  width: 100%;
+  display: flex;
+  justify-content: right;
 }
 
 
