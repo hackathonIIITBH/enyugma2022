@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-:root{
+:root {
     --success-color: #2ecc71;
     --error-color: #e74c3c;
 }
@@ -9,67 +9,91 @@
     box-sizing: border-box;
 }
 
-body{
+canvas {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+body {
     font-family: 'Open Sans', sans-serif;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     margin: 0px;
-    background-color: #242333;
+    background: url("../stars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
 
-.container{
+.wrapper {
+  position: fixed;
+  right:100px;
+}
+
+
+.container {
     width: 400px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter:blur(2px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.359);
+    z-index: 10;
 }
 
-.form h1{
+.form h1 {
     margin: 0 0 20px;
     text-align: center;
+    color:rgb(212, 212, 212);
 }
 
-.form{
+.form {
     padding: 30px 40px;
+    z-index: 10;
 }
 
-.form-control{
+.form-control {
     position: relative;
     margin-bottom: 10px;
     padding-bottom: 20px;
 }
 
-.form-control label{
+.form-control label {
     display: block;
     margin-bottom: 5px;
-    color: #777;
+    color: rgb(227, 227, 227);
+    font-weight: 700;
 }
 
-.form-control input{
+.form-control input {
     display: block;
     width: 100%;
     padding: 10px;
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
+    border: 2px solid #f0f0f0aa;
+    border-radius: 20px;
     font-size: 14px;
 }
 
-.form-control input:focus{
+.form-control input:focus {
     outline: 0;
     border-color: #777;
 }
 
-.form-control.success input{
+.form-control.success input {
     border-color: var(--success-color);
 }
 
-.form-control.error input{
+.form-control.error input {
     border-color: var(--error-color);
 }
 
-.form-control small{
+.form-control small {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -77,19 +101,68 @@ body{
     visibility: hidden;
 }
 
-.form-control.error small{
+.form-control.error small {
     visibility: visible;
 }
 
-.form button{
+.form button {
     display: block;
     width: 100%;
     margin-top: 20px;
     padding: 10px;
     border: 2px solid #3498db;
-    border-radius: 4px;
+    border-radius: 20px;
     background-color: #3498db;
-    color: #fff;
+    color: rgb(228, 228, 228);
     font-size: 16px;
     cursor: pointer;
+    transition: 500ms ;
+    z-index: 10;
+    font-weight: 700;
+}
+
+.form button:hover {
+    transform: scale(1.1);
+}
+
+.techfest_logo{
+    background-color: transparent;
+    position: fixed;
+    left:10vw;
+    height: 20vh;
+    width: 40vw;
+    top: 30%;
+}
+.main {
+  width: inherit;
+  height: inherit;
+  font-family: "Yeseva One", cursive;
+  position: absolute;
+  top:-50vh;
+  left:0;
+
+}
+
+/* Astronaut CSS */
+#astronaut > img {
+  padding-top: 0;
+  display: block;
+  position: fixed;
+  left: 49%;
+  top:50%;
+  width: 150px;
+  height: 150px;
+  animation: anim 20s linear infinite;
+}
+
+#astronaut2 > img {
+  padding-top: 150px;
+  display: block;
+  left:0;
+  position: fixed;
+  top: 40px;
+  width: 200px;
+  
+  animation: anim2 20s linear infinite;
+  animation-delay: 1s;
 }

@@ -83,7 +83,7 @@
     z-index: -1;
     background-color: rgb(141, 140, 140, 0.95);
     left: -50px;
-    top: px;
+    top: 0px;
     transform-origin: right;
     transform: skewY(45deg);
     transition: 0.5s;

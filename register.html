@@ -4,37 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- jsquery -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <link rel="stylesheet" href="./assets/css/astronautHS.css">
     <link href="assets/css/register.css" rel="stylesheet" type="text/css">
-    <title>Form Validator</title>
+   
+    
+    <title>Registration Form</title>
 </head>
 <body>
-    <div class="container">
-        <form action="/register" method="POST" class="form" id="form">
-            <h1>Register With Us</h1>
-            <div class="form-control">
-                <label for="name">Name</label>
-                <input type="text" autoComplete='off' id="name" placeholder="Enter name">
-                <small>Error Message</small>
-            </div>
-            <div class="form-control">
-                <label for="email">Email</label>
-                <input type="text" autoComplete='off' id="email" name="email" placeholder="Enter email">
-                <small>Error Message</small>
-            </div>
-            <div class="form-control">
-                <label for="password">Password</label>
-                <input type="password" autoComplete='off' name="password" class='field' id="password" placeholder="Enter password">
-                <small>Error Message</small>
-            </div>
-            <div class="form-control">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirmpassword" autoComplete='off'  placeholder="Enter password again">
-                <small id="small" class="small">Error Message</small>
-            </div>
-            <button type="submit" id="submit">Submit</button>
-        </form>
-    </div>
+        <div id="particles-js">
+            
+        </div>
 
-    <script src="assets/js/register.js"></script>
-</body>
+        <!-- Astronaut Hero Section -->
+   
+        <div id= "main">
+            <div id ="astronaut">
+                <img src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png" alt="" width="250">
+            </div>
+            <div class="techfest_logo">
+                <img src="https://enyugma.iiitbh.ac.in/Asset%201.svg" alt="fest_logo" class="fest_logo_img">
+            </div>
+            <div id ="astronaut2">
+                <img src="https://images.vexels.com/media/users/3/152641/isolated/preview/2b3d63661f0d7fe62c36168604985f26-space-cosmonaut-cartoon-by-vexels.png" alt="" width="250">
+            </div>
+        </div>
+        <div class=" wrapper">
+
+
+            <div class="container">
+                <form action="/register" method="POST" class="form" id="form">
+                    <h1>Register With Us</h1>
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input type="text" autoComplete='off' id="name" placeholder="Enter name">
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="text" autoComplete='off' id="email" name="email" placeholder="Enter email">
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="password">Password</label>
+                        <input type="password" autoComplete='off' name="password" class='field' id="password" placeholder="Enter password">
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirmpassword" autoComplete='off'  placeholder="Enter password again">
+                        <small id="small" class="small">Error Message</small>
+                    </div>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+        <script src="assets/js/register.js"></script>
+        <script src="assets/js/particles.js"></script>
+        <script type="text/javascript" src="./assets/js/app.js"></script>
+
+    </body>
 </html>
