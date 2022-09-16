@@ -37,11 +37,14 @@
     transform: scale(1.2);
 }
 
-.setbtn {
-    color: rgb(255, 255, 255);
-    float: right;
-    z-index: 20;
-    margin: 98vw;
+
+.setbtn
+{
+  color: rgb(255, 255, 255);
+  width: 100%;
+  display: flex;
+  justify-content: right;
+
 }
 
 .settingbar {
@@ -82,7 +85,7 @@
     z-index: -1;
     background-color: rgb(141, 140, 140, 0.95);
     left: -50px;
-    top: px;
+    top: 0px;
     transform-origin: right;
     transform: skewY(45deg);
     transition: 0.5s;
