@@ -153,9 +153,30 @@ body {
   
   .main {
     grid-area: main;
-    background-color: #5cdb95;
+    background-color: #3c3819;
+
+
+    background: linear-gradient(-45deg, #f695b2, #a65fc3, #34aab7, #6fd9b2);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
   }
   
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } 
+
+  
+  
+
   .main-header {
     display: flex;
     justify-content: space-between;
@@ -189,16 +210,28 @@ body {
   }
   
   .card {
-    display: flex;
+     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: #82bef6;
+    background-color: #add1f2;
     margin-bottom: 20px;
     -webkit-column-break-inside: avoid;
     padding: 24px;
     box-sizing: border-box;
   }
+
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600 px;
+    height: 200px;
+    background: #05386b;
+    box-shadow: -10px 5px 30px;
+    box-sizing: border-box;
+    transition: .5s;
+  } */
   
   /* Force varying heights to simulate dynamic content */
   .card:first-child {
@@ -262,80 +295,50 @@ body {
       column-count: 2;
     }
   }
-
-  .events-option{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 20px;
-    margin-bottom: 10%;
-  }
-  
-  /* button effect */
-  #button1{
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    padding: 5px 5px 5px 5px;
-  }
-  #button1:hover{
-    background-color: #008CBA;
-    color: rgb(142, 55, 55);
-  }
-  #button2{
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    padding: 5px 5px 5px 5px;
-  }
-  #button2:hover{
-    background-color: #008CBA;
-    color: rgb(142, 55, 55);
-  }
-  #button3{
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    padding: 5px 5px 5px 5px;
-  }
-  #button3:hover{
-    background-color: #008CBA;
-    color: rgb(142, 55, 55);
-  }
-  #button4{
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    padding: 5px 5px 5px 5px;
-  }
-  #button4:hover{
-    background-color: #008CBA;
-    color: rgb(142, 55, 55);
-  }
-  
-  .submit-button {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #ba0c00;
-    font-size: 200%;
-    margin-left:40% ;
-    padding: 5px 5px 5px 5px;
-  }
-  
-  .submit-button:hover{
-    background-color: #eb9b89;
-    color: rgb(50, 14, 227);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
   
 
- 
+  @border-color: orange;
+  @border-bottom-color: #ccc;
+  @border-size: 5px;
+  
+  #page {
+    max-width: 80%;
+    margin: auto;
+  }
+  
+  .container {
+    margin: 20px;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+  border-radius:10px;
+
+  }
+  
+  .body {
+    position: relative;
+    padding: 10px;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.592);
+    border-top: @ border-size solid @border-color @border-round;
+    border-bottom: 2px solid @border-bottom-color;
+    color: white;
+    font-family: georgia;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: inset 0 0 @border-size #333;
+
+    
+  }
+  
+  .upArrow {
+    position: absolute;
+    top: @border-size;
+    left: 80%;
+    margin-left: -@border-size;
+    width: 0;
+    height: 0;
+    border-left: @border-size solid transparent;
+    border-right: @border-size solid transparent;
+    border-top: @border-size solid @border-color;
+  }
