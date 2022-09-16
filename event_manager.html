@@ -1,4 +1,3 @@
-
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -8,9 +7,11 @@
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <title>EVENT MANAGEMENT PORTAL</title>
     </head>
     <body>
+    
         <nav class="navbar">
             <div class="navbar-container container">
                 <input type="checkbox" name="" id="">
@@ -21,36 +22,59 @@
                 </div>
                 <ul class="menu-items">
                     <li><img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" alt=""></li>
+                    
                 </ul>
                 <h1 class="logo">EVENT MANAGEMENT PORTAL</h1>
             </div>
         </nav>
-        <section class="side menu">
+        <div class="side menu">
             <div class="middle">
                 <ul class="menus">
-                  <li class="item" id="profile">
-                    <a href="#profile"><i class="fa-solid fa-house"></i>Home</a>
-                    <div class="sub-menus">
-                      <a href="#">Posts</a>
-                      <a href="#">Picture</a>
-                    </div>
+                  <li class="item" id="Home">
+                    <a href="#Home" style="text-decoration: none;"><i class="fa-solid fa-house"></i>Home</a>
+        
                   </li>
-                  <li class="item" id="messages">
-                    <a href="#messages"><i class="fa-solid fa-calendar"></i>Event Detail</a>
+                  <li class="item" id="event_detail">
+                  <a href="#event_detail" style="text-decoration: none;"><i class="fa-solid fa-calendar"></i>Event Detail</a>
                     
                   </li>
-                  <li class="item" id="settings">
-                    <a href="#settings"><i class="fa-solid fa-trophy"></i>Result</a>
+                  <li class="item" id="Result">
+                    <a href="#Result" style="text-decoration: none;"><i class="fa-solid fa-trophy"></i>Result</a>
                   
                   </li>
                   <li class="item">
-                    <a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                    <a href="#" style="text-decoration: none;"><i class="fas fa-sign-out-alt"></i>Logout</a>
                   </li>
                 </ul>
               </div>
+            </div>
+        </div>
+        <div class="manage">
+            <div class="manage_div">
+                <div class="manager_sec">
+                    <h2>MANAGER DETAILS</h2>
+                </div>
+             <div class="right">
+                 <div class="Description">
+                  <h2>DESCRIPTION</h2>
+                 </div>
+                 <div class="Registration">
+                 <h2>REGISTRATION DETAIL</h2>
+                  </div>
+              </div>
+            
+              </div>
+            </div>
+        </div>
+        <section class="information">
+        
         </section>
-        <section class="info_Section">
-            <div class=""></div>
-        </section>
+        <script>
+            $(function() {
+                $("#event_detail").click(function() {
+                $(".right").toggleClass("right-visible");
+            });
+        });
+        </script>
     </body>
     </html>
