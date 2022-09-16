@@ -2,7 +2,7 @@ $(document).ready(() => {
     $(".setbtn").css("display","none");
     setTimeout(() => {
         $(".setbtn").css("display","");
-    },17050);
+    },8550);
 })
   
   function sets() {
