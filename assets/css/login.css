@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); */
 
 :root{
     --success-color: #2ecc71;
@@ -10,25 +10,28 @@
 }
 
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family:cursive;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     margin: 0px;
-    background-color: #242333;
+    background-image: url("../stars.jpg");
+    background-size: cover;
 }
 
 .container{
-    width: 400px;
+    width: 20%;
+   height: 400px;
     border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgb(176, 170, 170);
+    box-shadow: 0 2px 10px rgba(237, 228, 228, 0.895);
 }
 
 .form h1{
     margin: 0 0 20px;
     text-align: center;
+    font-size: 20px;
 }
 
 .form{
@@ -38,27 +41,35 @@ body{
 .form-control{
     position: relative;
     margin-bottom: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
+font-family:cursive;
+font-weight: 700;
+color: #242333;
+font-size:20px;
+
 }
 
 .form-control label{
     display: block;
     margin-bottom: 5px;
-    color: #777;
+    color: rgb(24, 23, 23);
 }
 
 .form-control input{
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     border: 2px solid #f0f0f0;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 14px;
 }
 
 .form-control input:focus{
     outline: 0;
     border-color: #777;
+}
+.form-control input::placeholder{
+    font-size: 10px;
 }
 
 .form-control.success input{
@@ -81,11 +92,24 @@ body{
     visibility: visible;
 }
 
+
+#email:hover{
+    background: rgb(246, 198, 198);
+ color: #000;
+ font: 300;
+
+}
+#password:hover{
+    background:rgb(246, 198, 198);
+    color: #000;
+    font : 300
+
+}
 .form button{
     display: block;
     width: 100%;
     margin-top: 20px;
-    padding: 10px;
+    padding: 5px;
     border: 2px solid #3498db;
     border-radius: 4px;
     background-color: #3498db;
