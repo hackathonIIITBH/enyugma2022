@@ -10,7 +10,7 @@
     overflow: hidden;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +40,7 @@
 .setbtn {
     color: rgb(255, 255, 255);
     float: right;
-    z-index: -100000;
+    z-index: 20;
     margin: 98vw;
 }
 

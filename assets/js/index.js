@@ -6,8 +6,11 @@ setTimeout(() => {
   document.querySelector(".loader").style.display = "none";
   document.querySelector(".landing-page").style.display = "block";
 }, 7000);
+
 init();
-render();
+// render();
+// skrollr.init();
+
 function init() {
   container = document.getElementById("canvas");
   renderer = new THREE.WebGLRenderer({

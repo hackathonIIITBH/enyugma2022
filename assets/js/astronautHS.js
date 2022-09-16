@@ -1,1 +1,1 @@
-const astrounaut = getElementById('astronaut');
+// const astrounaut = getElementById('astronaut');
