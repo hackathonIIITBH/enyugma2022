@@ -1,185 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enyugma - 2022</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/cursor.css">
-    <link rel="stylesheet" href="./assets/css/loader.css">
-    <link rel="stylesheet" href="./assets/css/astronautHS.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/light.css">
+    <link rel="stylesheet" href="./assets/css/v-style.css" />
+    <link rel="stylesheet" href="cursor.css" />
+    <link rel="stylesheet" href="div.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"  />
+  </head>
 
-    <!-- Events css -->
-    <link rel="stylesheet" href="assets\css\v-style.css">
-
-    <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <!-- fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-     <!-- jsquery -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-     <!-- stellar.js -->
-     <script src="assets/js/jquery.stellar.min.js"></script>
-     <script src="assets/js/home.js"></script>
-
-     
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
-  
-</head>
-
-<body>
-    <!-- <div class="empty_container">
-        <h1>Hello world</h1>
-    </div> -->
-    <!-- <div id="particles-js"></div> -->
-
-    <div id="canvas"></div>
-    <!-- <section class="loader">
-        <div class="noite"></div>
-
-        <div class="constelacao"></div>
-
-        <div class="lua">
-            <div class="textura"></div>
-        </div>
-
-        <div class="chuvaMeteoro"></div>
-
-        <div class="floresta">
-
-            <h1 id="header">ENYUGMA</h1>
-
-
-            <img src="https://raw.githubusercontent.com/interaminense/starry-sky/master/src/img/bgTree.png" alt="" />
-        </div>
-    </section> -->
-
-    
-
-    <section class="landing-page">
-        <!-- <div class="navbar">
-            <div class="setbtn" id="setb" onclick="sets(this)">
-              <span class="material-symbols-outlined">
-                menu
-              </span>
-        </div>
-      </div>
-  
-      <div class = "body">
-      <div class="settingbar">
-        <div class="closebtn" style="--i: 7" onclick="closesettingbar()">
-          <i class="material-icons">close</i>
-        </div>
-        <div style="--top: 70px; --i :6">
-          <i class="material-icons">animation</i><i>Home</i>
-        </div>
-        <div style="--top: 170px; --i :5">
-          <i class="material-icons">animation</i><i>About Section</i>
-        </div>
-        <div style="--top: 270px; --i :4">
-          <i class="material-icons">animation</i><i>Hero Section</i>
-        </div>
-        <div style="--top: 370px; --i :3">
-          <i class="material-icons">animation</i><i>Event Section</i>
-        </div>
-        <div style="--top: 470px; --i :2">
-          <i class="material-icons">filter_vintage</i>
-          <i class="text">Contact Us</i>
-        </div>
-      </div> -->
-
-        <!-- <div class="container">
-            <img src="./assets/Indian_Institute_of_Information_Technology,_Bhagalpur_logo.png" alt="iiitbh"
-                class="logo_clg">
-        </div> -->
-
-        <!-- <div class="container_fest">
-        <img src="https://enyugma.iiitbh.ac.in/img/enugma%20introduction.png" alt="fest_tech" class="fest_tech">
-    </div> -->
-
-        <!-- TECHFEST_LOGO -->
-        <!-- <div class="techfest_logo">
-            <img src="https://enyugma.iiitbh.ac.in/Asset%201.svg" alt="fest_logo" class="fest_logo_img">
-        </div> -->
-
-        <!-- COUNTDOWN TIMER -->
-        <!-- <div class="container_timer">
-            <div class="days_container">
-                <span class="days_text" id="days"></span>
-                <span class="days_char">DAYS</span>
-            </div>
-            <div class="days_container hr1">
-                <span class="hours_text" id="hours"></span>
-                <span class="days_char">HOUR</span>
-            </div>
-            <div class="days_container">
-                <span class="minutes_text" id="minutes"></span>
-                <span class="days_char">MINS</span>
-            </div>
-            <div class="days_container">
-                <span class="sec_text" id="seconds"></span>
-                <span class="days_char">SECS</span>
-            </div>
-        </div> -->
-
-        <!-- <div class="starts_in_container">
-            <div class="wrapper">
-                <div class="main">
-                    <h1 class="shadow-effect tween-looper">STARTS IN <span></span></h1>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div>
-            <a href="#" class="glow-on-hover">REGISTER NOW</a>
-        </div> -->
-
-
-        <!-- Astronaut Hero Section -->   
-        <!-- <div id= "main">
-            <div id ="astronaut">
-              <img src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png" alt="" width="250">
-            </div>
-          
-            <div id ="astronaut2">
-              <img src="https://images.vexels.com/media/users/3/152641/isolated/preview/2b3d63661f0d7fe62c36168604985f26-space-cosmonaut-cartoon-by-vexels.png" alt="" width="250">
-            </div>
-        </div> -->
-
-
-
-        <!-- Events sectioon -->
-        <div class="event_container">
-            <div
+  <body>
+    <div
       class="e_container"
-      data-0="transform:translateX(10%);"
-      data-100="transform:translateX(-300%);">
+      data-0="transform:translateX(0%);"
+      data-100="transform:translateX(-400%);">
       <section>
         <div class="e_content">
           <h2>Cultural Board</h2>
@@ -558,185 +394,29 @@
         </div>
       </section>
     </div>
-        </div>
-
-        <!-- </div> -->
-
-
-        <!-- <div class="curzr" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-      <path class="inner" d="M25,30a5.82,5.82,0,0,1-1.09-.17l-.2-.07-7.36-3.48a.72.72,0,0,0-.35-.08.78.78,0,0,0-.33.07L8.24,29.54a.66.66,0,0,1-.2.06,5.17,5.17,0,0,1-1,.15,3.6,3.6,0,0,1-3.29-5L12.68,4.2a3.59,3.59,0,0,1,6.58,0l9,20.74A3.6,3.6,0,0,1,25,30Z" fill="#F2F5F8" />
-      <path class="outer" d="M16,3A2.59,2.59,0,0,1,18.34,4.6l9,20.74A2.59,2.59,0,0,1,25,29a5.42,5.42,0,0,1-.86-.15l-7.37-3.48a1.84,1.84,0,0,0-.77-.17,1.69,1.69,0,0,0-.73.16l-7.4,3.31a5.89,5.89,0,0,1-.79.12,2.59,2.59,0,0,1-2.37-3.62L13.6,4.6A2.58,2.58,0,0,1,16,3m0-2h0A4.58,4.58,0,0,0,11.76,3.8L2.84,24.33A4.58,4.58,0,0,0,7,30.75a6.08,6.08,0,0,0,1.21-.17,1.87,1.87,0,0,0,.4-.13L16,27.18l7.29,3.44a1.64,1.64,0,0,0,.39.14A6.37,6.37,0,0,0,25,31a4.59,4.59,0,0,0,4.21-6.41l-9-20.75A4.62,4.62,0,0,0,16,1Z" fill="#111920" />
-    </svg>
-  </div> -->
-    <!-- <div class="wrapper next-row"> -->
-      <footer>
-      <!-- <div class="footer">
-        <div class="wid-25 contact-list">
-           
-           
-              <ul>
-                  <h3>CONTACT</h3>
-                  
-                   
-                  <li><i class="fa fa-envelope icon " ></i>pro@iiitbh.ac.in</li>
-                  <li><i class="fa fa-envelope icon  "></i>pro@iiitbh.ac.in</li>
-                  <li><i class="fa fa-envelope icon  "></i>pro@iiitbh.ac.in</li>
-                  <li><i class="fa fa-envelope icon "></i>pro@iiitbh.ac.in</li>
-                 
-                </ul>
-           </div>
-             
-           
-          
-          
-          <div class="wid-25 address  ">
-            
-            <ul>
-              <h3>    ADDRESS</h3>
-            <li>
-              <i class="fa fa-map-marker-alt icon fa-bounce" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;" "></i>College of Engineering Campus, Bhagalpur,
-              Sabour, Bihar 813210
-              
-            </li>
-            <li><i class="fa fa-envelope icon  "></i>pro@iiitbh.ac.in</li>
-            <li><i class="fa fa-phone icon fa-shake"></i>123456789</li>
-          </ul>
-     </div>
-  
-          <div class="wid-25 need-help margin-top:5px">
-            <h3>NEED HELP</h3>
-            <ul>
-              <li>
-                <a href=""
-                  ><i class="fa fa-angle-right fa-fade"></i><span>About </span></a
-                >
-              </li>
-              <li>
-                <a href=""
-                  ><i class="fa fa-angle-right fa-beat"></i><span>Events</span></a
-                >
-              </li>
-              <li>
-                <a href=""
-                  ><i class="fa fa-angle-right fa-fade"></i><span>Tech Events</span></a
-                >
-              </li>
-              <li>
-                <a href=""
-                  ><i class="fa fa-angle-right fa-beat"></i><span>Team</span></a
-                >
-              </li>
-              <li>
-                <a href=""
-                  ><i class="fa fa-angle-right fa-fade"></i><span>Sponsors</span></a
-                >
-              </li>
-              
-            </ul>
-          </div>
-          <div class="wid-25 legal ">
-            <h3>LEGAL</h3>
-            <ul>
-              <li>
-                <a href=""
-                  ><i class="fa fa-angle-right fa-beat"></i><span>Privacy Policy </span></a
-                >
-              </li>
-              <li>
-                <a href=""
-                  ><i class="fa fa-angle-right fa-fade"></i><span>Terms and Conditions</span></a
-                >
-              </li>
-              <li>
-                <a href=""
-                  ><i class="fa fa-angle-right fa-beat"></i><span>Shipping Policy</span></a
-                >
-              </li>
-              <li>
-                <a href=""
-                  ><i class="fa fa-angle-right fa-fade"></i><span>Return and Refund Policy</span></a
-                >
-              </li>
-             
-              
-            </ul>
-            
-             
-            
-          </div>
-          </div>
-          <div class="copy-right">
-            
-            <P>  © <b>DEVELOPED BY WEBWERSE | IIITBH</b> .  ALL RIGHTS RESERVED. </P>
-           <div class="follow">
-            <p>FOLLOW US</p>
-            <span></span>
-            <a target="_blank" href="https://www.instagram.com/iiit_bhagalpur_official/?hl=en"><i class="fa fa-instagram" aria-hidden="true" ></i></a>
-            <span></span>
-           
-            <a target="_blank" href="https://www.linkedin.com/school/iiitbh/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            <span></span>
-           
-            <a target="_blank" href="https://www.facebook.com/iiitbh.ac.in"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-            <span></span>
-            
-            <a target="_blank" href="https://www.youtube.com/channel/UCmGmxS3Y3tt_7RHW_7JUKng"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-            <span></span>
-  
-           </div>
-          </footer> -->
-          <!-- </div> -->
-
-    </section>
-    
-</div>
-<script type="text/javascript" src="./assets/js/skrollr.js"></script>
+    <script type="text/javascript" src="./assets/js/skrollr.js"></script>
     <script type="text/javascript">
       var s = skrollr.init();
     </script>
-    <!-- <div class="cursor"></div>
-    <div class="cursor2"></div> -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
 
     <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js"></script>
-    <script 
-        src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js'></script>
+    <script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js'></script>
     <script src='https://jeromeetienne.github.io/threex.terrain/threex.terrain.js'></script>
 
-    <!-- <script type="text/javascript" src="./assets/js/skrollr.js"></script> -->
-    <script type="text/javascript" src="./assets/js/index.js"></script>
-    <!-- <script type="text/javascript" src="./assets/js/particles.js"></script> -->
-    <!-- <script type="text/javascript" src="./assets/js/app.js"></script> -->
-    <!-- <script type="text/javascript" src="./assets/js/loader.js"></script> -->
-    <!-- <script type="text/javascript" src="./assets/js/cursor1.js"></script> -->
-    <!-- <script type="text/javascript" src="./assets/js/astronautHS.js"></script> -->
-    <!-- timer javascript -->
-    <!-- <script src="./assets/js/timer.js"></script> -->
-
-    <!-- Navbar Script -->
-
-
-    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script> -->
-
-    <!-- Events javascript -->
-    
-    
-  
-    <!-- <script>
-        var tl = gsap.timeline({ defaults: { duartion: 1 } });
-        // skrollr.init();
-        tl.from(".container", { duration: 2,delay: 1, ease: "bounce.out", y: -50, opacity: 0 })
-            .from(".logo_clg", { duration: 1.3, delay: 1, opacity: 0 })
-            .from(".starts_in_container", { duration: 2, opacity: 0, ease: "elastic.out(1, 0.1)", y: -100 })
-            .from(".days_container", { duration: 1.5, ease: "bounce.out", x: 100, opacity: 0 })
-            .from(".hr1", { delay: 0.5 })     
-    </script> -->
-
-    <script type="text/javascript">
-        
-    </script>
+    <script src="index.js"></script>
+    <script src="cursor.js"></script>
+    <script src="cursor1.js"></script>
  
-</body>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
 
+    <script>
+        var tl=gsap.timeline({defaults: {duartion:1}});
+
+        tl.from(".container",{duration: 2, ease: "bounce.out", y: -50,opacity:0})
+          .from(".logo_clg", {duration:1.5,delay:0.5,opacity:0})
+    </script>
+  </body>
 </html>

@@ -47,6 +47,7 @@ form.addEventListener('submit',function(e){     // adding eventListener to form 
     checkRequired([email,password]);
     checkEmail(email);
 });
+<<<<<<< HEAD
 document.forms["#login"].addEventListener("submit",(e)=>{
 e.preventDefault();
 fetch(`${url}/login`,{
@@ -68,3 +69,28 @@ fetch(`${url}/login`,{
     alert(err)
 })
 })
+=======
+
+//Astronaut JS
+$.fn.multiply = function(numCopies) {
+    var newElements = this.clone();
+    for(var i = 1; i < numCopies; i++)
+    {
+        newElements = newElements.add(this.clone());
+    }
+    return newElements;
+  };
+  
+  $('.star').multiply(80).insertAfter('.star');
+  
+  
+  $('.star').each(function() {
+    var top = (Math.random() * 100) + '%';
+    var left = (Math.random() * 100) + '%';
+    
+    $(this).css({
+      "top": top,
+      "left": left
+    });
+  });
+>>>>>>> 58c1ffc24c8f5ecf8ed70735633f8ed462cc9cf9

@@ -16,22 +16,39 @@ body{
     justify-content: center;
     min-height: 100vh;
     margin: 0px;
-    background-image: url("../stars.jpg");
+    background: url("../stars.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.wrapper {
+  position: fixed;
+  right:100px;
 }
 
 .container{
-    width: 20%;
-   height: 400px;
-    border-radius: 5px;
-    background-color: rgb(176, 170, 170);
-    box-shadow: 0 2px 10px rgba(237, 228, 228, 0.895);
+    width: 400px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter:blur(2px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .form h1{
     margin: 0 0 20px;
     text-align: center;
-    font-size: 20px;
+    font-weight: 600;
+    color:rgb(212, 212, 212);
 }
 
 .form{
@@ -52,7 +69,8 @@ font-size:20px;
 .form-control label{
     display: block;
     margin-bottom: 5px;
-    color: rgb(24, 23, 23);
+    color: rgb(225, 218, 218);
+    font-weight: 900;
 }
 
 .form-control input{
@@ -60,8 +78,9 @@ font-size:20px;
     width: 100%;
     padding: 5px;
     border: 2px solid #f0f0f0;
-    border-radius: 6px;
+    border-radius: 20px;
     font-size: 14px;
+    font-weight: 400;
 }
 
 .form-control input:focus{
@@ -109,11 +128,60 @@ font-size:20px;
     display: block;
     width: 100%;
     margin-top: 20px;
-    padding: 5px;
-    border: 2px solid #3498db;
-    border-radius: 4px;
-    background-color: #3498db;
-    color: #fff;
+    padding: 10px;
+    border: 2px solid #3498dbb9;
+    border-radius: 20px;
+    background-color: #3498dbc9;
+    color: rgb(212, 212, 212);
     font-size: 16px;
+    font-weight: bolder;
     cursor: pointer;
+    transition: 500ms;
+    font-weight: 700;
+}
+
+.form button:hover {
+    transform: scale(1.1);
+}
+
+
+.techfest_logo{
+  background-color: transparent;
+  position: fixed;
+  left:10vw;
+  height: 20vh;
+  width: 40vw;
+  top: 30%;
+}
+.main {
+width: inherit;
+height: inherit;
+font-family: "Yeseva One", cursive;
+position: absolute;
+top:-50vh;
+left:0;
+}
+
+/* Astronaut CSS */
+#astronaut > img {
+  padding-top: 0;
+  display: block;
+  position: fixed;
+  left: 49%;
+  top:50%;
+  width: 150px;
+  height: 150px;
+  animation: anim 20s linear infinite;
+}
+
+#astronaut2 > img {
+  padding-top: 150px;
+  display: block;
+  left:0;
+  position: fixed;
+  top: 40px;
+  width: 200px;
+  
+  animation: anim2 20s linear infinite;
+  animation-delay: 1s;
 }
