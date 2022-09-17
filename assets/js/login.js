@@ -1,7 +1,7 @@
 const form=document.getElementById('form');
 const email=document.getElementById('email');
 const password=document.getElementById('password');
-
+const url="https://enyugma.herokuapp.com";
 console.log('Running!!!!');
 
 function showError(input,message){      // a function that will be called whenever an error is to be printed 
@@ -47,3 +47,24 @@ form.addEventListener('submit',function(e){     // adding eventListener to form 
     checkRequired([email,password]);
     checkEmail(email);
 });
+document.forms["#login"].addEventListener("submit",(e)=>{
+e.preventDefault();
+fetch(`${url}/login`,{
+    method:"post",
+    body:URLSearchParams(FormData(e.target))
+
+})
+.then((res)=>res.json()).then((data)=>{
+    if(data.status==0){
+        localStorage.setItem(data.auth_token)
+        window.location.href="./dashboard.html"
+    }
+    else{
+        alert("something went wrong")
+    }
+    
+})
+.catch((err)=>{
+    alert(err)
+})
+})
