@@ -20,7 +20,7 @@ body {
 
 .landing-page {
   height: 200vh;
-  display: block;
+  display: none;
 }
 
 #canvas {

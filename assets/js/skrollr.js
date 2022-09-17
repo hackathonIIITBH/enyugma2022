@@ -5,7 +5,9 @@
  *
  * Free to use under terms of MIT license
  */
-(function(window, document, undefined) {
+var ec=document.querySelector(".event_container")
+
+(function(ec, document, undefined) {
 	'use strict';
 
 	/*
@@ -294,8 +296,8 @@
 
 		//Triggers parsing of elements and a first reflow.
 		_instance.refresh();
-
-		_addEvent(window, 'resize orientationchange', function() {
+		var ec=document.querySelector(".event_container")
+		_addEvent(ec, 'resize orientationchange', function() {
 			var width = documentElement.clientWidth;
 			var height = documentElement.clientHeight;
 

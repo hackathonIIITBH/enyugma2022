@@ -9,11 +9,10 @@
 
 .events_container{
     background-color: transparent;
-    position: absolute;
+    /* position: absolute; */
+    display: flex;
     width: 100vw;
-    height: 101vh;
-    top: 200px;
-    z-index: -1;
+    height: 100vh;
     /* top:50%; */
 }
 
@@ -28,35 +27,35 @@
 
 .e_container {
 
-    position: relative;
-    top: 10%;
+    /* position: relative; */
+    /* top: 10%; */
     left: 0;
     width: 100%;
     display: flex;
     padding-top: 600px;
 }
 
-.e_container section {
+/* .e_container section {
     min-width: 100%;
     display: flex;
     justify-content: right;
     align-items: center;
     height: 100vh;
-}
+} */
 
-.e_container section .e_content {
+.e_container .e_content {
     max-width: 1200px;
     padding: 40px;
     text-align: center;
 }
 
-.e_container section .e_content h2 {
+.e_container .e_content h2 {
     font-size: 4em;
     color: beige;
     margin-bottom: 40px;
 }
 
-.e_container section .e_content p {
+.e_container .e_content p {
     max-width: 800px;
     font-size: 1em;
     line-height: 1.4em;

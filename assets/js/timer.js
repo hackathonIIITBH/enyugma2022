@@ -1,4 +1,4 @@
-var countToDate = new Date("Oct 16, 2022 18:37:25").getTime();
+var countToDate = new Date("Nov 04, 2022 00:00:00").getTime();
 
 var x = setInterval(function(){
 
@@ -21,4 +21,4 @@ var x = setInterval(function(){
         clearInterval(x);
         document.getElementById("demo").innerHTML = "COMING SOON";
     }
-},1000) 
+},50) 
