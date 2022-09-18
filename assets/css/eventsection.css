@@ -1,0 +1,115 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: url("https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg?w=2000") center no-repeat fixed;
+    /* overflow: hidden; */
+}
+.upper{
+    height: 100vh;
+    width: 100%;
+    /* position: fixed; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    /* margin-top: 200px;
+    margin-left: 200px; */
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+.container section{
+    min-width: 100%;
+    height: auto;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container section .block {
+    /* position: relative;
+    width: 580px;
+    height: 460px;
+    margin: 10px 300px 20px 80px; */
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.details{
+    margin-left: 20px;
+}
+
+#img{
+    width: 400px;
+    height: 300px;
+    /* display: none; */
+}
+
+h1 {
+    /* position: absolute; */
+    font-family: "Monument Extended";
+    font-weight: lighter;
+    font-size: 64px;
+    margin: 0%;
+}
+
+/* .block-1 h1,
+.block-3 h1,
+.block-5 h1 {
+    bottom: 0;
+    right: -60px;
+}
+
+.block-2 h1,
+.block-4 h1 {
+    right: -60px;
+} */
+
+.lowerpart{
+    height: 100vh;
+    width: 100%;
+    background: rgba(255, 0, 0, 0.221);
+}
+
+.lowerpart2{
+    height: 100vh;
+    width: 100%;
+    background: rgba(172, 255, 47, 0.208);
+}
+section:nth-child(1){
+    background-color: transparent;
+}
+section:nth-child(2){
+    background-color: transparent;
+}
+section:nth-child(3){
+    background-color: transparent;
+}
+section:nth-child(4){
+    background-color: transparent;
+}
+section:nth-child(5){
+    background-color: transparent;
+}
+
+#rocket {
+    width: 40%;
+    position: fixed;
+    top: 50%;
+    margin-top: 20px;
+    right: 50%;
+    margin-right: -90px;
+    transform: rotate(90deg) translateX(0%);
+  }

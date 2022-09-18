@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="./assets/css/eventsection.css" />
+    <script defer src="./assets/js/html2canvas.min.js"></script>
+    <script defer src="./assets/js/disintegrate.js"></script>
+    <script defer src="./assets/js/eventsection.js"></script>
+</head>
+
+<body>
+    <div class="upper" data-0="transform:translateY(0%);" data-1000="transform:translateY(-100%);">Hello</div>
+    <div class="container" id="cont" data-1000="transform:translateX(0%);" data-2000="transform:translateX(-400%);">
+        <div id='object'>
+            <img id="rocket" src="./assets/rocket2.gif"
+            data-1000="transform:translateX(-100%) translateY(20%) rotate(0deg) scale(0.8);" 
+            data-1333="transform:translateX(400%) translateY(-10%) rotate(50deg) scale(0.6);" 
+            data-1777="transform:translateX(800%) translateY(-15%) rotate(30deg) scale(0.6);" 
+            data-2000="transform:translateX(1120%) translateY(-50%) rotate(0deg) scale(0.4);">
+        </div>
+        <section>
+            <div class="block block-1" id="blocks">
+                <img src="https://images.unsplash.com/photo-1541363111435-5c1b7d867904?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVtbXl8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="" id="img">
+                <div class="details">
+                    <h1>asterisks.</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quisquam odio quis tempore enim voluptatibus consectetur ea et deleniti praesentium ratione iste doloribus nihil obcaecati, reprehenderit voluptate rem repellat, id perspiciatis. Eaque, vero velit. Tempora placeat earum debitis autem voluptas saepe sit assumenda quae amet officiis animi voluptatem dolorum.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="block block-2">
+                <img src="https://photos5.appleinsider.com/gallery/48901-95609-iPhone-14-Dummies-on-Wood-xl.jpg"
+                    alt="" id="img">
+                <div class="details">
+                    <h1>asterisks.</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quisquam odio quis tempore enim voluptatibus consectetur ea et deleniti praesentium ratione iste doloribus nihil obcaecati, reprehenderit voluptate rem repellat, id perspiciatis. Eaque, vero velit. Tempora placeat earum debitis autem voluptas saepe sit assumenda quae amet officiis animi voluptatem dolorum.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="block block-3">
+                <img src="https://images.unsplash.com/photo-1541363111435-5c1b7d867904?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVtbXl8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="" id="img">
+                <div class="details">
+                    <h1>asterisks.</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quisquam odio quis tempore enim voluptatibus consectetur ea et deleniti praesentium ratione iste doloribus nihil obcaecati, reprehenderit voluptate rem repellat, id perspiciatis. Eaque, vero velit. Tempora placeat earum debitis autem voluptas saepe sit assumenda quae amet officiis animi voluptatem dolorum.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="block block-4">
+                <img src="https://photos5.appleinsider.com/gallery/48901-95609-iPhone-14-Dummies-on-Wood-xl.jpg"
+                    alt="" id="img">
+                <div class="details">
+                    <h1>asterisks.</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quisquam odio quis tempore enim voluptatibus consectetur ea et deleniti praesentium ratione iste doloribus nihil obcaecati, reprehenderit voluptate rem repellat, id perspiciatis. Eaque, vero velit. Tempora placeat earum debitis autem voluptas saepe sit assumenda quae amet officiis animi voluptatem dolorum.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="block block-5">
+                <img src="https://images.unsplash.com/photo-1541363111435-5c1b7d867904?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVtbXl8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="" id="img">
+                <div class="details">
+                    <h1>asterisks.</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quisquam odio quis tempore enim voluptatibus consectetur ea et deleniti praesentium ratione iste doloribus nihil obcaecati, reprehenderit voluptate rem repellat, id perspiciatis. Eaque, vero velit. Tempora placeat earum debitis autem voluptas saepe sit assumenda quae amet officiis animi voluptatem dolorum.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="lowerpart" data-3000="transform:translateY(400%);"></div>
+    <div class="lowerpart2" data-3000="transform:translateY(400%);"></div>
+    <script type="text/javascript" src="./assets/js/skrollr.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+    </script>
+    <!-- <script src="./assets/js/eventsection.js"></script> -->
+    <!-- <script>
+        var blocks = document.getElementsByClassName("block");
+        var container = document.getElementsByClassName("container");
+        var hs = new HorizontalScroll.default({
+            blocks: blocks,
+            container: container,
+            isAnimated: true,
+            springEffect: 0.8,
+        });
+    </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="./assets/js/walking.js"></script>
+</body>
+
+</html>
