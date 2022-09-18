@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 var countToDate = new Date("Nov 04, 2022 00:00:00").getTime();
+=======
+var countToDate = new Date("Nov 04, 2022 18:37:25").getTime();
+>>>>>>> df2472a3dbda4699619c6335aae79b0e6f730819
 
 var x = setInterval(function(){
 
