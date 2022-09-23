@@ -1217,8 +1217,23 @@ footer{
   overflow: hidden;
   margin: 0px 19vw;
   text-align: center;
+  background-color: transparent;
 }
 
 .scrollView section .details p{
   word-wrap: break-word;
+  width: 100%;
+  height: fit-content;
 }
+
+/* .scrollView {
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+} */
+
+/* .scrollView >section {
+  transform: rotate(90deg);
+  transform-origin: right top;
+} */

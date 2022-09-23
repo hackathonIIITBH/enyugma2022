@@ -37,20 +37,13 @@ body {
     justify-content: center;
 }
 
-.container2 section .block {
-    /* position: relative;
-    width: 580px;
-    height: 460px;
-    margin: 10px 300px 20px 80px; */
+/* .container2 section .block {
     width: 100%;
     padding: 40px;
     text-align: center;
     display: flex;
     justify-content: space-between;
-}
-.details{
-    margin-left: 20px;
-}
+} */
 
 #img{
     width: 400px;
@@ -89,7 +82,7 @@ h1 {
     width: 100%;
     background: rgba(172, 255, 47, 0.208);
 }
-section:nth-child(1){
+/* section:nth-child(1){
     background-color: transparent;
 }
 section:nth-child(2){
@@ -103,7 +96,7 @@ section:nth-child(4){
 }
 section:nth-child(5){
     background-color: transparent;
-}
+} */
 
 #rocket {
     width: 40%;
