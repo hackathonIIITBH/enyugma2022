@@ -19,14 +19,14 @@ body {
 }
 
 .landing-page {
-  height: 276.7vh;
+  /* height: 300vh; */
   display: none;
 }
 .hero_section{
   background-color: transparent;
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  /* position: absolute; */
   /* display: block; */
 }
 .secondpartherosection{
@@ -412,10 +412,10 @@ body {
 
 .footer_container_1{
   background-color: transparent;
-  position: relative;
+  /* position: relative; */
   width: 100vw;
-  height: 60vh;
-  top: 200%;
+  /* height: 60vh; */
+  /* top: 200%; */
 }
 
 
@@ -1049,17 +1049,17 @@ body {
     margin-right: 5%;
   }
 .landing-page .footer {
-    margin-left: -5.5%;
+    /* margin-left: -5.5%;
     margin-right: -5.5%;
     padding-left: 5.5rem;
     padding-right: 6rem;
-    padding-top: 150px;
+    padding-top: 150px; */
     padding-bottom: 7px;
     display: flex;
     color: white;
     width: 100vw;
     position: relative;
-    height: 40vh;
+    /* height: 40vh; */
     /* z-index: 100; */
   }
  .contact-list{
@@ -1165,12 +1165,12 @@ body {
   }
   
   .copy-right {
-    margin-left: -9.5%;
-    margin-right: -9.5%;
-    padding-left: 11%;
-    padding-right: 20%;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    /* margin-left: -9.5%;
+    margin-right: -9.5%; */
+    /* padding-left: 11%; */
+    /* padding-right: 20%; */
+    /* padding-top: 1px; */
+    /* padding-bottom: 1px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1190,3 +1190,35 @@ footer{
   background-color: rgba(0, 0, 0, 0.226);
 }
   
+
+
+.scrolldesign{
+  margin-top: 220px;
+  width: 100%;
+  height: 600px;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 5px 70px 5px 20px;
+  background: transparent;
+  /* height: 100%; */
+  border-radius:15px;
+  color: white;
+}
+
+.scrollView{
+  scroll-behavior: auto;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.scrollView section{
+  width: 60vw;
+  word-wrap: break-word;
+  overflow: hidden;
+  margin: 0px 19vw;
+  text-align: center;
+}
+
+.scrollView section .details p{
+  word-wrap: break-word;
+}
