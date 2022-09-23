@@ -152,3 +152,8 @@ function init() {
 //       onRenderFct(deltaMsec/1000, nowMsec/1000)
 //   })
 // })
+
+
+// document.getElementById('scrollbehavior').addEventListener('scroll',function (){
+//   document.getElementById('scrollbehavior').style.left=`${window.sc}`
+// })
