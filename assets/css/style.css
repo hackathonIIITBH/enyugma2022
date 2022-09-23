@@ -1083,9 +1083,9 @@ body {
     /* height: 40vh; */
     /* z-index: 100; */
   }
- .contact-list{
+ /* .contact-list{
   padding-left: 120px;
- }
+ } */
  .contact-list ul{
   list-style-type: none;
  }
@@ -1094,7 +1094,7 @@ body {
  }
   .footer .contact-list {
     padding-top: 37px;
-    padding-right: 22px;
+    /* padding-right: 22px; */
     list-style-type: none;
     line-height: 2.5;
    
