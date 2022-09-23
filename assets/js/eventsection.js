@@ -25,7 +25,3 @@ function myFunction() {
         document.getElementById("cont").style.display = 'none';
     }
 }
-window.addEventListener("scroll", (event) => {
-    let scroll = this.scrollY;
-    console.log(scroll)
-});

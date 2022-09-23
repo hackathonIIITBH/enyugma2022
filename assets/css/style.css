@@ -435,6 +435,7 @@ body {
   background-color: transparent;
   /* position: relative; */
   width: 100vw;
+  padding: auto 6%;
   /* height: 60vh; */
   /* top: 200%; */
 }
