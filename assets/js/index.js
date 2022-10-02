@@ -7,6 +7,16 @@ setTimeout(() => {
   document.querySelector(".landing-page").style.display = "block";
 }, 7000);
 
+var item = document.querySelector("#scrollbehavior");
+item.addEventListener("wheel", function (e) {
+  // var percent = (100 * item.scrollLeft) / (item.scrollWidth - item.clientWidth);
+//  (document-item).style.overflow = "hidden";
+
+  if (e.deltaY > 0) {
+    item.scrollLeft += 100;
+  } else item.scrollLeft -= 100;
+});
+
 init();
 render();
 // skrollr.init();
@@ -152,7 +162,6 @@ function init() {
 //       onRenderFct(deltaMsec/1000, nowMsec/1000)
 //   })
 // })
-
 
 // document.getElementById('scrollbehavior').addEventListener('scroll',function (){
 //   document.getElementById('scrollbehavior').style.left=`${window.sc}`
