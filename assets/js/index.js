@@ -10,11 +10,15 @@ setTimeout(() => {
 var item = document.querySelector("#scrollbehavior");
 item.addEventListener("wheel", function (e) {
   // var percent = (100 * item.scrollLeft) / (item.scrollWidth - item.clientWidth);
-//  (document-item).style.overflow = "hidden";
+  //  (document-item).style.overflow = "hidden";
 
   if (e.deltaY > 0) {
     item.scrollLeft += 100;
-  } else item.scrollLeft -= 100;
+  } else {
+    if (item.scrollLeft > 0) {
+      item.scrollLeft -= 100;
+    }
+  }
 });
 
 init();
