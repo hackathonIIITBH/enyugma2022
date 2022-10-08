@@ -20,10 +20,7 @@ canvas {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    
     min-height: 100vh;
     margin: 0px;
     background: url("../stars.jpg");
@@ -31,11 +28,34 @@ body {
     background-size: cover;
     overflow: hidden;
 }
+.container_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5%;
+    padding-top: 3%;
+}
 
-.wrapper {
+.status {
+    color: white;
+    z-index: 10;
+    /* display: flex; */
+    justify-content: center;
+    padding: 0.5%;
+    margin: 1%;
+    /* background-color: #ff0000bb;
+    border: 2px solid #de1111; */
+    border-radius: 10px;  
+    font-weight: 500;
+    font-size: 22px;
+    display: none;  
+}
+
+/* .wrapper {
   position: fixed;
   right:100px;
-}
+} */
 
 
 .container {
@@ -82,7 +102,7 @@ body {
 
 .form-control input:focus {
     outline: 0;
-    border-color: #777;
+    border-color: rgb(255, 254, 254);
 }
 
 .form-control.success input {
