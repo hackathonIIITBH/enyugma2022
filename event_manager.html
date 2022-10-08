@@ -3,10 +3,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="event_manager.css">
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="./assets/css/event_manager.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <title>EVENT MANAGEMENT PORTAL</title>
     </head>
@@ -55,20 +53,53 @@
                     <h2>MANAGER DETAILS</h2>
                 </div>
              <div class="right">
-                 <div class="Description">
+                <form class="description" id="desc">
                   <h2>DESCRIPTION</h2>
-                 </div>
-                 <div class="Registration">
-                 <h2>REGISTRATION DETAIL</h2>
+                  <div class="form-control">
+                    <input type="text" autoComplete='off' id="Description" name="Description" placeholder="Event Description">
+                    <input type="text" autoComplete='off' id="Description" name="Description" placeholder="Event Description">
+                    <input type="text" autoComplete='off' id="Description" name="Description" placeholder="Event Description">
+                  </div>
+                  </form>
+                <div class="Registration">
+                    <h2>Registration Details</h2>
+                    <ul class="responsive-table">
+                      <li class="table-header">
+                        <div class="col col-1">Name of Event</div>
+                        <div class="col col-2">Event Description</div>
+                        <div class="col col-3">Contest Details</div>
+                        <div class="col col-4">Fee</div>
+                        <div class="col col-5">Prize Pool</div>
+                        <div class="col col-6">Participation Certificate</div>
+                        <div class="col col-7">Judging Criteria</div>
+                        <div class="col col-8">Registration Link</div>
+                        <div class="col col-9">Rules & Regulations</div>
+                        <div class="col col-10">Event Manager</div>
+                        
+                      </li>
+                      <li class="table-row">
+                        <div class="col col-1" data-label="Name of Event">Codeloop</div>
+                        <div class="col col-2" data-label="Event Description">abcdefo</div>
+                        <div class="col col-3" data-label="Contest Details">abefefe</div>
+                        <div class="col col-4" data-label="Fee">2000/-</div>
+                        <div class="col col-4" data-label="Prize Pool">12000/-</div>
+                        <div class="col col-4" data-label="Participation Certificate"><img src="" alt=""></div>
+                        <div class="col col-4" data-label="Judging Criteria">efefefef</div>
+                        <div class="col col-4" data-label="Registration Link"><url></url></div>
+                        <div class="col col-4" data-label="Rules & Regulations">ghurhiughtrh</div>
+                        <div class="col col-4" data-label="Event Manager">Shreyash</div>
+                                                
+                                                
+                                                
+
+                      </li>
+                    </ul>
                   </div>
               </div>
             
               </div>
             </div>
         </div>
-        <section class="information">
-        
-        </section>
         <script>
             $(function() {
                 $("#event_detail").click(function() {
