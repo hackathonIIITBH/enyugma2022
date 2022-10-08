@@ -2,10 +2,10 @@ var container;
 var camera, controls, scene, renderer;
 var w, h;
 
-setTimeout(() => {
-  document.querySelector(".loader").style.display = "none";
-  document.querySelector(".landing-page").style.display = "block";
-}, 7000);
+// setTimeout(() => {
+//   document.querySelector(".loader").style.display = "none";
+//   document.querySelector(".landing-page").style.display = "block";
+// }, 7000);
 
 var item = document.querySelector("#scrollbehavior");
 item.addEventListener("wheel", function (e) {
