@@ -102,7 +102,7 @@ body {
 
 .form-control input:focus {
     outline: 0;
-    border-color: #777;
+    border-color: rgb(255, 254, 254);
 }
 
 .form-control.success input {

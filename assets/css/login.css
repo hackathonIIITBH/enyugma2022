@@ -104,6 +104,9 @@ canvas {
   outline: 0;
   border-color: #777;
 }
+.form-control input::placeholder{
+    font-size: 10px;
+}
 
 .form-control.success input {
   border-color: var(--success-color);

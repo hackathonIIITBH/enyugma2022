@@ -3,7 +3,7 @@ const name=document.getElementById('name');
 const email=document.getElementById('email');
 const password=document.getElementById('password');
 const confirmPassword=document.getElementById('confirm-password');
-
+const url="https://enyugma.herokuapp.com";
 console.log('Running!!!!');
 
 function showError(input,message){      // a function that will be called whenever an error is to be printed 
@@ -70,6 +70,30 @@ form.addEventListener('submit',function(e){     // adding eventListener to form 
     checkPasswordMatch(password,confirmPassword);
     checkEmail(email);
 });
+<<<<<<< HEAD
+document.forms["#register"].addEventListener("submit",(e)=>{
+    e.preventDefault();
+    fetch(`${url}/register`,{
+        method:"post",
+        body:URLSearchParams(FormData(e.target))
+    
+    })
+    .then((res)=>res.json()).then((data)=>{
+        if(data.status==0){
+            localStorage.setItem(data.auth_token)
+            window.location.href="./dashboard.html"
+        }
+        else{
+            alert("something went wrong")
+        }
+        
+    })
+    .catch((err)=>{
+        alert(err)
+    })
+    })
+    
+=======
 
 //Astronaut JS
 $.fn.multiply = function(numCopies) {
@@ -93,3 +117,4 @@ $.fn.multiply = function(numCopies) {
       "left": left
     });
   });
+>>>>>>> 58c1ffc24c8f5ecf8ed70735633f8ed462cc9cf9

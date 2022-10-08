@@ -53,6 +53,27 @@ form.addEventListener("submit", function (e) {
   checkRequired([email, password]);
   checkEmail(email);
 });
+document.forms["#login"].addEventListener("submit",(e)=>{
+e.preventDefault();
+fetch(`${url}/login`,{
+    method:"post",
+    body:URLSearchParams(FormData(e.target))
+
+})
+.then((res)=>res.json()).then((data)=>{
+    if(data.status==0){
+        localStorage.setItem(data.auth_token)
+        window.location.href="./dashboard.html"
+    }
+    else{
+        alert("something went wrong")
+    }
+    
+})
+.catch((err)=>{
+    alert(err)
+})
+})
 
 //Astronaut JS
 // $.fn.multiply = function (numCopies) {
@@ -106,5 +127,3 @@ document.forms["login"].onsubmit = (e) => {
         }, 200);
     });
 };
-
-
