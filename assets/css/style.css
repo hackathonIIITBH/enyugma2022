@@ -1035,15 +1035,19 @@ footer {
 }
 
 .signin {
-    background-color: rgba(0, 0, 0, 0.078);
-    border: 2px solid rgba(255, 255, 255, 0.555);
+    background-color: rgba(186, 186, 186, 0.881);
+    border: 2px solid rgba(38, 38, 38, 0.555);
+    color:rgb(32, 32, 32);
+}
+
+.signin a {
+  color:rgb(49, 49, 49);
 }
 
 .signin:hover {
-  background-color: rgba(255, 255, 255, 0.852);
-  transform: scale(1.1);
+  background-color: rgba(30, 30, 30, 0.852);  
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.651);
 }
 .signin:hover a {
-  color:black;
+  color:rgb(220, 220, 220);
 }
