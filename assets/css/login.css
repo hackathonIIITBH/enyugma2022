@@ -19,22 +19,55 @@ body {
   overflow: hidden;
 }
 
+
+.navDesign{
+  display: flex;
+  width: 100%;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  z-index: 2;
+  justify-content: space-evenly;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.223);
+}
+
+.navDesign a{
+  text-decoration: none;
+  color: white;
+  /* background: transparent; */
+  /* backdrop-filter: blur(2px); */
+}
+
+.navDesign a h1{
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+}
+
+.navDesign a:hover{
+  background-color: rgba(255, 255, 255, 0.398);
+  transform: scale(1.1);
+}
+
+
 canvas {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: -1;
+  position: fixed;
 }
 
 .container_1 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding-right: 5%;
-  padding-top: 5%;
+  justify-content: space-evenly;
+  height: 100vh;
+  /* padding-right: 5%; */
+  /* padding-top: 5%; */
 }
 
 .status {
@@ -55,17 +88,27 @@ canvas {
 .wrapper {
   display: flex;
   align-items: center;
-  height: 80vh;
+  /* height: 80vh; */
+  width: 30%;
 }
 
 .container {
-  width: 400px;
+  min-width: 300px;
+  width: 100%;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(2px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+.container p{
+  color: white;
+  text-align: center;
+}
+
+.container p a{
+  color: white;
+}
 .form h1 {
   margin: 0 0 20px;
   text-align: center;
@@ -77,11 +120,6 @@ canvas {
   padding: 30px 40px;
 }
 
-.form-control {
-  position: relative;
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-}
 
 .form-control label {
   display: block;
@@ -117,7 +155,7 @@ canvas {
 }
 
 .form-control small {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   left: 0;
   color: var(--error-color);
@@ -150,11 +188,22 @@ canvas {
 
 .techfest_logo {
   background-color: transparent;
-  position: fixed;
-  left: 10vw;
-  height: 20vh;
+  /* left: 10vw; */
+  /* height: 20vh; */
   width: 40vw;
-  top: 30%;
+  /* top: 30%; */
+  color: white;
+}
+.techfest_logo h1{
+  width: 100%;
+  font-family: Verdana;
+  font-size: 22px;
+}
+.techfest_logo h2{
+  width: 100%;
+  font-family: Verdana;
+  font-size: 24px;
+  text-align: end;
 }
 .fest_logo_img {
   width: 100%;
@@ -163,7 +212,6 @@ canvas {
   width: inherit;
   height: inherit;
   font-family: "Yeseva One", cursive;
-  /* position: absolute; */
   /* top: -50vh; */
   left: 0;
 }
@@ -172,7 +220,6 @@ canvas {
 #astronaut > img {
   padding-top: 0;
   display: block;
-  position: fixed;
   left: 49%;
   top: 50%;
   width: 150px;
@@ -184,10 +231,23 @@ canvas {
   padding-top: 150px;
   display: block;
   left: 0;
-  position: fixed;
   top: 40px;
   width: 200px;
 
   animation: anim2 20s linear infinite;
   animation-delay: 1s;
+}
+
+@media (max-width:767px) {
+  .techfest_logo{
+    width: 90%;
+  }
+  .container_1{
+    flex-direction: column;
+    height: fit-content
+  }
+  .wrapper {
+    width: 90%;
+  }
+  
 }
