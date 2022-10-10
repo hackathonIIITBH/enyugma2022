@@ -868,6 +868,7 @@ body {
 .scrollView section .block .details p {
   word-wrap: break-word;
   width: 100%;
+  font-family: Verdana;
   /* height: 100%; */
 }
 
@@ -920,6 +921,7 @@ body {
 
 footer {
   color: white;
+  font-family: Verdana;
   margin-top: 80px;
   padding-top: 40px;
   background-color: rgba(0, 0, 0, 0.482);
