@@ -104,8 +104,8 @@ canvas {
   outline: 0;
   border-color: #777;
 }
-.form-control input::placeholder{
-    font-size: 10px;
+.form-control input::placeholder {
+  font-size: 10px;
 }
 
 .form-control.success input {
@@ -155,6 +155,9 @@ canvas {
   height: 20vh;
   width: 40vw;
   top: 30%;
+}
+.fest_logo_img {
+  width: 100%;
 }
 .main {
   width: inherit;
