@@ -2,24 +2,37 @@ var container;
 var camera, controls, scene, renderer;
 var w, h;
 
-setTimeout(() => {
-  document.querySelector(".loader").style.display = "none";
-  document.querySelector(".landing-page").style.display = "block";
-}, 7000);
+// setTimeout(() => {
+//   document.querySelector(".loader").style.display = "none";
+//   document.querySelector(".landing-page").style.display = "block";
+// }, 7000);
 
 var item = document.querySelector("#scrollbehavior");
-item.addEventListener("wheel", function (e) {
+function scrollsideLeft() {
   // var percent = (100 * item.scrollLeft) / (item.scrollWidth - item.clientWidth);
   //  (document-item).style.overflow = "hidden";
 
-  if (e.deltaY > 0) {
-    item.scrollLeft += 100;
-  } else {
-    if (item.scrollLeft > 0) {
-      item.scrollLeft -= 100;
-    }
-  }
-});
+  // if (e.deltaY > 0) {
+    item.scrollLeft += document.body.offsetWidth;
+  // } else {
+    // if (item.scrollLeft > 0) {
+      // item.scrollLeft -= 100;
+    // }
+  // }
+};
+
+function scrollsideRight() {
+  // var percent = (100 * item.scrollLeft) / (item.scrollWidth - item.clientWidth);
+  //  (document-item).style.overflow = "hidden";
+
+  // if (e.deltaY > 0) {
+    item.scrollLeft -= document.body.offsetWidth;
+  // } else {
+    // if (item.scrollLeft > 0) {
+      // item.scrollLeft -= 100;
+    // }
+  // }
+};
 
 init();
 render();
