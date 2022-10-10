@@ -8,6 +8,8 @@
   <title>Enyugma-2022</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="./assets/css/cursor.css" />
+  
+  <link rel="icon" type="image/x-icon" href="./assets/images/logo_enyugma.png">
   <!-- <link rel="stylesheet" href="./assets/css/loader.css" /> -->
   <link rel="stylesheet" href="./assets/css/astronautHS.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -63,99 +65,97 @@
 
   <!-- LANDING PAGE -->
   <section class="landing-page">
-    <!-- Particle background Javascript -->
     <div id="particles-js"></div>
-
-    <!-- cursor -->
-    <!-- <div class="cursor"></div>
-    <div class="cursor2"></div> -->
-
     <!-- CONTAINER OF HERO SECTION -->
     <div class="hero_section">
       <!-- college logo -->
-      <div class="container" style="position: fixed">
-        <img src="./assets/images/logo_enyugma.png" alt="iiitbh" class="logo_clg" />
-      </div>
-
-      <!-- navbar -->
       <div class="navbar">
-        <div class="setbtn" id="setb" onclick="sets(this)">
-          <span class="material-symbols-outlined"> menu </span>
+        <div class="navdesign">
+          <a href="./Event/technical.html">
+            <div class="link">
+              Technical
+            </div>
+          </a>
+          <a href="./Event/cultural.html">
+            <div class="link">
+              Cultural
+            </div>
+          </a>
+        </div>
+        <div>
+          <div class="container">
+            <img src="./assets/images/logo_enyugma.png" alt="iiitbh" class="logo_clg" />
+            <h1></h1>
+            <img src="./assets/images/Indian_Institute_of_Information_Technology,_Bhagalpur_logo.png" alt="iiitbh"
+              class="logo_clg" />
+          </div>
+        </div>
+        <div class="navdesign">
+          <a href="./auth/register.html">
+            <div class="link">
+              Sign-In
+            </div>
+          </a>
+          <a href="./auth/login.html">
+            <div class="link">
+              Sign-up
+            </div>
+          </a>
         </div>
       </div>
+    </div>
 
-      <div class="body">
-        <div class="settingbar">
-          <div class="closebtn" style="--i: 7" onclick="closesettingbar()">
-            <i class="material-icons">close</i>
+    <div class="body">
+
+      <!-- STARTS IN CONTAINER -->
+
+      <!-- TIMER CONTAINER -->
+      <div class="main-section">
+
+        <!-- TECHFEST LOGO -->
+        <div class="techfest_logo">
+          <h1>IIIT Bhagalpur presents</h1>
+          <img src="./assets/images/enyugmaArt.png" alt="fest_logo" class="fest_logo_img" />
+          <h2>2022</h2>
+        </div>
+        
+        
+        <div class="timer_design">
+          <h1>Techno-Cultural Fest</h1>
+          <div class="starts_in_container">
+            <div class="wrapper">
+              <div class="main">
+                <h1 class="shadow-effect tween-looper">
+                  STARTS IN <span></span>
+                </h1>
+              </div>
+            </div>
           </div>
-          <div style="--top: 70px; --i: 6">
-            <i class="material-icons">animation</i><i>Home</i>
+          <div class="container_timer">
+            <div class="days_container">
+              <span class="days_text" id="days"></span>
+              <span class="days_char">DAYS</span>
+            </div>
+            <div class="days_container hr1">
+              <span class="hours_text" id="hours"></span>
+              <span class="days_char">HOUR</span>
+            </div>
+            <div class="days_container">
+              <span class="minutes_text" id="minutes"></span>
+              <span class="days_char">MINS</span>
+            </div>
+            <div class="days_container">
+              <span class="sec_text" id="seconds"></span>
+              <span class="days_char">SECS</span>
+            </div>
           </div>
-          <div style="--top: 170px; --i: 5">
-            <i class="material-icons">animation</i><i>About Section</i>
-          </div>
-          <div style="--top: 270px; --i: 4">
-            <i class="material-icons">animation</i><i>Hero Section</i>
-          </div>
-          <div style="--top: 370px; --i: 3">
-            <i class="material-icons">animation</i><i>Event Section</i>
-          </div>
-          <div style="--top: 470px; --i: 4" onclick="window.open('./login.html','_target')">
-            <i class="material-icons">animation</i><i>Login</i>
-          </div>
-          <div style="--top: 570px; --i: 2">
-            <i class="material-icons">filter_vintage</i>
-            <i class="text">Contact Us</i>
+          <!-- REGISTER BUTTON -->
+          <div class="register_button">
+            <a href="./auth/login.html" class="glow-on-hover">REGISTER NOW</a>
           </div>
         </div>
-
-        <!-- STARTS IN CONTAINER -->
-
-        <!-- TIMER CONTAINER -->
-        <div class="main-section">
-
-          <!-- TECHFEST LOGO -->
-          <div class="techfest_logo">
-            <img src="./assets/images/enyugmaArt.png" alt="fest_logo" class="fest_logo_img" />
-          </div>
-
-
-          <div class="timer_design">
-            <div class="starts_in_container">
-              <div class="wrapper">
-                <div class="main">
-                  <h1 class="shadow-effect tween-looper">
-                    STARTS IN <span></span>
-                  </h1>
-                </div>
-              </div>
-            </div>
-            <div class="container_timer">
-              <div class="days_container">
-                <span class="days_text" id="days"></span>
-                <span class="days_char">DAYS</span>
-              </div>
-              <div class="days_container hr1">
-                <span class="hours_text" id="hours"></span>
-                <span class="days_char">HOUR</span>
-              </div>
-              <div class="days_container">
-                <span class="minutes_text" id="minutes"></span>
-                <span class="days_char">MINS</span>
-              </div>
-              <div class="days_container">
-                <span class="sec_text" id="seconds"></span>
-                <span class="days_char">SECS</span>
-              </div>
-            </div>
-            <!-- REGISTER BUTTON -->
-            <div class="register_button">
-              <a href="./register.html" class="glow-on-hover">REGISTER NOW</a>
-            </div>
-          </div>
-          <!-- Astronaut Hero Section -->
-          <!--             
+        <!-- Astronaut Hero Section -->
+        <!--             
             <div id="main">
               <div id="astronaut">
                 <img
@@ -173,13 +173,13 @@
                 />
               </div>
             </div> -->
-        </div>
-
-        <!-- CANVAS SECTION -->
       </div>
 
-      <!-- REVERSE TERRAIN -->
-      <!-- <div class="container2" id="cont" data-1000="transform:translateX(0%);" data-2000="transform:translateX(-450%);"> -->
+      <!-- CANVAS SECTION -->
+    </div>
+
+    <!-- REVERSE TERRAIN -->
+    <!-- <div class="container2" id="cont" data-1000="transform:translateX(0%);" data-2000="transform:translateX(-450%);"> -->
     </div>
 
     <div class="scrolldesign" id="scrollbehavior">
@@ -212,8 +212,9 @@
           <div class="button_enentMove" onclick="scrollsideLeft()"><i class="fa-solid fa-angle-right"></i></div>
         </div>
         <div class="event_design">
-          <div class="button_enentMove buttonscreenSet1" onclick="scrollsideRight()"><i class="fa-solid fa-angle-left"></i></div>
-          <h1 class="heading_event" >Cultural Event</h1>
+          <div class="button_enentMove buttonscreenSet1" onclick="scrollsideRight()"><i
+              class="fa-solid fa-angle-left"></i></div>
+          <h1 class="heading_event">Cultural Event</h1>
           <section onclick="window.location.href='./Event/cultural.html';">
             <div class="block cultural_event">
               <!-- <img src="https://photos5.appleinsider.com/gallery/48901-95609-iPhone-14-Dummies-on-Wood-xl.jpg" alt=""
@@ -230,7 +231,8 @@
               </div>
             </div>
           </section>
-          <div class="button_enentMove buttonscreenSet2" onclick="scrollsideRight()"><i class="fa-solid fa-angle-left"></i></div>
+          <div class="button_enentMove buttonscreenSet2" onclick="scrollsideRight()"><i
+              class="fa-solid fa-angle-left"></i></div>
         </div>
       </div>
     </div>

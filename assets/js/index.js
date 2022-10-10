@@ -14,6 +14,7 @@ function scrollsideLeft() {
 
   // if (e.deltaY > 0) {
     item.scrollLeft += document.body.offsetWidth;
+    
   // } else {
     // if (item.scrollLeft > 0) {
       // item.scrollLeft -= 100;

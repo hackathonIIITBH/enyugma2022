@@ -13,7 +13,7 @@ body {
   font-family: "Open Sans", sans-serif;
   min-height: 100vh;
   margin: 0px;
-  background: url("../stars.jpg");
+  background: url("../images/stars.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
