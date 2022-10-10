@@ -53,7 +53,6 @@ body {
 
 .hero_section {
   background-color: transparent;
-  height: 100vh;
   width: 100vw;
   /* position: absolute; */
   /* display: block; */
@@ -125,7 +124,6 @@ body {
 .container {
   background-color: white;
   color: white;
-  position: absolute;
   width: 9vw;
   height: 14vh;
   /* top: -1%; */
@@ -974,4 +972,78 @@ footer {
 .sectionC_footer a {
   color: white;
   text-decoration: none;
+}
+
+/* navbar */
+
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    z-index: 1000000;
+    align-items: center;
+    justify-content: space-around;
+    height:100px;
+    width: 100%;
+    background-color: transparent;
+      backdrop-filter: blur(5px);
+  
+}
+
+.navbar .link,.signin {
+  padding-right:20px;
+  padding-left:20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Cascadia Code;
+  height:100px;
+  width:100px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 500ms ease-in-out;
+  cursor: pointer;
+  border:1px solid rgba(255, 255, 255, 0.098);
+  border-radius: 20px;
+
+
+}
+
+
+
+.navbar .link:hover {
+  background-color: rgba(255, 255, 255, 0.098);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.651);
+}
+
+.navbar .container img:hover {
+  backdrop-filter: hue-rotate(180deg);
+}
+
+.navbar .link a ,.signin a{
+  text-decoration: none;
+  color:white;
+  transition: 500ms;
+}
+
+.signin {
+    background-color: rgba(0, 0, 0, 0.078);
+    border: 2px solid rgba(255, 255, 255, 0.555);
+}
+
+.signin:hover {
+  background-color: rgba(255, 255, 255, 0.852);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.651);
+}
+.signin:hover a {
+  color:black;
 }
