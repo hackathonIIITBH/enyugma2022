@@ -73,42 +73,20 @@
     <!-- CONTAINER OF HERO SECTION -->
     <div class="hero_section">
       <!-- college logo -->
-      <div class="container" style="position: fixed">
-        <img src="./assets/images/logo_enyugma.png" alt="iiitbh" class="logo_clg" />
-      </div>
-
-      <!-- navbar -->
       <div class="navbar">
-        <div class="setbtn" id="setb" onclick="sets(this)">
-          <span class="material-symbols-outlined"> menu </span>
+        <div class="container" >
+          <img src="./assets/images/logo_enyugma.png" alt="iiitbh" class="logo_clg" />
+        </div>
+
+          <div class = "link"><a href="">Competitions</a></div>
+          <div class = "link"><a href="">Workshops</a></div>
+          <div class = "link"><a href="">History</a></div>
+          <div class = "link"><a href="">Media</a></div>
+          <div class = "signin"><a href="">Sign-In</a></div>
         </div>
       </div>
 
       <div class="body">
-        <div class="settingbar">
-          <div class="closebtn" style="--i: 7" onclick="closesettingbar()">
-            <i class="material-icons">close</i>
-          </div>
-          <div style="--top: 70px; --i: 6">
-            <i class="material-icons">animation</i><i>Home</i>
-          </div>
-          <div style="--top: 170px; --i: 5">
-            <i class="material-icons">animation</i><i>About Section</i>
-          </div>
-          <div style="--top: 270px; --i: 4">
-            <i class="material-icons">animation</i><i>Hero Section</i>
-          </div>
-          <div style="--top: 370px; --i: 3">
-            <i class="material-icons">animation</i><i>Event Section</i>
-          </div>
-          <div style="--top: 470px; --i: 4" onclick="window.open('./login.html','_target')">
-            <i class="material-icons">animation</i><i>Login</i>
-          </div>
-          <div style="--top: 570px; --i: 2">
-            <i class="material-icons">filter_vintage</i>
-            <i class="text">Contact Us</i>
-          </div>
-        </div>
 
         <!-- STARTS IN CONTAINER -->
 
@@ -212,8 +190,9 @@
           <div class="button_enentMove" onclick="scrollsideLeft()"><i class="fa-solid fa-angle-right"></i></div>
         </div>
         <div class="event_design">
-          <div class="button_enentMove buttonscreenSet1" onclick="scrollsideRight()"><i class="fa-solid fa-angle-left"></i></div>
-          <h1 class="heading_event" >Cultural Event</h1>
+          <div class="button_enentMove buttonscreenSet1" onclick="scrollsideRight()"><i
+              class="fa-solid fa-angle-left"></i></div>
+          <h1 class="heading_event">Cultural Event</h1>
           <section onclick="window.location.href='./cultural.html';">
             <div class="block cultural_event">
               <!-- <img src="https://photos5.appleinsider.com/gallery/48901-95609-iPhone-14-Dummies-on-Wood-xl.jpg" alt=""
@@ -230,7 +209,8 @@
               </div>
             </div>
           </section>
-          <div class="button_enentMove buttonscreenSet2" onclick="scrollsideRight()"><i class="fa-solid fa-angle-left"></i></div>
+          <div class="button_enentMove buttonscreenSet2" onclick="scrollsideRight()"><i
+              class="fa-solid fa-angle-left"></i></div>
         </div>
       </div>
     </div>
@@ -279,29 +259,29 @@
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
   <script>
-    var tl = gsap.timeline({ defaults: { duartion: 1 } });
+    var tl = gsap.timeline( { defaults: { duartion: 1 } } );
     // skrollr.init();
-    tl.from(".container", {
+    tl.from( ".container", {
       duration: .5,
       delay: 0,
       ease: "bounce.out",
       y: -50,
       opacity: 0,
-    })
-      .from(".logo_clg", { duration: 1, delay: 1, opacity: 0 })
-      .from(".starts_in_container", {
+    } )
+      .from( ".logo_clg", { duration: 1, delay: 1, opacity: 0 } )
+      .from( ".starts_in_container", {
         duration: 1,
         opacity: 0,
         ease: "elastic.out(1, 0.1)",
         y: -100,
-      })
-      .from(".days_container", {
+      } )
+      .from( ".days_container", {
         duration: 0.5,
         ease: "bounce.out",
         x: 100,
         opacity: 0,
-      })
-      .from(".hr1", { delay: 0.5 });
+      } )
+      .from( ".hr1", { delay: 0.5 } );
   </script>
   <!-- <script type="text/javascript" src="./assets/js/skrollr.js"></script> -->
   <!-- <script type="text/javascript">
