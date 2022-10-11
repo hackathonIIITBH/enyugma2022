@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 body {
-  background-image: url("../stars.jpg");
+  background-image: url("../images/stars.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
