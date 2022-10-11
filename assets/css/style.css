@@ -11,12 +11,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: rgba(0, 0, 0, 0.465);
+  /* background: transparent; */
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: white;
 }
 
 /* Handle on hover */
@@ -497,10 +497,12 @@ body {
 
   .techfest_logo h1{
     text-align: center;
+    width: 95%;
   }
   
   .techfest_logo h2{
     text-align: center;
+    width: 95%;
   }
   .timer_design {
     width: 60%;
@@ -884,7 +886,7 @@ body {
   word-wrap: break-word;
   width: 100%;
   font-family: Verdana;
-  /* height: 100%; */
+  height: 100%;
 }
 
 .button_enentMove {

@@ -16,7 +16,27 @@ body {
   background: url("../images/stars.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.465);
+  /* background: transparent; */
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 
@@ -65,7 +85,7 @@ canvas {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 100vh;
+  height: 90vh;
   /* padding-right: 5%; */
   /* padding-top: 5%; */
 }
@@ -90,6 +110,7 @@ canvas {
   align-items: center;
   /* height: 80vh; */
   width: 30%;
+  min-width: 300px;
 }
 
 .container {
