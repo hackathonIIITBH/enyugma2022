@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 body {
   background-image: url("../stars.jpg");
@@ -70,7 +72,7 @@ body {
 
 img.logo {
     margin-top: 5px;
-    height: 92px;
+    width: 130px;
     border-radius: 25%;
   }
 .left {
@@ -86,5 +88,126 @@ img.logo {
     display: flex;
     justify-content: space-between;
     width: 30%;
-    padding-right: 30px;
+    padding-right: 55px;
+  }
+
+
+
+  .event_about_container{
+    background-color:transparent ;
+    position: relative;
+    width: 65vw;
+    height: 68vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,15%);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+  .left_event_about{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .robot_event_img{
+    width: 90%;
+    position: relative;
+    left: 4%;
+  }
+  .title_event{
+    position: relative;
+    left: 27%;
+    width: fit-content;
+    color: white;
+  }
+  .money_prize{
+    position: relative;
+    left: 37%;
+    margin-top:-10px ;
+    color: white;
+  }
+  .problem_state_link{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+  }
+  .problem_state{
+    width:12vw;
+    position: relative;
+    border-radius: 10px;
+    height: 5vh;
+    padding: 5px;
+    font-size: 16px;
+    font-family: 'Alkalami', serif;
+    left: 20%;
+  }
+  .right_event_about{
+    background-color: black;
+    position: relative;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .title_nav{
+    background-color: #008080;
+    position: relative;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-size: 22px;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .text_settle:nth-child(1){
+    position: relative;
+    left: 2%;
+    top: 10%;
+    cursor: pointer;
+  }
+  .text_settle{
+    position: relative;
+    top: 10%;
+    cursor: pointer;
+  }
+  .text_settle_last{
+    position: relative;
+    top: 10%;
+    left: -2%;
+    cursor: pointer;
+  }
+  .seperate{
+    font-size: 53px;
+    position: relative;
+    top: -50%;
+    cursor: none;
+  }
+  .about_area{
+    background-color: white;
+    position: relative;
+    height: 33vh;
+    width: 40vw;
+    left: 4.3%;
+    top: 2%;
+  }
+  .register_event{
+    position: relative;
+    width: 14vw;
+    height: 7vh;
+    font-size: 35px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    top: 15%;
+    left: 34.3%;
+  }
+  .how_regs{
+    position: relative;
+    top:13%;
+    left: 37%;
+    color: white;
+    text-decoration: none;
   }
