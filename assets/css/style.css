@@ -28,7 +28,7 @@ body {
   margin: 0px;
   padding: 0;
   /*background: #191d1e;*/
-  background: url("../stars.jpg");
+  background: url("../images/stars.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
@@ -39,7 +39,7 @@ body {
   /* padding-top: 10vh; */
   width: 95vw;
   margin: auto;
-  height: 100vh;
+  height: 85vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -86,7 +86,7 @@ body {
   position: fixed;
   bottom: 0;
   background-color: transparent;
-  opacity: 0.8;
+  opacity: 0.5;
   z-index: -1;
 }
 
@@ -103,13 +103,25 @@ body {
   /* position: absolute; */
   height: 40vh;
   width: 60%;
-
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
   /* top: 12%; */
+  color: white;
 }
 
+.techfest_logo h1{
+  width: 60%;
+  font-family: Verdana;
+  font-size: 22px;
+}
+.techfest_logo h2{
+  width: 60%;
+  font-family: Verdana;
+  font-size: 24px;
+  text-align: end;
+}
 .fest_logo_img {
   /* position: relative; */
   width: 70%;
@@ -121,14 +133,105 @@ body {
   width: 40%;
 }
 
-.container {
-  background-color: white;
+.timer_design h1{
   color: white;
-  width: 9vw;
-  height: 14vh;
-  /* top: -1%; */
-  left: 2%;
-  border-radius: 0 0 10px 10px;
+  text-align: center;
+  font-family: Verdana;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  width: 200px;
+  padding: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.logo_clg {
+  /* width: fit-content; */
+  /* position: relative; */
+  width: 80px;
+  height: 80px;
+  /* left: 17%; */
+  /* top: 5%; */
+}
+
+.container h1 {
+  padding: 0;
+  margin: 0;
+  width: 0px;
+  height: 80px;
+  border-left: 2px solid black;
+}
+
+.navdesign {
+  display: flex;
+  height: 70px;
+  width: calc( (100% - 200px)/2 );
+  margin-top: 0;
+  justify-content: space-evenly;
+  /* align-items: flex-start; */
+}
+
+
+/* navbar */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  /* z-index: 1000000; */
+  /* align-items: center; */
+  justify-content: space-around;
+  /* height: 100px; */
+  width: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+}
+
+.navbar .link{
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Cascadia Code;
+  height: calc(100% - 20px );
+  /* width: 100px; */
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: 800ms ease-in-out;
+  cursor: pointer;
+  /* border: 1px solid rgba(255, 255, 255, 0.098); */
+  /* border-radius: 20px; */
+}
+
+.navbar .link:hover {
+  background-color: rgba(255, 255, 255, 0.398);
+  transform: scale(1.1);
+  /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.651); */
+}
+
+.navbar .navdesign a{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: 500ms;
+}
+
+@media (max-width:767px) {
+  .navdesign{
+    display: none;
+  }
 }
 
 #particles-js {
@@ -139,13 +242,7 @@ body {
   z-index: -2;
 }
 
-.logo_clg {
-  width: fit-content;
-  position: relative;
-  width: 64%;
-  left: 17%;
-  top: 5%;
-}
+
 
 .empty_container {
   background: transparent;
@@ -290,7 +387,7 @@ body {
   text-decoration: none;
   color: var(--clr-neon);
   border: var(--clr-neon) 0.125em solid;
-  padding: 0.25em 1em;
+  padding: 0.35em 1.2em;
   border-radius: 0.25em;
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
   box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
@@ -300,6 +397,7 @@ body {
   /* left: 72.3vw; */
   font-family: "Fredoka One", cursive;
   margin-top: 10px;
+  backdrop-filter: blur(2px);
 }
 
 .glow-on-hover::before {
@@ -324,7 +422,7 @@ body {
   /* bottom: 0; */
   /* left: 0; */
   /* right: 0; */
-  box-shadow: 0 0 0.5em 0.5em var(--clr-neon);
+  /* box-shadow: 0 0 0.5em 0.5em var(--clr-neon); */
   opacity: 0;
   background-color: var(--clr-neon);
   z-index: -1;
@@ -383,23 +481,31 @@ body {
 
 
 @media (max-width: 778px) {
-  .hero_section{
+  .hero_section {
     height: fit-content;
   }
+
   .main-section {
     height: fit-content;
   }
 
   .techfest_logo {
-    margin-top: 60px;
-    width: 90%;
+    margin-top: 30px;
+    width: 100%;
     margin-bottom: 20px;
   }
 
+  .techfest_logo h1{
+    text-align: center;
+  }
+  
+  .techfest_logo h2{
+    text-align: center;
+  }
   .timer_design {
     width: 60%;
     /* height: 200px; */
-    margin-bottom: 10px;
+    margin-bottom: 60px;
   }
 
   .main h1 {
@@ -413,16 +519,7 @@ body {
 }
 
 @media screen and (max-width: 1100px) {
-  .container {
-    background-color: white;
-    color: white;
-    position: absolute;
-    width: 9vw;
-    height: 13vh;
-    /* top: -1%; */
-    left: 2%;
-    border-radius: 0 0 10px 10px;
-  }
+
 
   .days_container {
     /* position: relative; */
@@ -471,24 +568,14 @@ body {
   body {
     margin: 0px;
     /*background: #191d1e;*/
-    background: url("../stars1100px.jpg");
+    /* background: url("../stars1100px.jpg"); */
     /* background-repeat: no-repeat; */
     background-size: cover;
     /* overflow: hidden; */
     height: 100%;
-    cursor: none;
+    /* cursor: ; */
   }
 
-  .container {
-    background-color: white;
-    color: white;
-    position: absolute;
-    width: 9vw;
-    height: 11vh;
-    /* top: -1%; */
-    left: 2%;
-    border-radius: 0 0 10px 10px;
-  }
 
   .days_container {
     position: relative;
@@ -529,16 +616,7 @@ body {
 }
 
 @media screen and (max-width: 751px) {
-  .container {
-    background-color: white;
-    color: white;
-    position: absolute;
-    width: 9vw;
-    height: 10vh;
-    /* top: -1%; */
-    left: 2%;
-    border-radius: 0 0 10px 10px;
-  }
+
 
   .days_container {
     position: relative;
@@ -580,24 +658,7 @@ body {
 }
 
 @media screen and (max-width: 673px) {
-  .container {
-    background-color: white;
-    color: white;
-    position: absolute;
-    width: 9vw;
-    height: 9vh;
-    /* top: -1%; */
-    left: 2%;
-    border-radius: 0 0 10px 10px;
-  }
 
-  .logo_clg {
-    width: fit-content;
-    position: relative;
-    width: 64%;
-    left: 17%;
-    top: 8%;
-  }
 
   .days_text {
     font-size: 24px;
@@ -632,26 +693,6 @@ body {
     display: none;
   }
 
-  .container {
-    background-color: white;
-    color: white;
-    position: absolute;
-    width: 9vw;
-    height: 7vh;
-    /* top: -1%; */
-    left: 2%;
-    border-radius: 0 0 10px 10px;
-  }
-
-  .logo_clg {
-    width: fit-content;
-    position: relative;
-    width: 67%;
-    left: 17%;
-    top: 15%;
-  }
-
-
 
   .days_container {
     position: relative;
@@ -668,24 +709,8 @@ body {
 }
 
 @media screen and (max-width: 376px) {
-  .container {
-    background-color: white;
-    color: white;
-    position: absolute;
-    width: 9vw;
-    height: 5.5vh;
-    /* top: -1%; */
-    left: 2%;
-    border-radius: 0 0 10px 10px;
-  }
 
-  .logo_clg {
-    width: fit-content;
-    position: relative;
-    width: 67%;
-    left: 17%;
-    top: 15%;
-  }
+
 
   .days_container {
     position: relative;
@@ -702,16 +727,7 @@ body {
 }
 
 @media screen and (max-width: 321px) {
-  .container {
-    background-color: white;
-    color: white;
-    position: absolute;
-    width: 9vw;
-    height: 6vh;
-    /* top: -1%; */
-    left: 2%;
-    border-radius: 0 0 10px 10px;
-  }
+
 
   .days_container {
     position: relative;
@@ -788,6 +804,7 @@ body {
 .event_design .heading_event {
   font-size: 30px;
   /* margin: 30px; */
+  text-align: center;
   padding: 50px;
   font-style: normal;
   font-family: Verdana;
@@ -866,6 +883,7 @@ body {
 .scrollView section .block .details p {
   word-wrap: break-word;
   width: 100%;
+  font-family: Verdana;
   /* height: 100%; */
 }
 
@@ -918,6 +936,7 @@ body {
 
 footer {
   color: white;
+  font-family: Verdana;
   margin-top: 80px;
   padding-top: 40px;
   background-color: rgba(0, 0, 0, 0.482);
@@ -972,82 +991,4 @@ footer {
 .sectionC_footer a {
   color: white;
   text-decoration: none;
-}
-
-/* navbar */
-
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
-
-
-.navbar {
-    display: flex;
-    flex-direction: row;
-    z-index: 1000000;
-    align-items: center;
-    justify-content: space-around;
-    height:100px;
-    width: 100%;
-    background-color: transparent;
-      backdrop-filter: blur(5px);
-  
-}
-
-.navbar .link,.signin {
-  padding-right:20px;
-  padding-left:20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
-  font-family: Cascadia Code;
-  height:100px;
-  width:100px;
-  text-align: center;
-  border-radius: 10px;
-  transition: 500ms ease-in-out;
-  cursor: pointer;
-  border:1px solid rgba(255, 255, 255, 0.098);
-  border-radius: 20px;
-
-
-}
-
-
-
-.navbar .link:hover {
-  background-color: rgba(255, 255, 255, 0.098);
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.651);
-}
-
-.navbar .container img:hover {
-  backdrop-filter: hue-rotate(180deg);
-}
-
-.navbar .link a ,.signin a{
-  text-decoration: none;
-  color:white;
-  transition: 500ms;
-}
-
-.signin {
-    background-color: rgba(186, 186, 186, 0.881);
-    border: 2px solid rgba(38, 38, 38, 0.555);
-    color:rgb(32, 32, 32);
-}
-
-.signin a {
-  color:rgb(49, 49, 49);
-}
-
-.signin:hover {
-  background-color: rgba(30, 30, 30, 0.852);  
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.651);
-}
-.signin:hover a {
-  color:rgb(220, 220, 220);
 }
