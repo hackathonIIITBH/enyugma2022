@@ -1,7 +1,32 @@
+html{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.465);
+  /* background: transparent; */
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: rgba(34, 34, 34, 0.84);
+  scroll-behavior: smooth;
 }
 
 button {
