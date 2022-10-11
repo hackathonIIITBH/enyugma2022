@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body {
+  background-image: url("../stars.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Acme', sans-serif;
+  background-size: cover;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+.full-navbar{
+  display: block;
+  background-color: aqua;
+}
+#navbar {
+  transition: top 0.3s;
+}
+
+.navbar {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 65%, #000000 100%), url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Frectangle-frame-png%2F2&psig=AOvVaw2Mi4a2dGgMl7npYhzi0sy2&ust=1665321130428000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCJjQoOfa0PoCFQAAAAAdAAAAABAD);
+    background-color: 	#008080;
+    background-size: cover;
+    background-position: center;
+    height: 58px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+  }
+.fullnavbar a {
+    text-decoration: none;
+    height: 29px;
+    font-family: 'Acme', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+.a {
+    text-decoration: none !important;
+    background-color: transparent;
+  }
+
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+  }
+
+img.logo {
+    margin-top: 5px;
+    height: 92px;
+    border-radius: 25%;
+  }
+.left {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding-left: 30px;
+  }
+.logo {
+    width: 210px;
+  }
+.right {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding-right: 30px;
+  }
