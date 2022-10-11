@@ -1,63 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enyugma-2022</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/cursor.css" />
-    <link rel="stylesheet" href="./assets/css/loader.css" />
-    <link rel="stylesheet" href="./assets/css/astronautHS.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/light.css" />
 
-    <!-- Events css -->
-    <link rel="stylesheet" href="assets\css\v-style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enyugma`22</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/logo_enyugma.png">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/cursor.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+  <!-- <link rel="stylesheet" href="./assets/css/loader.css" /> -->
+  <link rel="stylesheet" href="./assets/css/astronautHS.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/light.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <!-- fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <!-- jsquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Events css -->
+  <link rel="stylesheet" href="assets\css\v-style.css" />
 
-    <!-- stellar.js -->
-    <script src="assets/js/jquery.stellar.min.js"></script>
-    <script src="assets/js/home.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./assets/css/eventsection.css" />
-    <script defer src="./assets/js/html2canvas.min.js"></script>
-    <!-- <script defer src="./assets/js/eventsection.js"></script> -->
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <!-- jsquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <body>
-    <div id="canvas"></div>
-    <!-- <div class="secondpartherosection"> -->
-    <!-- <div id="reverse"></div> -->
-    <!-- </div> -->
-    <!-- LOADER SECTION -->
+  <!-- stellar.js -->
+  <script src="assets/js/jquery.stellar.min.js"></script>
+  <script src="assets/js/home.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="./assets/css/eventsection.css" /> -->
+  <script defer src="./assets/js/html2canvas.min.js"></script>
+  <!-- <script defer src="./assets/js/eventsection.js"></script> -->
+</head>
+
+<body>
+  <div id="canvas"></div>
+  <div class="toup" id="toup">
+    <i class="fa-solid fa-angle-up" onclick="scrollsideup()"></i>
+  </div>
+  <!-- <div class="secondpartherosection"> -->
+  <!-- <div id="reverse"></div> -->
+  <!-- </div> -->
+  <!-- LOADER SECTION -->
+  <!--     
     <section class="loader">
       <div class="noite"></div>
       <div class="constelacao"></div>
@@ -73,148 +64,112 @@
           alt=""
         />
       </div>
-    </section>
+    </section> -->
 
-    <!-- LANDING PAGE -->
-    <section class="landing-page">
-      <!-- Particle background Javascript -->
-      <div id="particles-js"></div>
-
-      <!-- cursor -->
-      <div class="cursor"></div>
-      <div class="cursor2"></div>
-
-      <!-- CONTAINER OF HERO SECTION -->
-      <div class="hero_section">
-        <!-- college logo -->
-        <div class="container" style="position: fixed">
-          <img
-            src="./assets/Indian_Institute_of_Information_Technology,_Bhagalpur_logo.png"
-            alt="iiitbh"
-            class="logo_clg"
-          />
+  <!-- LANDING PAGE -->
+  <section class="landing-page">
+    <div id="particles-js"></div>
+    <!-- CONTAINER OF HERO SECTION -->
+    <div class="hero_section">
+      <!-- college logo -->
+      <div class="navbar">
+        <div class="navdesign">
+          <a href="./Event/technical.html">
+            <div class="link">
+              Technical
+            </div>
+          </a>
+          <a href="./Event/cultural.html">
+            <div class="link">
+              Cultural
+            </div>
+          </a>
         </div>
-
-        <!-- navbar -->
-        <div class="navbar">
-          <div class="setbtn" id="setb" onclick="sets(this)">
-            <span class="material-symbols-outlined"> menu </span>
+        <div>
+          <div class="container">
+            <img src="./assets/images/logo_enyugma.png" alt="iiitbh" class="logo_clg" />
+            <h1></h1>
+            <img src="./assets/images/Indian_Institute_of_Information_Technology,_Bhagalpur_logo.png" alt="iiitbh"
+              class="logo_clg" />
           </div>
         </div>
+        <div class="navdesign">
+          <a href="./auth/register.html">
+            <div class="link">
+              Sign-In
+            </div>
+          </a>
+          <a href="./auth/login.html">
+            <div class="link">
+              Sign-up
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
 
-        <div class="body">
-          <div class="settingbar">
-            <div class="closebtn" style="--i: 7" onclick="closesettingbar()">
-              <i class="material-icons">close</i>
-            </div>
-            <div style="--top: 70px; --i: 6">
-              <i class="material-icons">animation</i><i>Home</i>
-            </div>
-            <div style="--top: 170px; --i: 5">
-              <i class="material-icons">animation</i><i>About Section</i>
-            </div>
-            <div style="--top: 270px; --i: 4">
-              <i class="material-icons">animation</i><i>Hero Section</i>
-            </div>
-            <div style="--top: 370px; --i: 3">
-              <i class="material-icons">animation</i><i>Event Section</i>
-            </div>
-            <div
-              style="--top: 470px; --i: 4"
-              onclick="window.open('./login.html','_target')"
-            >
-              <i class="material-icons">animation</i><i>Login</i>
-            </div>
-            <div style="--top: 570px; --i: 2">
-              <i class="material-icons">filter_vintage</i>
-              <i class="text">Contact Us</i>
-            </div>
-          </div>
+    <div class="body">
+      <div class="main-section">
 
-          <!-- STARTS IN CONTAINER -->
+        <!-- TECHFEST LOGO -->
+        <div class="techfest_logo">
+          <!-- <h1>IIIT Bhagalpur presents</h1> -->
+          <img src="./assets/images/enyugmaArt2.png" alt="fest_logo" class="fest_logo_img" />
+          <!-- <h2>2022</h2> -->
+        </div>
 
-          <!-- TIMER CONTAINER -->
-          <div class="main-section">
-            <div class="starts_in_container">
-              <div class="wrapper">
-                <div class="main">
-                  <h1 class="shadow-effect tween-looper">
-                    STARTS IN <span></span>
-                  </h1>
-                </div>
-              </div>
-            </div>
-            <div class="container_timer">
-              <div class="days_container">
-                <span class="days_text" id="days"></span>
-                <span class="days_char">DAYS</span>
-              </div>
-              <div class="days_container hr1">
-                <span class="hours_text" id="hours"></span>
-                <span class="days_char">HOUR</span>
-              </div>
-              <div class="days_container">
-                <span class="minutes_text" id="minutes"></span>
-                <span class="days_char">MINS</span>
-              </div>
-              <div class="days_container">
-                <span class="sec_text" id="seconds"></span>
-                <span class="days_char">SECS</span>
-              </div>
-            </div>
-
-            <!-- REGISTER BUTTON -->
-            <div>
-              <a href="./register.html" class="glow-on-hover">REGISTER NOW</a>
-            </div>
-
-            <!-- TECHFEST LOGO -->
-            <div class="techfest_logo">
-              <img
-                src="http://enyugma.iiitbh.ac.in/Asset%201.svg"
-                alt="fest_logo"
-                class="fest_logo_img"
-              />
-            </div>
-
-            <!-- Astronaut Hero Section -->
-            <div id="main">
-              <div id="astronaut">
-                <img
-                  src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png"
-                  alt=""
-                  width="250"
-                />
-              </div>
-
-              <div id="astronaut2">
-                <img
-                  src="https://images.vexels.com/media/users/3/152641/isolated/preview/2b3d63661f0d7fe62c36168604985f26-space-cosmonaut-cartoon-by-vexels.png"
-                  alt=""
-                  width="250"
-                />
+        <div class="timer_design">
+          <h1>Enyugma `22</h1>
+          <div class="starts_in_container">
+            <div class="wrapper">
+              <div class="main">
+                <h1 class="shadow-effect tween-looper">
+                  STARTS IN <span></span>
+                </h1>
               </div>
             </div>
           </div>
-
-          <!-- CANVAS SECTION -->
+          <div class="container_timer">
+            <div class="days_container">
+              <span class="days_text" id="days"></span>
+              <span class="days_char">DAYS</span>
+            </div>
+            <div class="days_container hr1">
+              <span class="hours_text" id="hours"></span>
+              <span class="days_char">HOUR</span>
+            </div>
+            <div class="days_container">
+              <span class="minutes_text" id="minutes"></span>
+              <span class="days_char">MINS</span>
+            </div>
+            <div class="days_container">
+              <span class="sec_text" id="seconds"></span>
+              <span class="days_char">SECS</span>
+            </div>
+          </div>
+          <!-- REGISTER BUTTON -->
+          <div class="register_button">
+            <a href="./auth/login.html" class="glow-on-hover">REGISTER NOW</a>
+          </div>
         </div>
-
-        <!-- REVERSE TERRAIN -->
-        <!-- <div class="container2" id="cont" data-1000="transform:translateX(0%);" data-2000="transform:translateX(-450%);"> -->
+        <div class="tobottom" >
+          <i class="fa-solid fa-angle-down" onclick="scrollsidedown()"></i>
+        </div>
       </div>
 
-      <div class="scrolldesign" id="scrollbehavior">
-        <div class="scrollView">
-          <section onclick="window.location.href='./technical.html';">
-            <div class="block">
-              <img
-                src="https://images.unsplash.com/photo-1541363111435-5c1b7d867904?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVtbXl8ZW58MHx8MHx8&w=1000&q=80"
-                alt=""
-                id="img"
-              />
+      <!-- CANVAS SECTION -->
+    </div>
+    </div>
+    <div class="scrolldesign" id="scrollbehavior">
+      <div class="scrollView">
+        <div class="event_design">
+          <h1 class="heading_event">Technical Event</h1>
+          <section onclick="window.location.href='./Event/technical.html';">
+            <div class="block technical_event">
+              <!-- <img
+              src="https://images.unsplash.com/photo-1541363111435-5c1b7d867904?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVtbXl8ZW58MHx8MHx8&w=1000&q=80"
+              alt="" id="img" /> -->
               <div class="details">
-                <h1>Technical Board</h1>
                 <p>
                   The festival offers aspiring innovators a once-in-a-lifetime
                   chance to demonstrate their technological expertise and serves
@@ -227,20 +182,22 @@
                   expose them to a wide range of contemporary technology and
                   allow them to interact with other technophiles from all over
                   the nation. Take part in whatever strikes your fancy and
-                  listen to what the fest has to say!
+                  listen to what the fest has to say!
                 </p>
               </div>
             </div>
           </section>
-          <section onclick="window.location.href='./cultural.html';">
-            <div class="block">
-              <img
-                src="https://photos5.appleinsider.com/gallery/48901-95609-iPhone-14-Dummies-on-Wood-xl.jpg"
-                alt=""
-                id="img"
-              />
+          <div class="button_enentMove" onclick="scrollsideLeft()"><i class="fa-solid fa-angle-right"></i></div>
+        </div>
+        <div class="event_design">
+          <div class="button_enentMove buttonscreenSet1" onclick="scrollsideRight()"><i
+              class="fa-solid fa-angle-left"></i></div>
+          <h1 class="heading_event">Cultural Event</h1>
+          <section onclick="window.location.href='./Event/cultural.html';">
+            <div class="block cultural_event">
+              <!-- <img src="https://photos5.appleinsider.com/gallery/48901-95609-iPhone-14-Dummies-on-Wood-xl.jpg" alt=""
+              id="img" /> -->
               <div class="details">
-                <h1>Cultural Board</h1>
                 <p>
                   Exhibit your creativity and love for dance, singing, music,
                   debate, poetry, photography, animation, video editing, art and
@@ -252,170 +209,87 @@
               </div>
             </div>
           </section>
+          <div class="button_enentMove buttonscreenSet2" onclick="scrollsideRight()"><i
+              class="fa-solid fa-angle-left"></i></div>
         </div>
       </div>
+    </div>
 
-      <!-- <div class="lowerpart" data-3000="transform:translateY(450%);"></div>
+    <!-- <div class="lowerpart" data-3000="transform:translateY(450%);"></div>
       <div class="lowerpart2" data-3000="transform:translateY(450%);"></div> -->
 
-      <!-- FOOTER -->
-      <!-- <div class="footer_container_1" data-3000="transform:translateY(450%);">
-      <div class="footer">
-        <div class="wid-25 contact-list">
-
-
-          <ul>
-            <h3>CONTACT</h3>
-
-
-            <li><i class="fa fa-envelope icon "></i>pro@iiitbh.ac.in</li>
-            <li><i class="fa fa-envelope icon  "></i>pro@iiitbh.ac.in</li>
-            <li><i class="fa fa-envelope icon  "></i>pro@iiitbh.ac.in</li>
-            <li><i class="fa fa-envelope icon "></i>pro@iiitbh.ac.in</li>
-
-          </ul>
+    <!-- FOOTER -->
+    <footer>
+      <div></div>
+      <div class="sectionB_footer">
+        <div class="social">
+          <a href="https://www.linkedin.com/company/enyugma-iiitbh/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-discord"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
         </div>
-
-
-
-
-        <div class="wid-25 address  ">
-
-          <ul>
-            <h3> ADDRESS</h3>
-            <li>
-              <i class="fa fa-map-marker-alt icon fa-bounce"
-                style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;" "></i>College of Engineering Campus, Bhagalpur,
-                      Sabour, Bihar 813210
-                      
-                    </li>
-                    <li><i class=" fa fa-envelope icon "></i>pro@iiitbh.ac.in</li>
-                    <li><i class=" fa fa-phone icon fa-shake"></i>123456789
-            </li>
-          </ul>
-        </div>
-
-        <div class="wid-25 need-help margin-top:5px">
-          <h3>NEED HELP</h3>
-          <ul>
-            <li>
-              <a href=""><i class="fa fa-angle-right fa-fade"></i><span>About </span></a>
-            </li>
-            <li>
-              <a href=""><i class="fa fa-angle-right fa-beat"></i><span>Events</span></a>
-            </li>
-            <li>
-              <a href=""><i class="fa fa-angle-right fa-fade"></i><span>Tech Events</span></a>
-            </li>
-            <li>
-              <a href=""><i class="fa fa-angle-right fa-beat"></i><span>Team</span></a>
-            </li>
-            <li>
-              <a href=""><i class="fa fa-angle-right fa-fade"></i><span>Sponsors</span></a>
-            </li>
-
-          </ul>
-        </div>
-        <div class="wid-25 legal ">
-          <h3>LEGAL</h3>
-          <ul>
-            <li>
-              <a href=""><i class="fa fa-angle-right fa-beat"></i><span>Privacy Policy </span></a>
-            </li>
-            <li>
-              <a href=""><i class="fa fa-angle-right fa-fade"></i><span>Terms and Conditions</span></a>
-            </li>
-            <li>
-              <a href=""><i class="fa fa-angle-right fa-beat"></i><span>Shipping Policy</span></a>
-            </li>
-            <li>
-              <a href=""><i class="fa fa-angle-right fa-fade"></i><span>Return and Refund Policy</span></a>
-            </li>
-
-
-          </ul>
-
-
-
+        <div class="copyright">
+          <p>Enyugma <i class="fa-regular fa-copyright"></i> reserved</p>
         </div>
       </div>
-      <div class="copy-right">
+      <div class="sectionC_footer">
+        <p>Designed By <a href="https://gymkhanaiiitbh.github.io/Tech-Frontend/webverse/web.html">Webverse</a></p>
+      </div>
+    </footer>
+  </section>
 
-        <P> © <b>DEVELOPED BY WEBWERSE | IIITBH</b> . ALL RIGHTS RESERVED. </P>
-        <div class="follow">
-          <p>FOLLOW US</p>
-          <span></span>
-          <a target="_blank" href="https://www.instagram.com/iiit_bhagalpur_official/?hl=en"><i class="fa fa-instagram"
-              aria-hidden="true"></i></a>
-          <span></span>
-
-          <a target="_blank" href="https://www.linkedin.com/school/iiitbh/"><i class="fa fa-linkedin"
-              aria-hidden="true"></i></a>
-          <span></span>
-
-          <a target="_blank" href="https://www.facebook.com/iiitbh.ac.in"><i class="fa fa-facebook-official"
-              aria-hidden="true"></i></a>
-          <span></span>
-
-          <a target="_blank" href="https://www.youtube.com/channel/UCmGmxS3Y3tt_7RHW_7JUKng"><i
-              class="fa fa-youtube-play" aria-hidden="true"></i></a>
-          <span></span>
-
-        </div>
-        </footer> -->
-      <!--</div> -->
-    </section>
-
-    <!-- JAVASCRIPT -->
-    <!-- THREE JS JAVASCRIPT -->
-    <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js"></script>
-    <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js"></script>
-    <script src="https://jeromeetienne.github.io/threex.terrain/threex.terrain.js"></script>
-    <script type="text/javascript" src="./assets/js/index.js"></script>
-    <script src="./assets/js/canvas2.js"></script>
-    <!-- Particle javascript -->
-    <script type="text/javascript" src="./assets/js/particles.js"></script>
-    <script type="text/javascript" src="./assets/js/app.js"></script>
-    <!-- loader javascript -->
-    <script type="text/javascript" src="./assets/js/loader.js"></script>
-    <!-- CURSOR JAVASCRIPT -->
-    <script type="text/javascript" src="./assets/js/cursor1.js"></script>
-    <!-- timer javascript -->
-    <script src="./assets/js/timer.js"></script>
-    <!-- gsap animation -->
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
-    <script>
-      var tl = gsap.timeline({ defaults: { duartion: 1 } });
-      // skrollr.init();
-      tl.from(".container", {
-        duration: 2,
-        delay: 1,
+  <!-- JAVASCRIPT -->
+  <!-- THREE JS JAVASCRIPT -->
+  <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js"></script>
+  <script
+    src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js"></script>
+  <script src="https://jeromeetienne.github.io/threex.terrain/threex.terrain.js"></script>
+  <script type="text/javascript" src="./assets/js/index.js"></script>
+  <script src="./assets/js/canvas2.js"></script>
+  <!-- Particle javascript -->
+  <script type="text/javascript" src="./assets/js/particles.js"></script>
+  <script type="text/javascript" src="./assets/js/app.js"></script>
+  <!-- loader javascript -->
+  <!-- <script type="text/javascript" src="./assets/js/loader.js"></script> -->
+  <!-- CURSOR JAVASCRIPT -->
+  <!-- <script type="text/javascript" src="./assets/js/cursor1.js"></script> -->
+  <!-- timer javascript -->
+  <script src="./assets/js/timer.js"></script>
+  <!-- gsap animation -->
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+  <script>
+    var tl = gsap.timeline({ defaults: { duartion: 1 } });
+    // skrollr.init();
+    tl.from(".container", {
+      duration: .5,
+      delay: 0,
+      ease: "bounce.out",
+      y: -50,
+      opacity: 0,
+    })
+      .from(".logo_clg", { duration: 1, delay: 1, opacity: 0 })
+      .from(".starts_in_container", {
+        duration: 1,
+        opacity: 0,
+        ease: "elastic.out(1, 0.1)",
+        y: -100,
+      })
+      .from(".days_container", {
+        duration: 0.5,
         ease: "bounce.out",
-        y: -50,
+        x: 100,
         opacity: 0,
       })
-        .from(".logo_clg", { duration: 1.3, delay: 1, opacity: 0 })
-        .from(".starts_in_container", {
-          duration: 2,
-          opacity: 0,
-          ease: "elastic.out(1, 0.1)",
-          y: -100,
-        })
-        .from(".days_container", {
-          duration: 1.5,
-          ease: "bounce.out",
-          x: 100,
-          opacity: 0,
-        })
-        .from(".hr1", { delay: 0.5 });
-    </script>
-    <!-- <script type="text/javascript" src="./assets/js/skrollr.js"></script> -->
-    <!-- <script type="text/javascript">
+      .from(".hr1", { delay: 0.5 });
+  </script>
+  <!-- <script type="text/javascript" src="./assets/js/skrollr.js"></script> -->
+  <!-- <script type="text/javascript">
     var s = skrollr.init();
   </script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./assets/js/walking.js"></script>
-    <!-- !! -->
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./assets/js/walking.js"></script>
+  <!-- !! -->
+</body>
+
 </html>

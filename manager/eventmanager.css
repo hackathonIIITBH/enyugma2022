@@ -1,0 +1,74 @@
+body{
+    font-family: Verdana;
+    background-color: rgba(0, 0, 0, 0.261);
+    /* background-image: url(../assets/images/stars.jpg); */
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.navdesign{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo_fest{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    background-color: white;
+    padding: 10px;
+    margin: 0px 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.navdesign a{
+    color: black;
+    text-decoration: none;
+}
+
+.navdesign h1{
+    margin: 0;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.secondNavdesign{
+    margin-top: 10px;
+}
+
+.secondNavdesign h1{
+    margin: 10px;
+    padding: 0px;
+    font-size: 20px;
+}
+
+.EventheadName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.EventheadName button{
+    background:transparent;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    padding: 0px;
+    font-size: 18px;
+}
+
+.contactInfo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contactInfo h2{
+    margin: 10px;
+    padding: 0px;
+    font-size: 15px;
+    font-weight: normal;
+}

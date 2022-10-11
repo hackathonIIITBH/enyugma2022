@@ -53,27 +53,25 @@ form.addEventListener("submit", function (e) {
   checkRequired([email, password]);
   checkEmail(email);
 });
-document.forms["#login"].addEventListener("submit",(e)=>{
-e.preventDefault();
-fetch(`${url}/login`,{
-    method:"post",
-    body:URLSearchParams(FormData(e.target))
-
-})
-.then((res)=>res.json()).then((data)=>{
-    if(data.status==0){
-        localStorage.setItem(data.auth_token)
-        window.location.href="./dashboard.html"
-    }
-    else{
-        alert("something went wrong")
-    }
-    
-})
-.catch((err)=>{
-    alert(err)
-})
-})
+document.forms["login"].addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(`${url}/login`, {
+    method: "post",
+    body: new URLSearchParams(new FormData(e.target)),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status == 0) {
+        localStorage.setItem("userToken", data.auth_token);
+        window.location.href = "./dashboard.html";
+      } else {
+        alert("something went wrong");
+      }
+    })
+    .catch((err) => {
+      alert(err);
+    });
+});
 
 //Astronaut JS
 // $.fn.multiply = function (numCopies) {
@@ -98,6 +96,10 @@ fetch(`${url}/login`,{
 
 var stats = document.querySelector(".status");
 
+setTimeout(() => {
+  stats.style.display = "none";
+}, 3000);
+
 document.forms["login"].onsubmit = (e) => {
   e.preventDefault();
   fetch(`${url}/login`, {
@@ -107,23 +109,19 @@ document.forms["login"].onsubmit = (e) => {
     .then((res) => res.json())
     .then((data) => {
       if (data.status == 0) {
-        localStorage.setItem("tokenLogin");
+        localStorage.setItem(`${data.auth_token}`);
         window.location.href = "./dashboard.html";
       } else {
-        setTimeout(() => {
-            stats.style.backgroundColor = "#ff0000bb";
-            stats.style.border = "2px solid #de1111";
-            stats.style.display = "flex";
-            stats.innerHTML = "Something Went Wrong!!";
-        }, 200);
+        stats.style.backgroundColor = "#ff0000bb";
+        stats.style.border = "2px solid #de1111";
+        stats.style.display = "flex";
+        stats.innerHTML = "Something Went Wrong!!";
       }
     })
     .catch((err) => {
-        setTimeout(() => {
-            stats.style.backgroundColor = "#ff0000bb";
-            stats.style.border = "2px solid #de1111";
-            stats.style.display = "flex";
-            stats.innerHTML = err;
-        }, 200);
+      stats.style.backgroundColor = "#ff0000bb";
+      stats.style.border = "2px solid #de1111";
+      stats.style.display = "flex";
+      stats.innerHTML = err;
     });
 };

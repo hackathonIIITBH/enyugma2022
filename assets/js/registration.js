@@ -1,6 +1,10 @@
-const url = "http://localhost:2100";
+const url = "https://enyugma.herokuapp.com";
 
 var stats = document.querySelector(".status");
+
+setTimeout(() => {
+  stats.style.display = "none";
+},3000);
 
 document.forms["register"].onsubmit = (e) => {
   e.preventDefault();
@@ -14,18 +18,18 @@ document.forms["register"].onsubmit = (e) => {
         stats.style.backgroundColor = "#46d381bb";
         stats.style.border = "2px solid #2ecc71";
         stats.style.display = "flex";
-        stats.innerHTML="Registeration Successful"
+        stats.innerHTML = "Registeration Successful";
       } else {
         stats.style.backgroundColor = "#ff0000bb";
         stats.style.border = "2px solid #de1111";
         stats.style.display = "flex";
-        stats.innerHTML="Something Went Wrong!!"
+        stats.innerHTML = "Something Went Wrong!!";
       }
     })
     .catch((err) => {
-        stats.style.backgroundColor = "#ff0000bb";
-        stats.style.border = "2px solid #de1111";
-        stats.style.display = "flex";
-        stats.innerHTML=err;
+      stats.style.backgroundColor = "#ff0000bb";
+      stats.style.border = "2px solid #de1111";
+      stats.style.display = "flex";
+      stats.innerHTML = err;
     });
 };
