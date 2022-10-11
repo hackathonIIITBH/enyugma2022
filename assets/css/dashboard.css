@@ -1,234 +1,114 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
 body {
-	min-height: 100vh;
-	display: grid;
-	place-items: center;
-	margin: 0;
-	padding: 0;
-	background-image: url("../dashboard.jpg");
-	font-family: 'Martel Sans', sans-serif;
-  background-color: #cccccc;
-}
-
-h1 {
-	font-size: 3.25vmin;
-	text-align: center;
-	color: white;
-}
-p {
-	font-size: max(10pt, 2.5vmin);
-	line-height: 1.4;
-	color: #edf3ed;
-	margin-bottom: 1.5rem;
-}
-
-/* Navbar  */
-
-.nav {
-  height: 60px;
-  width: 100%;
-  background-color: #4d4d4d;
-  position: relative;
-  margin-top: -9%;
-}
-
-.nav > .nav-header {
-  display: inline;
-}
-
-.nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px;
-}
-
-.nav > .nav-btn {
-  display: none;
-}
-
-.nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 18px;
-}
-
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
-  text-decoration: none;
-  color: #efefef;
-}
-
-.nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.nav > #nav-check {
-  display: none;
-}
-
-@media (max-width:600px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-}
-.userdetails{
-  background-color: rgb(9, 9, 9);
-  width:100%;
-  margin-top: -27%;
-}
-/* Navbar end */
-
-
-
-
-.details{
-	height: 100%;
-	width: 100%;
-	left: auto;
-}
-.wrap {
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	width: 200vmin;
-	height:100px;
-	border: 2px solid;
-	/* border-image: linear-gradient(to right, #232526, #414345); */
-	margin: 2rem auto;
-	transition: .3s ease-in-out;
-	position: relative;
-	overflow: hidden;
-}
-.overlay {
-	position: relative;
-	display: flex;
-	width: 100%;
-	height: 100%;
-	padding: 1rem .75rem;
-	background: #485563;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-	transition: .4s ease-in-out;
-	z-index: 1;
-}
-.overlay:hover{
-	background: #232526;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-}
-.btns{
-	display: none;
-	position: relative;
-	left:25%;
-	top:90%;
-}
-
-.overlay:hover   .btns{
-	display: block;
-}
-
-
-.wrapp{
-  max-width: 350px;
-  margin: auto;
-  padding:20px;
-  background: #fff;
-  margin-top:100px;
-  border-radius: 10px;
-  }
-  form{
-  margin-top:50px;
-  }
-  input{
-  width:100%;
-  padding:10px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-  border:none;
-  outline: none;
-  border:1px solid gray;
-  font-size : 15px;
-  border-radius: 5px;
-  }
-  
-  input[type=submit] {
-  font-size: 16px;
-  margin-top:30px;
-  color:#fff ;
-  font-weight:bold;
-  background: #cc0033;
-  border:1px solid #fff;
-  cursor:pointer;
-  }
-  input[type=submit]:hover{
-  background: orange;
-  }
-  .over{
-  height:100%;
-  width:100%;
-  display: none;
-  position: fixed;
-  z-index:1;
-  background-image: url("../space.jpg");
-  top:0;
-  left:0;
-  background: rgba (0,0,0,0.7);
-  }
-  .closebtn{
+  margin: 0;
+  padding: 0;
+  background-color: rgba(34, 34, 34, 0.84);
   position: absolute;
-  top:20px;
-  right:45px;
-  font-size: 60px;
-  cursor:pointer;
-  color: #fff;
-  }
+  width: 100%;
+}
 
-/* side-vav */
+button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffff;
+  padding: 1%;
+  width: 100%;
+  margin: 1% 5%;
+}
+
+.navbar {
+  background-color: #5ca1c3;
+  display: flex;
+  justify-content: space-between;
+  /* position: fixed; */
+  width: 100%;
+  box-shadow: rgba(244, 244, 244, 0.35) 0px 5px 15px;
+}
+
+.logo-icon {
+  width: 40px;
+  padding: 1%;
+}
+
+.logo-icon img {
+  width: 100%;
+}
+
+.user-detail {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1%;
+}
+
+.user-detail .img-user {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-pic {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user-details,.event-details {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: flex-start;
+  margin: 2%;
+  padding: 1%;
+  background-color: rgb(124, 165, 240);
+  box-shadow: rgba(244, 244, 244, 0.35) 0px 5px 15px;
+  height: 40vh;
+  border-radius: 15px;
+}
+
+.event-overlay {
+  display: none;
+}
+
+.event-togglers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.event-detail {
+  width: 97%;
+  padding: 2%;
+  margin: 1%;
+  /* height: 60vh; */
+}
+
+.events {
+  margin: 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  width: 95%; 
+  background-color: aliceblue;
+  border-radius: 15px;
+}
+
+.event-strips {
+  position: absolute; 
+}
+
+.events:hover .event-overlay {
+  display: flex;
+  position: relative;
+  z-index: 5;
+  background-color: rgb(78, 78, 79);
+  opacity: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}

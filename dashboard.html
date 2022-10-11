@@ -1,87 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/dashboard.css" />
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="./assets/css/dashboard.css">
-</head>
+    <script
+      defer
+      type="text/javascript"
+      src="./assets/js/dashboard.js"
+    ></script>
+  </head>
 
-<body>
-	<!-- Navbar -->
-	<div class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-          <div class="nav-title">
-            Enyugma
-          </div>
-        </div>
-        <div class="nav-btn">
-          <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </div>
-        
-        <div class="nav-links">
-          <a href="" target="_blank">Technical</a>
-          <a href="" target="_blank">Cultural</a>
+  <body>
+	<div class="overlays">
+		<div class="update-data" id="data-update">
+			<form id="data-upd"></form>
+		</div>
+		<div class="register-event" id="register-event">
+			<form id="evt-reg"></form>
+		</div>
+		<div class="register-ca" id="register-ca">
+			<form id="ca-reg"></form>
+		</div>
+	</div>
+    <nav class="navbar">
+      <div class="logo-icon">
+        <img src="./assets/images/logo_enyugma.png" />
+      </div>
+      <div class="user-detail">
+        <span id="user-name" class="user-name"></span>
+        <div class="img-user">
+          <img
+            id="user-pic"
+            class="user-pic"
+            src="./assets/images/default-user-image.png"
+          />
         </div>
       </div>
-
-      <div class="userdetails">
-        <p>User details,like name ,mail, event registered, win</p>
+    </nav>
+    <div class="user-details">
+      <h5>Name: <span id="user-name"></span></h5>
+      <h5>Application No.: <span id="user-appno"></span></h5>
+      <h5>Email Id: <span id="user-email"></span></h5>
+      <h5>Address: <span id="user-address"></span></h5>
+      <h5>Events Participated: <span id="user-events"></span></h5>
     </div>
-
-
-	<div class="wrap">
-		<div class="overlay">
-
-			<div class="overlay-content ">
-				<h1 class="Event-name">Web-Development</h1>
-				<p class="details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus quas, aliquid
-					similique excepturi, ipsam beatae optio </p>
+    <div class="event-details">
+      <div class="event-togglers">
+        <button class="tech-event">Technical</button>
+        <button class="cult-event">Cultural</button>
+      </div>
+      <div class="event-detail">
+        <div class="events">
+          <div class="event-overlay">
+            <button class="explore">Explore</button>
+            <button class="Register">Register</button>
+          </div>
+          <div class="event-strips">
+			<div class="event-name"><span id="event-name"></span></div>
+			<div class="event-shortDesc"><span id="event-shortDesc"></span></div>
+		  </div>
+        </div>
+		<div class="events">
+			<div class="event-overlay">
+			  <button class="explore">Explore</button>
+			  <button class="Register">Register</button>
 			</div>
-
-			<div class="btns">
-				<button id="button1" class="openbtn" onclick="openForm1()">Register</button>
-                <button class="explore">Explore</button>
-			</div>
-
-		</div>
-
-	</div>
-		
-
-		<!-- Overlay_Effect -->
-
-		<div id="myOverlay1" class="over">
-			<span class="closebtn" onclick="closeForm1()" title="Close Overlay"> &#215 </span>
-			<div class="wrapp">
-			  <h2> Sign Up Here</h2>
-			  <form id="form1">
-		
-				<input type="text" id="name" placeholder="Enter First Name">
-				<input type="text" id="lname" placeholder="Enter Last Name">
-				<input type="text" id="number" placeholder="Enter Email or Mobile Number">
-				<input type="password" id="pass" placeholder="Enter Password">
-				<input type="text" id="rpass" placeholder="Re-Enter Password">
-
-				<button class="submit-button" type="submit">submit</button>
-
-			  </form>
+			<div class="event-strips">
+			  <div class="event-name"><span id="event-name"></span></div>
+			  <div class="event-shortDesc"><span id="event-shortDesc"></span></div>
 			</div>
 		  </div>
-
-
-
-
-
-
-		<script src="./assets/js/dashboard.js"></script>
-</body>
-
+      </div>
+    </div>
+  </body>
 </html>
