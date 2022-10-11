@@ -2,8 +2,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgba(34, 34, 34, 0.84);
-  position: absolute;
-  width: 100%;
 }
 
 button {
@@ -14,6 +12,11 @@ button {
   padding: 1%;
   width: 100%;
   margin: 1% 5%;
+}
+
+.main-content {
+  position: relative;
+  width: 100%;
 }
 
 .navbar {
@@ -112,3 +115,76 @@ button {
   height: 100%;
   border-radius: 15px;
 }
+
+.overlays {
+  display: none;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(169, 169, 169, 0.789);
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  height: 100vh;
+}
+
+.update-data {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  margin: 3%;
+}
+
+form input,textarea {
+  width: 500px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  margin: 2%;
+}
+
+form input[type="file"] {
+  width: 180px;
+}
+
+form input {
+  padding: 3%;
+}
+
+form textarea {
+  padding: 3%;
+}
+
+form input::placeholder,textarea::placeholder {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#data-upd {
+  width: 80%;
+}
+
+#upd-img {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.show-div {
+  width: 60%;
+}
+
+.show-div img {
+  width: 100%;
+  border-radius: 15px;
+}
+
