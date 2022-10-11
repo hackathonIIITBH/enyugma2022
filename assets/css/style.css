@@ -4,6 +4,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
+html{
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
@@ -32,9 +36,38 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
-  /* cursor: none; */
+  scroll-behavior: smooth;
 }
 
+.toup{
+  position: fixed;
+  bottom: 2%;
+  color: white;
+  right: 3%;
+  z-index: 2;
+}
+
+.toup .fa-solid{
+  width: 50px;
+  background-color: white;
+  border-radius: 50px;
+  /* border: 2px solid white; */
+  height: 50px;
+  /* padding: 20px 20px; */
+  display: flex;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  /* font-weight: normal; */
+  font-size: 30px;
+  transition: 800ms ease-in-out;
+  cursor: pointer;
+}
+
+.toup .fa-solid:hover{
+  transform: scale(1.2);
+  backdrop-filter: blur(.5px);
+}
 .main-section {
   /* padding-top: 10vh; */
   width: 95vw;
@@ -66,6 +99,37 @@ body {
   top: 100%;
   transform: rotate(180deg);
   /* scale: -1; */
+}
+
+.tobottom{
+  color: white;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tobottom .fa-solid{
+  width: 60px;
+  /* background-color: white; */
+  border-radius: 10px;
+  /* border: 2px solid white; */
+  height: 60px;
+  /* padding: 20px 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-weight: normal; */
+  font-size: 40px;
+  color: white;
+  transition: 800ms ease-in-out;
+  cursor: pointer;
+}
+
+.tobottom .fa-solid:hover{
+  transform: scale(1.2);
+  backdrop-filter: blur(.5px);
 }
 
 #reverse {
@@ -101,8 +165,8 @@ body {
 .techfest_logo {
   background-color: transparent;
   /* position: absolute; */
-  height: 40vh;
-  width: 60%;
+  /* height: 40vh; */
+  width: 70%;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -130,7 +194,7 @@ body {
 }
 
 .timer_design {
-  width: 40%;
+  width: 30%;
 }
 
 .timer_design h1{
@@ -148,6 +212,7 @@ body {
   padding: 5px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  
 }
 
 .logo_clg {
@@ -226,12 +291,6 @@ body {
   justify-content: center;
   height: 100%;
   transition: 500ms;
-}
-
-@media (max-width:767px) {
-  .navdesign{
-    display: none;
-  }
 }
 
 #particles-js {
@@ -933,6 +992,22 @@ body {
   .buttonscreenSet2 {
     display: flex;
   }
+
+  .container{
+    height: 60px;
+    width: 150px;
+  }
+  .logo_clg{
+    width: 40px;
+    height: 40px;
+  }
+
+  /* @media (max-width:767px) { */
+    .navdesign{
+      display: none;
+    }
+  /* } */
+  
 }
 
 

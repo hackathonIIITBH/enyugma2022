@@ -9,17 +9,7 @@ var w, h;
 
 var item = document.querySelector("#scrollbehavior");
 function scrollsideLeft() {
-  // var percent = (100 * item.scrollLeft) / (item.scrollWidth - item.clientWidth);
-  //  (document-item).style.overflow = "hidden";
-
-  // if (e.deltaY > 0) {
-    item.scrollLeft += document.body.offsetWidth;
-    
-  // } else {
-    // if (item.scrollLeft > 0) {
-      // item.scrollLeft -= 100;
-    // }
-  // }
+    item.scrollLeft += document.body.offsetWidth;    
 };
 
 function scrollsideRight() {
@@ -33,7 +23,30 @@ function scrollsideRight() {
       // item.scrollLeft -= 100;
     // }
   // }
+}
+
+function scrollsidedown() {
+  const element = document.getElementById("scrollbehavior");
+  element.scrollIntoView();
 };
+
+
+function scrollsideup() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+};
+
+let mybutton = document.getElementById("toup");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "flex";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
 
 init();
 render();
