@@ -1,4 +1,4 @@
-const url = `http://localhost:2100`
+const url = `https://enyugma.herokuapp.com`
 // /api/event/getevent
 
 let data = {};
