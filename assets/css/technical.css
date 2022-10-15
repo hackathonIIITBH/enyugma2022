@@ -81,6 +81,7 @@ body{
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    min-height: 50vh;
 }
 .events .container{
     display:flex;
@@ -117,6 +118,7 @@ body{
     justify-content: center;
     opacity: 0;
     transition: 800ms ease-in-out;
+    width: 100%;
 }
 
 .events .container:hover .alltext{
@@ -139,7 +141,7 @@ body{
     align-items: center;
 }
 
-.events .alltext p{
+.events .alltext .eventdetails{
     width: fit-content;
     text-align: center;
     color: white;
