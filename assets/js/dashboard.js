@@ -20,6 +20,24 @@ imgShow.addEventListener("load", () => {
 
 register.addEventListener("click", () => {
   overlays.style.display = "flex";
-  window.location.href="#"
+  window.location.href = "#";
   document.body.style.overflow = "hidden";
+});
+
+document.forms["upd-img"].addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(`${url}/profileImg`, {
+    method: "POST",
+    body: new FormData(e.target),
+    headers: {
+      "content-type": "application/json",
+      "auth_token": `${localStorage.getItem(userToken)}`,
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status == 0) {
+        alert("Image Uploaded Sucessfully");
+      }
+    });
 });
