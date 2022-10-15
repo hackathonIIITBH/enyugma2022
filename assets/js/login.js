@@ -1,8 +1,8 @@
 const form = document.getElementById("login");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-const url = "https://enyugma.herokuapp.com";
-
+// const url = "https://enyugma.herokuapp.com";
+const url = "http://localhost:2100"
 console.log("Running!!!!");
 
 function showError(input, message) {
@@ -61,15 +61,16 @@ document.forms["login"].addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       if (data.status == 0) {
         localStorage.setItem("userToken", data.auth_token);
-        window.location.href = "./dashboard.html";
+        window.location.href = "../user/dashboard.html";
       } else {
-        alert("something went wrong");
+        alert("Invalid Detail");
       }
     })
     .catch((err) => {
-      alert(err);
+      alert('Server Error');
     });
 });
 

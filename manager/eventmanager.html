@@ -8,7 +8,7 @@
 
     <title>Enyugma`22-manager-portal</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/logo_enyugma.png">
-    <link rel="stylesheet" href="./eventmanager.css" />
+    <link rel="stylesheet" href="./css/eventmanager.css" />
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <!-- jsquery -->
@@ -19,18 +19,18 @@
     <div class="navdesign">
         <div class="logo_fest"> <img src="../assets/images/logo_enyugma.png" alt="Server Error" srcset="" width="100%"
                 height="100%"></div>
-        <a href="#">
-            <h1>Event Name</h1>
+        <a href="#" id="eventname">
+            <!-- <h1>Event Name</h1> -->
         </a>
     </div>
     <div class="secondNavdesign">
-        <div class="EventheadName">
-            <h1>Event head name</h1>
-            <button> Logout</button>
+        <div class="EventheadName" id="headname">
+            <!-- <h1>Event head name</h1>
+            <button onclick='logout()'> Logout</button> -->
         </div>
-        <div class="contactInfo">
-            <h2>harsh.cse.20023@iiitbh.ac.in</h2>
-            <h2>7455878221</h2>
+        <div class="contactInfo" id="contact">
+            <!-- <h2>harsh.cse.20023@iiitbh.ac.in</h2>
+            <h2>7455878221</h2> -->
         </div>
     </div>
     <div class="container heroSection">
@@ -40,13 +40,19 @@
         </div>
         <div class="eventDesc">
             <h1>Description</h1>
-            <p>
-                The ideastrom has been spearheading this drive of the E-club, by providing
-                a platform for the students to get excellent professional guidance from our experienced and
-                distinguished startup mentors. Te student then get the chance to present their business plan in
-                front of angel investors and industry leaders
+            <p id="paragraphDesc" >
             </p>
-            <button>Edit</button>
+            <div id="formDesc">
+                <form id="updateDescriptionForm">
+                    <textarea name="desc" id="descTextarea" required>
+                    </textarea>
+                
+                    <input class="passwordinput" type="password" name="password" id="DescPasswrod" placeholder="password" required>
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+            <button id="editDesc" onclick="changeDesctoEdit()" >Edit</button>
+            <button id="cancelDesc" onclick="changeDesctoNormal()">Cancel</button>
         </div>
     </div>
     <div class="container rules">
@@ -69,28 +75,42 @@
             <table>
                 <tr>
                     <td>1st</td>
-                    <td>20000</td>
+                    <td id="pprize1"></td>
+                    <td id="changeprize1" style="display: none;"><input id="prize1" type="text"></td>
+                    
                 </tr>
                 <tr>
                     <td>2nd</td>
-                    <td>19000</td>
+                    <td id="pprize2" ></td>
+                    <td id="changeprize2" style="display: none;"><input id="prize2" type="text"></td>
+                    
                 </tr>
                 <tr>
                     <td>3rd</td>
-                    <td>18000</td>
+                    <td id="pprize3" ></td>
+                    <td id="changeprize3" style="display: none;"><input id="prize3" type="text"></td>
+                    
                 </tr>
                 <tr>
                     <td>4th</td>
-                    <td>17000</td>
+                    <td id="pprize4" ></td>
+                    <td id="changeprize4" style="display: none;"><input id="prize4" type="text"></td>
+                    
                 </tr>
                 <tr>
                     <td>5th</td>
-                    <td>16000</td>
+                    <td id="pprize5" ></td>
+                    <td id="changeprize5" style="display: none;"><input id="prize5" type="text"></td>
                 </tr>
             </table>
         </div>
+        <div >
+            <input type="password" id="prizepassword" style="display: none;" placeholder="Password" >
+        </div>
         <div class="buttondesign">
-            <button> Update </button>
+            <button id="updateprize" style="display: none;" onclick="updateprize()"> Update</button>
+            <button id="editprize" onclick="editprize()"> Edit </button>
+            <button id="cancelprize" style="display: none;" onclick="cancelprize()"> Cancel </button>
         </div>
     </div>
     <div class="container eventdetail">
@@ -99,41 +119,63 @@
                 <table>
                     <tr>
                         <td>Platform</td>
-                        <td>20000</td>
+                        <td id="pplatform" ></td>
+                        <td id="changeplatform" style="display: none;"><input id="platform" type="text"></td>
                     </tr>
                     <tr>
                         <td>Date</td>
-                        <td>19000</td>
+                        <td id="pdate" ></td>
+                        <td id="changedate" style="display: none;"><input id="date" type="text"></td>
                     </tr>
                     <tr>
                         <td>Type</td>
-                        <td>18000</td>
+                        <td id="ptype"></td>
+                        <td id="changetype" style="display: none;"><input id="type" type="text"></td>
                     </tr>
                     <tr>
                         <td>Registration Fees</td>
-                        <td>17000</td>
+                        <td id="pfees" ></td>
+                        <td id="changefees" style="display: none;"><input id="fees" type="text"></td>
                     </tr>
                 </table>
-
+            </div>
+            <div >
+                <input type="password" id="detailpassword" style="display: none;" placeholder="Password" >
             </div>
             <div class="buttondesign">
-                <button> Update </button>
+                <button id="updatedetail" style="display: none;" onclick="updateDetail()"> Update</button>
+                <button id="editdetail" onclick="editdetail()"> Edit </button>
+                <button id="canceldetail" style="display: none;" onclick="canceldetail()"> Cancel </button>
             </div>
     </div>
     <div class="container judging">
         <h1>Judging Criterea</h1>
-        <p>
-            The ideastrom has been spearheading this drive of the E-club, 
-            by providing a platform for the students to get excellent professional 
-            guidance from our experienced and distinguished startup mentors. Te 
-            student then get the chance to present their business plan in front of 
-            angel investors and industry leaders
+        <!-- <p> -->
+        <!-- </p> -->
+        <p id="paragraphjudging" >
         </p>
+        <div id="formjudging">
+            <form id="updatejudgingform">
+                <textarea name="desc" id="judgingTextarea" required></textarea>
+                <input class="passwordinput" type="password" name="password" id="judgingPasswrod" placeholder="password" required>
+                <input type="submit" value="Add">
+            </form>
+        </div>
         <div class="buttondesign">
-            <button> Update </button>
+            <button id="editjudging" onclick="changejudgingtoEdit()" >Edit</button>
+            <button id="canceljudging" onclick="changejudgingtoNormal()">Cancel</button>
+            <!-- <button> Update </button> -->
         </div>
     </div>
-    <script src="./eventmanager.js"></script>
+
+
+
+    <script src="./js/eventmanager.js"></script>
+    <script>
+        if(!localStorage.getItem('managertoken')){
+            window.location.href = './mlogin.html'
+        }
+    </script>
 </body>
 
 </html>
