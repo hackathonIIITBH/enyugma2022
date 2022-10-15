@@ -1,7 +1,8 @@
 const form = document.getElementById("login");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-const url = "https://enyugma.herokuapp.com";
+// const url = "https://enyugma.herokuapp.com";
+var url = "http://localhost:2100";
 
 console.log("Running!!!!");
 
@@ -62,8 +63,8 @@ document.forms["login"].addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((data) => {
       if (data.status == 0) {
-        localStorage.setItem("userToken", data.auth_token);
-        window.location.href = "./dashboard.html";
+        localStorage.setItem("caToken", `${data.auth_token}`);
+        window.location.href = "./ca-portal.html";
       } else {
         alert("something went wrong");
       }
@@ -109,7 +110,7 @@ document.forms["login"].onsubmit = (e) => {
     .then((res) => res.json())
     .then((data) => {
       if (data.status == 0) {
-        localStorage.setItem(`${data.auth_token}`);
+        localStorage.setItem("caToken", `${data.auth_token}`);
         window.location.href = "./ca-portal.html";
       } else {
         stats.style.backgroundColor = "#ff0000bb";

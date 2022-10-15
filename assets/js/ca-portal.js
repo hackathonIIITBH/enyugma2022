@@ -1,20 +1,10 @@
-const url = "http://localhost:5000";
+const url = "http://localhost:2100";
 
-var sno = document.querySelector("#sno");
-var nm = document.querySelector("#name");
-var gender = document.querySelector("#gender");
-var cno = document.querySelector("#cno");
-var inst = document.querySelector("#inst");
-var prog = document.querySelector("#prog");
-var gYear = document.querySelector("#gYear");
-var social = document.querySelector("#social");
-var q1 = document.querySelector("#q1");
-var q2 = document.querySelector("#q2");
-var query = document.querySelector("#query");
+var userName = document.querySelector("#user-name");
 var userDisp = document.querySelector("#user-disp");
 
 const displayDetails = (data) => {
-  let html = "";
+  var html = "";
   for (let i = 0; i < data.length; i++) {
     html += `<tr>
                 <td class="sno" id="sno">${i + 1}</td>
@@ -65,18 +55,22 @@ const displayDetails = (data) => {
 };
 
 fetch(`${url}/caDetails`, {
+  method: "POST",
   headers: {
-    "content-type": "application/json",
+    "Content-Type": "application/json",
     auth_token: `${localStorage.getItem("caToken")}`,
   },
 })
   .then((res) => res.json())
   .then((data) => {
     if (data.status == 0) {
-      displayDetails(data.data);
+    //   displayDetails(data.data);
+    //   userName.innerHTML = data.user;
+      console.log(data.user)
     } else {
-      alert("Something Went Wrong!!");
+      localStorage.removeItem("caToken");
     }
+    // console.log(data);
   })
   .catch((err) => {
     alert(err);
