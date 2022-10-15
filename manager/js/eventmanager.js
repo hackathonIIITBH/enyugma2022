@@ -38,7 +38,9 @@ const userdata = () => {
                 localStorage.removeItem('managertoken')
                 window.location.href = './mlogin.html'
             }
-        }).catch()
+        }).catch(()=>{
+            alert('unable to fetch')
+        })
 }
 
 userdata();
@@ -73,33 +75,42 @@ const getevent = () => {
             // console.log(res);
             if (res.status == 0) {
                 eventshow(res.event);
+            } else {
+
+                localStorage.removeItem('managertoken')
+                window.location.href = './mlogin.html'
             }
         }).catch(() => {
-
+            alert("unable to fetch")
         })
 }
 
 function eventshow(event) {
-    document.getElementById('paragraphDesc').innerText = event.desc
+    document.getElementById('paragraphDesc').innerHTML = event.desc
     document.getElementById('descTextarea').value = event.desc
     document.getElementById('platform').value = event.platform;
     document.getElementById('date').value = event.date;
     document.getElementById('type').value = event.type;
     document.getElementById('fees').value = event.fees;
 
-    document.getElementById('pplatform').innerText = event.platform;
-    document.getElementById('pdate').innerText = event.date;
-    document.getElementById('ptype').innerText = event.type;
-    document.getElementById('pfees').innerText = event.fees;
+    document.getElementById('pplatform').innerHTML = event.platform;
+    document.getElementById('pdate').innerHTML = event.date;
+    document.getElementById('ptype').innerHTML = event.type;
+    document.getElementById('pfees').innerHTML = event.fees;
 
     document.getElementById('judgingTextarea').value = event.judging;
-    document.getElementById('paragraphjudging').innerText = event.judging;
+    document.getElementById('paragraphjudging').innerHTML = event.judging;
+
+    document.getElementById('rulesTextarea').value = event.rule;
+    document.getElementById('paragraphrules').innerHTML = event.rule;
+
+
 
     // console.log(event.prize);
 
     for (const i in event.prize) {
         // console.log(i);
-        document.getElementById(`pprize${event.prize[i].no}`).innerText = event.prize[i].prize;
+        document.getElementById(`pprize${event.prize[i].no}`).innerHTML = event.prize[i].prize;
         document.getElementById(`prize${event.prize[i].no}`).value = event.prize[i].prize;
     }
 
@@ -134,9 +145,11 @@ document.getElementById('updateDescriptionForm').addEventListener('submit', (e) 
             if (res.status == 0) {
                 getevent();
                 changeDesctoNormal();
+            } else {
+                alert("unable to update")
             }
         }).catch(() => {
-
+            alert("unable to update")
         })
 
 })
@@ -221,9 +234,11 @@ const updateDetail = () => {
             if (res.status == 0) {
                 getevent();
                 canceldetail();
+            } else {
+                alert("unable to update")
             }
         }).catch(() => {
-
+            alert("unable to update")
         })
 
 }
@@ -275,9 +290,11 @@ document.getElementById('updatejudgingform').addEventListener('submit', (e) => {
             if (res.status == 0) {
                 getevent();
                 changejudgingtoNormal();
+            } else {
+                alert("unable to update")
             }
         }).catch(() => {
-
+            alert("unable to update")
         })
 
 })
@@ -391,9 +408,69 @@ const updateprize = () => {
                 getevent();
                 // canceldetail();
                 cancelprize();
+            } else {
+                alert("unable to update")
             }
         }).catch(() => {
-
+            alert("unable to update")
         })
 
 }
+
+
+// Rules
+
+
+const changeruletoEdit = () => {
+    document.getElementById('formrules').style.display = 'block';
+    document.getElementById('paragraphrules').style.display = 'none';
+    document.getElementById('editrule').style.display = 'none';
+    document.getElementById('cancelrule').style.display = 'block';
+}
+
+
+const changeruletoNormal = () => {
+    document.getElementById('formrules').style.display = 'none';
+    document.getElementById('paragraphrules').style.display = 'block';
+    document.getElementById('editrule').style.display = 'block';
+    document.getElementById('cancelrule').style.display = 'none';
+}
+
+
+
+document.getElementById('updaterulesForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    // data = new URLSearchParams(new FormData(e.target));
+    var desc = document.getElementById('rulesTextarea').value;
+    var password = document.getElementById('rulesPasswrod').value;
+    if (desc.length === 0) {
+        return;
+    }
+
+    fetch(`${url}/api/event/rule`, {
+        method: 'POST',
+        headers: {
+            'content-Type': 'application/json',
+            'auth_token': `${localStorage.getItem('managertoken')}`
+        },
+        body: JSON.stringify({
+            eventname: data.eventname,
+            rules: desc,
+            password: password
+        })
+    })
+        .then(res => res.json())
+        .then((res) => {
+            // console.log(res);
+            if (res.status == 0) {
+                getevent();
+                changeruletoNormal();
+            } else {
+                alert("unable to update")
+            }
+        }).catch(() => {
+            alert("unable to update")
+        })
+
+})
+
