@@ -106,7 +106,7 @@ body{
     margin:0px 0px 0px 0px;
 }
 
-.eventDesc #descTextarea{
+.eventDesc #descTextarea, #rulesTextarea{
     padding: 0px 10px;
     height: 200px;
     overflow: auto;
@@ -115,10 +115,10 @@ body{
     resize: none;
 }
 
-#formDesc{
+#formDesc, #formrules{
     display: none;
 }
-#cancelDesc{
+#cancelDesc, #cancelrule{
     display: none;
 }
 

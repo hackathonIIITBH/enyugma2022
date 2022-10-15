@@ -58,15 +58,26 @@
     <div class="container rules">
         <h1>Rules</h1>
         <div>
-            <ul>
-                <li>The ideastrom has been spearheading this drive of the E-club,</li>
+            <ul id="paragraphrules">
+                <!-- <li>The ideastrom has been spearheading this drive of the E-club,</li>
                 <li> providing a platform for the students to get excellent professional </li>
                 <li> from our experienced and distinguished startup mentors. Te student then </li>
-                <li> get the chance to present their business plan in front of angel investors and industry leaders</li>
+                <li> get the chance to present their business plan in front of angel investors and industry leaders</li> -->
             </ul>
         </div>
+        
+        <div id="formrules">
+            <form id="updaterulesForm">
+                <textarea name="rule" id="rulesTextarea" required>
+                </textarea>
+            
+                <input class="passwordinput" type="password" name="password" id="rulesPasswrod" placeholder="password" required>
+                <input type="submit" value="Add">
+            </form>
+        </div>
         <div class="buttondesign">
-            <button> Add more </button>
+            <button id="editrule" onclick="changeruletoEdit()" >Edit</button>
+            <button id="cancelrule" onclick="changeruletoNormal()">Cancel</button>
         </div>
     </div>
     <div class="container prizepool">
