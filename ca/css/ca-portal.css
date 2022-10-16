@@ -1,0 +1,134 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.465);
+  /* background: transparent; */
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(34, 34, 34, 0.84);
+  scroll-behavior: smooth;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffff;
+  padding: 1%;
+  width: 100%;
+  margin: 1% 5%;
+}
+
+.navbar {
+  background-color: #5ca1c3;
+  display: flex;
+  justify-content: space-between;
+  /* position: fixed; */
+  width: 100%;
+  box-shadow: rgba(244, 244, 244, 0.35) 0px 5px 15px;
+}
+
+.logo-icon {
+  width: 50px;
+  padding: 1%;
+}
+
+.navbar h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.logo-icon img {
+  width: 100%;
+}
+
+.user-detail {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1%;
+}
+
+.user-detail .img-user {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-pic {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user-details,
+.event-details {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: flex-start;
+  margin: 2%;
+  padding: 1%;
+  background-color: rgb(124, 165, 240);
+  box-shadow: rgba(244, 244, 244, 0.35) 0px 5px 15px;
+  height: 40vh;
+  border-radius: 15px;
+}
+
+.responses {
+  margin: 2%;
+  background-color: #ffff;
+  border-radius: 15px;
+  padding: 1%;
+}
+
+.response-table tr,
+th,
+td {
+  border: 2px solid #000;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.res-header {
+  background-color: rgb(133, 131, 131);
+  color: aliceblue;
+}
+
+.response-table #social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.response-table #social a {
+  margin: 1%;
+}
+
+.sno,.user-name {
+  font-weight: 600;
+}
