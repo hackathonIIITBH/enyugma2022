@@ -14,7 +14,7 @@ console.log(urlParams.get('search'))
 
 let eventname = urlParams.get('search');
 
-console.log(eventname);
+// /console.log(eventname);
 
 const getevent = () => {
     fetch(`${url}/api/event/getevent`, {
@@ -104,4 +104,8 @@ function display(e,id) {
     over[id-1].classList = 'text_settle hereitis'
 
     document.getElementById(`${e}`).style.display = "block";
+}
+
+function register(){
+    window.location.href = `../register/eventregister.html?register=${eventname}`
 }
