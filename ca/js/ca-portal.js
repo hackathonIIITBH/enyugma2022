@@ -1,4 +1,5 @@
-const url = "http://localhost:2100";
+const url = "https://enyugma.herokuapp.com";
+// var url = "http://localhost:2100";
 
 var userName = document.querySelector("#user-name");
 var userDisp = document.querySelector(".response-table");
