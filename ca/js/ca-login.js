@@ -54,6 +54,13 @@ form.addEventListener("submit", function (e) {
   checkRequired([email, password]);
   checkEmail(email);
 });
+
+var stats = document.querySelector(".status");
+
+setTimeout(() => {
+  stats.style.display = "none";
+}, 3000);
+
 document.forms["login"].addEventListener("submit", (e) => {
   e.preventDefault();
   fetch(`${url}/caLogin`, {
@@ -66,11 +73,17 @@ document.forms["login"].addEventListener("submit", (e) => {
         localStorage.setItem("caToken", `${data.auth_token}`);
         window.location.href = "./ca-portal.html";
       } else {
-        alert("something went wrong");
+        stats.style.backgroundColor = "#ff0000bb";
+        stats.style.border = "2px solid #de1111";
+        stats.style.display = "flex";
+        stats.innerHTML = "Something Went Wrong!!";
       }
     })
     .catch((err) => {
-      alert(err);
+      stats.style.backgroundColor = "#ff0000bb";
+      stats.style.border = "2px solid #de1111";
+      stats.style.display = "flex";
+      stats.innerHTML = err;
     });
 });
 

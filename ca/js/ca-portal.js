@@ -3,6 +3,7 @@ const url = "https://enyugma.herokuapp.com";
 
 var userName = document.querySelector("#user-name");
 var userDisp = document.querySelector(".response-table");
+var logout = document.querySelector("#logout");
 
 const displayDetails = (data) => {
   var html = "";
@@ -56,7 +57,12 @@ fetch(`${url}/caDetails`, {
     console.log(data);
   })
   .catch((err) => {
-    alert(err);
+    // alert(err);
     localStorage.removeItem("caToken");
     window.location.href = "./ca-login.html";
   });
+
+logout.addEventListener("click", () => {
+  localStorage.removeItem("caToken");
+  window.location.href = "./ca-login.html";
+});
