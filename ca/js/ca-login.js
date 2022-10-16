@@ -56,7 +56,7 @@ form.addEventListener("submit", function (e) {
 });
 document.forms["login"].addEventListener("submit", (e) => {
   e.preventDefault();
-  fetch(`${url}/login`, {
+  fetch(`${url}/caLogin`, {
     method: "post",
     body: new URLSearchParams(new FormData(e.target)),
   })
