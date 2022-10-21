@@ -10,7 +10,7 @@ const eventnameshow = document.getElementById('eventNameshow');
 
 queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-console.log(urlParams.get('search'))
+// console.log(urlParams.get('search'))
 
 let eventname = urlParams.get('search');
 
