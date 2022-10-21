@@ -1,10 +1,11 @@
-const url = "https://enyugma.herokuapp.com";
+// const url = "https://enyugma.herokuapp.com";
+var url = "http://localhost:2100";
 
 var stats = document.querySelector(".status");
 
 setTimeout(() => {
   stats.style.display = "none";
-},3000);
+}, 3000);
 
 document.forms["register"].onsubmit = (e) => {
   e.preventDefault();

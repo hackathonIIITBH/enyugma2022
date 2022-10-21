@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -62,6 +62,21 @@ button {
   width: 100%;
 }
 
+.status {
+  color: white;
+  z-index: 10;
+  /* display: flex; */
+  justify-content: center;
+  padding: 0.5%;
+  margin: 1%;
+  /* background-color: #ff0000bb;
+    border: 2px solid #de1111; */
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 22px;
+  display: none;
+}
+
 .user-detail {
   width: 30%;
   height: 100%;
@@ -84,7 +99,8 @@ button {
   border-radius: 50%;
 }
 
-.user-details,.event-details {
+.user-details,
+.event-details {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -121,13 +137,13 @@ button {
   display: flex;
   flex-direction: column;
   height: 10vh;
-  width: 95%; 
+  width: 95%;
   background-color: aliceblue;
   border-radius: 15px;
 }
 
 .event-strips {
-  position: absolute; 
+  position: absolute;
 }
 
 .events:hover .event-overlay {
@@ -142,11 +158,11 @@ button {
 }
 
 .overlays {
-  display: none;
+  /* display: none; */
   width: 100%;
   position: absolute;
   background-color: rgba(169, 169, 169, 0.789);
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
@@ -169,7 +185,8 @@ form {
   margin: 3%;
 }
 
-form input,textarea {
+form input,
+textarea {
   width: 500px;
   outline: none;
   border: none;
@@ -189,7 +206,8 @@ form textarea {
   padding: 3%;
 }
 
-form input::placeholder,textarea::placeholder {
+form input::placeholder,
+textarea::placeholder {
   text-align: center;
   vertical-align: middle;
 }
@@ -213,3 +231,23 @@ form input::placeholder,textarea::placeholder {
   border-radius: 15px;
 }
 
+.drop-down {
+  display: none;
+  background-color: #5ca1c3;
+  padding: 1%;
+  width: 20%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.drop-down a{
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+}
+
+.user-detail:hover .drop-down {
+  display: block;
+  position: absolute;
+  margin-top: 8%;
+}

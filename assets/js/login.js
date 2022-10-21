@@ -1,8 +1,8 @@
 const form = document.getElementById("login");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-const url = "https://enyugma.herokuapp.com";
-// const url = "http://localhost:2100"
+// const url = "https://enyugma.herokuapp.com";
+const url = "http://localhost:2100"
 console.log("Running!!!!");
 
 function showError(input, message) {
@@ -53,26 +53,6 @@ form.addEventListener("submit", function (e) {
   checkRequired([email, password]);
   checkEmail(email);
 });
-document.forms["login"].addEventListener("submit", (e) => {
-  e.preventDefault();
-  fetch(`${url}/login`, {
-    method: "post",
-    body: new URLSearchParams(new FormData(e.target)),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      if (data.status == 0) {
-        localStorage.setItem("userToken", data.auth_token);
-        window.location.href = "../user/dashboard.html";
-      } else {
-        alert("Invalid Detail");
-      }
-    })
-    .catch((err) => {
-      alert('Server Error');
-    });
-});
 
 //Astronaut JS
 // $.fn.multiply = function (numCopies) {
@@ -110,13 +90,13 @@ document.forms["login"].onsubmit = (e) => {
     .then((res) => res.json())
     .then((data) => {
       if (data.status == 0) {
-        localStorage.setItem(`${data.auth_token}`);
-        window.location.href = "./dashboard.html";
+        localStorage.setItem("userToken", `${data.auth_token}`);
+        window.location.href = "../user/dashboard.html";
       } else {
         stats.style.backgroundColor = "#ff0000bb";
         stats.style.border = "2px solid #de1111";
         stats.style.display = "flex";
-        stats.innerHTML = "Something Went Wrong!!";
+        stats.innerHTML = "Invalid Details";
       }
     })
     .catch((err) => {
