@@ -1,5 +1,5 @@
-// const url = "https://enyugma.herokuapp.com";
-var url = "http://localhost:2100";
+const url = "https://enyugma.herokuapp.com";
+// var url = "http://localhost:2100";
 
 var stats = document.querySelector(".status");
 

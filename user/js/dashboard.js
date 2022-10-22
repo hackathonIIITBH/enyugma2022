@@ -3,8 +3,38 @@ var imgShow = document.querySelector("#img-show");
 var register = document.querySelector(".Register");
 var overlays = document.querySelector(".overlays");
 
-// const url = "https://enyugma.herokuapp.com";
-var url = "http://localhost:2100";
+const url = "https://enyugma.herokuapp.com";
+// var url = "http://localhost:2100";
+
+if (localStorage.getItem("userToken")) {
+  fetch(`${url}/userDetails`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      auth_token: `${localStorage.getItem("userToken")}`,
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status == 0) {
+        displayDetails(data.data);
+        document.title = `${data.data.name} | Enyugma Portal`;
+      } else {
+        stats.style.backgroundColor = "#ff0000bb";
+        stats.style.border = "2px solid #de1111";
+        stats.style.display = "flex";
+        stats.innerHTML = "Something Went Wrong!!";
+      }
+    })
+    .catch((err) => {
+      stats.style.backgroundColor = "#ff0000bb";
+      stats.style.border = "2px solid #de1111";
+      stats.style.display = "flex";
+      stats.innerHTML = err;
+    });
+} else {
+  window.location.href = "../auth/login.html";
+}
 
 imgUpd.addEventListener("change", (e) => {
   imgShow.src = URL.createObjectURL(e.target.files[0]);
@@ -22,34 +52,42 @@ register.addEventListener("click", () => {
 
 document.forms["upd-img"].addEventListener("submit", (e) => {
   e.preventDefault();
-  fetch(`${url}/profileImg`, {
+  fetch(`${url}/userDetails`, {
     method: "POST",
-    body: new FormData(e.target),
     headers: {
-      "content-type": "application/json",
+      "Content-Type": "application/json",
       auth_token: `${localStorage.getItem("userToken")}`,
     },
   })
     .then((res) => res.json())
     .then((data) => {
       if (data.status == 0) {
-        stats.style.backgroundColor = "#46d381bb";
-        stats.style.border = "2px solid #2ecc71";
-        stats.style.display = "flex";
-        stats.innerHTML = "Image Uploaded Successfully";
-        overlays.style.display = "none";
-      } else {
-        stats.style.backgroundColor = "#ff0000bb";
-        stats.style.border = "2px solid #de1111";
-        stats.style.display = "flex";
-        stats.innerHTML = "Something Went Wrong!!";
+        fetch(`${url}/profileImg/${data.data.email}`, {
+          method: "POST",
+          body: new FormData(e.target),
+        })
+          .then((res1) => res1.json())
+          .then((data1) => {
+            if (data1.status == 0) {
+              stats.style.backgroundColor = "#46d381bb";
+              stats.style.border = "2px solid #2ecc71";
+              stats.style.display = "flex";
+              stats.innerHTML = "Image Uploaded Successfully";
+              overlays.style.display = "none";
+            } else {
+              stats.style.backgroundColor = "#ff0000bb";
+              stats.style.border = "2px solid #de1111";
+              stats.style.display = "flex";
+              stats.innerHTML = "Something Went Wrong!!";
+            }
+          })
+          .catch((err) => {
+            stats.style.backgroundColor = "#ff0000bb";
+            stats.style.border = "2px solid #de1111";
+            stats.style.display = "flex";
+            stats.innerHTML = err;
+          });
       }
-    })
-    .catch((err) => {
-      stats.style.backgroundColor = "#ff0000bb";
-      stats.style.border = "2px solid #de1111";
-      stats.style.display = "flex";
-      stats.innerHTML = err;
     });
 });
 
@@ -74,9 +112,9 @@ const displayDetails = (data) => {
   // }
   // userEvents.innerHTML = html;
 
-  console.log(data.profile)
+  // console.log(data.profile);
 
-  if (data.profile == 1) {
+  if (data.profile == 1 && data.profileImg == 1) {
     overlays.style.display = "none";
   }
 };
@@ -86,37 +124,12 @@ setTimeout(() => {
   // window.location.reload();
 }, 3000);
 
-fetch(`${url}/userDetails`, {
-  method: "POST",
-  headers: {
-    "content-type": "application/json",
-    auth_token: `${localStorage.getItem("userToken")}`,
-  },
-})
-  .then((res) => res.json())
-  .then((data) => {
-    if (data.status == 0) {
-      displayDetails(data.data);
-      document.title = `${data.data.name} | Enyugma Portal`;
-    } else {
-      stats.style.backgroundColor = "#ff0000bb";
-      stats.style.border = "2px solid #de1111";
-      stats.style.display = "flex";
-      stats.innerHTML = "Something Went Wrong!!";
-    }
-  })
-  .catch((err) => {
-    stats.style.backgroundColor = "#ff0000bb";
-    stats.style.border = "2px solid #de1111";
-    stats.style.display = "flex";
-    stats.innerHTML = err;
-  });
-
 document.forms["data-upd"].addEventListener("submit", (e) => {
   e.preventDefault();
   fetch(`${url}/userUpdDetails`, {
     method: "POST",
     headers: {
+      "Content-Type": "application/json",
       auth_token: `${localStorage.getItem("userToken")}`,
     },
     body: new URLSearchParams(new FormData(e.target)),

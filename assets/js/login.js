@@ -1,8 +1,8 @@
 const form = document.getElementById("login");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-// const url = "https://enyugma.herokuapp.com";
-const url = "http://localhost:2100"
+const url = "https://enyugma.herokuapp.com";
+// const url = "http://localhost:2100"
 console.log("Running!!!!");
 
 function showError(input, message) {
