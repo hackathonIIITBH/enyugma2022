@@ -30,7 +30,6 @@ const userdata = () => {
   })
     .then((res) => res.json())
     .then((res) => {
-      // console.log(res)
       if (res.status == 0) {
         data = res.newdata;
         setvalues();
@@ -52,7 +51,6 @@ function logout() {
 }
 
 const setvalues = () => {
-  // console.log(data);
   eventname.innerHTML = `<h1>${data.eventname}</h1>`;
   headname.innerHTML = `<h1>${data.name}</h1> <button onclick='logout()'> Logout</button>`;
   contact.innerHTML = `<h2>${data.email}</h2> <h2>${data.phone}</h2>`;
@@ -66,9 +64,9 @@ const arrayBufferToBase64 = (buffer) => {
   return window.btoa(binary);
 };
 
-const getevent = () => {
-  // console.log('event')
-  fetch(`${url}/api/event/getevent`, {
+const getevent = async () => {
+  let post = 0;
+  await fetch(`${url}/api/event/getevent`, {
     method: "POST",
     headers: {
       "content-Type": "application/json",
@@ -79,9 +77,9 @@ const getevent = () => {
   })
     .then((res) => res.json())
     .then((res) => {
-      // console.log(res);
       if (res.status == 0) {
-        eventshow(res.event, res.postImg);
+        post = res.event.post;
+        eventshow(res.event);
       } else {
         localStorage.removeItem("managertoken");
         window.location.href = "./mlogin.html";
@@ -90,9 +88,32 @@ const getevent = () => {
     .catch(() => {
       alert("unable to fetch");
     });
+
+  if (post === 1) {
+    imgbuffer = await getimage(data.eventname);
+    img = arrayBufferToBase64(imgbuffer);
+    document.getElementById(
+      "post-img"
+    ).src = `data:image/png;base64,${img.toString("base64")}`;
+  }
 };
 
-function eventshow(event, postImg) {
+
+async function getimage(ename) {
+  let dataimg = -1;
+  await fetch(`${url}/api/event/img/${ename}`)
+    .then((res) => res.json())
+    .then((data) => {
+      // imgurl = arrayBufferToBase64(data.postImg[0].data);
+      if (data.status == 0) {
+        dataimg = data.postImg[0].data
+      }
+    });
+  return dataimg;
+}
+
+
+function eventshow(event) {
   document.getElementById("paragraphDesc").innerHTML = event.desc;
   document.getElementById("descTextarea").value = event.desc;
   document.getElementById("platform").value = event.platform;
@@ -110,16 +131,14 @@ function eventshow(event, postImg) {
 
   document.getElementById("rulesTextarea").value = event.rule;
   document.getElementById("paragraphrules").innerHTML = event.rule;
-  document.getElementById(
-    "post-img"
-  ).src = `data:image/png;base64,${arrayBufferToBase64(
-    postImg[0].data
-  ).toString("base64")}`;
+  // document.getElementById(
+  //   "post-img"
+  // ).src = `data:image/png;base64,${arrayBufferToBase64(
+  //   postImg[0].data
+  // ).toString("base64")}`;
 
-  // console.log(event.prize);
 
   for (const i in event.prize) {
-    // console.log(i);
     document.getElementById(`pprize${event.prize[i].no}`).innerHTML =
       event.prize[i].prize;
     document.getElementById(`prize${event.prize[i].no}`).value =
@@ -154,7 +173,6 @@ document
     })
       .then((res) => res.json())
       .then((res) => {
-        // console.log(res);
         if (res.status == 0) {
           getevent();
           changeDesctoNormal();
@@ -233,7 +251,6 @@ const updateDetail = () => {
     password: password,
   };
 
-  // console.log(sendData);
 
   fetch(`${url}/api/event/details`, {
     method: "POST",
@@ -296,7 +313,6 @@ document.getElementById("updatejudgingform").addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
       if (res.status == 0) {
         getevent();
         changejudgingtoNormal();
@@ -408,7 +424,6 @@ const updateprize = () => {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
       if (res.status == 0) {
         getevent();
         // canceldetail();
@@ -461,7 +476,6 @@ document.getElementById("updaterulesForm").addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((res) => {
-      // console.log(res);
       if (res.status == 0) {
         getevent();
         changeruletoNormal();

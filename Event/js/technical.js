@@ -8,23 +8,16 @@ const technical = () => {
   fetch(`${url}/api/event/technical`)
     .then((res) => res.json())
     .then((res) => {
-      // console.log(res)
       if (res.status == 0) {
         desc = res.event;
+
+        setevent(desc);
       } else {
         window.location.href = "../index.html";
       }
     })
     .catch((err) => {
-      console.log(err);
       window.location.href = "../index.html";
-    });
-  fetch(`${url}/api/event/img/technical`)
-    .then((res) => res.json())
-    .then((data) => {
-      if (data.status == 0) {
-        setevent(desc, data.eventImg);
-      }
     });
 };
 
@@ -37,18 +30,28 @@ const arrayBufferToBase64 = (buffer) => {
   return window.btoa(binary);
 };
 
-function setevent(event,eventImg) {
-  // console.log(event)
+async function getimage(e) {
+  let dataimg=-1;
+  await fetch(`${url}/api/event/img/${e}`)
+    .then((res) => res.json())
+    .then((data) => {
+      // imgurl = arrayBufferToBase64(data.postImg[0].data);
+      if (data.status == 0) {
+        dataimg = data.postImg[0].data
+      }
+    });
+    return dataimg;
+  }
+
+async function setevent(event) {
   let html = ``;
   for (const i in event) {
-    // console.log(i);
     if (event[i].post == 1) {
-      html += `<a href="../eventDetail/eventabout.html?search=${
-        event[i].eventname
-      }" class="container">
-                    <img src='data:image/png;base64,${arrayBufferToBase64(
-                      event[i].postImg[0].data
-                    ).toString("base64")}'
+      imgbuffer = await getimage(event[i].eventname);
+      img = arrayBufferToBase64(imgbuffer);
+      html += `<a href="../eventDetail/eventabout.html?search=${event[i].eventname
+        }" class="container">
+                    <img src='data:image/png;base64,${img.toString("base64")}'
                         alt="event name here">
                     <div class="alltext">
                         <h1 class="eventname"> ${event[i].eventname}
