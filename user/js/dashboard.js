@@ -59,9 +59,9 @@ document.forms["upd-img"].addEventListener("submit", (e) => {
       auth_token: `${localStorage.getItem("userToken")}`,
     },
   })
-    .then((res1) => res1.json())
-    .then((data1) => {
-      if (data1.status == 0) {
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status == 0) {
         stats.style.backgroundColor = "#46d381bb";
         stats.style.border = "2px solid #2ecc71";
         stats.style.display = "flex";
@@ -87,7 +87,15 @@ var userAppno = document.querySelector("#user-appno");
 var userEmail = document.querySelector("#user-email");
 var userAddress = document.querySelector("#user-address");
 var userEvents = document.querySelector("#user-events");
+var userPic = document.querySelector("#user-pic");
 var stats = document.querySelector(".status");
+
+const arrayBufferToBase64 = (buffer) => {
+  var binary = "";
+  var bytes = [].slice.call(new Uint8Array(buffer));
+  bytes.forEach((b) => (binary += String.fromCharCode(b)));
+  return window.btoa(binary);
+};
 
 const displayDetails = (data) => {
   for (let i = 0; i < userName.length; i++) {
@@ -96,7 +104,9 @@ const displayDetails = (data) => {
   userAppno.innerHTML = data.appno;
   userEmail.innerHTML = data.email;
   userAddress.innerHTML = data.address;
-
+  var img = arrayBufferToBase64(data.pImg[0].data);
+  // console.log(data.pImg);
+  userPic.src = `data:image/png;base64,${img.toString("base64")}`;
   // let html = "";
   // for (let i = 0; i < data.events.length; i++) {
   //   html += `${data.events[i]}, `;

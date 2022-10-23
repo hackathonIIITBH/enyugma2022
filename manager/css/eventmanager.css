@@ -1,342 +1,382 @@
-body{
-    font-family: Verdana;
-    background-color: rgba(227, 227, 227, 0.867);
-    /* background-image: url(../assets/images/stars.jpg); */
-    color: black;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: Verdana;
+  background-color: rgba(227, 227, 227, 0.867);
+  /* background-image: url(../assets/images/stars.jpg); */
+  color: black;
+  margin: 0;
+  padding: 0;
 }
 
-.navdesign{
+.navdesign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo_fest {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background-color: white;
+  padding: 10px;
+  margin: 0px 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.navdesign a {
+  color: black;
+  text-decoration: none;
+}
+
+.navdesign h1 {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.secondNavdesign {
+  margin-top: 10px;
+  border-bottom: 1px solid black;
+}
+
+.secondNavdesign h1 {
+  margin: 0px 10px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+.EventheadName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.EventheadName button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0px 10px;
+  padding: 0px;
+  font-size: 18px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.contactInfo h2 {
+  margin: 0px 10px;
+  padding: 0px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  margin: 20px auto;
+}
+
+.heroSection {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.eventbanner {
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+.eventbanner:hover .event-post {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 
-.logo_fest{
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    background-color: white;
-    padding: 10px;
-    margin: 0px 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+.event-post {
+  position: absolute;
+  display: none;
+  background-color: rgba(85, 85, 85, 0.632);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.navdesign a{
-    color: black;
-    text-decoration: none;
+#event-img {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.navdesign h1{
-    margin: 0;
-    padding: 0 10px;
-    font-size: 20px;
+#event-img button,
+input {
+  margin: 5% 1%;
+  color: #fff;
 }
 
-.secondNavdesign{
-    margin-top: 10px;
-    border-bottom: 1px solid black;
+#event-img .submit {
+  width: 100%;
+  padding: 5%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: #000;
 }
 
-.secondNavdesign h1{
-    margin: 0px 10px;
-    padding: 0px;
-    font-size: 20px;
+.eventDesc {
+  width: calc(100% - 300px);
+  min-width: 300px;
+  /* height: 300px; */
 }
 
-.EventheadName{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+.eventDesc p {
+  padding: 0px 20px;
+  height: 200px;
+  overflow: auto;
+  margin: 0px 0px 0px 0px;
 }
 
-.EventheadName button{
-    background:transparent;
-    border: none;
-    cursor: pointer;
-    margin: 0px 10px;
-    padding: 0px;
-    font-size: 18px;
+.eventDesc #descTextarea,
+#rulesTextarea {
+  padding: 0px 10px;
+  height: 200px;
+  overflow: auto;
+  width: calc(100% - 40px);
+  margin: 0px 10px 0px 10px;
+  resize: none;
 }
 
-.contactInfo{
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
+#formDesc,
+#formrules {
+  display: none;
+}
+#cancelDesc,
+#cancelrule {
+  display: none;
 }
 
-.contactInfo h2{
-    margin: 0px 10px;
-    padding: 0px;
-    font-size: 15px;
-    font-weight: normal;
+.passwordinput {
+  width: 200px;
+  margin: 10px;
 }
 
-.container{
-    width: 80%;
-    margin: auto;
-    margin: 20px auto;
+.eventDesc h1 {
+  padding: 0px 20px;
+  margin: 5px 0px 0px 0px;
+  font-size: 20px;
+  height: 30px;
 }
 
-.heroSection{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
+.eventDesc button {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px;
+  height: 30px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+  transition: 800ms ease-in-out;
 }
 
-.eventbanner{
-    height: 300px;
-    width: 300px;
+.eventDesc button:hover {
+  background-color: black;
+  color: white;
 }
 
-.eventDesc{
-    width: calc(100% - 300px);
-    min-width: 300px;
-    /* height: 300px; */
+.rules h1 {
+  /* padding: 0px 20px; */
+  /* margin: 5px 0px 0px 0px; */
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
 }
 
-.eventDesc p{
-    padding: 0px 20px;
-    height: 200px;
-    overflow: auto;
-    margin:0px 0px 0px 0px;
+.rules ul {
+  font-size: 15px;
 }
 
-.eventDesc #descTextarea, #rulesTextarea{
-    padding: 0px 10px;
-    height: 200px;
-    overflow: auto;
-    width: calc(100% - 40px );
-    margin:0px 10px 0px 10px;
-    resize: none;
+.rules .buttondesign {
+  text-align: center;
 }
 
-#formDesc, #formrules{
-    display: none;
-}
-#cancelDesc, #cancelrule{
-    display: none;
-}
-
-.passwordinput{
-    width: 200px;
-    margin: 10px;
-}
-
-.eventDesc h1{
-    padding: 0px 20px;
-    margin: 5px 0px 0px 0px;
-    font-size: 20px;
-    height: 30px;
+.rules button {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px;
+  height: 30px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+  transition: 800ms ease-in-out;
 }
 
-.eventDesc button{
-    background: transparent;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 0px 10px;
-    height: 30px;
-    margin: 0px 20px 0px 20px;
-    cursor: pointer;
-    transition: 800ms ease-in-out;
+.rules button:hover {
+  background-color: black;
+  color: white;
 }
 
-.eventDesc button:hover{
-    background-color: black;
-    color: white;
+.prizepool h1 {
+  /* padding: 0px 20px; */
+  /* margin: 5px 0px 0px 0px; */
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
 }
 
-.rules h1{
-    /* padding: 0px 20px; */
-    /* margin: 5px 0px 0px 0px; */
-    font-size: 20px;
-    height: 30px;
-    text-align: center;
+.prizepool table {
+  font-size: 15px;
+  width: 100%;
+  margin: 5px 0px;
+  border: 1px solid black;
+  border-collapse: collapse;
 }
 
-.rules ul{
-    font-size: 15px;
+.prizepool table tr {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
 }
 
-.rules .buttondesign{
-    text-align: center;
+.prizepool table td {
+  width: 50%;
+  border: 1px solid black;
+  border-collapse: collapse;
 }
 
-.rules button{
-    background: transparent;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 0px 10px;
-    height: 30px;
-    margin: 0px 20px 0px 20px;
-    cursor: pointer;
-    transition: 800ms ease-in-out;
+.prizepool .buttondesign {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.rules button:hover{
-    background-color: black;
-    color: white;
+.prizepool button {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px;
+  height: 30px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+  transition: 800ms ease-in-out;
 }
 
-
-.prizepool h1{
-    /* padding: 0px 20px; */
-    /* margin: 5px 0px 0px 0px; */
-    font-size: 20px;
-    height: 30px;
-    text-align: center;
+.prizepool button:hover {
+  background-color: black;
+  color: white;
 }
 
-.prizepool table{
-    font-size: 15px;
-    width: 100%;
-    margin: 5px 0px;
-    border: 1px solid black;
-    border-collapse: collapse;
+.eventdetail h1 {
+  /* padding: 0px 20px; */
+  /* margin: 5px 0px 0px 0px; */
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
 }
 
-.prizepool table tr{
-    width: 100%;
-    border: 1px solid black;
-    border-collapse: collapse;
+.eventdetail table {
+  font-size: 15px;
+  width: 100%;
+  margin: 5px 0px;
+  border: 1px solid black;
+  border-collapse: collapse;
 }
 
-.prizepool table td{
-    width: 50%;
-    border: 1px solid black;
-    border-collapse: collapse;
+.eventdetail table tr {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
 }
 
-
-.prizepool .buttondesign{
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.eventdetail table td {
+  width: 50%;
+  border: 1px solid black;
+  border-collapse: collapse;
 }
 
-.prizepool button{
-    background: transparent;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 0px 10px;
-    height: 30px;
-    margin: 0px 20px 0px 20px;
-    cursor: pointer;
-    transition: 800ms ease-in-out;
+.eventdetail .buttondesign {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.prizepool button:hover{
-    background-color: black;
-    color: white;
+.eventdetail button {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px;
+  height: 30px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+  transition: 800ms ease-in-out;
 }
 
-.eventdetail h1{
-    /* padding: 0px 20px; */
-    /* margin: 5px 0px 0px 0px; */
-    font-size: 20px;
-    height: 30px;
-    text-align: center;
+.eventdetail button:hover {
+  background-color: black;
+  color: white;
 }
 
-.eventdetail table{
-    font-size: 15px;
-    width: 100%;
-    margin: 5px 0px;
-    border: 1px solid black;
-    border-collapse: collapse;
+.judging h1 {
+  /* padding: 0px 20px; */
+  /* margin: 5px 0px 0px 0px; */
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
 }
 
-.eventdetail table tr{
-    width: 100%;
-    border: 1px solid black;
-    border-collapse: collapse;
+.judging p {
+  padding: 0px 20px;
+  /* height: 200px; */
+  overflow: auto;
+  margin: 0px 0px 10px 0px;
 }
 
-.eventdetail table td{
-    width: 50%;
-    border: 1px solid black;
-    border-collapse: collapse;
+.judging .buttondesign {
+  text-align: center;
 }
 
-.eventdetail .buttondesign{
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.judging button {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px;
+  height: 30px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+  transition: 800ms ease-in-out;
 }
 
-
-.eventdetail button{
-    background: transparent;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 0px 10px;
-    height: 30px;
-    margin: 0px 20px 0px 20px;
-    cursor: pointer;
-    transition: 800ms ease-in-out;
+.judging button:hover {
+  background-color: black;
+  color: white;
 }
 
-.eventdetail button:hover{
-    background-color: black;
-    color: white;
+#judgingTextarea {
+  padding: 0px 10px;
+  height: 200px;
+  overflow: auto;
+  width: calc(100% - 40px);
+  margin: 0px 10px 0px 10px;
+  resize: none;
 }
 
-.judging h1{
-    /* padding: 0px 20px; */
-    /* margin: 5px 0px 0px 0px; */
-    font-size: 20px;
-    height: 30px;
-    text-align: center;
+#formjudging {
+  display: none;
 }
 
-.judging p{
-    padding: 0px 20px;
-    /* height: 200px; */
-    overflow: auto;
-    margin:0px 0px 10px 0px;
-}
-
-.judging .buttondesign{
-    text-align: center;
-}
-
-.judging button{
-    background: transparent;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 0px 10px;
-    height: 30px;
-    margin: 0px 20px 0px 20px;
-    cursor: pointer;
-    transition: 800ms ease-in-out;
-}
-
-.judging button:hover{
-    background-color: black;
-    color: white;
-}
-
-
-#judgingTextarea{
-    padding: 0px 10px;
-    height: 200px;
-    overflow: auto;
-    width: calc(100% - 40px );
-    margin:0px 10px 0px 10px;
-    resize: none;
-}
-
-#formjudging{
-    display: none;
-}
-
-
-#canceljudging{
-    display: none;
+#canceljudging {
+  display: none;
 }
