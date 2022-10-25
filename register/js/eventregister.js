@@ -1,5 +1,5 @@
-// const url = `https://enyugma.herokuapp.com`
-const url = `http://localhost:2100`
+const url = `https://enyugma.herokuapp.com`
+// const url = `http://localhost:2100`
 let userdetail;
 let username = document.getElementById('name');
 let email = document.getElementById('email');
@@ -56,7 +56,7 @@ const getuser = () => {
         .then((res) => res.json())
         .then((res) => {
             // console.log(res)
-            if (res.status == 0) {
+            if (res.status === 0) {
                 // console.log(res.data)
                 if(res.data.profile==0){
                     window.location.href = `../user/dashboard.html`
@@ -64,8 +64,8 @@ const getuser = () => {
                 userdetail = res.data;
                 showdata();
             } else {
-                localStorage.removeItem('userToken');
-                window.location.href = `../auth/login.html`
+                // localStorage.removeItem('userToken');
+                // window.location.href = `../auth/login.html`
             }
         })
         .catch((err) => {
