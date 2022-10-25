@@ -78,7 +78,7 @@ button {
 }
 
 .user-detail {
-  width: 30%;
+  width: fit-content;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -88,15 +88,23 @@ button {
 }
 
 .user-detail .img-user {
-  width: 10%;
+  /* width: 10%; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.user-name{
+  font-weight: 900;
+  font-family: Verdana;
+  text-transform: capitalize;
+  margin-right: 10px;
+}
+
 .user-pic {
-  width: 100%;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
 }
 
 .user-details,
@@ -105,11 +113,12 @@ button {
   flex-direction: column;
   /* justify-content: center; */
   align-items: flex-start;
+  font-family: Verdana;
   margin: 2%;
   padding: 1%;
   background-color: rgb(124, 165, 240);
   box-shadow: rgba(244, 244, 244, 0.35) 0px 5px 15px;
-  height: 40vh;
+  /* height: 40vh; */
   border-radius: 15px;
 }
 
@@ -124,26 +133,49 @@ button {
   width: 100%;
 }
 
-.event-detail {
-  width: 97%;
-  padding: 2%;
-  margin: 1%;
-  /* height: 60vh; */
+.eventhead{
+  font-size: 20px;
+  font-weight: 900;
+  margin: 10px;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.eventhead a{
+  text-decoration: none;
+  text-align: center;
+  
+}
+
+.event-detail{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .events {
-  margin: 1%;
-  width: 100%;
+  margin: 10px;
+  /* width: calc(100% - 40px); */
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  height: 10vh;
-  width: 95%;
+  /* height: 50px; */
+  /* width: 95%; */
   background-color: aliceblue;
-  border-radius: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: Verdana;
 }
 
-.event-strips {
-  position: absolute;
+.event-name{
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.event-shortDesc{
+  color: rgb(90, 88, 88);
 }
 
 .events:hover .event-overlay {
@@ -157,7 +189,19 @@ button {
   border-radius: 15px;
 }
 
-.overlays {
+.overlays1 {
+  /* display: none; */
+  width: 100%;
+  position: absolute;
+  background-color: rgba(169, 169, 169, 0.789);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  height: 100vh;
+}
+
+.overlays2 {
   /* display: none; */
   width: 100%;
   position: absolute;
@@ -171,9 +215,13 @@ button {
 
 .update-data {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+}
+
+.datadisplayform{
+  width: fit-content;
 }
 
 form {
@@ -182,28 +230,22 @@ form {
   justify-content: center;
   align-items: center;
   /* width: 100%; */
-  margin: 3%;
+  /* margin: 3%; */
 }
 
 form input,
 textarea {
-  width: 500px;
+  width: 300px;
   outline: none;
   border: none;
-  border-radius: 15px;
-  margin: 2%;
+  resize: none;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 5px 5px 5px;
 }
 
 form input[type="file"] {
   width: 180px;
-}
-
-form input {
-  padding: 3%;
-}
-
-form textarea {
-  padding: 3%;
 }
 
 form input::placeholder,
@@ -213,11 +255,11 @@ textarea::placeholder {
 }
 
 #data-upd {
-  width: 80%;
+  width: 320px;
 }
 
 #upd-img {
-  width: 80%;
+  width: 300px;
   display: flex;
   justify-content: center;
 }
@@ -244,6 +286,7 @@ textarea::placeholder {
   text-decoration: none;
   font-weight: 600;
   color: #fff;
+  cursor: pointer;
 }
 
 .user-detail:hover .drop-down {

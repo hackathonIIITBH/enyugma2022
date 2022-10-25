@@ -1,167 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Expires" content="0" />
 
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="../assets/images/logo_enyugma.png"
-    />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
-    <title></title>
-    <link rel="stylesheet" href="./css/dashboard.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Expires" content="0" />
 
-    <script defer type="text/javascript" src="./js/dashboard.js"></script>
-  </head>
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo_enyugma.png" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <title></title>
+  <link rel="stylesheet" href="./css/dashboard.css" />
 
-  <body>
-    <div class="overlays">
-      <div class="update-data" id="data-update">
-        <form id="data-upd">
-          <input
-            id="inst-name"
-            type="text"
-            placeholder="Enter Institute Name"
-            required
-            name="instName"
-          />
-          <input
-            type="text"
-            id="course"
-            name="course"
-            placeholder="Enter Course Name with Specialization(if any)"
-            required
-          />
-          <input
-            type="text"
-            id="year"
-            name="year"
-            placeholder="Enter Course Year"
-            required
-          />
-          <textarea
-            id="inst-addr"
-            placeholder="Enter Institute Address"
-            required
-            name="instAddr"
-          ></textarea>
-          <textarea
-            id="address"
-            name="address"
-            required
-            placeholder="Enter Your Address"
-          ></textarea>
-          <input
-            type="text"
-            name="state"
-            id="state"
-            placeholder="Enter Contact No."
-            required
-          />
-          <input
-            type="text"
-            name="contact"
-            id="contact"
-            placeholder="Enter Contact No."
-            required
-          />
-          <input
-            id="dob"
-            name="dob"
-            placeholder="Enter your Date of Birth"
-            type="text"
-            required
-          />
-          <input
-            type="text"
-            id="ca-refer"
-            name="profile"
-            style="display: none"
-            value="1"
-            disabled
-          />
-          <input type="submit" id="submit" value="Save" />
-        </form>
-        <form id="upd-img" enctype="multipart/form-data" method="POST">
-          <div class="show-div">
-            <img id="img-show" src="../assets/images/default-user-image.png" />
-          </div>
-          <input type="file" name="img" id="img-upd" />
-          <input type="submit" id="submit" value="Save" />
-        </form>
-      </div>
-      <div class="register-event" id="register-event">
-        <form id="evt-reg"></form>
-      </div>
-      <div class="register-ca" id="register-ca">
-        <form id="ca-reg"></form>
-      </div>
+  <script defer type="text/javascript" src="./js/dashboard.js"></script>
+</head>
+
+<body>
+  <div class="overlays1">
+    <div class="update-data datadisplayform" id="data-update">
+      <form id="data-upd">
+        <input id="inst-name" type="text" placeholder="Enter Institute Name" required name="instName" />
+        <input type="text" id="course" name="course" placeholder="Enter Course Name with Specialization(if any)"
+          required />
+        <input type="text" id="year" name="year" placeholder="Enter Graduating Year" required />
+        <textarea id="inst-addr" placeholder="Enter Institute Address" required name="instAddr"></textarea>
+        <textarea id="address" name="address" required placeholder="Enter Your Address"></textarea>
+        <input type="text" name="state" id="state" placeholder="State" required />
+        <input type="text" name="contact" id="contact" placeholder="Enter Contact No." required />
+        <input id="dob" name="dob" placeholder="Enter your Date of Birth" type="text" required />
+        <input type="text" id="ca-refer" name="profile" style="display: none" value="1" disabled />
+        <input type="submit" id="submit" value="Save" />
+      </form>
     </div>
-    <div class="main-content">
-      <nav class="navbar">
-        <div class="logo-icon">
-          <img src="../assets/images/logo_enyugma.png" />
+  </div>
+  <div class="overlays2">
+    <div class="update-data" id="img-update">
+      <form id="upd-img" enctype="multipart/form-data" method="POST">
+        <div class="show-div">
+          <img id="img-show" src="../assets/images/default-user-image.png" />
         </div>
-        <div class="user-detail">
-          <span id="user-name" class="user-name"></span>
-          <div class="img-user">
-            <img
-              id="user-pic"
-              class="user-pic"
-              src="../assets/images/default-user-image.png"
-            />
-          </div>
-          <div class="drop-down">
-            <a class="logout" id="logout" href="#">Logout</a>
-          </div>
-        </div>
-      </nav>
-      <div class="status"></div>
-      <div class="user-details">
-        <h5>Name: <span id="user-name"></span></h5>
-        <h5>Application No.: <span id="user-appno"></span></h5>
-        <h5>Email Id: <span id="user-email"></span></h5>
-        <h5>Address: <span id="user-address"></span></h5>
-        <h5>Events Participated: <span id="user-events"></span></h5>
-      </div>
-      <div class="event-details">
-        <div class="event-togglers">
-          <button class="tech-event">Technical</button>
-          <button class="cult-event">Cultural</button>
-          <button class="workshops">Workshops</button>
-        </div>
-        <div class="event-detail">
-          <div class="events">
-            <div class="event-overlay">
-              <button class="explore">Explore</button>
-              <button class="Register">Register</button>
-            </div>
-            <div class="event-strips">
-              <div class="event-name"><span id="event-name"></span></div>
-              <div class="event-shortDesc">
-                <span id="event-shortDesc"></span>
-              </div>
-            </div>
-          </div>
-          <div class="events">
-            <div class="event-overlay">
-              <button class="explore">Explore</button>
-              <button class="Register">Register</button>
-            </div>
-            <div class="event-strips">
-              <div class="event-name"><span id="event-name"></span></div>
-              <div class="event-shortDesc">
-                <span id="event-shortDesc"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <input type="file" name="img" id="img-upd" />
+        <input type="submit" id="submit" value="Save" />
+      </form>
     </div>
-  </body>
+  </div>
+  <div class="main-content">
+    <nav class="navbar">
+      <div class="logo-icon">
+        <img src="../assets/images/logo_enyugma.png" />
+      </div>
+      <div class="user-detail">
+        <span id="user-name" class="user-name"></span>
+        <div class="img-user">
+          <img id="user-pic" class="user-pic" src="../assets/images/default-user-image.png" />
+        </div>
+        <div class="drop-down">
+          <a class="logout" id="logout" onclick="logout()">Logout</a>
+        </div>
+      </div>
+    </nav>
+    <div class="status"></div>
+    <div class="user-details">
+      <h5>Name: <span id="user-name"></span></h5>
+      <h5>Application No.: <span id="user-appno"></span></h5>
+      <h5>Email Id: <span id="user-email"></span></h5>
+      <h5>Address: <span id="user-address"></span></h5>
+      <h5>Events Participated: <span id="user-events"></span></h5>
+    </div>
+    <div class="event-details">
+      <!-- <div class="event-togglers">
+        <button class="tech-event">Technical</button>
+        <button class="cult-event">Cultural</button>
+        <button class="workshops">Workshops</button>
+      </div> -->
+      <div class="eventhead"><a href="">Technical Event</a></div>
+      <div class="event-detail" id="eventshowtech"></div>
+      <div class="eventhead"><a href="">Cultural Event</a></div>
+      <div class="event-detail" id="eventshowcult"></div>
+      <div class="eventhead"><a href="">Workshop</a></div>
+      <div class="event-detail" id="eventshowworkshop"></div>
+    </div>
+  </div>
+</body>
+
 </html>

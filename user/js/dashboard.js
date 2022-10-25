@@ -1,10 +1,17 @@
 var imgUpd = document.querySelector("#img-upd");
 var imgShow = document.querySelector("#img-show");
 var register = document.querySelector(".Register");
-var overlays = document.querySelector(".overlays");
+var overlays1 = document.querySelector(".overlays1");
+var overlays2 = document.querySelector(".overlays2");
 
-const url = "https://enyugma.herokuapp.com";
-// var url = "http://localhost:2100";
+// const url = "https://enyugma.herokuapp.com";
+var url = "http://localhost:2100";
+
+
+function logout(){
+  localStorage.removeItem("userToken");
+  window.location.href = `../auth/login.html`;
+}
 
 if (localStorage.getItem("userToken")) {
   fetch(`${url}/userDetails`, {
@@ -16,6 +23,7 @@ if (localStorage.getItem("userToken")) {
   })
     .then((res) => res.json())
     .then((data) => {
+      // console.log(data);
       if (data.status == 0) {
         displayDetails(data.data);
         document.title = `${data.data.name} | Enyugma Portal`;
@@ -44,11 +52,11 @@ imgShow.addEventListener("load", () => {
   URL.revokeObjectURL(imgShow.src);
 });
 
-register.addEventListener("click", () => {
-  overlays.style.display = "flex";
-  window.location.href = "#";
-  document.body.style.overflow = "hidden";
-});
+// register.addEventListener("click", () => {
+//   overlays.style.display = "flex";
+//   window.location.href = "#";
+//   document.body.style.overflow = "hidden";
+// });
 
 document.forms["upd-img"].addEventListener("submit", (e) => {
   e.preventDefault();
@@ -66,7 +74,7 @@ document.forms["upd-img"].addEventListener("submit", (e) => {
         stats.style.border = "2px solid #2ecc71";
         stats.style.display = "flex";
         stats.innerHTML = "Image Uploaded Successfully";
-        overlays.style.display = "none";
+        overlays2.style.display = "none";
       } else {
         stats.style.backgroundColor = "#ff0000bb";
         stats.style.border = "2px solid #de1111";
@@ -104,9 +112,9 @@ const displayDetails = (data) => {
   userAppno.innerHTML = data.appno;
   userEmail.innerHTML = data.email;
   userAddress.innerHTML = data.address;
-  var img = arrayBufferToBase64(data.pImg[0].data);
+  // var img = arrayBufferToBase64(data.pImg[0].data);
   // console.log(data.pImg);
-  userPic.src = `data:image/png;base64,${img.toString("base64")}`;
+  // userPic.src = `data:image/png;base64,${img.toString("base64")}`;
   // let html = "";
   // for (let i = 0; i < data.events.length; i++) {
   //   html += `${data.events[i]}, `;
@@ -115,10 +123,34 @@ const displayDetails = (data) => {
 
   // console.log(data.profile);
 
-  if (data.profile == 1 && data.profileImg == 1) {
-    overlays.style.display = "none";
+  if (data.profile == 1) {
+    overlays1.style.display = "none";
+  }
+
+  if (data.profileImg == 1) {
+    overlays2.style.display = "none";
+    displayimg();
   }
 };
+
+const displayimg = () => {
+  fetch(`${url}/userimg`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      auth_token: `${localStorage.getItem("userToken")}`,
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status === 0) {
+        var img = arrayBufferToBase64(data.img[0].data);
+        userPic.src = `data:image/png;base64,${img.toString("base64")}`;
+      }
+    })
+    .catch()
+
+}
 
 setTimeout(() => {
   stats.style.display = "none";
@@ -130,19 +162,19 @@ document.forms["data-upd"].addEventListener("submit", (e) => {
   fetch(`${url}/userUpdDetails`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
       auth_token: `${localStorage.getItem("userToken")}`,
     },
     body: new URLSearchParams(new FormData(e.target)),
   })
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       if (data.status == 0) {
         stats.style.backgroundColor = "#46d381bb";
         stats.style.border = "2px solid #2ecc71";
         stats.style.display = "flex";
         stats.innerHTML = "Profile Updated Successfully";
-        overlays.style.display = "none";
+        overlays1.style.display = "none";
       } else {
         stats.style.backgroundColor = "#ff0000bb";
         stats.style.border = "2px solid #de1111";
@@ -157,3 +189,89 @@ document.forms["data-upd"].addEventListener("submit", (e) => {
       stats.innerHTML = err;
     });
 });
+
+
+
+// Events 
+
+const technical = () => {
+  let desc = [];
+  fetch(`${url}/api/event/technical`)
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        // desc = res.event;
+        // console.log(res);
+
+        seteventtechnical(res.event);
+      } else {
+        window.location.href = "../index.html";
+      }
+    })
+    .catch((err) => {
+      window.location.href = "../index.html";
+    });
+};
+
+
+technical();
+
+
+function seteventtechnical(event){
+  let html = ``;
+  event.forEach((e)=>{
+    html += `
+    <a href="../eventDetail/eventabout.html?search=${e.eventname}">
+        <div class="events">
+          <div class="event-strips">
+            <div class="event-name"><span id="event-name">${e.eventname}</span></div>
+            
+          </div>
+        </div>
+        </a>
+        `
+  })
+
+  document.getElementById('eventshowtech').innerHTML = html;
+}
+
+const cultural = () => {
+  let desc = [];
+  fetch(`${url}/api/event/cultural`)
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        // desc = res.event;
+        // console.log(res);
+
+        seteventcultural(res.event);
+      } else {
+        window.location.href = "../index.html";
+      }
+    })
+    .catch((err) => {
+      window.location.href = "../index.html";
+    });
+};
+
+
+cultural();
+
+
+function seteventcultural(event){
+  let html = ``;
+  event.forEach((e)=>{
+    html += `
+    <a href="../eventDetail/eventabout.html?search=${e.eventname}">
+        <div class="events">
+          <div class="event-strips">
+            <div class="event-name"><span id="event-name">${e.eventname}</span></div>
+            
+          </div>
+        </div>
+        </a>
+        `
+  })
+
+  document.getElementById('eventshowcult').innerHTML = html;
+}
