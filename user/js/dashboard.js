@@ -4,8 +4,8 @@ var register = document.querySelector(".Register");
 var overlays1 = document.querySelector(".overlays1");
 var overlays2 = document.querySelector(".overlays2");
 
-// const url = "https://enyugma.herokuapp.com";
-var url = "http://localhost:2100";
+const url = "https://enyugma.herokuapp.com";
+// var url = "http://localhost:2100";
 
 
 function logout(){
@@ -125,11 +125,15 @@ const displayDetails = (data) => {
 
   if (data.profile == 1) {
     overlays1.style.display = "none";
+  }else{
+    overlays1.style.display = "flex";
   }
 
   if (data.profileImg == 1) {
     overlays2.style.display = "none";
     displayimg();
+  }else{
+    overlays2.style.display = "flex";
   }
 };
 
