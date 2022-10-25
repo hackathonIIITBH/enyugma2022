@@ -122,6 +122,15 @@ button {
   border-radius: 15px;
 }
 
+.user-details h5{
+  margin: 0;
+  padding: 5px;
+  font-weight: normal;
+}
+.user-details h5 span{
+  font-weight: 600;
+}
+
 .event-overlay {
   display: none;
 }

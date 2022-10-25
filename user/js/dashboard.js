@@ -125,6 +125,11 @@ const displayDetails = (data) => {
 
   if (data.profile == 1) {
     overlays1.style.display = "none";
+    document.getElementById('dobshow').innerHTML = data.dob;
+    document.getElementById('courseshow').innerHTML = data.course
+    document.getElementById('instshow').innerHTML = `${data.instName}, ${data.instAddr}`
+    document.getElementById('stateshow').innerHTML = data.state
+
   }else{
     overlays1.style.display = "flex";
   }
