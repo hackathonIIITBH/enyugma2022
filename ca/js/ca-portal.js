@@ -36,31 +36,35 @@ const displayDetails = (data) => {
   userDisp.innerHTML += html;
 };
 
-fetch(`${url}/caDetails`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    auth_token: `${localStorage.getItem("caToken")}`,
-  },
-})
-  .then((res) => res.json())
-  .then((data) => {
-    if (data.status == 0) {
-      displayDetails(data.data);
-      userName.innerHTML = data.user;
-      document.title = `${data.user} | CA-Portal`;
-      console.log(data.user);
-    } else {
+if (localStorage.getItem("caToken")) {
+  fetch(`${url}/caDetails`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      auth_token: `${localStorage.getItem("caToken")}`,
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status == 0) {
+        displayDetails(data.data);
+        userName.innerHTML = data.user;
+        document.title = `${data.user} | CA-Portal`;
+        console.log(data.user);
+      } else {
+        localStorage.removeItem("caToken");
+        window.location.href = "./ca-login.html";
+      }
+      console.log(data);
+    })
+    .catch((err) => {
+      // alert(err);
       localStorage.removeItem("caToken");
       window.location.href = "./ca-login.html";
-    }
-    console.log(data);
-  })
-  .catch((err) => {
-    // alert(err);
-    localStorage.removeItem("caToken");
-    window.location.href = "./ca-login.html";
-  });
+    });
+} else {
+  window.location.href = "./ca-login.html";
+}
 
 logout.addEventListener("click", () => {
   localStorage.removeItem("caToken");
