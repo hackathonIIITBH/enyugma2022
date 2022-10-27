@@ -510,3 +510,59 @@ document.forms["event-img"].addEventListener("submit", (e) => {
       alert(err);
     });
 });
+
+
+
+// event registration
+
+const getregistration = () => {
+  fetch(`${url}/api/event/eventregistration`, {
+    method: "GET",
+    headers: {
+      auth_token: `${localStorage.getItem("managertoken")}`,
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      // console.log(data);
+      if (data.status == 0) {
+        showregistration(data.reg);
+      } else {
+        // alert("Unable to update the post");
+      }
+    })
+    .catch((err) => {
+      // alert(err);
+    });
+}
+
+getregistration();
+
+function showregistration(reg) {
+  document.getElementById('noofregistration').innerHTML = `Total Registration : ${reg.length}`
+  let html = `
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Study</th>
+              <th>Contact</th>
+              <th>social</th>
+              <th>Address</th>
+            </tr>
+  `
+  console.log(reg);
+  reg.forEach((e)=>{
+    html += `
+            <tr>
+              <td>${e.name}</td>
+              <td>${e.email}</td>
+              <td><p>${e.course}, year - ${e.graduatingYear}</p><p>${e.college}</p><p>${e.collegeAddress}</p></td>
+              <td>${e.contact}</td>
+              <td><p><span class="fa-brands fa-instagram"></span>${e.instagram}</p>
+                <p><span class="fa-brands fa-linkedin"></span>${e.linkedin}</p>
+                <p><span class="fa-brands fa-github"></span>${e.github}</p></td>
+              <td>${e.address}</td>
+            </tr>`
+  })
+  document.getElementById('registershow').innerHTML = html;
+}

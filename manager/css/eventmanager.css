@@ -137,7 +137,7 @@ body {
 
 .eventDesc {
   width: calc(100% - 300px);
-  min-width: 300px;
+  min-width: 280px;
   /* height: 300px; */
 }
 
@@ -379,4 +379,24 @@ body {
 
 #canceljudging {
   display: none;
+}
+
+
+/* tableforregistration */
+
+
+.tableforregistration{
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.tableforregistration table{
+  margin: auto;
+  width: 98%;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+.tableforregistration tr,.tableforregistration th, .tableforregistration td{
+  border: 1px solid black;
 }
