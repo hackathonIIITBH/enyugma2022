@@ -1011,7 +1011,7 @@ body {
   
 }
 
-
+/* footer */
 footer {
   color: white;
   font-family: Verdana;
@@ -1028,6 +1028,15 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   color: white;
+}
+
+.sectionB_footer .contact{
+  margin: 10px 15px;
+  padding: 10px 0px;
+}
+.sectionB_footer .contact a{
+  color: white;
+  text-decoration: none;
 }
 
 .sectionB_footer .social {
@@ -1053,7 +1062,12 @@ footer {
 
 .sectionB_footer .copyright p {
   margin: 0;
-  padding: 0 50px;
+  /* padding: 0 50px; */
+  text-align: center;
+  margin-top: 10px;
+}
+.sectionB_footer .copyright p a{
+  color: white;
 }
 
 .sectionC_footer {

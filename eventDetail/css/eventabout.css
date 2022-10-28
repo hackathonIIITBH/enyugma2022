@@ -244,12 +244,11 @@ img.logo {
   background-color: rgba(255, 255, 255, 0.189);
 }
 
-/* FOOTER SECTION */
-
+/* footer */
 footer {
   color: white;
   font-family: Verdana;
-  margin-top: 30px;
+  margin-top: 80px;
   padding-top: 40px;
   background-color: rgba(0, 0, 0, 0.482);
 }
@@ -262,6 +261,15 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   color: white;
+}
+
+.sectionB_footer .contact{
+  margin: 10px 15px;
+  padding: 10px 0px;
+}
+.sectionB_footer .contact a{
+  color: white;
+  text-decoration: none;
 }
 
 .sectionB_footer .social {
@@ -287,7 +295,12 @@ footer {
 
 .sectionB_footer .copyright p {
   margin: 0;
-  padding: 0 50px;
+  /* padding: 0 50px; */
+  text-align: center;
+  margin-top: 10px;
+}
+.sectionB_footer .copyright p a{
+  color: white;
 }
 
 .sectionC_footer {
@@ -295,7 +308,7 @@ footer {
 }
 
 .sectionC_footer p {
-  font-size: 20px;
+  font-size: 14px;
   margin: 0;
   padding: 10px;
 }
