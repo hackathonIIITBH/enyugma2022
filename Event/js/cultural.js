@@ -76,6 +76,7 @@ async function setevent(event) {
                             </div>
                         </a>`;
         }
+        main.innerHTML = html;
     }
 
     main.innerHTML = html;

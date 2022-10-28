@@ -27,10 +27,10 @@
         <textarea id="inst-addr" placeholder="Enter Institute Address" required name="instAddr"></textarea>
         <textarea id="address" name="address" required placeholder="Enter Your Address"></textarea>
         <input type="text" name="state" id="state" placeholder="State" required />
-        <input type="text" name="contact" id="contact" placeholder="Enter Contact No." required />
-        <input id="dob" name="dob" placeholder="Enter your Date of Birth" type="text" required />
+        <input type="number" name="contact" id="contact" placeholder="Enter Contact No." required />
+        <input id="dob" name="dob" placeholder="Enter your Date of Birth : DD/MM/YYYY" type="text" required />
         <input type="text" id="ca-refer" name="profile" style="display: none" value="1" disabled />
-        <input type="submit" id="submit" value="Save" />
+        <input type="submit" id="submit" value="Save" style="cursor: pointer;" />
       </form>
     </div>
   </div>
@@ -40,8 +40,8 @@
         <div class="show-div">
           <img id="img-show" src="../assets/images/default-user-image.png" />
         </div>
-        <input type="file" name="img" id="img-upd" />
-        <input type="submit" id="submit" value="Save" />
+        <input type="file" name="img" id="img-upd" required/>
+        <input type="submit" id="submit" value="Save" style="cursor: pointer;"/>
       </form>
     </div>
   </div>

@@ -9,6 +9,7 @@ let course = document.getElementById('course');
 let graduating = document.getElementById('graduating');
 let eventNameshow = document.getElementById('eventname');
 let contact = document.getElementById('contact');
+let state = document.getElementById('state');
 
 
 queryString = window.location.search;
@@ -64,8 +65,8 @@ const getuser = () => {
                 userdetail = res.data;
                 showdata();
             } else {
-                // localStorage.removeItem('userToken');
-                // window.location.href = `../auth/login.html`
+                localStorage.removeItem('userToken');
+                window.location.href = `../auth/login.html`
             }
         })
         .catch((err) => {
@@ -92,8 +93,21 @@ const showdata = () => {
     course.innerHTML = `<span>Course</span>: ${userdetail.course}`
     graduating.innerHTML = `<span>Gradguating year</span>: ${userdetail.year}`
     address.innerHTML = `<span>Address</span>: ${userdetail.address}`
-    contact.value = `${userdetail.state}`
+    state.innerHTML = `<span>State</span>: ${userdetail.state}`
+    contact.value = `${userdetail.contact}`
     document.getElementById('loaderShow').style.display = 'none';
+
+    let st = new Set();
+    userdetail.eventreg.forEach(element => {
+        st.add(element)
+    });
+    if(st.has(eventname)){
+        alert('Already Registered for this event')
+        window.location.href=`../user/dashboard.html`
+    }
+
+    
+    document.getElementById('submitbutton').style.display="block"
 }
 
 document.getElementById('fillform').addEventListener('submit', (e) => {
@@ -115,7 +129,8 @@ document.getElementById('fillform').addEventListener('submit', (e) => {
         linkedin: linkedinValue,
         github: GithubValue,
         contact: contactValue,
-        eventname : eventname
+        eventname : eventname,
+        state:userdetail.state
     }
 
     // console.log(data);
@@ -123,7 +138,8 @@ document.getElementById('fillform').addEventListener('submit', (e) => {
     fetch(`${url}/api/event/registerforevent`, {
         method: "POST",
         headers: {
-            'content-Type': 'application/json'
+            'content-Type': 'application/json',
+            auth_token: `${localStorage.getItem("userToken")}`,
         },
         body: JSON.stringify(data)
     })

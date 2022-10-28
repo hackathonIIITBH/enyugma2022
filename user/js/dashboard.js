@@ -32,6 +32,8 @@ if (localStorage.getItem("userToken")) {
         stats.style.border = "2px solid #de1111";
         stats.style.display = "flex";
         stats.innerHTML = "Something Went Wrong!!";
+        localStorage.removeItem('userToken')
+        window.location.href = "../auth/login.html";
       }
     })
     .catch((err) => {
@@ -75,6 +77,7 @@ document.forms["upd-img"].addEventListener("submit", (e) => {
         stats.style.display = "flex";
         stats.innerHTML = "Image Uploaded Successfully";
         overlays2.style.display = "none";
+        window.location.reload();
       } else {
         stats.style.backgroundColor = "#ff0000bb";
         stats.style.border = "2px solid #de1111";
@@ -96,6 +99,7 @@ var userEmail = document.querySelector("#user-email");
 var userAddress = document.querySelector("#user-address");
 var userEvents = document.querySelector("#user-events");
 var userPic = document.querySelector("#user-pic");
+var userevent = document.querySelector("#user-events");
 var stats = document.querySelector(".status");
 
 const arrayBufferToBase64 = (buffer) => {
@@ -129,7 +133,12 @@ const displayDetails = (data) => {
     document.getElementById('courseshow').innerHTML = data.course
     document.getElementById('instshow').innerHTML = `${data.instName}, ${data.instAddr}`
     document.getElementById('stateshow').innerHTML = data.state
-
+    let eventhtml=``
+    data.eventreg.forEach((e)=>{
+      eventhtml += `<a href="../eventDetail/eventabout.html?search=${e}" style="margin:2px 10px;">${e}</a>`
+    })
+    
+    userEvents.innerHTML = eventhtml
   }else{
     overlays1.style.display = "flex";
   }
@@ -184,6 +193,7 @@ document.forms["data-upd"].addEventListener("submit", (e) => {
         stats.style.display = "flex";
         stats.innerHTML = "Profile Updated Successfully";
         overlays1.style.display = "none";
+        window.location.reload();
       } else {
         stats.style.backgroundColor = "#ff0000bb";
         stats.style.border = "2px solid #de1111";

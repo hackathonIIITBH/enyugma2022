@@ -20,6 +20,12 @@ document.forms["register"].onsubmit = (e) => {
         stats.style.border = "2px solid #2ecc71";
         stats.style.display = "flex";
         stats.innerHTML = "Registeration Successful";
+        window.location.href="./login.html";
+      } else if(data.status==1) {
+        stats.style.backgroundColor = "#ff0000bb";
+        stats.style.border = "2px solid #de1111";
+        stats.style.display = "flex";
+        stats.innerHTML = "Email Already exist";
       } else {
         stats.style.backgroundColor = "#ff0000bb";
         stats.style.border = "2px solid #de1111";

@@ -76,6 +76,8 @@ async function setevent(event) {
                       </div>
                   </a>`;
     }
+    main.innerHTML = html;
+    // console.log("load");
   }
 
   main.innerHTML = html;
