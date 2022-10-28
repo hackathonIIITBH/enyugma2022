@@ -64,7 +64,7 @@ async function setevent(event) {
                 </a>`;
     } else {
       html += `<a href="../eventDetail/eventabout.html?search=${event[i].eventname}" class="container">
-                      <img src='../assets/images/Indian_Institute_of_Information_Technology,_Bhagalpur_logo.png'
+                      <img src='../assets/images/cultural_banner.jpg'
                           alt="event name here">
                       <div class="alltext">
                           <h1 class="eventname"> ${event[i].eventname}
