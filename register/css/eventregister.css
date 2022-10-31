@@ -124,6 +124,32 @@ img.logo {
     color: black;
 }
 
+#showornot {
+    word-break: break-all;
+
+}
+
+.paymentformdetail {
+    font-size: 14px;
+    font-weight: normal;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    /* text-align: center; */
+}
+
+.buttonforpayment {
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.buttonforpayment:hover {
+    color: black;
+    background: white;
+}
 
 
 /* footer */

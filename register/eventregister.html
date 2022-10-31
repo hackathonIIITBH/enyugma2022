@@ -40,6 +40,7 @@
     <div id="message" style="text-align: center;">
     </div>
     <div class="userdate">
+      <p class="userdetail" id="appno"></p>
       <p class="userdetail" id="name"></p>
       <p class="userdetail" id="email"></p>
       <p class="userdetail" id="college"></p>
@@ -67,8 +68,56 @@
         <label for="Github">Github:</label>
         <input type="text" placeholder="Github" id="Github" />
       </div>
+      <div id="showornot">
+        <p class="userdetail" id="fees"></p>
+        <p>First Step : Payment Process</p>
+        <p>Payment Platform :
+        </p>
+        <p class="linksbi">https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=3661358</p>
+        <p><a href="https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=3661358" target="_blank"
+            class="buttonforpayment"> Click Here</a></p>
+        <div class="paymentformdetail">
+          <p>Fill these details</p>
+          <p>In the "Select category" option choose "MISC"</p>
+          <p>
+            Purpose * -------- Event Name
+          </p>
+          <p>
+            Name of the depositor * ------- Your Name
+          </p>
+          <p>
+            EMAIL ID * -------- Email id to be used for login
+          </p>
+          <p>
+            Contact No. * --------Personal Contact No.
+          </p>
+          <p>
+            Application No.* ------- Application Number provided above
+          </p>
+          <p>
+            Amount * -------- Registeration Fees Value as menthioned above
+          <p>
+            Remarks----------keep blank
+          </p>
+        </div>
+        <p>Second Step : Fill Form</p>
+        <p> <a href="#" class="buttonforpayment">Click Here</a></p>
+        <div>
+
+          <label for="allvalue"> Have you completed all the step ?</label>
+          <select name="" id="allvalue" onclick="ableordiable(this.value)">
+            <option value="select">Select</option>
+            <option value="yes">YES</option>
+            <option value="no">NO</option>
+          </select>
+        </div>
+        <div class="inputtag">
+          <label for="txnno"> Txn:</label>
+          <input type="text" id="txnno" placeholder="Enter Txn number" required>
+        </div>
+      </div>
       <div class="inputtag">
-        <input type="submit" id="submitbutton" value="Register" style="display: none;" />
+        <input type="submit" id="submitbutton" value="Register" style="display: none; cursor:not-allowed;" disabled />
       </div>
     </form>
   </div>

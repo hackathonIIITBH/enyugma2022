@@ -47,9 +47,15 @@ function showevent() {
     desc.innerHTML = eventdata.desc
     judging.innerHTML = eventdata.judging
     rules.innerHTML = eventdata.rule
+    let fees  = eventdata.fees;
+    if(eventdata.fees=="0"){
+        fees = 'NULL';
+    }else{
+        fees = `Rs ${eventdata.fees}`
+    }
     detail.innerHTML = `<p>Platform : ${eventdata.platform}</p>
                         <p>Date : ${eventdata.date}</p>
-                        <p>Registration Fees : ${eventdata.fees}</p>`
+                        <p>Registration Fees : ${fees}</p>`
 
     let arr = eventdata.prize;
     let mp = new Map();
