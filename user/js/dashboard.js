@@ -294,3 +294,44 @@ function seteventcultural(event){
 
   document.getElementById('eventshowcult').innerHTML = html;
 }
+
+const workshop = () => {
+  let desc = [];
+  fetch(`${url}/api/event/workshop`)
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        // desc = res.event;
+        // console.log(res);
+
+        seteventworkshop(res.event);
+      } else {
+        window.location.href = "../index.html";
+      }
+    })
+    .catch((err) => {
+      window.location.href = "../index.html";
+    });
+};
+
+
+workshop();
+
+
+function seteventworkshop(event){
+  let html = ``;
+  event.forEach((e)=>{
+    html += `
+    <a href="../eventDetail/eventabout.html?search=${e.eventname}">
+        <div class="events">
+          <div class="event-strips">
+            <div class="event-name"><span id="event-name">${e.eventname}</span></div>
+            
+          </div>
+        </div>
+        </a>
+        `
+  })
+
+  document.getElementById('eventshowworkshop').innerHTML = html;
+}
