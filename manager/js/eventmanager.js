@@ -1,5 +1,5 @@
-// const url = `https://enyugma.herokuapp.com`;
-var url = "http://localhost:2100";
+const url = `https://enyugma.herokuapp.com`;
+// var url = "http://localhost:2100";
 // /api/event/getevent
 
 let data = {};
@@ -552,7 +552,7 @@ function showregistration(reg) {
               <th>Verify</th>
             </tr>
   `
-  console.log(reg);
+  // console.log(reg);
   reg.forEach((e) => {
     html += `
             <tr>
@@ -576,8 +576,8 @@ function showregistration(reg) {
 
 
 function verifyuser(mail,appno){
-  console.log(mail);
-  console.log(appno);
+  // console.log(mail);
+  // console.log(appno);
   
   fetch(`${url}/api/event/verifyregitered`, {
     method: "POST",
@@ -592,9 +592,10 @@ function verifyuser(mail,appno){
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       if (data.status == 0) {
         // showregistration(data.reg);
+        window.location.reload();
       } else {
         // alert("Unable to update the post");
       }
