@@ -1,5 +1,5 @@
-const url = `https://enyugma.herokuapp.com`;
-// var url = "http://localhost:2100";
+// const url = `https://enyugma.herokuapp.com`;
+var url = "http://localhost:2100";
 // /api/event/getevent
 
 let data = {};
@@ -548,21 +548,59 @@ function showregistration(reg) {
               <th>Contact</th>
               <th>social</th>
               <th>Address</th>
+              <th>Txn No</th>
+              <th>Verify</th>
             </tr>
   `
   console.log(reg);
-  reg.forEach((e)=>{
+  reg.forEach((e) => {
     html += `
             <tr>
               <td>${e.name}</td>
-              <td>${e.email}</td>
+              <td>${e.appno}<br>${e.email}</td>
               <td><p>${e.course}, year - ${e.graduatingYear}</p><p>${e.college}</p><p>${e.collegeAddress}</p></td>
               <td>${e.contact}</td>
               <td><p><span class="fa-brands fa-instagram"></span>${e.instagram}</p>
                 <p><span class="fa-brands fa-linkedin"></span>${e.linkedin}</p>
                 <p><span class="fa-brands fa-github"></span>${e.github}</p></td>
               <td>${e.address}</td>
-            </tr>`
+              <td>${e.txnno}</td>`
+    if(e.valid==true){
+      html += `<td>Verified</td>`
+    }else
+      html += `<td><button onclick="verifyuser('${e.email}','${e.appno}')">Verify</button></td>`
+    html += `</tr>`
   })
   document.getElementById('registershow').innerHTML = html;
+}
+
+
+function verifyuser(mail,appno){
+  console.log(mail);
+  console.log(appno);
+  
+  fetch(`${url}/api/event/verifyregitered`, {
+    method: "POST",
+    headers: {
+      auth_token: `${localStorage.getItem("managertoken")}`,
+      'content-type' : 'application/json'
+    },
+    body :JSON.stringify({
+      email:mail,
+      appno : appno
+    })
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      if (data.status == 0) {
+        // showregistration(data.reg);
+      } else {
+        // alert("Unable to update the post");
+      }
+    })
+    .catch((err) => {
+      // alert(err);
+    });
+
 }

@@ -400,3 +400,7 @@ body {
 .tableforregistration tr,.tableforregistration th, .tableforregistration td{
   border: 1px solid black;
 }
+
+#registershow td{
+  padding: 5px;
+}
