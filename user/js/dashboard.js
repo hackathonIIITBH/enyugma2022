@@ -8,7 +8,7 @@ const url = "https://enyugma.herokuapp.com";
 // var url = "http://localhost:2100";
 
 
-function logout(){
+function logout() {
   localStorage.removeItem("userToken");
   window.location.href = `../auth/login.html`;
 }
@@ -133,20 +133,20 @@ const displayDetails = (data) => {
     document.getElementById('courseshow').innerHTML = data.course
     document.getElementById('instshow').innerHTML = `${data.instName}, ${data.instAddr}`
     document.getElementById('stateshow').innerHTML = data.state
-    let eventhtml=``
-    data.eventreg.forEach((e)=>{
+    let eventhtml = ``
+    data.eventreg.forEach((e) => {
       eventhtml += `<a href="../eventDetail/eventabout.html?search=${e}" style="margin:2px 10px;">${e}</a>`
     })
-    
+
     userEvents.innerHTML = eventhtml
-  }else{
+  } else {
     overlays1.style.display = "flex";
   }
 
   if (data.profileImg == 1) {
     overlays2.style.display = "none";
     displayimg();
-  }else{
+  } else {
     overlays2.style.display = "flex";
   }
 };
@@ -236,9 +236,9 @@ const technical = () => {
 technical();
 
 
-function seteventtechnical(event){
+function seteventtechnical(event) {
   let html = ``;
-  event.forEach((e)=>{
+  event.forEach((e) => {
     html += `
     <a href="../eventDetail/eventabout.html?search=${e.eventname}">
         <div class="events">
@@ -277,9 +277,9 @@ const cultural = () => {
 cultural();
 
 
-function seteventcultural(event){
+function seteventcultural(event) {
   let html = ``;
-  event.forEach((e)=>{
+  event.forEach((e) => {
     html += `
     <a href="../eventDetail/eventabout.html?search=${e.eventname}">
         <div class="events">
@@ -318,9 +318,9 @@ const workshop = () => {
 workshop();
 
 
-function seteventworkshop(event){
+function seteventworkshop(event) {
   let html = ``;
-  event.forEach((e)=>{
+  event.forEach((e) => {
     html += `
     <a href="../eventDetail/eventabout.html?search=${e.eventname}">
         <div class="events">
@@ -334,4 +334,42 @@ function seteventworkshop(event){
   })
 
   document.getElementById('eventshowworkshop').innerHTML = html;
+}
+
+
+// size 
+
+const input = document.getElementById('img-upd')
+
+input.addEventListener('change', (event) => {
+  // alert("GET FILE")
+  const target = event.target
+  validateFileType(target);
+  if (target.files && target.files[0]) {
+
+    /*Maximum allowed size in bytes
+      5MB Example
+      Change first operand(multiplier) for your needs*/
+    const maxAllowedSize = 100000;
+    // alert(target.files[0].size);
+    if (target.files[0].size > maxAllowedSize) {
+      // Here you can ask your users to load correct file
+      alert("File must be less than 100kb")
+      target.value = ''
+      imgShow.src = "../assets/images/default-user-image.png";
+    }
+  }
+})
+
+function validateFileType(target) {
+  var fileName = input.value;
+  var idxDot = fileName.lastIndexOf(".") + 1;
+  var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+  if (extFile == "jpg" || extFile == "jpeg" || extFile == "png") {
+    //TO DO
+  } else {
+    alert("Only jpg/jpeg and png files are allowed!");
+    target.value = ''
+    imgShow.src = "../assets/images/default-user-image.png";
+  }
 }
