@@ -509,30 +509,6 @@ body {
 
 .shadow-effect {
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.659);
-  /* 0px 3px 3px rgba(255, 255, 255, 0.25),
-    2px 6px 3px rgba(255, 255, 255, 0.24),
-    4px 9px 3px rgba(255, 255, 255, 0.23),
-    6px 12px 3px rgba(255, 255, 255, 0.22),
-    8px 15px 3px rgba(255, 255, 255, 0.21),
-    10px 18px 3px rgba(255, 255, 255, 0.2),
-    12px 21px 3px rgba(255, 255, 255, 0.19); */
-  /* 14px 24px 3px rgba(255, 255, 255, 0.18),
-    16px 27px 3px rgba(205, 60, 60, 0.17),
-    18px 30px 3px rgba(205, 60, 60, 0.16),
-    20px 33px 3px rgba(205, 60, 60, 0.15),
-    22px 36px 3px rgba(205, 60, 60, 0.14),
-    24px 39px 3px rgba(205, 60, 60, 0.13),
-    26px 42px 3px rgba(205, 60, 60, 0.12),
-    28px 45px 3px rgba(205, 60, 60, 0.11),
-    30px 48px 3px rgba(205, 60, 60, 0.1),
-    32px 51px 3px rgba(205, 60, 60, 0.09),
-    34px 54px 3px rgba(205, 60, 60, 0.08),
-    36px 57px 3px rgba(205, 60, 60, 0.06),
-    38px 60px 3px rgba(205, 60, 60, 0.05),
-    40px 63px 3px rgba(205, 60, 60, 0.04),
-    42px 66px 3px rgba(205, 60, 60, 0.03),
-    44px 69px 3px rgba(205, 60, 60, 0.02),
-    46px 72px 3px rgba(205, 60, 60, 0.01);; */
 }
 
 #particles-js {
@@ -947,6 +923,10 @@ body {
   width: 100%;
   font-family: Verdana;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .button_enentMove {

@@ -50,7 +50,7 @@ async function setevent(event) {
             imgbuffer = await getimage(event[i].eventname);
             img = arrayBufferToBase64(imgbuffer);
             html += `<a href="../eventDetail/eventabout.html?search=${event[i].eventname
-                }" class="container">
+                }" target="_blank" class="container">
                           <img src='data:image/png;base64,${img.toString("base64")}'
                               alt="event name here">
                           <div class="alltext">
@@ -63,7 +63,7 @@ async function setevent(event) {
                           </div>
                       </a>`;
         } else {
-            html += `<a href="../eventDetail/eventabout.html?search=${event[i].eventname}" class="container">
+            html += `<a href="../eventDetail/eventabout.html?search=${event[i].eventname}" target="_blank" class="container">
                             <img src='../assets/images/cultural_banner.jpg'
                                 alt="event name here">
                             <div class="alltext">

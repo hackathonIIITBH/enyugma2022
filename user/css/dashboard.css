@@ -26,6 +26,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgba(34, 34, 34, 0.84);
+  background-image: url(../../assets/images/stars.jpg);
   scroll-behavior: smooth;
 }
 
@@ -42,10 +43,12 @@ button {
 .main-content {
   position: relative;
   width: 100%;
+  color: white;
 }
 
 .navbar {
-  background-color: #5ca1c3;
+  /* /* background-color: #5ca1c3; */
+  background:transparent; 
   display: flex;
   justify-content: space-between;
   /* position: fixed; */
@@ -56,6 +59,10 @@ button {
 .logo-icon {
   width: 40px;
   padding: 1%;
+  margin: 0px 1%;
+  background-color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .logo-icon img {
@@ -84,7 +91,8 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 1%;
+  margin: 1%;
+  position: relative;
 }
 
 .user-detail .img-user {
@@ -107,6 +115,10 @@ button {
   border-radius: 10px;
 }
 
+#user-events a{
+  color: white;
+}
+
 .user-details,
 .event-details {
   display: flex;
@@ -116,8 +128,11 @@ button {
   font-family: Verdana;
   margin: 2%;
   padding: 1%;
-  background-color: rgb(124, 165, 240);
-  box-shadow: rgba(244, 244, 244, 0.35) 0px 5px 15px;
+  background: transparent;
+  /* background-color: rgb(124, 165, 240); */
+  /* box-shadow: rgba(244, 244, 244, 0.35) 0px 5px 15px;
+   */
+  backdrop-filter: blur(2px);
   /* height: 40vh; */
   border-radius: 15px;
 }
@@ -154,6 +169,7 @@ button {
 .eventhead a{
   text-decoration: none;
   text-align: center;
+  color: white;
   
 }
 
@@ -162,12 +178,26 @@ button {
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
+  font-size: 12px;
+}
+
+.event-detail a{
+  color: black;
+  text-decoration: none;
+  transition: 200ms ease-in-out;
+}
+.event-detail a:hover{
+  color: white;
+}
+.event-detail a:hover .events{
+  background-color: black;
+  
 }
 
 .events {
   margin: 10px;
   /* width: calc(100% - 40px); */
-  padding: 10px;
+  padding: 6px 8px;
   display: flex;
   flex-direction: column;
   /* height: 50px; */
@@ -285,22 +315,105 @@ textarea::placeholder {
 
 .drop-down {
   display: none;
-  background-color: #5ca1c3;
+  /* background-color: #5ca1c3; */
+  background: white;
+  color: black;
   padding: 1%;
   width: 20%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  bottom: -20px;
+  padding: 4px;
 }
 
 .drop-down a{
   text-decoration: none;
   font-weight: 600;
-  color: #fff;
   cursor: pointer;
+  color: black;
 }
 
 .user-detail:hover .drop-down {
   display: block;
   position: absolute;
   margin-top: 8%;
+}
+
+
+
+/* footer */
+footer {
+  color: white;
+  font-family: Verdana;
+  margin-top: 80px;
+  padding-top: 40px;
+  background-color: rgba(0, 0, 0, 0.482);
+}
+
+.sectionB_footer {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.sectionB_footer .contact{
+  margin: 10px 15px;
+  padding: 10px 0px;
+}
+.sectionB_footer .contact a{
+  color: white;
+  text-decoration: none;
+}
+
+.sectionB_footer .social {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionB_footer .social a {
+  color: rgb(174, 173, 173);
+}
+
+.sectionB_footer .social a .fa-brands {
+  font-size: 24px;
+  transition: 800ms ease-in-out;
+}
+
+.sectionB_footer .social a .fa-brands:hover {
+  transform: scale(1.4);
+  color: white;
+}
+
+.sectionB_footer .copyright p {
+  margin: 0;
+  /* padding: 0 50px; */
+  text-align: center;
+  margin-top: 10px;
+}
+.sectionB_footer .copyright p a{
+  color: white;
+}
+
+.sectionC_footer {
+  text-align: center;
+}
+
+.sectionC_footer p {
+  font-size: 14px;
+  margin: 0;
+  padding: 10px;
+}
+
+.sectionC_footer a {
+  color: white;
+  text-decoration: none;
 }
