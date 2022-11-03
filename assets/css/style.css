@@ -991,6 +991,65 @@ body {
   
 }
 
+.sponser_section{
+  color: white;
+  display: grid;
+  /* grid-template-columns: auto auto; */
+  grid-template-columns: repeat(auto-fit, 40%);
+  gap: 10px;
+  /* background-color: #2196F3; */
+  padding: 35px;
+  align-items: center;
+  justify-content: space-around;
+  margin: 25px 25px;
+  margin-top: 70px;
+}
+
+.sponser_section > div{
+  background-color: #b4b4b452;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 150px 200px;
+  /* gap: 10px; */
+  justify-content: space-around;
+  /* align-items: center; */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.heading{
+  font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.sponser_section>div:hover{
+  cursor: pointer;
+  background-color: #b4b4b46e;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+@media (max-width: 800px){
+  .sponser_section{
+    grid-template-columns: repeat(auto-fill, 400px);
+    gap: 50px;
+  }
+
+  .heading{
+    font-size:x-large;
+    word-spacing: 3px;
+  }
+}
+
+@media (max-width: 500px){
+  .sponser_section{
+    grid-template-columns: repeat(auto-fill, 280px);
+    gap: 50px;
+  }
+}
 /* footer */
 footer {
   color: white;
