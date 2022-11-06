@@ -1123,3 +1123,77 @@ footer {
   color: white;
   text-decoration: none;
 }
+
+/* By Dhruv Srivastava */
+
+.sidecontainer {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top:25%;
+  z-index: 111100000;
+}
+
+@media only screen and (max-width: 767px) {
+  .sidecontainer {
+    display: inline-block;
+  }
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(225, 225, 225);
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 111100000;
+}
+
+.myhidesidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background: linear-gradient(rgb(33, 33, 33), rgba(17, 17, 17, 0.696)); /* Black*/
+  backdrop-filter: blur(5px);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the myhidesidenav */
+}
+
+/* The navigation menu links */
+
+.myhidesidenav a {
+  padding: 20px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #dadada;
+  display: block;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.myhidesidenav .linkers {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  margin-top:50px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.myhidesidenav a:hover {
+  color: #ffffff;
+}
+
+/* Position and style the close button (top right corner) */
+.myhidesidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+}
