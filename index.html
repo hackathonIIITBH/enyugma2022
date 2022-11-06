@@ -2,136 +2,332 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <title>Enyugma`22</title>
 
+  <link rel="icon" type="image/x-icon" href="./assets/images/logo_enyugma.png">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/cursor.css" />
 
+  <!-- <link rel="stylesheet" href="./assets/css/loader.css" /> -->
+  <link rel="stylesheet" href="./assets/css/astronautHS.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/light.css" />
 
-    <title>Enyugma - 2022</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/cursor.css">
-    <link rel="stylesheet" href="./assets/css/loader.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+  <!-- Events css -->
+  <link rel="stylesheet" href="assets\css\v-style.css" />
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <!-- jsquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- stellar.js -->
+  <script src="assets/js/jquery.stellar.min.js"></script>
+  <script src="assets/js/home.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="./assets/css/eventsection.css" /> -->
+  <script defer src="./assets/js/html2canvas.min.js"></script>
+  <!-- <script defer src="./assets/js/eventsection.js"></script> -->
 </head>
 
 <body>
-    <!-- <div class="empty_container">
-        <h1>Hello world</h1>
-    </div> -->
-    <div id="particles-js"></div>
-
-    <div id="canvas"></div>
+  <div id="canvas"></div>
+  <div class="toup" id="toup">
+    <i class="fa-solid fa-angle-up" onclick="scrollsideup()"></i>
+  </div>
+  <!-- <div class="secondpartherosection"> -->
+  <!-- <div id="reverse"></div> -->
+  <!-- </div> -->
+  <!-- LOADER SECTION -->
+  <!--     
     <section class="loader">
-        <div class="noite"></div>
+      <div class="noite"></div>
+      <div class="constelacao"></div>
+      <div class="lua">
+        <div class="textura"></div>
+      </div>
+      <div class="chuvaMeteoro"></div>
 
-        <div class="constelacao"></div>
+      <div class="floresta">
+        <h1 id="header">ENYUGMA</h1>
+        <img
+          src="https://raw.githubusercontent.com/interaminense/starry-sky/master/src/img/bgTree.png"
+          alt=""
+        />
+      </div>
+    </section> -->
 
-        <div class="lua">
-            <div class="textura"></div>
+  <!-- LANDING PAGE -->
+  <section class="landing-page">
+    <div id="particles-js"></div>
+    <!-- CONTAINER OF HERO SECTION -->
+    <div class="hero_section">
+      <!-- college logo -->
+      <div class="navbar">
+        <div class="navdesign">
+          <a href="./Event/technical.html">
+            <div class="link">
+              Technical
+            </div>
+          </a>
+          <a href="./Event/cultural.html">
+            <div class="link">
+              Cultural
+            </div>
+          </a>
+        </div>
+        <div>
+          <div class="container">
+            <img src="./assets/images/logo_enyugma.png" alt="iiitbh" class="logo_clg" />
+            <h1></h1>
+            <img src="./assets/images/Indian_Institute_of_Information_Technology,_Bhagalpur_logo.png" alt="iiitbh"
+              class="logo_clg" />
+          </div>
+        </div>
+        <div class="navdesign">
+          <a href="./Event/workshop.html">
+            <div class="link">
+              Workshops
+            </div>
+          </a>
+          <a href="./auth/login.html" id="dashorlogin">
+            <div class="link">
+              Sign-In
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="main-section">
+
+        <!-- TECHFEST LOGO -->
+        <div class="techfest_logo">
+          <!-- <h1>IIIT Bhagalpur presents</h1> -->
+          <img src="./assets/images/enyugmaArt2.png" alt="fest_logo" class="fest_logo_img" />
+          <!-- <h2>2022</h2> -->
         </div>
 
-        <div class="chuvaMeteoro"></div>
-
-        <div class="floresta">
-
-            <h1 id="header">ENYUGMA</h1>
-
-
-            <img src="https://raw.githubusercontent.com/interaminense/starry-sky/master/src/img/bgTree.png" alt="" />
-        </div>
-    </section>
-
-    <section class="landing-page">
-
-        <div class="container">
-            <img src="./assets/Indian_Institute_of_Information_Technology,_Bhagalpur_logo.png" alt="iiitbh"
-                class="logo_clg">
-        </div>
-
-        <!-- <div class="container_fest">
-        <img src="https://enyugma.iiitbh.ac.in/img/enugma%20introduction.png" alt="fest_tech" class="fest_tech">
-    </div> -->
-
-
-
-        <!-- COUNTDOWN TIMER -->
-        <div class="container_timer">
+        <div class="timer_design">
+          <h1>Enyugma `22</h1>
+          <div class="starts_in_container">
+            <div class="wrapper">
+              <div class="main">
+                <h1 class="shadow-effect tween-looper">
+                  STARTS IN <span></span>
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="container_timer">
             <div class="days_container">
-                <span class="days_text" id="days"></span>
-                <span class="days_char">DAYS</span>
+              <span class="days_text" id="days"></span>
+              <span class="days_char">DAYS</span>
             </div>
             <div class="days_container hr1">
-                <span class="hours_text" id="hours"></span>
-                <span class="days_char">HOUR</span>
+              <span class="hours_text" id="hours"></span>
+              <span class="days_char">HOUR</span>
             </div>
             <div class="days_container">
-                <span class="minutes_text" id="minutes"></span>
-                <span class="days_char">MINS</span>
+              <span class="minutes_text" id="minutes"></span>
+              <span class="days_char">MINS</span>
             </div>
             <div class="days_container">
-                <span class="sec_text" id="seconds"></span>
-                <span class="days_char">SECS</span>
+              <span class="sec_text" id="seconds"></span>
+              <span class="days_char">SECS</span>
             </div>
+          </div>
+          <!-- REGISTER BUTTON -->
+          <div class="register_button" id="dashboardorlogin">
+            <a href="./auth/register.html" class="glow-on-hover">REGISTER NOW</a>
+          </div>
         </div>
+        <div class="tobottom">
+          <i class="fa-solid fa-angle-down" onclick="scrollsidedown()"></i>
+        </div>
+      </div>
 
-        <div class="starts_in_container">
-            <div class="wrapper">
-                <div class="main">
-                    <h1 class="shadow-effect tween-looper">STARTS IN <span></span></h1>
-                </div>
+      <!-- CANVAS SECTION -->
+    </div>
+    </div>
+    <div class="scrolldesign" id="scrollbehavior">
+      <div class="scrollView">
+        <div class="event_design">
+          <h1 class="heading_event">Technical Event</h1>
+          <section onclick="window.location.href='./Event/technical.html';">
+            <div class="block technical_event">
+              <!-- <img
+              src="https://images.unsplash.com/photo-1541363111435-5c1b7d867904?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVtbXl8ZW58MHx8MHx8&w=1000&q=80"
+              alt="" id="img" /> -->
+              <div class="details">
+                <p>
+                  The festival offers aspiring innovators a once-in-a-lifetime
+                  chance to demonstrate their technological expertise and serves
+                  as the ideal platform for innovative ideas. These Events are
+                  Planned for the tech-savvy youth by entrepreneurs and tech
+                  gurus. A series of challenges, hackathons, and workshops to
+                  encourage techies to think creatively and broaden their
+                  perspectives These events aim to inspire and empower the
+                  Technoids to invent and create new things, as well as to
+                  expose them to a wide range of contemporary technology and
+                  allow them to interact with other technophiles from all over
+                  the nation. Take part in whatever strikes your fancy and
+                  listen to what the fest has to say!
+                </p>
+              </div>
             </div>
+          </section>
+          <div class="button_enentMove" onclick="scrollsideLeft()"><i class="fa-solid fa-angle-right"></i></div>
         </div>
-
-        <div>
-            <a href="#" class="glow-on-hover">REGISTER NOW</a>
+        <div class="event_design">
+          <div class="button_enentMove buttonscreenSet1" onclick="scrollsideRight()"><i
+              class="fa-solid fa-angle-left"></i></div>
+          <h1 class="heading_event">Cultural Event</h1>
+          <section onclick="window.location.href='./Event/cultural.html';">
+            <div class="block cultural_event">
+              <!-- <img src="https://photos5.appleinsider.com/gallery/48901-95609-iPhone-14-Dummies-on-Wood-xl.jpg" alt=""
+              id="img" /> -->
+              <div class="details">
+                <p>
+                  Exhibit your creativity and love for dance, singing, music,
+                  debate, poetry, photography, animation, video editing, art and
+                  many more . A treasure hunt will be held for everyone to
+                  channel their inner Sherlock Holmes in addition to the
+                  competitions. You can improve your artistic and expressive
+                  abilities by attending workshops.
+                </p>
+              </div>
+            </div>
+          </section>
+          <div class="button_enentMove buttonscreenSet2" onclick="scrollsideRight()"><i
+              class="fa-solid fa-angle-left"></i></div>
         </div>
+      </div>
+    </div>
 
+    <!-- <div class="lowerpart" data-3000="transform:translateY(450%);"></div>
+      <div class="lowerpart2" data-3000="transform:translateY(450%);"></div> -->
+    
+    <div class="sponser_section">
+        <div class="left_part">
+          <h1 class="heading">
+            Why Sponsor Us
+            <hr>
+          </h1>
+          <p class="details">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, cupiditate impedit magnam error incidunt a nobis illum ex quis nisi voluptas rerum corrupti repudiandae!</p>
+        </div>
+        <div class="right_part">
+          <h1 class="heading">
+            Want to become Campus Ambassador?
+            <hr>
+          </h1>
+          <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quae blanditiis expedita, autem a deleniti, magnam rem hic, voluptatem repudiandae animi minus vero dicta?</p>
+        </div>
+    </div>
 
-        <!-- <div class="curzr" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-      <path class="inner" d="M25,30a5.82,5.82,0,0,1-1.09-.17l-.2-.07-7.36-3.48a.72.72,0,0,0-.35-.08.78.78,0,0,0-.33.07L8.24,29.54a.66.66,0,0,1-.2.06,5.17,5.17,0,0,1-1,.15,3.6,3.6,0,0,1-3.29-5L12.68,4.2a3.59,3.59,0,0,1,6.58,0l9,20.74A3.6,3.6,0,0,1,25,30Z" fill="#F2F5F8" />
-      <path class="outer" d="M16,3A2.59,2.59,0,0,1,18.34,4.6l9,20.74A2.59,2.59,0,0,1,25,29a5.42,5.42,0,0,1-.86-.15l-7.37-3.48a1.84,1.84,0,0,0-.77-.17,1.69,1.69,0,0,0-.73.16l-7.4,3.31a5.89,5.89,0,0,1-.79.12,2.59,2.59,0,0,1-2.37-3.62L13.6,4.6A2.58,2.58,0,0,1,16,3m0-2h0A4.58,4.58,0,0,0,11.76,3.8L2.84,24.33A4.58,4.58,0,0,0,7,30.75a6.08,6.08,0,0,0,1.21-.17,1.87,1.87,0,0,0,.4-.13L16,27.18l7.29,3.44a1.64,1.64,0,0,0,.39.14A6.37,6.37,0,0,0,25,31a4.59,4.59,0,0,0,4.21-6.41l-9-20.75A4.62,4.62,0,0,0,16,1Z" fill="#111920" />
-    </svg>
-  </div> -->
+    <!-- FOOTER -->
+    <footer>
+      <div></div>
+      <div class="sectionB_footer">
+        <div class="contact">
+          <a href="./contact/contact.html">Our Team</a>
+        </div>
+        <div class="social">
+          <a href="https://www.linkedin.com/company/enyugma-iiitbh/" target="_blank"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="https://instagram.com/enyugma_iiitbh?igshid=YmMyMTA2M2Y=" target="_blank"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="https://twitter.com/Enyugma_iiitbh?t=rsewQT6uohFzibkSGoBkyQ&s=08" target="_blank" target="_blank"><i
+              class="fa-brands fa-twitter"></i></a>
+          <a href="https://discord.gg/qqFJdJf6wb"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://www.youtube.com/channel/UCa2xaEV66eEOnoVE9MLYOxg" target="_blank"><i
+              class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="copyright">
+          <p>
+            For any technical query, you may contact to
+          </p>
+          <p>
+            <a href="mailto:support.enyugma@iiitbh.ac.in">
+              support.enyugma@iiitbh.ac.in
+            </a>
+          </p>
+          <p>Enyugma <i class="fa-regular fa-copyright"></i> reserved</p>
+        </div>
+      </div>
+      <div class="sectionC_footer">
+        <p>Designed By <a href="https://gymkhanaiiitbh.github.io/Tech-Frontend/webverse/web.html">Webverse, Technical
+            Board IIIT Bhagalpur</a></p>
+      </div>
+    </footer>
+  </section>
 
-
-    </section>
-
-    <div class="cursor"></div>
-    <div class="cursor2"></div>
-
-
-
-    <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js"></script>
-    <script
-        src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js'></script>
-    <script src='https://jeromeetienne.github.io/threex.terrain/threex.terrain.js'></script>
-
-    <script type="text/javascript" src="./assets/js/index.js"></script>
-    <script type="text/javascript" src="./assets/js/particles.js"></script>
-    <script type="text/javascript" src="./assets/js/app.js"></script>
-    <script type="text/javascript" src="./assets/js/loader.js"></script>
-    <script type="text/javascript" src="./assets/js/cursor1.js"></script>
-
-    <!-- timer javascript -->
-    <script src="./assets/js/timer.js"></script>
-
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
-
-    <script>
-        var tl = gsap.timeline({ defaults: { duartion: 1 } });
-
-        tl.from(".container", { duration: 2,delay: 5, ease: "bounce.out", y: -50, opacity: 0 })
-            .from(".logo_clg", { duration: 1.5, delay: 2, opacity: 0 })
-            .from(".starts_in_container", { duration: 3.5, opacity: 0, ease: "elastic.out(1, 0.1)", y: -100 })
-            .from(".days_container", { duration: 2.5, ease: "bounce.out", x: 100, opacity: 0 })
-            .from(".hr1", { delay: 0.5 })
-    </script>
-
+  <!-- JAVASCRIPT -->
+  <!-- THREE JS JAVASCRIPT -->
+  <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js"></script>
+  <script
+    src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js"></script>
+  <script src="https://jeromeetienne.github.io/threex.terrain/threex.terrain.js"></script>
+  <script type="text/javascript" src="./assets/js/index.js"></script>
+  <script src="./assets/js/canvas2.js"></script>
+  <!-- Particle javascript -->
+  <script type="text/javascript" src="./assets/js/particles.js"></script>
+  <script type="text/javascript" src="./assets/js/app.js"></script>
+  <!-- loader javascript -->
+  <!-- <script type="text/javascript" src="./assets/js/loader.js"></script> -->
+  <!-- CURSOR JAVASCRIPT -->
+  <!-- <script type="text/javascript" src="./assets/js/cursor1.js"></script> -->
+  <!-- timer javascript -->
+  <script src="./assets/js/timer.js"></script>
+  <!-- gsap animation -->
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+  <script>
+    var tl = gsap.timeline({ defaults: { duartion: 1 } });
+    // skrollr.init();
+    tl.from(".container", {
+      duration: .5,
+      delay: 0,
+      ease: "bounce.out",
+      y: -50,
+      opacity: 0,
+    })
+      .from(".logo_clg", { duration: 1, delay: 1, opacity: 0 })
+      .from(".starts_in_container", {
+        duration: 1,
+        opacity: 0,
+        ease: "elastic.out(1, 0.1)",
+        y: -100,
+      })
+      .from(".days_container", {
+        duration: 0.5,
+        ease: "bounce.out",
+        x: 100,
+        opacity: 0,
+      })
+      .from(".hr1", { delay: 0.5 });
+  </script>
+  <!-- <script type="text/javascript" src="./assets/js/skrollr.js"></script> -->
+  <!-- <script type="text/javascript">
+    var s = skrollr.init();
+  </script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./assets/js/walking.js"></script>
+  <!-- !! -->
 </body>
 
 </html>

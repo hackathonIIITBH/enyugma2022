@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo_enyugma.png" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <!-- jsquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title></title>
+  <link rel="stylesheet" href="./css/dashboard.css" />
+
+  <script defer type="text/javascript" src="./js/dashboard.js"></script>
+</head>
+
+<body>
+  <div class="overlays1" style="display: none;">
+    <div class="update-data datadisplayform" id="data-update">
+      <form id="data-upd">
+        <input id="inst-name" type="text" placeholder="Enter Institute Name" required name="instName" />
+        <input type="text" id="course" name="course" placeholder="Enter Course Name with Specialization(if any)"
+          required />
+        <input type="text" id="year" name="year" placeholder="Enter Graduating Year" required />
+        <textarea id="inst-addr" placeholder="Enter Institute Address" required name="instAddr"></textarea>
+        <textarea id="address" name="address" required placeholder="Enter Your Address"></textarea>
+        <input type="text" name="state" id="state" placeholder="State" required />
+        <input type="number" name="contact" id="contact" placeholder="Enter Contact No." required />
+        <input id="dob" name="dob" placeholder="Enter your Date of Birth : DD/MM/YYYY" type="text" required />
+        <input type="text" id="ca-refer" name="profile" style="display: none" value="1" disabled />
+        <input type="submit" id="submit" value="Save" style="cursor: pointer;" />
+      </form>
+    </div>
+  </div>
+  <div class="overlays2" style="display: none;">
+    <div class="update-data" id="img-update">
+      <form id="upd-img" enctype="multipart/form-data" method="POST">
+        <div class="show-div">
+          <img id="img-show" src="../assets/images/default-user-image.png" />
+        </div>
+        <input type="file" name="img" id="img-upd" accept="image/*" required />
+        <p style="font-family: Verdana;">Image must be less then 100KB</p>
+        <input type="submit" id="submit" value="Save" style="cursor: pointer;" />
+      </form>
+    </div>
+  </div>
+  <div class="main-content">
+    <nav class="navbar">
+      <a href="https://enyugma.iiitbh.ac.in/" target="_blank" class="logo-icon">
+        <img src="../assets/images/logo_enyugma.png" />
+      </a>
+      <div class="user-detail">
+        <span id="user-name" class="user-name"></span>
+        <div class="img-user">
+          <img id="user-pic" class="user-pic" src="../assets/images/default-user-image.png" />
+        </div>
+        <div class="drop-down">
+          <a class="logout" id="logout" onclick="logout()">Logout</a>
+        </div>
+      </div>
+    </nav>
+    <div class="status"></div>
+    <div class="user-details">
+      <h5>Name: <span id="user-name"></span></h5>
+      <h5>Application No.: <span id="user-appno"></span></h5>
+      <h5>Email Id: <span id="user-email"></span></h5>
+      <h5>DOB: <span id="dobshow"></span></h5>
+      <h5>Course: <span id="courseshow"></span></h5>
+      <h5>Institute: <span id="instshow"></span></h5>
+      <h5>State: <span id="stateshow"></span></h5>
+      <h5>Address: <span id="user-address"></span></h5>
+      <h5>Events Participated: <span id="user-events"></span></h5>
+    </div>
+    <div class="event-details">
+      <!-- <div class="event-togglers">
+        <button class="tech-event">Technical</button>
+        <button class="cult-event">Cultural</button>
+        <button class="workshops">Workshops</button>
+      </div> -->
+      <div class="eventhead"><a href="../Event/technical.html">Technical Event</a></div>
+      <div class="event-detail" id="eventshowtech"></div>
+      <div class="eventhead"><a href="../Event/cultural.html">Cultural Event</a></div>
+      <div class="event-detail" id="eventshowcult"></div>
+      <div class="eventhead"><a href="../Event/workshop.html">Workshop</a></div>
+      <div class="event-detail" id="eventshowworkshop"></div>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer>
+    <div></div>
+    <div class="sectionB_footer">
+      <div class="contact">
+        <a href="./contact/contact.html">Contact Us</a>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/company/enyugma-iiitbh/" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a>
+        <a href="https://instagram.com/enyugma_iiitbh?igshid=YmMyMTA2M2Y=" target="_blank"><i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/Enyugma_iiitbh?t=rsewQT6uohFzibkSGoBkyQ&s=08" target="_blank" target="_blank"><i
+            class="fa-brands fa-twitter"></i></a>
+        <a href="https://discord.gg/qqFJdJf6wb" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://www.youtube.com/channel/UCa2xaEV66eEOnoVE9MLYOxg" target="_blank"><i
+            class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="copyright">
+        <p>
+          For any technical query, you may contact to
+        </p>
+        <p>
+          <a href="mailto:support.enyugma@iiitbh.ac.in">
+            support.enyugma@iiitbh.ac.in
+          </a>
+        </p>
+        <p>Enyugma <i class="fa-regular fa-copyright"></i> reserved</p>
+      </div>
+    </div>
+    <div class="sectionC_footer">
+      <p>Designed By <a href="https://gymkhanaiiitbh.github.io/Tech-Frontend/webverse/web.html">Webverse, Technical
+          Board IIIT Bhagalpur</a></p>
+    </div>
+  </footer>
+</body>
+
+</html>

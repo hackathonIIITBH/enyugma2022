@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+.navbar {
+  display: flex;
+  height: 150px;
+  background: transparent;
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  top: 20px;
+  left: 0px;
+  justify-content: space-around;
+  flex: 1;
+  align-items: center;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0px;
+  background: url("../stars.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.navbar .techfest_logo img {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  padding: 10px;
+  transition: 250ms;
+  filter: opacity(0.7) drop-shadow(0px 0px 10px black);
+}
+
+.navbar .techfest_logo img:hover {
+  filter: opacity(1) drop-shadow(0px 0px 10px rgb(224, 222, 222));
+}
+
+.navbar h1 {
+  color: rgb(224, 222, 222);
+  text-align: center;
+  transition: 500ms;
+}
+
+.navbar h1:hover {
+  text-shadow: 0px 0px 30px rgb(224, 222, 222);
+  transform: scale(1.2);
+}
+
+.setbtn {
+  color: rgb(255, 255, 255);
+  transform: translateX(-10px);
+  cursor: pointer;
+}
+
+.buttons {
+  color: rgb(223, 223, 223);
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 700;
+  transition: 500ms;
+}
+
+.buttons:hover {
+  text-shadow: 0px 0px 30px rgb(224, 222, 222);
+  transform: scale(1.2);
+  filter: hue-rotate(90deg) sepia(25%);
+  text-decoration: wavy;
+}
+
+
+
+.container {
+  width: 100%;
+  min-height: 500px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 200px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  color: rgb(224, 222, 222);
+}
+
+.container img {
+  margin: 20px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.container p {
+  padding: 10px;
+
+}
+
+.container .rbtn{
+  background-color: rgba(122, 174, 252, 0.233);
+  backdrop-filter:blur(5px);
+  z-index: 1000;
+  width: 300px;
+  height:60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  position: absolute;
+  bottom:20px;
+  right: 20px;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.rbtn:hover {
+  transform: scale(1.2) translateX(-20px);
+}
+
+.rbtn:hover ~ .arrow {
+  transform: translateX(100px);
+}

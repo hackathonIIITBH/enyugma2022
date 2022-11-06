@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+    background-image: url("../assets/images/stars.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Acme', sans-serif;
+    background-size: cover;
+    overflow-x: hidden;
+    font-family: Verdana;
+}
+
+body {
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+
+.navDesign {
+    display: flex;
+    width: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    z-index: 2;
+    justify-content: space-evenly;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.223);
+}
+
+.navDesign a {
+    text-decoration: none;
+    color: white;
+    /* background: transparent; */
+    /* backdrop-filter: blur(2px); */
+}
+
+.navDesign a h1 {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px;
+}
+
+.navDesign a:hover {
+    background-color: rgba(255, 255, 255, 0.398);
+    transform: scale(1.1);
+}
+
+img.logo {
+    margin-top: 5px;
+    width: 130px;
+    border-radius: 25%;
+}
+
+
+/* ------------------Contact List -------------------- */
+
+.heading h1 {
+    font-weight: 600;
+    font-family: Verdana;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+.Contact{
+    width: 90%;
+    margin: auto;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contactPerson{
+    color: white;
+    background: transparent;
+    backdrop-filter: blur(.5px);
+    padding: 10px;
+    border: 2px solid white;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.contactPerson .name{
+    font-size: 18px;  
+    font-weight: 800; 
+}
+
+.contactPerson .post{
+    font-size: 14px;   
+    margin-bottom: 8px
+}
+
+.contactPerson .phone{
+    font-size: 16px;       
+}
+
+.contactPerson .phone .fa-phone{
+    font-size: 16px;       
+    margin-right:5px;
+}
+
+.contactPerson .email{
+    font-size: 16px;   
+}
+
+.contactPerson .email .fa-envelope{
+    font-size: 16px;   
+    margin-right:5px;
+}
+
+
+/* footer */
+footer {
+    color: white;
+    font-family: Verdana;
+    margin-top: 80px;
+    padding-top: 40px;
+    background-color: rgba(0, 0, 0, 0.482);
+  }
+  
+  .sectionB_footer {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: white;
+  }
+  
+  .sectionB_footer .contact{
+    margin: 10px 15px;
+    padding: 10px 0px;
+  }
+  .sectionB_footer .contact a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sectionB_footer .social {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sectionB_footer .social a {
+    color: rgb(174, 173, 173);
+  }
+  
+  .sectionB_footer .social a .fa-brands {
+    font-size: 24px;
+    transition: 800ms ease-in-out;
+  }
+  
+  .sectionB_footer .social a .fa-brands:hover {
+    transform: scale(1.4);
+    color: white;
+  }
+  
+  .sectionB_footer .copyright p {
+    margin: 0;
+    /* padding: 0 50px; */
+    text-align: center;
+    margin-top: 10px;
+  }
+  .sectionB_footer .copyright p a{
+    color: white;
+  }
+  
+  .sectionC_footer {
+    text-align: center;
+  }
+  
+  .sectionC_footer p {
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .sectionC_footer a {
+    color: white;
+    text-decoration: none;
+  }

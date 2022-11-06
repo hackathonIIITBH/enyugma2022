@@ -1,0 +1,406 @@
+body {
+  font-family: Verdana;
+  background-color: rgba(227, 227, 227, 0.867);
+  /* background-image: url(../assets/images/stars.jpg); */
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.navdesign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo_fest {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background-color: white;
+  padding: 10px;
+  margin: 0px 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.navdesign a {
+  color: black;
+  text-decoration: none;
+}
+
+.navdesign h1 {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.secondNavdesign {
+  margin-top: 10px;
+  border-bottom: 1px solid black;
+}
+
+.secondNavdesign h1 {
+  margin: 0px 10px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+.EventheadName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.EventheadName button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0px 10px;
+  padding: 0px;
+  font-size: 18px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.contactInfo h2 {
+  margin: 0px 10px;
+  padding: 0px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  margin: 20px auto;
+}
+
+.heroSection {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.eventbanner {
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+.eventbanner:hover .event-post {
+    display: flex;
+}
+
+.event-post {
+  position: absolute;
+  display: none;
+  background-color: rgba(85, 85, 85, 0.632);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#event-img {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#event-img button,
+#event-img input {
+  margin: 5% 1%;
+  color: #fff;
+}
+
+#event-img .submit {
+  width: 100%;
+  padding: 5%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+}
+
+.eventDesc {
+  width: calc(100% - 300px);
+  min-width: 280px;
+  /* height: 300px; */
+}
+
+.eventDesc p {
+  padding: 0px 20px;
+  height: 200px;
+  overflow: auto;
+  margin: 0px 0px 0px 0px;
+}
+
+.eventDesc #descTextarea,
+#rulesTextarea {
+  padding: 0px 10px;
+  height: 200px;
+  overflow: auto;
+  width: calc(100% - 40px);
+  margin: 0px 10px 0px 10px;
+  resize: none;
+}
+
+#formDesc,
+#formrules {
+  display: none;
+}
+#cancelDesc,
+#cancelrule {
+  display: none;
+}
+
+.passwordinput {
+  width: 200px;
+  margin: 10px;
+}
+
+.eventDesc h1 {
+  padding: 0px 20px;
+  margin: 5px 0px 0px 0px;
+  font-size: 20px;
+  height: 30px;
+}
+
+.eventDesc button {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px;
+  height: 30px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+  transition: 800ms ease-in-out;
+}
+
+.eventDesc button:hover {
+  background-color: black;
+  color: white;
+}
+
+.rules h1 {
+  /* padding: 0px 20px; */
+  /* margin: 5px 0px 0px 0px; */
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
+}
+
+.rules ul {
+  font-size: 15px;
+}
+
+.rules .buttondesign {
+  text-align: center;
+}
+
+.rules button {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px;
+  height: 30px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+  transition: 800ms ease-in-out;
+}
+
+.rules button:hover {
+  background-color: black;
+  color: white;
+}
+
+.prizepool h1 {
+  /* padding: 0px 20px; */
+  /* margin: 5px 0px 0px 0px; */
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
+}
+
+.prizepool table {
+  font-size: 15px;
+  width: 100%;
+  margin: 5px 0px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.prizepool table tr {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.prizepool table td {
+  width: 50%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.prizepool .buttondesign {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.prizepool button {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px;
+  height: 30px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+  transition: 800ms ease-in-out;
+}
+
+.prizepool button:hover {
+  background-color: black;
+  color: white;
+}
+
+.eventdetail h1 {
+  /* padding: 0px 20px; */
+  /* margin: 5px 0px 0px 0px; */
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
+}
+
+.eventdetail table {
+  font-size: 15px;
+  width: 100%;
+  margin: 5px 0px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.eventdetail table tr {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.eventdetail table td {
+  width: 50%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.eventdetail .buttondesign {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.eventdetail button {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px;
+  height: 30px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+  transition: 800ms ease-in-out;
+}
+
+.eventdetail button:hover {
+  background-color: black;
+  color: white;
+}
+
+.judging h1 {
+  /* padding: 0px 20px; */
+  /* margin: 5px 0px 0px 0px; */
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
+}
+
+.judging p {
+  padding: 0px 20px;
+  /* height: 200px; */
+  overflow: auto;
+  margin: 0px 0px 10px 0px;
+}
+
+.judging .buttondesign {
+  text-align: center;
+}
+
+.judging button {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0px 10px;
+  height: 30px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+  transition: 800ms ease-in-out;
+}
+
+.judging button:hover {
+  background-color: black;
+  color: white;
+}
+
+#judgingTextarea {
+  padding: 0px 10px;
+  height: 200px;
+  overflow: auto;
+  width: calc(100% - 40px);
+  margin: 0px 10px 0px 10px;
+  resize: none;
+}
+
+#formjudging {
+  display: none;
+}
+
+#canceljudging {
+  display: none;
+}
+
+
+/* tableforregistration */
+
+
+.tableforregistration{
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.tableforregistration table{
+  margin: auto;
+  width: 98%;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+.tableforregistration tr,.tableforregistration th, .tableforregistration td{
+  border: 1px solid black;
+}
+
+#registershow td{
+  padding: 5px;
+}

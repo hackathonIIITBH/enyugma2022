@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="stylesheet" href="../assets/css/astronautHS.css" />
+    <link href="../assets/css/register.css" rel="stylesheet" type="text/css" />
+    <title>Enyugma`22 CA-Register</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/logo_enyugma.png"
+    />
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+    <!-- Astronaut Hero Section -->
+    <div class="navDesign">
+      <a href="../index.html">
+        <h1>Home</h1>
+      </a>
+      <a href="../Event/technical.html" class="alreadyPage">
+        <h1>Technical</h1>
+      </a>
+      <a href="../Event/cultural.html">
+        <h1>Cultural</h1>
+      </a>
+    </div>
+    <div class="status"></div>
+    <div class="container_1">
+      <!-- <div id="astronaut">
+          <img
+            src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png"
+            alt=""
+            width="250"
+          />
+        </div> -->
+      <div class="techfest_logo">
+        <!-- <h1>IIIT Bhagalpur presents</h1> -->
+        <img
+          src="../assets/images/enyugmaArt2.png"
+          alt="fest_logo"
+          class="fest_logo_img"
+        />
+        <!-- <h2>2022</h2> -->
+      </div>
+      <!-- <div id="astronaut2">
+          <img
+            src="https://images.vexels.com/media/users/3/152641/isolated/preview/2b3d63661f0d7fe62c36168604985f26-space-cosmonaut-cartoon-by-vexels.png"
+            alt=""
+            width="250"
+          />
+        </div> -->
+      <div class="wrapper">
+        <div class="container">
+          <form class="form" id="ca-register">
+            <h1>Want to be the Campus Ambassador? Fill this up</h1>
+            <h3>
+              Campus Ambassador Brochure is
+              <a
+                href="https://drive.google.com/file/d/1U_nLdDtdtW7Ru6BNdkOekE0K3cGiMdMS/view?usp=sharing"
+                >here</a
+              >.
+            </h3>
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                autocomplete="off"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter name"
+              />
+              <small>Error Message</small>
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                autocomplete="off"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter email"
+              />
+              <small>Error Message</small>
+            </div>
+            <div class="form-control">
+              <fieldset>
+                <legend>Gender</legend>
+                <div class="radio-set">
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                    required
+                  />
+                  <label for="male">Male</label>
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    required
+                    value="female"
+                  />
+                  <label for="female">Female</label>
+                  <input
+                    type="radio"
+                    id="ns"
+                    name="gender"
+                    value="not say"
+                    required
+                  />
+                  <label for="ns">Prefer not to say</label>
+                </div>
+              </fieldset>
+              <small>Error Message</small>
+            </div>
+            <div class="form-control">
+              <label for="contact">Contact No. (Preferably WhatsApp)</label>
+              <input
+                type="text"
+                id="contact"
+                name="contact"
+                required
+                autocomplete="off"
+                placeholder="Enter Contact No"
+              />
+              <small id="small" class="small">Error Message</small>
+            </div>
+            <div class="form-control">
+              <label for="inst">Institute Name and Address</label>
+              <input
+                type="text"
+                id="inst"
+                name="inst"
+                required
+                autocomplete="off"
+                placeholder="Enter Institute Name & Address"
+              />
+              <small id="small" class="small">Error Message</small>
+            </div>
+            <div class="form-control">
+              <label for="program">Program(Eg. B.Tech, MBA, etc.)</label>
+              <input
+                type="text"
+                id="program"
+                name="program"
+                required
+                autocomplete="off"
+                placeholder="Enter Program(Eg. B.Tech, MBA, etc.)"
+              />
+              <small id="small" class="small">Error Message</small>
+            </div>
+            <div class="form-control">
+              <label for="gdYear">Graduating Year</label>
+              <input
+                type="text"
+                id="gdYear"
+                required
+                name="gdYear"
+                autocomplete="off"
+                placeholder="Enter Graduating Year"
+              />
+              <small id="small" class="small">Error Message</small>
+            </div>
+            <div class="form-control">
+              <fieldset>
+                <legend>Social Media Handles</legend>
+                <div class="social-handles">
+                  <input type="text" id="fb" name="fb" placeholder="Facebook" />
+                  <input
+                    type="text"
+                    id="insta"
+                    name="insta"
+                    placeholder="Instagram"
+                  />
+                  <input
+                    type="text"
+                    id="twitter"
+                    name="twitter"
+                    placeholder="Twitter"
+                  />
+                  <input
+                    type="text"
+                    id="linkedin"
+                    name="linkedin"
+                    placeholder="LinkedIn"
+                  />
+                  <input
+                    type="text"
+                    id="others"
+                    name="others"
+                    placeholder="Others"
+                  />
+                </div>
+              </fieldset>
+              <small id="small" class="small">Error Message</small>
+            </div>
+            <div class="form-control">
+              <label for="wCA"
+                >Why do you think you are the perfect Campus Ambassador of your
+                campus? (min. 50 Words)</label
+              >
+              <input
+                type="text"
+                id="wCA"
+                name="wCA"
+                autocomplete="off"
+                placeholder="Enter your Answer"
+              />
+              <small id="small" class="small">Error Message</small>
+            </div>
+            <div class="form-control">
+              <label for="eCA"
+                >What do you expect from us as a part of the Campus Ambassador
+                Program?</label
+              >
+              <input
+                type="text"
+                id="eCA"
+                name="eCA"
+                autocomplete="off"
+                placeholder="Enter your Answer"
+              />
+              <small id="small" class="small">Error Message</small>
+            </div>
+            <div class="form-control">
+              <label for="query">Any Query?</label>
+              <input
+                type="text"
+                id="query"
+                name="query"
+                autocomplete="off"
+                placeholder="Any Query?"
+              />
+              <small id="small" class="small">Error Message</small>
+            </div>
+            <button type="submit" id="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="../assets/js/login.js"></script> -->
+    <script src="./js/ca-register.js"></script>
+    <script src="../assets/js/particles.js"></script>
+    <script type="text/javascript" src="../assets/js/app.js"></script>
+  </body>
+</html>

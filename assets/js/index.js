@@ -2,12 +2,56 @@ var container;
 var camera, controls, scene, renderer;
 var w, h;
 
-setTimeout(() => {
-  document.querySelector(".loader").style.display = "none";
-  document.querySelector(".landing-page").style.display = "block";
-}, 7000);
+// setTimeout(() => {
+//   document.querySelector(".loader").style.display = "none";
+//   document.querySelector(".landing-page").style.display = "block";
+// }, 7000);
+
+var item = document.querySelector("#scrollbehavior");
+function scrollsideLeft() {
+  item.scrollLeft += document.body.offsetWidth;
+};
+
+function scrollsideRight() {
+  // var percent = (100 * item.scrollLeft) / (item.scrollWidth - item.clientWidth);
+  //  (document-item).style.overflow = "hidden";
+
+  // if (e.deltaY > 0) {
+  item.scrollLeft -= document.body.offsetWidth;
+  // } else {
+  // if (item.scrollLeft > 0) {
+  // item.scrollLeft -= 100;
+  // }
+  // }
+}
+
+function scrollsidedown() {
+  const element = document.getElementById("scrollbehavior");
+  element.scrollIntoView();
+};
+
+
+function scrollsideup() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+
+let mybutton = document.getElementById("toup");
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    mybutton.style.display = "flex";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
 init();
-render();
+// render();
+// skrollr.init();
+
 function init() {
   container = document.getElementById("canvas");
   renderer = new THREE.WebGLRenderer({
@@ -149,3 +193,31 @@ function init() {
 //       onRenderFct(deltaMsec/1000, nowMsec/1000)
 //   })
 // })
+
+// document.getElementById('scrollbehavior').addEventListener('scroll',function (){
+//   document.getElementById('scrollbehavior').style.left=`${window.sc}`
+// })
+
+
+// Dashboard
+
+function dash() {
+  let change = document.getElementById('dashboardorlogin');
+  let changedash = document.getElementById('dashorlogin');
+
+  if (localStorage.getItem('userToken')) {
+    change.innerHTML =  `<a href="./user/dashboard.html" class="glow-on-hover">Dashboard</a>`
+    changedash.innerHTML =  `<div class="link">Profile</div>`
+    changedash.href = './user/dashboard.html'
+  }else{
+    
+    changedash.innerHTML =  `<div class="link">Sign-In</div>`
+    changedash.href = './auth/login.html'
+    change.innerHTML =  `<a href="./auth/register.html" class="glow-on-hover">REGISTER NOW</a>`
+  }
+}
+
+
+if (localStorage.getItem('userToken')) {
+  dash();
+}

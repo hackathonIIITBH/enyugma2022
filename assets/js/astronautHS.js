@@ -1,0 +1,1 @@
+// const astrounaut = getElementById('astronaut');

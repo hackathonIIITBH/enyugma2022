@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/loader/loader.css" />
+    <style>
+      body {
+        font-family: Verdana;
+        /* background-color: black; */
+      }
+
+      .logo {
+        width: 90px;
+        height: 90px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .loginform {
+        /* width: 300px; */
+        margin: auto;
+        width: fit-content;
+      }
+
+      .loginform h1 {
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .loginform input {
+        /* width: calc(100% - 30px); */
+        padding: 5px;
+        margin: 10px;
+        width: 250px;
+      }
+
+      .loginform form {
+        border: 2px solid rgba(0, 0, 0, 0.186);
+        padding: 5px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="logo">
+      <img
+        src="../assets/images/logo_enyugma.png"
+        alt=""
+        srcset=""
+        width="100%"
+        height="100%"
+      />
+    </div>
+    <div
+      style="margin: auto; width: fit-content; display: none"
+      id="loaderShow"
+    >
+      <div class="loader" style="--width: 20%"><span></span></div>
+    </div>
+    <div class="margin: auto; width: fit-content;" id="message"></div>
+    <div class="loginform">
+      <h1>Manager Login</h1>
+      <form action="" method="post" id="managerlogin">
+        <input type="email" name="email" id="" placeholder="email" required />
+        <input
+          type="password"
+          name="password"
+          id=""
+          placeholder="password"
+          required
+        />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+    <script>
+      url = `https://enyugma.herokuapp.com`;
+      document
+        .getElementById("managerlogin")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          // console.log("get");
+          document.getElementById("loaderShow").style.display = `block`;
+          document.getElementById("message").innerHTML = ``;
+          fetch(`${url}/api/manager/managerlogin`, {
+            method: "POST",
+            body: new URLSearchParams(new FormData(e.target)),
+          })
+            .then((res) => res.json())
+            .then((res) => {
+              // console.log(res);
+              if (res.status == 0) {
+                document.getElementById(
+                  "message"
+                ).innerHTML = `<h1 style="font-size: 13px; color: green; text-align: center;">Successful</h1>`;
+                document.getElementById("loaderShow").style.display = `none`;
+                localStorage.setItem(`managertoken`, `${res.auth_token}`);
+                window.location.href = "./eventmanager.html";
+              } else {
+                document.getElementById(
+                  "message"
+                ).innerHTML = `<h1 style="font-size: 13px; color: red; text-align: center;">Invalid Detail</h1>`;
+                document.getElementById("loaderShow").style.display = `none`;
+              }
+            })
+            .catch(() => {
+              document.getElementById(
+                "message"
+              ).innerHTML = `<h1 style="font-size: 13px; color: red; text-align: center;">System Error</h1>`;
+            });
+        });
+    </script>
+  </body>
+</html>
