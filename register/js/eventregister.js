@@ -1,5 +1,8 @@
 const url = `https://enyugma.herokuapp.com`
 // const url = `http://localhost:2100`
+
+window.location.href = '../index.html'
+
 let userdetail;
 let username = document.getElementById('name');
 let email = document.getElementById('email');

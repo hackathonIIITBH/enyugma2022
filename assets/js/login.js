@@ -3,6 +3,7 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const url = "https://enyugma.herokuapp.com";
 // const url = "http://localhost:2100"
+window.location.href = '../index.html'
 console.log("Running!!!!");
 
 function showError(input, message) {

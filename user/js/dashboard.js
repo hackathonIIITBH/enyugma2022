@@ -7,6 +7,8 @@ var overlays2 = document.querySelector(".overlays2");
 const url = "https://enyugma.herokuapp.com";
 // var url = "http://localhost:2100";
 
+window.location.href = '../index.html'
+
 
 function logout() {
   localStorage.removeItem("userToken");
