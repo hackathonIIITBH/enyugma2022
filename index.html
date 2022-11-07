@@ -109,6 +109,22 @@
             </div>
           </a>
         </div>
+        <div class="">
+          <div class="sidecontainer" onclick="sbani(this); openNav();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+      </div>
+      <div id="mySidenav" class="myhidesidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="linkers">
+        <a href="./Event/technical.html">Technical</a>
+        <a href="./Event/cultural.html">Cultural</a>
+        <a href="./Event/workshop.html">Workshops</a>
+        <a href="./auth/login.html">Profile</a>
+      </div>
       </div>
     </div>
 
@@ -221,22 +237,24 @@
 
     <!-- <div class="lowerpart" data-3000="transform:translateY(450%);"></div>
       <div class="lowerpart2" data-3000="transform:translateY(450%);"></div> -->
-    
+
     <div class="sponser_section">
-        <div class="left_part">
-          <h1 class="heading">
-            Why Sponsor Us
-            <hr>
-          </h1>
-          <p class="details">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, cupiditate impedit magnam error incidunt a nobis illum ex quis nisi voluptas rerum corrupti repudiandae!</p>
-        </div>
-        <div class="right_part">
-          <h1 class="heading">
-            Want to become Campus Ambassador?
-            <hr>
-          </h1>
-          <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quae blanditiis expedita, autem a deleniti, magnam rem hic, voluptatem repudiandae animi minus vero dicta?</p>
-        </div>
+      <div class="left_part">
+        <h1 class="heading">
+          Why Sponsor Us
+          <hr>
+        </h1>
+        <p class="details">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, cupiditate impedit magnam
+          error incidunt a nobis illum ex quis nisi voluptas rerum corrupti repudiandae!</p>
+      </div>
+      <div class="right_part">
+        <h1 class="heading">
+          Want to become Campus Ambassador?
+          <hr>
+        </h1>
+        <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quae blanditiis expedita,
+          autem a deleniti, magnam rem hic, voluptatem repudiandae animi minus vero dicta?</p>
+      </div>
     </div>
 
     <!-- FOOTER -->
@@ -296,6 +314,7 @@
   <!-- gsap animation -->
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+  <script src="assets\js\sidebar.js"></script>
   <script>
     var tl = gsap.timeline({ defaults: { duartion: 1 } });
     // skrollr.init();
