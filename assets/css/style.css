@@ -272,7 +272,7 @@ body {
   text-align: center;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  transition: 800ms ease-in-out;
+  transition: 200ms ease-in-out;
   cursor: pointer;
   /* border: 1px solid rgba(255, 255, 255, 0.098); */
   /* border-radius: 20px; */

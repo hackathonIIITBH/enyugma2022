@@ -42,6 +42,7 @@ const getevent = () => {
         })
 }
 
+let redirectLink = `../register/eventregister.html?register=${eventname}`;
 
 function showevent() {
     desc.innerHTML = eventdata.desc
@@ -53,6 +54,10 @@ function showevent() {
     }else{
         fees = `Rs ${eventdata.fees}`
     }
+    if(eventdata.unstoplink){
+        redirectLink = eventdata.unstoplink;
+    }
+
     detail.innerHTML = `<p>Platform : ${eventdata.platform}</p>
                         <p>Date : ${eventdata.date}</p>
                         <p>Registration Fees : ${fees}</p>`
@@ -113,5 +118,5 @@ function display(e,id) {
 }
 
 function register(){
-    window.location.href = `../register/eventregister.html?register=${eventname}`
+    window.location.href = redirectLink
 }
