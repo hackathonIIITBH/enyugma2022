@@ -4,6 +4,8 @@ const email=document.getElementById('email');
 const password=document.getElementById('password');
 const confirmPassword=document.getElementById('confirm-password');
 // const url="https://enyugma.herokuapp.com";
+
+window.location.href = '../index.html'
 console.log('Running!!!!');
 
 function showError(input,message){      // a function that will be called whenever an error is to be printed 
