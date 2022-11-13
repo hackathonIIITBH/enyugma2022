@@ -996,7 +996,7 @@ body {
   display: grid;
   /* grid-template-columns: auto auto; */
   grid-template-columns: repeat(auto-fit, 40%);
-  gap: 10px;
+  gap: 5px;
   /* background-color: #2196F3; */
   padding: 35px;
   align-items: center;
@@ -1006,7 +1006,7 @@ body {
 }
 
 .sponser_section > div{
-  background-color: #b4b4b452;
+  background-color: #111921d3;
   text-align: center;
   display: grid;
   grid-template-rows: 150px 200px;
@@ -1014,7 +1014,9 @@ body {
   justify-content: space-around;
   /* align-items: center; */
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 20px whitesmoke;
+  transition: all 0.5s ease-in-out 0.25s;
 }
 
 .heading{
@@ -1027,8 +1029,8 @@ body {
 
 .sponser_section>div:hover{
   cursor: pointer;
-  background-color: #b4b4b46e;
-  transform: scale(1.1);
+  background-color:  #111921e4;
+  transform: scale(1.05);
   transition: all 0.5s;
 }
 
