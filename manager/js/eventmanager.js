@@ -120,17 +120,20 @@ function eventshow(event) {
   document.getElementById("date").value = event.date;
   document.getElementById("type").value = event.type;
   document.getElementById("fees").value = event.fees;
+  document.getElementById("link").value = event.unstoplink;
 
   document.getElementById("pplatform").innerHTML = event.platform;
   document.getElementById("pdate").innerHTML = event.date;
   document.getElementById("ptype").innerHTML = event.type;
   document.getElementById("pfees").innerHTML = event.fees;
+  document.getElementById("plink").innerHTML = event.unstoplink;
 
   document.getElementById("judgingTextarea").value = event.judging;
   document.getElementById("paragraphjudging").innerHTML = event.judging;
 
   document.getElementById("rulesTextarea").value = event.rule;
   document.getElementById("paragraphrules").innerHTML = event.rule;
+  
   // document.getElementById(
   //   "post-img"
   // ).src = `data:image/png;base64,${arrayBufferToBase64(
@@ -200,6 +203,9 @@ const editdetail = () => {
   document.getElementById("changefees").style.display = "block";
   document.getElementById("pfees").style.display = "none";
 
+  document.getElementById("changelink").style.display = "block";
+  document.getElementById("plink").style.display = "none";
+
   document.getElementById("detailpassword").style.display = "block";
 
   document.getElementById("editdetail").style.display = "none";
@@ -220,6 +226,9 @@ const canceldetail = () => {
   document.getElementById("changefees").style.display = "none";
   document.getElementById("pfees").style.display = "block";
 
+  document.getElementById("changelink").style.display = "none";
+  document.getElementById("plink").style.display = "block";
+
   document.getElementById("detailpassword").style.display = "none";
 
   document.getElementById("editdetail").style.display = "block";
@@ -233,15 +242,18 @@ const updateDetail = () => {
   let type = document.getElementById("type").value;
   let fees = document.getElementById("fees").value;
   let password = document.getElementById("detailpassword").value;
+  let link = document.getElementById("link").value;
+
   if (
     platform.length == 0 ||
     date.length == 0 ||
     type.length == 0 ||
-    fees.length == 0
-  ) {
-    return;
-  }
-
+    fees.length == 0 ||
+    link.length == 0
+    ) {
+      return;
+    }
+    
   var sendData = {
     eventname: data.eventname,
     platform: platform,
@@ -249,6 +261,7 @@ const updateDetail = () => {
     type: type,
     fees: fees,
     password: password,
+    unstoplink: link
   };
 
 
