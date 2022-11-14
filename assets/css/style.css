@@ -857,6 +857,8 @@ body {
   text-align: center;
   background-color: transparent;
   cursor: pointer;
+  max-width: 600px;
+  max-height: 400px;
 }
 
 .scrollView section .block {
