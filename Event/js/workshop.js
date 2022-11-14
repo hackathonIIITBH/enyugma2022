@@ -77,6 +77,11 @@ async function setevent(event) {
                   </a>`;
     }
     main.innerHTML = html;
+    main.innerHTML += `
+      <div style="margin: auto; width: 100%; height: fit-content; display:flex; justify-content:center;" id="loaderShow">
+        <div class="loader" style="--width: 20%"><span></span></div>
+      </div>
+      `
     // console.log("load");
   }
 
