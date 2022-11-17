@@ -45,6 +45,9 @@ const getevent = () => {
 let redirectLink = `../register/eventregister.html?register=${eventname}`;
 
 function showevent() {
+    if(eventname=="Delphi"){
+        document.getElementById('changeRegister').innerHTML='Register with Devfolio'
+    }
     desc.innerHTML = eventdata.desc
     judging.innerHTML = eventdata.judging
     rules.innerHTML = eventdata.rule
