@@ -1,161 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NWCV7E9ZQT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Expires" content="0" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Cache-Control" content="no-cache" />
+      gtag("config", "G-NWCV7E9ZQT");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
 
-  <title>Enyugma`22-Event-Register</title>
-  <link rel="icon" type="image/x-icon" href="../assets/images/logo_enyugma.png" />
-  <link rel="stylesheet" href="./css/eventregister.css" />
-  <link rel="stylesheet" href="../assets/css/loader/loader2.css" />
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-  <!-- jsquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
+    <title>Enyugma`22-Event-Register</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/logo_enyugma.png"
+    />
+    <link rel="stylesheet" href="./css/eventregister.css" />
+    <link rel="stylesheet" href="../assets/css/loader/loader2.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- jsquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
 
-<body>
-  <div class="navDesign">
-    <a href="../index.html">
-      <h1>Home</h1>
-    </a>
-    <a href="../Event/technical.html" class="alreadyPage">
-      <h1>Technical</h1>
-    </a>
-    <a href="../Event/cultural.html">
-      <h1>Cultural</h1>
-    </a>
-  </div>
-
-  <div class="registerdesign">
-    <h1 id="eventname"></h1>
-    <div style="margin: auto; width: fit-content; height: fit-content" id="loaderShow">
-      <div class="loader" style="--width: 20%"><span></span></div>
+  <body>
+    <div class="navDesign">
+      <a href="../index.html">
+        <h1>Home</h1>
+      </a>
+      <a href="../Event/technical.html" class="alreadyPage">
+        <h1>Technical</h1>
+      </a>
+      <a href="../Event/cultural.html">
+        <h1>Cultural</h1>
+      </a>
     </div>
-    <div id="message" style="text-align: center;">
-    </div>
-    <div class="userdate">
-      <p class="userdetail" id="appno"></p>
-      <p class="userdetail" id="name"></p>
-      <p class="userdetail" id="email"></p>
-      <p class="userdetail" id="college"></p>
-      <p class="userdetail" id="course"></p>
-      <p class="userdetail" id="graduating"></p>
-      <p class="userdetail" id="address"></p>
-      <p class="userdetail" id="state"></p>
-      <!-- <p><span class="fa-brands fa-instagram"></span> : harshrastogi15</p> -->
-      <!-- <p><span class="fa-brands fa-linkedin"></span> : harshrastogi15</p> -->
-    </div>
-    <form action="" method="post" id="fillform">
-      <div class="inputtag">
-        <label for="insta">Instagram:</label>
-        <input type="text" placeholder="Insta id" id="insta" />
-      </div>
-      <div class="inputtag">
-        <label for="linkedin">Linkedin:</label>
-        <input type="text" placeholder="Linkedin id" id="linkedin" />
-      </div>
-      <div class="inputtag">
-        <label for="contact">Contact:</label>
-        <input type="text" placeholder="Contact" id="contact" required />
-      </div>
-      <div class="inputtag">
-        <label for="Github">Github:</label>
-        <input type="text" placeholder="Github" id="Github" />
-      </div>
-      <div id="showornot">
-        <p class="userdetail" id="fees"></p>
-        <p>First Step : Payment Process</p>
-        <p>Payment Platform :
-        </p>
-        <p class="linksbi">https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=3661358</p>
-        <p><a href="https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=3661358" target="_blank"
-            class="buttonforpayment"> Click Here</a></p>
-        <div class="paymentformdetail">
-          <p>Fill these details</p>
-          <p>In the "Select category" option choose "MISC"</p>
-          <p>
-            Purpose * -------- Event Name
-          </p>
-          <p>
-            Name of the depositor * ------- Your Name
-          </p>
-          <p>
-            EMAIL ID * -------- Email id to be used for login
-          </p>
-          <p>
-            Contact No. * --------Personal Contact No.
-          </p>
-          <p>
-            Application No.* ------- Application Number provided above
-          </p>
-          <p>
-            Amount * -------- Registeration Fees Value as menthioned above
-          <p>
-            Remarks----------keep blank
-          </p>
-        </div>
-        <p>Second Step : Fill Form</p>
-        <p> <a href="#" class="buttonforpayment">Click Here</a></p>
-        <div>
 
-          <label for="allvalue"> Have you completed all the step ?</label>
-          <select name="" id="allvalue" onclick="ableordiable(this.value)">
-            <option value="select">Select</option>
-            <option value="yes">YES</option>
-            <option value="no">NO</option>
-          </select>
+    <div class="registerdesign">
+      <h1 id="eventname"></h1>
+      <div
+        style="margin: auto; width: fit-content; height: fit-content"
+        id="loaderShow"
+      >
+        <div class="loader" style="--width: 20%"><span></span></div>
+      </div>
+      <div id="message" style="text-align: center"></div>
+      <div class="userdate">
+        <p class="userdetail" id="appno"></p>
+        <p class="userdetail" id="name"></p>
+        <p class="userdetail" id="email"></p>
+        <p class="userdetail" id="college"></p>
+        <p class="userdetail" id="course"></p>
+        <p class="userdetail" id="graduating"></p>
+        <p class="userdetail" id="address"></p>
+        <p class="userdetail" id="state"></p>
+        <!-- <p><span class="fa-brands fa-instagram"></span> : harshrastogi15</p> -->
+        <!-- <p><span class="fa-brands fa-linkedin"></span> : harshrastogi15</p> -->
+      </div>
+      <form action="" method="post" id="fillform">
+        <div class="inputtag">
+          <label for="insta">Instagram:</label>
+          <input type="text" placeholder="Insta id" id="insta" />
         </div>
         <div class="inputtag">
-          <label for="txnno"> Txn:</label>
-          <input type="text" id="txnno" placeholder="Enter Txn number" required>
+          <label for="linkedin">Linkedin:</label>
+          <input type="text" placeholder="Linkedin id" id="linkedin" />
+        </div>
+        <div class="inputtag">
+          <label for="contact">Contact:</label>
+          <input type="text" placeholder="Contact" id="contact" required />
+        </div>
+        <div class="inputtag">
+          <label for="Github">Github:</label>
+          <input type="text" placeholder="Github" id="Github" />
+        </div>
+        <div id="showornot">
+          <p class="userdetail" id="fees"></p>
+          <p>First Step : Payment Process</p>
+          <p>Payment Platform :</p>
+          <p class="linksbi">
+            https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=3661358
+          </p>
+          <p>
+            <a
+              href="https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=3661358"
+              target="_blank"
+              class="buttonforpayment"
+            >
+              Click Here</a
+            >
+          </p>
+          <div class="paymentformdetail">
+            <p>Fill these details</p>
+            <p>In the "Select category" option choose "MISC"</p>
+            <p>Purpose * -------- Event Name</p>
+            <p>Name of the depositor * ------- Your Name</p>
+            <p>EMAIL ID * -------- Email id to be used for login</p>
+            <p>Contact No. * --------Personal Contact No.</p>
+            <p>Application No.* ------- Application Number provided above</p>
+            <p>
+              Amount * -------- Registeration Fees Value as menthioned above
+            </p>
+
+            <p>Remarks----------keep blank</p>
+          </div>
+          <p>Second Step : Fill Form</p>
+          <p><a href="#" class="buttonforpayment">Click Here</a></p>
+          <div>
+            <label for="allvalue"> Have you completed all the step ?</label>
+            <select name="" id="allvalue" onclick="ableordiable(this.value)">
+              <option value="select">Select</option>
+              <option value="yes">YES</option>
+              <option value="no">NO</option>
+            </select>
+          </div>
+          <div class="inputtag">
+            <label for="txnno"> Txn:</label>
+            <input
+              type="text"
+              id="txnno"
+              placeholder="Enter Txn number"
+              required
+            />
+          </div>
+        </div>
+        <div class="inputtag">
+          <input
+            type="submit"
+            id="submitbutton"
+            value="Register"
+            style="display: none; cursor: not-allowed"
+            disabled
+          />
+        </div>
+      </form>
+    </div>
+    <footer>
+      <div></div>
+      <div class="sectionB_footer">
+        <div class="contact">
+          <a href="../contact/contact.html">Our Team</a>
+        </div>
+        <div class="social">
+          <a
+            href="https://www.linkedin.com/company/enyugma-iiitbh/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="https://instagram.com/enyugma_iiitbh?igshid=YmMyMTA2M2Y="
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://twitter.com/Enyugma_iiitbh?t=rsewQT6uohFzibkSGoBkyQ&s=08"
+            target="_blank"
+            target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="https://discord.gg/qqFJdJf6wb" target="_blank"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UCa2xaEV66eEOnoVE9MLYOxg"
+            target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+        <div class="copyright">
+          <p>For any technical query, you may contact to</p>
+          <p>
+            <a href="mailto:support.enyugma@iiitbh.ac.in">
+              support.enyugma@iiitbh.ac.in
+            </a>
+          </p>
+          <p>Enyugma <i class="fa-regular fa-copyright"></i> reserved</p>
         </div>
       </div>
-      <div class="inputtag">
-        <input type="submit" id="submitbutton" value="Register" style="display: none; cursor:not-allowed;" disabled />
-      </div>
-    </form>
-  </div>
-  <footer>
-    <div></div>
-    <div class="sectionB_footer">
-      <div class="contact">
-        <a href="../contact/contact.html">Our Team</a>
-      </div>
-      <div class="social">
-        <a href="https://www.linkedin.com/company/enyugma-iiitbh/" target="_blank"><i
-            class="fa-brands fa-linkedin"></i></a>
-        <a href="https://instagram.com/enyugma_iiitbh?igshid=YmMyMTA2M2Y=" target="_blank"><i
-            class="fa-brands fa-instagram"></i></a>
-        <a href="https://twitter.com/Enyugma_iiitbh?t=rsewQT6uohFzibkSGoBkyQ&s=08" target="_blank" target="_blank"><i
-            class="fa-brands fa-twitter"></i></a>
-        <a href="https://discord.gg/qqFJdJf6wb" target="_blank"><i class="fa-brands fa-discord"></i></a>
-        <a href="https://www.youtube.com/channel/UCa2xaEV66eEOnoVE9MLYOxg" target="_blank"><i
-            class="fa-brands fa-youtube"></i></a>
-      </div>
-      <div class="copyright">
+      <div class="sectionC_footer">
         <p>
-          For any technical query, you may contact to
+          Designed By
+          <a
+            href="https://gymkhanaiiitbh.github.io/Tech-Frontend/webverse/web.html"
+            >Webverse, Technical Board IIIT Bhagalpur</a
+          >
         </p>
-        <p>
-          <a href="mailto:support.enyugma@iiitbh.ac.in">
-            support.enyugma@iiitbh.ac.in
-          </a>
-        </p>
-        <p>Enyugma <i class="fa-regular fa-copyright"></i> reserved</p>
       </div>
-    </div>
-    <div class="sectionC_footer">
-      <p>Designed By <a href="https://gymkhanaiiitbh.github.io/Tech-Frontend/webverse/web.html">Webverse, Technical
-          Board IIIT Bhagalpur</a></p>
-    </div>
-  </footer>
-  <script src="./js/eventregister.js"></script>
-</body>
-
+    </footer>
+    <script src="./js/eventregister.js"></script>
+  </body>
 </html>

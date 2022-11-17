@@ -1,230 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NWCV7E9ZQT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Expires" content="0" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Cache-Control" content="no-cache" />
+      gtag("config", "G-NWCV7E9ZQT");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
 
-  <title>Enyugma`22-manager-portal</title>
-  <link rel="icon" type="image/x-icon" href="../assets/images/logo_enyugma.png" />
-  <link rel="stylesheet" href="./css/eventmanager.css" />
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-  <!-- jsquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
+    <title>Enyugma`22-manager-portal</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/logo_enyugma.png"
+    />
+    <link rel="stylesheet" href="./css/eventmanager.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- jsquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
 
-<body>
-  <div class="navdesign">
-    <div class="logo_fest">
-      <img src="../assets/images/logo_enyugma.png" alt="Server Error" srcset="" width="100%" height="100%" />
+  <body>
+    <div class="navdesign">
+      <div class="logo_fest">
+        <img
+          src="../assets/images/logo_enyugma.png"
+          alt="Server Error"
+          srcset=""
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <a href="#" id="eventname">
+        <!-- <h1>Event Name</h1> -->
+      </a>
     </div>
-    <a href="#" id="eventname">
-      <!-- <h1>Event Name</h1> -->
-    </a>
-  </div>
-  <div class="secondNavdesign">
-    <div class="EventheadName" id="headname">
-      <!-- <h1>Event head name</h1>
+    <div class="secondNavdesign">
+      <div class="EventheadName" id="headname">
+        <!-- <h1>Event head name</h1>
             <button onclick='logout()'> Logout</button> -->
-    </div>
-    <div class="contactInfo" id="contact">
-      <!-- <h2>harsh.cse.20023@iiitbh.ac.in</h2>
+      </div>
+      <div class="contactInfo" id="contact">
+        <!-- <h2>harsh.cse.20023@iiitbh.ac.in</h2>
             <h2>7455878221</h2> -->
-    </div>
-  </div>
-  <div>
-    <div class="container heroSection">
-      <div class="eventbanner">
-        <div class="event-post">
-          <form id="event-img" enctype="multipart/form-data">
-            <input type="file" name="banner" required />
-            <button class="submit" type="submit">Update</button>
-          </form>
-        </div>
-        <img src="../assets/images/Indian_Institute_of_Information_Technology,_Bhagalpur_logo.png" alt="" width="100%"
-          height="100%" id="post-img" />
       </div>
-      <div class="eventDesc">
-        <h1>Description</h1>
-        <p id="paragraphDesc"></p>
-        <div id="formDesc">
-          <form id="updateDescriptionForm">
-            <textarea name="desc" id="descTextarea" required> </textarea>
+    </div>
+    <div>
+      <div class="container heroSection">
+        <div class="eventbanner">
+          <div class="event-post">
+            <form id="event-img" enctype="multipart/form-data">
+              <input type="file" name="banner" required />
+              <button class="submit" type="submit">Update</button>
+            </form>
+          </div>
+          <img
+            src="../assets/images/Indian_Institute_of_Information_Technology,_Bhagalpur_logo.png"
+            alt=""
+            width="100%"
+            height="100%"
+            id="post-img"
+          />
+        </div>
+        <div class="eventDesc">
+          <h1>Description</h1>
+          <p id="paragraphDesc"></p>
+          <div id="formDesc">
+            <form id="updateDescriptionForm">
+              <textarea name="desc" id="descTextarea" required> </textarea>
 
-            <input class="passwordinput" type="password" name="password" id="DescPasswrod" placeholder="password"
-              required />
-            <input type="submit" value="Add" />
-          </form>
+              <input
+                class="passwordinput"
+                type="password"
+                name="password"
+                id="DescPasswrod"
+                placeholder="password"
+                required
+              />
+              <input type="submit" value="Add" />
+            </form>
+          </div>
+          <button id="editDesc" onclick="changeDesctoEdit()">Edit</button>
+          <button id="cancelDesc" onclick="changeDesctoNormal()">Cancel</button>
         </div>
-        <button id="editDesc" onclick="changeDesctoEdit()">Edit</button>
-        <button id="cancelDesc" onclick="changeDesctoNormal()">Cancel</button>
       </div>
-    </div>
-    <div class="container rules">
-      <h1>Rules</h1>
-      <div>
-        <ul id="paragraphrules">
-          <!-- <li>The ideastrom has been spearheading this drive of the E-club,</li>
+      <div class="container rules">
+        <h1>Rules</h1>
+        <div>
+          <ul id="paragraphrules">
+            <!-- <li>The ideastrom has been spearheading this drive of the E-club,</li>
                 <li> providing a platform for the students to get excellent professional </li>
                 <li> from our experienced and distinguished startup mentors. Te student then </li>
                 <li> get the chance to present their business plan in front of angel investors and industry leaders</li> -->
-        </ul>
-      </div>
+          </ul>
+        </div>
 
-      <div id="formrules">
-        <form id="updaterulesForm">
-          <textarea name="rule" id="rulesTextarea" required> </textarea>
+        <div id="formrules">
+          <form id="updaterulesForm">
+            <textarea name="rule" id="rulesTextarea" required> </textarea>
 
-          <input class="passwordinput" type="password" name="password" id="rulesPasswrod" placeholder="password"
-            required />
-          <input type="submit" value="Add" />
-        </form>
+            <input
+              class="passwordinput"
+              type="password"
+              name="password"
+              id="rulesPasswrod"
+              placeholder="password"
+              required
+            />
+            <input type="submit" value="Add" />
+          </form>
+        </div>
+        <div class="buttondesign">
+          <button id="editrule" onclick="changeruletoEdit()">Edit</button>
+          <button id="cancelrule" onclick="changeruletoNormal()">Cancel</button>
+        </div>
       </div>
-      <div class="buttondesign">
-        <button id="editrule" onclick="changeruletoEdit()">Edit</button>
-        <button id="cancelrule" onclick="changeruletoNormal()">Cancel</button>
+      <div class="container prizepool">
+        <h1>Prize Pool</h1>
+        <div>
+          <table>
+            <tr>
+              <td>1st</td>
+              <td id="pprize1"></td>
+              <td id="changeprize1" style="display: none">
+                <input id="prize1" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <td>2nd</td>
+              <td id="pprize2"></td>
+              <td id="changeprize2" style="display: none">
+                <input id="prize2" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <td>3rd</td>
+              <td id="pprize3"></td>
+              <td id="changeprize3" style="display: none">
+                <input id="prize3" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <td>4th</td>
+              <td id="pprize4"></td>
+              <td id="changeprize4" style="display: none">
+                <input id="prize4" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <td>5th</td>
+              <td id="pprize5"></td>
+              <td id="changeprize5" style="display: none">
+                <input id="prize5" type="text" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <input
+            type="password"
+            id="prizepassword"
+            style="display: none"
+            placeholder="Password"
+          />
+        </div>
+        <div class="buttondesign">
+          <button
+            id="updateprize"
+            style="display: none"
+            onclick="updateprize()"
+          >
+            Update
+          </button>
+          <button id="editprize" onclick="editprize()">Edit</button>
+          <button
+            id="cancelprize"
+            style="display: none"
+            onclick="cancelprize()"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+      <div class="container eventdetail">
+        <h1>Event Detail</h1>
+        <div style="overflow-x: auto">
+          <table>
+            <tr>
+              <td>Platform</td>
+              <td id="pplatform"></td>
+              <td id="changeplatform" style="display: none">
+                <input id="platform" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td id="pdate"></td>
+              <td id="changedate" style="display: none">
+                <input id="date" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <td>Type</td>
+              <td id="ptype"></td>
+              <td id="changetype" style="display: none">
+                <input id="type" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <td>Registration Fees</td>
+              <td id="pfees"></td>
+              <td id="changefees" style="display: none">
+                <input id="fees" type="number" />
+              </td>
+            </tr>
+            <tr>
+              <td>Unstop Link</td>
+              <td id="plink"></td>
+              <td id="changelink" style="display: none">
+                <input id="link" type="text" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <input
+            type="password"
+            id="detailpassword"
+            style="display: none"
+            placeholder="Password"
+          />
+        </div>
+        <div class="buttondesign">
+          <button
+            id="updatedetail"
+            style="display: none"
+            onclick="updateDetail()"
+          >
+            Update
+          </button>
+          <button id="editdetail" onclick="editdetail()">Edit</button>
+          <button
+            id="canceldetail"
+            style="display: none"
+            onclick="canceldetail()"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+      <div class="container judging">
+        <h1>Judging Criterea</h1>
+        <!-- <p> -->
+        <!-- </p> -->
+        <p id="paragraphjudging"></p>
+        <div id="formjudging">
+          <form id="updatejudgingform">
+            <textarea name="desc" id="judgingTextarea" required></textarea>
+            <input
+              class="passwordinput"
+              type="password"
+              name="password"
+              id="judgingPasswrod"
+              placeholder="password"
+              required
+            />
+            <input type="submit" value="Add" />
+          </form>
+        </div>
+        <div class="buttondesign">
+          <button id="editjudging" onclick="changejudgingtoEdit()">Edit</button>
+          <button id="canceljudging" onclick="changejudgingtoNormal()">
+            Cancel
+          </button>
+          <!-- <button> Update </button> -->
+        </div>
       </div>
     </div>
-    <div class="container prizepool">
-      <h1>Prize Pool</h1>
-      <div>
-        <table>
-          <tr>
-            <td>1st</td>
-            <td id="pprize1"></td>
-            <td id="changeprize1" style="display: none">
-              <input id="prize1" type="text" />
-            </td>
-          </tr>
-          <tr>
-            <td>2nd</td>
-            <td id="pprize2"></td>
-            <td id="changeprize2" style="display: none">
-              <input id="prize2" type="text" />
-            </td>
-          </tr>
-          <tr>
-            <td>3rd</td>
-            <td id="pprize3"></td>
-            <td id="changeprize3" style="display: none">
-              <input id="prize3" type="text" />
-            </td>
-          </tr>
-          <tr>
-            <td>4th</td>
-            <td id="pprize4"></td>
-            <td id="changeprize4" style="display: none">
-              <input id="prize4" type="text" />
-            </td>
-          </tr>
-          <tr>
-            <td>5th</td>
-            <td id="pprize5"></td>
-            <td id="changeprize5" style="display: none">
-              <input id="prize5" type="text" />
-            </td>
-          </tr>
-        </table>
+    <div class="registration">
+      <div id="noofregistration" style="text-align: center">
+        Total Registration : 0
       </div>
-      <div>
-        <input type="password" id="prizepassword" style="display: none" placeholder="Password" />
-      </div>
-      <div class="buttondesign">
-        <button id="updateprize" style="display: none" onclick="updateprize()">
-          Update
-        </button>
-        <button id="editprize" onclick="editprize()">Edit</button>
-        <button id="cancelprize" style="display: none" onclick="cancelprize()">
-          Cancel
-        </button>
-      </div>
-    </div>
-    <div class="container eventdetail">
-      <h1>Event Detail</h1>
-      <div style="overflow-x: auto;">
-        <table>
-          <tr>
-            <td>Platform</td>
-            <td id="pplatform"></td>
-            <td id="changeplatform" style="display: none">
-              <input id="platform" type="text" />
-            </td>
-          </tr>
-          <tr>
-            <td>Date</td>
-            <td id="pdate"></td>
-            <td id="changedate" style="display: none">
-              <input id="date" type="text" />
-            </td>
-          </tr>
-          <tr>
-            <td>Type</td>
-            <td id="ptype"></td>
-            <td id="changetype" style="display: none">
-              <input id="type" type="text" />
-            </td>
-          </tr>
-          <tr>
-            <td>Registration Fees</td>
-            <td id="pfees"></td>
-            <td id="changefees" style="display: none">
-              <input id="fees" type="number" />
-            </td>
-          </tr>
-          <tr>
-            <td>Unstop Link</td>
-            <td id="plink"></td>
-            <td id="changelink" style="display: none">
-              <input id="link" type="text" />
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div>
-        <input type="password" id="detailpassword" style="display: none" placeholder="Password" />
-      </div>
-      <div class="buttondesign">
-        <button id="updatedetail" style="display: none" onclick="updateDetail()">
-          Update
-        </button>
-        <button id="editdetail" onclick="editdetail()">Edit</button>
-        <button id="canceldetail" style="display: none" onclick="canceldetail()">
-          Cancel
-        </button>
-      </div>
-    </div>
-    <div class="container judging">
-      <h1>Judging Criterea</h1>
-      <!-- <p> -->
-      <!-- </p> -->
-      <p id="paragraphjudging"></p>
-      <div id="formjudging">
-        <form id="updatejudgingform">
-          <textarea name="desc" id="judgingTextarea" required></textarea>
-          <input class="passwordinput" type="password" name="password" id="judgingPasswrod" placeholder="password"
-            required />
-          <input type="submit" value="Add" />
-        </form>
-      </div>
-      <div class="buttondesign">
-        <button id="editjudging" onclick="changejudgingtoEdit()">Edit</button>
-        <button id="canceljudging" onclick="changejudgingtoNormal()">
-          Cancel
-        </button>
-        <!-- <button> Update </button> -->
-      </div>
-    </div>
-  </div>
-  <div class="registration">
-    <div id="noofregistration" style="text-align: center;">Total Registration : 0</div>
-    <div class="tableforregistration" style="margin-bottom: 40px;">
-      <table id="registershow">
-        <!-- <tr>
+      <div class="tableforregistration" style="margin-bottom: 40px">
+        <table id="registershow">
+          <!-- <tr>
           <th>Name</th>
           <th>Email</th>
           <th>Study</th>
@@ -240,15 +317,14 @@
           <td>social</td>
           <td>Address</td>
         </tr> -->
-      </table>
+        </table>
+      </div>
     </div>
-  </div>
-  <script src="./js/eventmanager.js"></script>
-  <script>
-    if (!localStorage.getItem("managertoken")) {
-      window.location.href = "./mlogin.html";
-    }
-  </script>
-</body>
-
+    <script src="./js/eventmanager.js"></script>
+    <script>
+      if (!localStorage.getItem("managertoken")) {
+        window.location.href = "./mlogin.html";
+      }
+    </script>
+  </body>
 </html>
