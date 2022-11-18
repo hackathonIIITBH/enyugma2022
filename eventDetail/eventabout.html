@@ -1,188 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-NWCV7E9ZQT"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-NWCV7E9ZQT");
-    </script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Expires" content="0" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
-    <title>Enyugma`22-Event</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="../assets/images/logo_enyugma.png"
-    />
-    <link href="./css/eventabout.css" rel="stylesheet" type="text/css" />
-    <link
-      href="../assets/css/loader/loader2.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- <title>Event About Portal</title> -->
-    <!-- fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <!-- jsquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  </head>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NWCV7E9ZQT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  <body>
-    <div class="navDesign">
-      <a href="../index.html">
-        <h1>Home</h1>
-      </a>
-      <a href="../Event/technical.html" class="alreadyPage">
-        <h1>Technical</h1>
-      </a>
-      <a href="../Event/cultural.html">
-        <h1>Cultural</h1>
-      </a>
+    gtag("config", "G-NWCV7E9ZQT");
+  </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <title>Enyugma`22-Event</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo_enyugma.png" />
+  <link href="./css/eventabout.css" rel="stylesheet" type="text/css" />
+  <link href="../assets/css/loader/loader2.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- <title>Event About Portal</title> -->
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <!-- jsquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+</head>
+
+<body>
+  <div class="navDesign">
+    <a href="../index.html">
+      <h1>Home</h1>
+    </a>
+    <a href="../Event/technical.html" class="alreadyPage">
+      <h1>Technical</h1>
+    </a>
+    <a href="../Event/cultural.html">
+      <h1>Cultural</h1>
+    </a>
+  </div>
+  <div class="eventnameshow" id="eventNameshow"></div>
+  <section class="main_content">
+    <div class="event_about_container">
+      <div class="left_event_about">
+        <img src="../assets/images/logo_enyugma.png" alt="image" class="robot_event_img" />
+      </div>
+      <div class="right_event_about">
+        <div class="title_nav" id="title_nav">
+          <li class="text_settle hereitis" onclick="display('description',1)">
+            Description
+          </li>
+          <li class="text_settle" onclick="display('detail',2)">Detail</li>
+          <li class="text_settle" onclick="display('prize',3)">Prize</li>
+          <li class="text_settle" onclick="display('rules',4)">Rules</li>
+          <li class="text_settle" onclick="display('judging',5)">Judging</li>
+        </div>
+        <div class="about_area" id="about_area">
+          <div id="description">
+            <div style="margin: auto; width: fit-content; height: fit-content" id="loaderShow">
+              <div class="loader" style="--width: 20%"><span></span></div>
+            </div>
+          </div>
+          <div id="detail" style="display: none">
+            <div style="margin: auto; width: fit-content; height: fit-content" id="loaderShow">
+              <div class="loader" style="--width: 20%"><span></span></div>
+            </div>
+          </div>
+          <div id="prize" style="display: none">
+            <div style="margin: auto; width: fit-content; height: fit-content" id="loaderShow">
+              <div class="loader" style="--width: 20%"><span></span></div>
+            </div>
+          </div>
+          <div id="rules" style="display: none">
+            <div style="margin: auto; width: fit-content; height: fit-content" id="loaderShow">
+              <div class="loader" style="--width: 20%"><span></span></div>
+            </div>
+          </div>
+          <div id="judging" style="display: none">
+            <div style="margin: auto; width: fit-content; height: fit-content" id="loaderShow">
+              <div class="loader" style="--width: 20%"><span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="register_event" id="changeRegister" onclick="register()">REGISTER</button>
+        <div id="registerDelphi">
+          <div class="apply-button" data-hackathon-slug="" data-button-theme="dark"
+            style="height: 44px; width: 300px; margin: auto;"></div>
+        </div>
+
+      </div>
     </div>
-    <div class="eventnameshow" id="eventNameshow"></div>
-    <section class="main_content">
-      <div class="event_about_container">
-        <div class="left_event_about">
-          <img
-            src="../assets/images/logo_enyugma.png"
-            alt="image"
-            class="robot_event_img"
-          />
-        </div>
-        <div class="right_event_about">
-          <div class="title_nav" id="title_nav">
-            <li class="text_settle hereitis" onclick="display('description',1)">
-              Description
-            </li>
-            <li class="text_settle" onclick="display('detail',2)">Detail</li>
-            <li class="text_settle" onclick="display('prize',3)">Prize</li>
-            <li class="text_settle" onclick="display('rules',4)">Rules</li>
-            <li class="text_settle" onclick="display('judging',5)">Judging</li>
-          </div>
-          <div class="about_area" id="about_area">
-            <div id="description">
-              <div
-                style="margin: auto; width: fit-content; height: fit-content"
-                id="loaderShow"
-              >
-                <div class="loader" style="--width: 20%"><span></span></div>
-              </div>
-            </div>
-            <div id="detail" style="display: none">
-              <div
-                style="margin: auto; width: fit-content; height: fit-content"
-                id="loaderShow"
-              >
-                <div class="loader" style="--width: 20%"><span></span></div>
-              </div>
-            </div>
-            <div id="prize" style="display: none">
-              <div
-                style="margin: auto; width: fit-content; height: fit-content"
-                id="loaderShow"
-              >
-                <div class="loader" style="--width: 20%"><span></span></div>
-              </div>
-            </div>
-            <div id="rules" style="display: none">
-              <div
-                style="margin: auto; width: fit-content; height: fit-content"
-                id="loaderShow"
-              >
-                <div class="loader" style="--width: 20%"><span></span></div>
-              </div>
-            </div>
-            <div id="judging" style="display: none">
-              <div
-                style="margin: auto; width: fit-content; height: fit-content"
-                id="loaderShow"
-              >
-                <div class="loader" style="--width: 20%"><span></span></div>
-              </div>
-            </div>
-          </div>
+  </section>
 
-          <button class="register_event" id="changeRegister" onclick="register()">REGISTER</button>
-        </div>
-      </div>
-    </section>
+  <section id="sponshorshipDelhi" style="color: white; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; display: none;">
+    <h1 style="width: 90%; text-align: center;">GOLD SPONSORS</h1>
+    <img style="width: 60%; min-width: 250px;" src="../assets/images/Delphi/Devfolio_Logo-White@2x.png" alt="Server Error" srcset="">
+    <h1 style="width: 90%; text-align: center;">SILVER SPONSORS</h1>
+    <img style="width: 60%; min-width: 250px; margin-top: 10px;" src="../assets/images/Delphi/Polygon_Logo-White@2x.png" alt="Server Error" srcset="">
+    <img style="width: 60%; min-width: 250px; margin-top: 10px;" src="../assets/images/Delphi/Solana Dark.png" alt="Server Error" srcset="">
+    <img style="width: 60%; min-width: 250px; margin-top: 10px;" src="../assets/images/Delphi/Filecoin White.png" alt="Server Error" srcset="">
+    <img style="width: 60%; min-width: 250px; margin-top: 10px;" src="../assets/images/Delphi/Replit-Dark-Background.png" alt="Server Error" srcset="">
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <div></div>
-      <div class="sectionB_footer">
-        <div class="contact">
-          <a href="../contact/contact.html">Our Team</a>
-        </div>
-        <div class="social">
-          <a
-            href="https://www.linkedin.com/company/enyugma-iiitbh/"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a
-            href="https://instagram.com/enyugma_iiitbh?igshid=YmMyMTA2M2Y="
-            target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            href="https://twitter.com/Enyugma_iiitbh?t=rsewQT6uohFzibkSGoBkyQ&s=08"
-            target="_blank"
-            target="_blank"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-          <a href="https://discord.gg/qqFJdJf6wb" target="_blank"
-            ><i class="fa-brands fa-discord"></i
-          ></a>
-          <a
-            href="https://www.youtube.com/channel/UCa2xaEV66eEOnoVE9MLYOxg"
-            target="_blank"
-            ><i class="fa-brands fa-youtube"></i
-          ></a>
-        </div>
-        <div class="copyright">
-          <p>For any technical query, you may contact to</p>
-          <p>
-            <a href="mailto:support.enyugma@iiitbh.ac.in">
-              support.enyugma@iiitbh.ac.in
-            </a>
-          </p>
-          <p>Enyugma <i class="fa-regular fa-copyright"></i> reserved</p>
-        </div>
+  <!-- FOOTER -->
+  <footer>
+    <div></div>
+    <div class="sectionB_footer">
+      <div class="contact">
+        <a href="../contact/contact.html">Our Team</a>
       </div>
-      <div class="sectionC_footer">
+      <div class="social">
+        <a href="https://www.linkedin.com/company/enyugma-iiitbh/" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a>
+        <a href="https://instagram.com/enyugma_iiitbh?igshid=YmMyMTA2M2Y=" target="_blank"><i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/Enyugma_iiitbh?t=rsewQT6uohFzibkSGoBkyQ&s=08" target="_blank" target="_blank"><i
+            class="fa-brands fa-twitter"></i></a>
+        <a href="https://discord.gg/qqFJdJf6wb" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://www.youtube.com/channel/UCa2xaEV66eEOnoVE9MLYOxg" target="_blank"><i
+            class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="copyright">
+        <p>For any technical query, you may contact to</p>
         <p>
-          Designed By
-          <a
-            href="https://gymkhanaiiitbh.github.io/Tech-Frontend/webverse/web.html"
-            >Webverse, Technical Board IIIT Bhagalpur</a
-          >
+          <a href="mailto:support.enyugma@iiitbh.ac.in">
+            support.enyugma@iiitbh.ac.in
+          </a>
         </p>
+        <p>Enyugma <i class="fa-regular fa-copyright"></i> reserved</p>
       </div>
-    </footer>
-    <script src="./js/eventabout.js"></script>
-  </body>
+    </div>
+    <div class="sectionC_footer">
+      <p>
+        Designed By
+        <a href="https://gymkhanaiiitbh.github.io/Tech-Frontend/webverse/web.html">Webverse, Technical Board IIIT
+          Bhagalpur</a>
+      </p>
+    </div>
+  </footer>
+  <script src="./js/eventabout.js"></script>
+</body>
+
 </html>
