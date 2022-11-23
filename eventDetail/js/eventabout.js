@@ -13,6 +13,7 @@ const urlParams = new URLSearchParams(queryString);
 // console.log(urlParams.get('search'))
 
 let eventname = urlParams.get('search');
+document.getElementById('registerDelphi').style.display = 'none'
 
 // /console.log(eventname);
 
