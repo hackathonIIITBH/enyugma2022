@@ -26,7 +26,7 @@ function scrollsideRight() {
 }
 
 function scrollsidedown() {
-  const element = document.getElementById("scrollbehavior");
+  const element = document.getElementById("starNight");
   element.scrollIntoView();
 };
 

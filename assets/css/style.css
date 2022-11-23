@@ -37,6 +37,7 @@ body {
   background-size: cover;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-family: Verdana;
 }
 
 .toup{
@@ -1048,6 +1049,103 @@ body {
   color: white;
 }
 
+
+/* Star night */
+.starnight{
+  color: white;
+  width: 95%;
+  margin: 80px auto;
+
+}
+
+.starnight h1{
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  margin-top: 50px;
+}
+
+.starnight h3{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+.starnight .stardiv{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.starnight .starshow{
+  width: 240px;
+  height: 280px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.801);
+}
+
+.starnight .starshow h2{
+  margin: 5px;
+  font-size: 24px;
+}
+.starnight .starshow h3{
+  margin: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.starnight .starshow a{
+  color: white;
+}
+
+.starnight .starshow::before{
+  content: "";
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.starnight .epr::before{
+  background-image: url('../images/person/epr.jpg');
+}
+
+.starnight .sneh::before{
+  background-image: url('../images/person/sneh_upadhya.JPG');
+}
+
+.starnight .indrani::before{
+  background-image: url('../images/person/Indrani.jpg');
+}
+
+.starnight .shloka::before{
+  background-image: url('../images/person/shloka.JPG');
+}
+
+.starnight .starshow:hover::before{
+  opacity: .4;
+  z-index: -1;
+  /* background-color: rgba(0, 0, 0, 0.708); */
+}
+
+.starnight .starshow:hover{
+  color: white;
+  opacity: 1;
+  /* background-color: rgba(0, 0, 0, 0.382); */
+}
 
 /* footer */
 footer {
