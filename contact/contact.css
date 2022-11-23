@@ -118,6 +118,14 @@ img.logo {
     margin-right:5px;
 }
 
+.contactPerson .email a,.contactPerson .phone a{
+    /* font-size: 16px;    */
+    /* margin-right:5px; */
+    color: white;
+    text-decoration: none;
+
+}
+
 
 /* footer */
 footer {
