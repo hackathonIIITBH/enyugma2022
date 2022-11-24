@@ -1133,7 +1133,7 @@ body {
 }
 
 .starnight .shloka::before{
-  background-image: url('../images/person/shloka.JPG');
+  background-image: url('../images/person/shloka.png');
 }
 
 .starnight .starshow:hover::before{
