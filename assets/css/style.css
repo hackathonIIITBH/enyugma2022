@@ -1161,8 +1161,8 @@ body {
   background-image: url('../images/person/Indrani.jpg');
 }
 
-.starnight .shloka::before {
-  background-image: url('../images/person/shloka.JPG');
+.starnight .shloka::before{
+  background-image: url('../images/person/shloka.png');
 }
 
 .starnight .starshow:hover::before {
