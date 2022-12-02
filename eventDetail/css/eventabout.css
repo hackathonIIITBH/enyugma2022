@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
-
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -32,7 +31,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
   background-size: cover;
   overflow-x: hidden;
   font-family: Verdana;
@@ -47,9 +46,9 @@ body {
   background-color: #fff;
 }
 
-
 .navDesign {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   top: 0;
   left: 0;
@@ -102,7 +101,7 @@ img.logo {
   padding-right: 70px;
 }
 
-.eventnameshow{
+.eventnameshow {
   color: white;
   font-size: 35px;
   text-align: center;
@@ -111,7 +110,7 @@ img.logo {
   font-weight: 900;
 }
 
-.main_content{
+.main_content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,7 +159,7 @@ img.logo {
   height: 5vh;
   padding: 5px;
   font-size: 16px;
-  font-family: 'Alkalami', serif;
+  font-family: "Alkalami", serif;
   left: 20%;
 }
 
@@ -168,10 +167,10 @@ img.logo {
   background-color: black;
   background: transparent;
   backdrop-filter: blur(2px);
-  
+
   min-width: 300px;
   /* width: 50vw; */
-  width: calc( 100% - 300px );
+  width: calc(100% - 300px);
   display: flex;
   flex-direction: column;
 }
@@ -190,12 +189,11 @@ img.logo {
   /* overflow: hidden; */
 }
 
-.title_nav li{
-  padding: 3px 5px;  
+.title_nav li {
+  padding: 3px 5px;
 }
 
-
-.title_nav li:hover{
+.title_nav li:hover {
   /* padding: 3px 5px;   */
   background-color: white;
   color: black;
@@ -209,11 +207,10 @@ img.logo {
   cursor: pointer;
 }
 
-.hereitis{
+.hereitis {
   color: black;
   background-color: white;
 }
-
 
 .about_area {
   /* background-color: white; */
@@ -239,7 +236,7 @@ img.logo {
   cursor: pointer;
 }
 
-.register_event:hover{
+.register_event:hover {
   color: white;
   background-color: rgba(255, 255, 255, 0.189);
 }
@@ -263,11 +260,11 @@ footer {
   color: white;
 }
 
-.sectionB_footer .contact{
+.sectionB_footer .contact {
   margin: 10px 15px;
   padding: 10px 0px;
 }
-.sectionB_footer .contact a{
+.sectionB_footer .contact a {
   color: white;
   text-decoration: none;
 }
@@ -299,7 +296,7 @@ footer {
   text-align: center;
   margin-top: 10px;
 }
-.sectionB_footer .copyright p a{
+.sectionB_footer .copyright p a {
   color: white;
 }
 
