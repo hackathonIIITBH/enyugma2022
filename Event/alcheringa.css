@@ -1,0 +1,15 @@
+.events-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.events .event {
+    width: 20%;
+    margin: 1%;
+}
+
+.events .event img {
+    width: 100%;
+}
