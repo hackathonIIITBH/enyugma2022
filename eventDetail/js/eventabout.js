@@ -1,4 +1,4 @@
-const url = `https://enyugma.herokuapp.com`
+// const url = `https://enyugma.herokuapp.com`
 // const url = `http://localhost:2100`
 
 let eventdata = {}
@@ -18,35 +18,41 @@ document.getElementById('registerDelphi').style.display = 'none'
 // /console.log(eventname);
 
 const getevent = () => {
-    fetch(`${url}/api/event/getevent`, {
-        method: "POST",
-        headers: {
-            'content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            eventname: `${eventname}`
-        })
-    })
-        .then(res => res.json())
-        .then((res) => {
-            // console.log(res);
-            if (res.status == 0) {
-                eventdata = res.event
-                eventnameshow.innerHTML = eventdata.name
-                showevent();
-            }else{
-                window.location.href=`../Event/technical.html`
-            }
-        }).catch((err) => {
-            console.log(err);
-            window.location.href=`../Event/technical.html`
-        })
+    // fetch(`${url}/api/event/getevent`, {
+    //     method: "POST",
+    //     headers: {
+    //         'content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify({
+    //         eventname: `${eventname}`
+    //     })
+    // })
+    //     .then(res => res.json())
+    //     .then((res) => {
+    //         // console.log(res);
+    //         if (res.status == 0) {
+    //             eventdata = res.event
+    //             eventnameshow.innerHTML = eventdata.name
+    //         }else{
+    //             window.location.href=`../Event/technical.html`
+    //         }
+    //     }).catch((err) => {
+    //         console.log(err);
+    //         window.location.href=`../Event/technical.html`
+    //     })
+    // eventdata = data.eventname
+    // console.log(data);
+    // console.log(eventname);
+    // console.log(data[eventname]);
+    eventdata = data[eventname]
+    eventnameshow.innerHTML = eventname
+    showevent();
 }
 
 let redirectLink = `../register/eventregister.html?register=${eventname}`;
 
 function showevent() {
-    if(eventname=="Oracle of Delphi"){
+    if (eventname == "Oracle of Delphi") {
         document.getElementById('changeRegister').style.display = 'none'
         document.getElementById('registerDelphi').style.display = 'block'
         document.getElementById('sponshorshipDelhi').style.display = 'flex'
@@ -54,13 +60,13 @@ function showevent() {
     desc.innerHTML = eventdata.desc
     judging.innerHTML = eventdata.judging
     rules.innerHTML = eventdata.rule
-    let fees  = eventdata.fees;
-    if(eventdata.fees=="0"){
+    let fees = eventdata.fees;
+    if (eventdata.fees == "0") {
         fees = 'NULL';
-    }else{
+    } else {
         fees = `Rs ${eventdata.fees}`
     }
-    if(eventdata.unstoplink){
+    if (eventdata.unstoplink) {
         redirectLink = eventdata.unstoplink;
     }
 
@@ -85,15 +91,15 @@ function showevent() {
     if (mp[2].length != 0) {
         // <li></li>
         html += `<p>Second Prize : ${mp[2]}</p>`
-    } 
+    }
     if (mp[3].length != 0) {
         // <li></li>
         html += `<p>Third Prize : ${mp[3]}</p>`
-    } 
+    }
     if (mp[4].length != 0) {
         // <li></li>
         html += `<p>Fourth Prize : ${mp[4]}</p>`
-    } 
+    }
     if (mp[5].length != 0) {
         // <li></li>
         html += `<p>Five Prize : ${mp[5]}</p>`
@@ -105,7 +111,7 @@ function showevent() {
 getevent();
 
 
-function display(e,id) {
+function display(e, id) {
     let data = document.getElementById('about_area').children
     // console.log(data)
     for (let index = 0; index < 5; index++) {
@@ -117,12 +123,12 @@ function display(e,id) {
     for (let index = 0; index < 5; index++) {
         over[index].classList = 'text_settle'
     }
-    
-    over[id-1].classList = 'text_settle hereitis'
+
+    over[id - 1].classList = 'text_settle hereitis'
 
     document.getElementById(`${e}`).style.display = "block";
 }
 
-function register(){
+function register() {
     window.location.href = redirectLink
 }
