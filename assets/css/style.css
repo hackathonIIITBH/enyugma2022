@@ -1083,7 +1083,6 @@ body {
   color: white;
   width: 95%;
   margin: 80px auto;
-
 }
 
 .starnight h1 {
@@ -1100,7 +1099,7 @@ body {
   margin-top: 50px;
 }
 
-.starnight .stardiv {
+.starnight .stardiv, .starnight .guestdiv {
   color: white;
   display: flex;
   justify-content: center;
@@ -1123,12 +1122,27 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.801);
 }
 
-.starnight .starshow h2 {
+.starnight .guestshow {
+  width: 300px;
+  height: 300px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.801);
+}
+
+.starnight .starshow h2,.starnight .guestshow h2 {
   margin: 5px;
   font-size: 24px;
 }
 
-.starnight .starshow h3 {
+.starnight .starshow h3,.starnight .guestshow h3 {
   margin: 5px;
   font-size: 20px;
   font-weight: 600;
@@ -1140,6 +1154,16 @@ body {
 }
 
 .starnight .starshow::before {
+  content: "";
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.starnight .guestshow::before {
   content: "";
   background-size: 100% 100%;
   position: absolute;
@@ -1165,7 +1189,20 @@ body {
   background-image: url('../images/person/shloka.png');
 }
 
+.starnight .shloka::before{
+  background-image: url('../images/person/shloka.png');
+}
+
+.starnight .sandeepjain::before{
+  background-image: url('../images/person/SANDEEP_JAIN.png');
+}
+
 .starnight .starshow:hover::before {
+  opacity: .4;
+  z-index: -1;
+  /* background-color: rgba(0, 0, 0, 0.708); */
+}
+.starnight .guestshow:hover::before {
   opacity: .4;
   z-index: -1;
   /* background-color: rgba(0, 0, 0, 0.708); */
