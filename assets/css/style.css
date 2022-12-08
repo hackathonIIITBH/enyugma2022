@@ -1099,7 +1099,8 @@ body {
   margin-top: 50px;
 }
 
-.starnight .stardiv, .starnight .guestdiv {
+.starnight .stardiv,
+.starnight .guestdiv {
   color: white;
   display: flex;
   justify-content: center;
@@ -1137,12 +1138,14 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.801);
 }
 
-.starnight .starshow h2,.starnight .guestshow h2 {
+.starnight .starshow h2,
+.starnight .guestshow h2 {
   margin: 5px;
   font-size: 24px;
 }
 
-.starnight .starshow h3,.starnight .guestshow h3 {
+.starnight .starshow h3,
+.starnight .guestshow h3 {
   margin: 5px;
   font-size: 20px;
   font-weight: 600;
@@ -1185,15 +1188,15 @@ body {
   background-image: url('../images/person/Indrani.jpg');
 }
 
-.starnight .shloka::before{
+.starnight .shloka::before {
   background-image: url('../images/person/shloka.png');
 }
 
-.starnight .shloka::before{
+.starnight .shloka::before {
   background-image: url('../images/person/shloka.png');
 }
 
-.starnight .sandeepjain::before{
+.starnight .sandeepjain::before {
   background-image: url('../images/person/SANDEEP_JAIN.png');
 }
 
@@ -1202,6 +1205,7 @@ body {
   z-index: -1;
   /* background-color: rgba(0, 0, 0, 0.708); */
 }
+
 .starnight .guestshow:hover::before {
   opacity: .4;
   z-index: -1;
@@ -1373,4 +1377,35 @@ footer {
   right: 10px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+#demobtn {
+  animation-name: animate;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  min-width: 150px;
+  border: 0px;
+  margin: auto;
+  padding: 8px 10px;
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+@keyframes animate {
+  0% {
+    background-color: red;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  100% {
+    background-color: white;
+    color: red;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
 }

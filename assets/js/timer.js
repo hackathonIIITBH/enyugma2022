@@ -1,4 +1,5 @@
-var countToDate = new Date("Dec 09, 2022 18:37:25").getTime();
+var countToDate = new Date("Dec 08, 2022 23:59:00").getTime();
+// var countToDate = new Date("Dec 08, 2022 18:45:00").getTime();
 
 var x = setInterval(function(){
 
@@ -16,9 +17,18 @@ var x = setInterval(function(){
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
-
+    // console.log(distance)
+    // if(now >= countToDate){
+    //     console.log('HELLO')
+    // }
     if(distance < 0){
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "COMING SOON";
+        document.getElementById("demo").innerHTML = 
+        `
+        <h3 style="font-size:22px; margin:5px auto 10px auto;">9 December to 11 December, 2022</h3>
+        <button id="demobtn" >Now Live</button>
+        `
     }
+
+
 },50) 
