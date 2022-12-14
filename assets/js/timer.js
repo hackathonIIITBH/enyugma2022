@@ -25,9 +25,7 @@ var x = setInterval(function(){
         clearInterval(x);
         document.getElementById("demo").innerHTML = 
         `
-        <h3 style="font-size:22px; margin:5px auto 10px auto;">9 December to 11 December, 2022</h3>
-        <button id="demobtn" >Now Live</button>
-        `
+        <h3 style="font-size:22px; margin:5px auto 10px auto;">9 December to 11 December, 2022</h3>`
     }
 
 
