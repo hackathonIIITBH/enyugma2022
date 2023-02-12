@@ -104,6 +104,7 @@ function showevent() {
         // <li></li>
         html += `<p>Five Prize : ${mp[5]}</p>`
     }
+    html+=`<p>Note: Prize details with ** symbol are Updated Data.</p>`
     prize.innerHTML = html;
 
 }
