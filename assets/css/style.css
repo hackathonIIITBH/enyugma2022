@@ -1025,57 +1025,68 @@ body {
 .sponser_section {
   color: white;
   display: flex;
-  flex-wrap: wrap;
-  width: 95%;
-  margin: auto;
+  flex-direction: column;
   /* grid-template-columns: auto auto; */
   /* grid-template-columns: repeat(auto-fit, 40%); */
   /* gap: 5px; */
   /* background-color: #2196F3; */
   /* padding: 35px; */
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   /* margin: 25px 25px; */
   margin-top: 60px;
+  font-size: 30px;
 }
 
-.sponser_section>div {
-  background-color: #11192190;
-  text-align: center;
-  display: grid;
-  /* grid-template-rows: 150px 200px; */
-  /* gap: 10px; */
+.sponsors {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  min-width: 280px;
-  width: 40%;
-  min-height: 300px;
-  /* align-items: center; */
-  padding: 20px 5px;
-  border-radius: 30px;
-  margin-top: 30px;
-  /* box-shadow: 2px 2px 20px whitesmoke; */
-  transition: all 0.5s ease-in-out 0.25s;
-  font-family: Verdana;
-
+  align-items: center;
 }
 
-.sponser_section a:hover {
-  color: rgba(255, 255, 255, 0.408);
+.sponsors img {
+  width: 20%;
+  margin: 2%;
+  border-radius: 20px;
 }
+  /* .sponser_section>div {
+    background-color: #11192190;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 150px 200px;
+    gap: 10px;
+    justify-content: space-around;
+    min-width: 280px;
+    width: 40%;
+    min-height: 300px;
+    align-items: center;
+    padding: 20px 5px;
+    border-radius: 30px;
+    margin-top: 30px;
+    box-shadow: 2px 2px 20px whitesmoke;
+    transition: all 0.5s ease-in-out 0.25s;
+    font-family: Verdana;
 
-.sponser_section .heading {
-  font-family: Verdana;
-  /* letter-spacing: 2px; */
-  /* word-spacing: 4px; */
-  /* font-size: xx-large; */
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-}
+  }
 
-.sponser_section a {
-  color: white;
-}
+  .sponser_section a:hover {
+    color: rgba(255, 255, 255, 0.408);
+  }
+
+  .sponser_section .heading {
+    font-family: Verdana;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sponser_section a {
+    color: white;
+  } */
 
 
 /* Star night */
