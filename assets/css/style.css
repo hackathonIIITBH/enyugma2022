@@ -69,7 +69,7 @@ body {
 
 .toup .fa-solid:hover {
   transform: scale(1.2);
-  backdrop-filter: blur(.5px);
+  backdrop-filter: blur(0.5px);
 }
 
 .main-section {
@@ -133,7 +133,7 @@ body {
 
 .tobottom .fa-solid:hover {
   transform: scale(1.2);
-  backdrop-filter: blur(.5px);
+  backdrop-filter: blur(0.5px);
 }
 
 #reverse {
@@ -239,7 +239,6 @@ body {
   padding: 5px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-
 }
 
 .logo_clg {
@@ -262,12 +261,11 @@ body {
 .navdesign {
   display: flex;
   height: 70px;
-  width: calc((100% - 200px)/2);
+  width: calc((100% - 200px) / 2);
   margin-top: 0;
   justify-content: space-evenly;
   /* align-items: flex-start; */
 }
-
 
 /* navbar */
 .navbar {
@@ -327,8 +325,6 @@ body {
   height: 100%;
   z-index: -2;
 }
-
-
 
 .empty_container {
   background: transparent;
@@ -541,7 +537,6 @@ body {
   overflow: hidden;
 }
 
-
 @media (max-width: 778px) {
   .hero_section {
     height: fit-content;
@@ -580,12 +575,9 @@ body {
   .glow-on-hover {
     font-size: 15px;
   }
-
 }
 
 @media screen and (max-width: 1100px) {
-
-
   .days_container {
     /* position: relative; */
     background-color: transparent;
@@ -641,7 +633,6 @@ body {
     /* cursor: ; */
   }
 
-
   .days_container {
     position: relative;
     background-color: transparent;
@@ -681,8 +672,6 @@ body {
 }
 
 @media screen and (max-width: 751px) {
-
-
   .days_container {
     position: relative;
     background-color: transparent;
@@ -723,8 +712,6 @@ body {
 }
 
 @media screen and (max-width: 673px) {
-
-
   .days_text {
     font-size: 24px;
     padding-left: 11px;
@@ -752,12 +739,10 @@ body {
 }
 
 @media screen and (max-width: 426px) {
-
   #canvas {
     /* position: fixed; */
     display: none;
   }
-
 
   .days_container {
     position: relative;
@@ -774,9 +759,6 @@ body {
 }
 
 @media screen and (max-width: 376px) {
-
-
-
   .days_container {
     position: relative;
     background-color: transparent;
@@ -792,8 +774,6 @@ body {
 }
 
 @media screen and (max-width: 321px) {
-
-
   .days_container {
     position: relative;
     background-color: transparent;
@@ -832,7 +812,6 @@ body {
     padding-left: 10px;
   }
 }
-
 
 .scrolldesign {
   /* margin-top: 300px; */
@@ -910,7 +889,6 @@ body {
   background-image: url(../images/technical_banner.jpg);
 }
 
-
 .cultural_event::before {
   background-image: url(../images/cultural_banner.jpg);
 }
@@ -921,7 +899,7 @@ body {
 
 .block:hover::before {
   /* display: none; */
-  opacity: .9;
+  opacity: 0.9;
   transition: 1100ms ease-in-out;
   z-index: -1;
 }
@@ -980,7 +958,7 @@ body {
   display: none;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .event_design {
     flex-direction: column;
   }
@@ -1019,7 +997,6 @@ body {
   }
 
   /* } */
-
 }
 
 .sponser_section {
@@ -1050,7 +1027,7 @@ body {
   margin: 2%;
   border-radius: 20px;
 }
-  /* .sponser_section>div {
+/* .sponser_section>div {
     background-color: #11192190;
     text-align: center;
     display: grid;
@@ -1087,7 +1064,6 @@ body {
   .sponser_section a {
     color: white;
   } */
-
 
 /* Star night */
 .starnight {
@@ -1188,37 +1164,37 @@ body {
 }
 
 .starnight .epr::before {
-  background-image: url('../images/person/epr.jpg');
+  background-image: url("../images/person/epr.jpg");
 }
 
 .starnight .sneh::before {
-  background-image: url('../images/person/sneh_upadhya.JPG');
+  background-image: url("../images/person/sneh_upadhya.JPG");
 }
 
 .starnight .indrani::before {
-  background-image: url('../images/person/Indrani.jpg');
+  background-image: url("../images/person/Indrani.jpg");
 }
 
 .starnight .shloka::before {
-  background-image: url('../images/person/shloka.png');
+  background-image: url("../images/person/shloka.png");
 }
 
 .starnight .shloka::before {
-  background-image: url('../images/person/shloka.png');
+  background-image: url("../images/person/shloka.png");
 }
 
 .starnight .sandeepjain::before {
-  background-image: url('../images/person/SANDEEP_JAIN.png');
+  background-image: url("../images/person/SANDEEP_JAIN.png");
 }
 
 .starnight .starshow:hover::before {
-  opacity: .4;
+  opacity: 0.4;
   z-index: -1;
   /* background-color: rgba(0, 0, 0, 0.708); */
 }
 
 .starnight .guestshow:hover::before {
-  opacity: .4;
+  opacity: 0.4;
   z-index: -1;
   /* background-color: rgba(0, 0, 0, 0.708); */
 }
@@ -1316,9 +1292,29 @@ footer {
   z-index: 111100000;
 }
 
+.result {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #dadada;
+  border-radius: 15px;
+  padding: 2%;
+}
+
+.result a{
+  color: #dadada;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 5px 0 5px 0;
+}
+
 @media only screen and (max-width: 767px) {
   .sidecontainer {
     display: inline-block;
+  }
+  .result {
+    display: flex;
   }
 }
 
